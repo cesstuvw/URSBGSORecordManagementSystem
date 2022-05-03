@@ -12,4 +12,7 @@
         btnADDUSER.Image = My.Resources.adduser
     End Sub
 
+    Private Sub btnADDUSER_Click(sender As Object, e As EventArgs) Handles btnADDUSER.Click
+
+    End Sub
 End Class

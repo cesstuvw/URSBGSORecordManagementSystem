@@ -1,5 +1,6 @@
 ﻿Public Class frmMAINMENU
 
+
     Dim btnDASHWasClicked As Boolean = False
     Dim btnUSERACWasClicked As Boolean = False
     Dim btnITEMWasClicked As Boolean = False
@@ -19,13 +20,16 @@
     End Property
 
     Private Sub frmMAINMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
+        'Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
+        roundedFORM(Me)
+        roundedPANEL(pnlMENU)
 
         DoubleBuffered = True
         btnLOGOUTA.Hide()
         pnlLOGOUT.Hide()
 
         btnDASHWasClicked = True
+        btnDASH.BackgroundImage = My.Resources.dashboardmnmn
 
         btnINDICATOR.Height = btnDASH.Height
         btnINDICATOR.Top = btnDASH.Top
@@ -49,19 +53,18 @@
         btnREPORTS.FlatAppearance.MouseDownBackColor = btnREPORTS.BackColor
 
         'HIDE USERCONTROL PANEL TO SHOW DASHBOARD 
+        pnlDASHBOARD.Show()
         pnlUSERCONTROL.Hide()
-
-        'LOAD USERCONTROL
-        Dim usercontrol As New ucUSERACCOUNT
-        usercontrol.Parent = pnlUSERCONTROL
-        usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
-        btnDASH.BackgroundImage = My.Resources.dashboardmnmn
     End Sub
 
 
     Private Sub btnDASH_Click(sender As Object, e As EventArgs) Handles btnDASH.Click
         pnlUSERCONTROL.Hide()
+        pnlDASHBOARD.BringToFront()
+        pnlDASHBOARD.Show()
+        pnlMENU.BringToFront()
+        BTNCLOSE.BringToFront()
+        BTNMINIMIZE.BringToFront()
         btnDASH.FlatAppearance.MouseOverBackColor = btnDASH.BackColor
 
         btnDASH.BackgroundImage = My.Resources.dashboardmnmn
@@ -76,6 +79,7 @@
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnDASH.Height
         btnINDICATOR.Top = btnDASH.Top
+        btnINDICATOR.BringToFront()
 
         btnDASHWasClicked = True
         btnUSERACWasClicked = False
@@ -93,6 +97,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnUSERACC.BackgroundImage = My.Resources.useraccountmnmn
         btnDASH.BackgroundImage = My.Resources.dashboardmnfn
@@ -103,15 +108,11 @@
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucUSERACCOUNT
-        usercontrol.Parent = pnlUSERCONTROL
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucUSERACCOUNT()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
         usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnUSERACC.Height
@@ -129,12 +130,12 @@
     End Sub
 
     Private Sub btnITEM_Click(sender As Object, e As EventArgs) Handles btnITEM.Click
-        DoubleBuffered = True
         pnlUSERCONTROL.Show()
         pnlUSERCONTROL.BringToFront()
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnITEM.BackgroundImage = My.Resources.itemmnmn
         btnUSERACC.BackgroundImage = My.Resources.useraccountmnfn
@@ -145,21 +146,10 @@
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucITEM
-        usercontrol.Parent = pnlUSERCONTROL
-        usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
-
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnITEM.Height
         btnINDICATOR.Top = btnITEM.Top
         btnINDICATOR.BringToFront()
-
 
         btnDASHWasClicked = False
         btnUSERACWasClicked = False
@@ -169,6 +159,12 @@
         btnTRANSACWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
+
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucITEM()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
+        usercontrol.Show()
     End Sub
 
     Private Sub btnITEMST_Click(sender As Object, e As EventArgs) Handles btnITEMST.Click
@@ -177,6 +173,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnITEMST.BackgroundImage = My.Resources.itemstocksmnmn
         btnITEM.BackgroundImage = My.Resources.itemmnfn
@@ -186,16 +183,6 @@
         btnTRANSAC.BackgroundImage = My.Resources.transactionmnfn
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
-
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucITEMSTOCKS
-        usercontrol.Parent = pnlUSERCONTROL
-        usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnITEMST.Height
@@ -210,6 +197,12 @@
         btnTRANSACWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
+
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucITEMSTOCKS()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
+        usercontrol.Show()
     End Sub
 
     Private Sub btnBORP_Click(sender As Object, e As EventArgs) Handles btnBORP.Click
@@ -218,6 +211,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnBORP.BackgroundImage = My.Resources.borrowersprofilemnmn
         btnITEMST.BackgroundImage = My.Resources.itemstocksmnfn
@@ -228,15 +222,12 @@
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
 
-        Dim usercontrol As New ucBORROWERSPROFILE
-        usercontrol.Parent = pnlUSERCONTROL
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucBORROWERSPROFILE()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
         usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnBORP.Height
@@ -259,6 +250,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnTRANSAC.BackgroundImage = My.Resources.transactionmnmn
         btnBORP.BackgroundImage = My.Resources.borrowersprofilemngn
@@ -269,15 +261,11 @@
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucTRANSACTION
-        usercontrol.Parent = pnlUSERCONTROL
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucTRANSACTION()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
         usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnTRANSAC.Height
@@ -300,6 +288,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnSETT.BackgroundImage = My.Resources.settingsmnmn
         btnREPORTS.BackgroundImage = My.Resources.reportsmnfn
@@ -310,15 +299,11 @@
         btnDASH.BackgroundImage = My.Resources.dashboardmnfn
         btnTRANSAC.BackgroundImage = My.Resources.transactionmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucSETTINGS
-        usercontrol.Parent = pnlUSERCONTROL
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucSETTINGS()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
         usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnSETT.Height
@@ -341,6 +326,7 @@
         pnlMENU.BringToFront()
         BTNCLOSE.BringToFront()
         BTNMINIMIZE.BringToFront()
+        pnlDASHBOARD.SendToBack()
 
         btnREPORTS.BackgroundImage = My.Resources.reportsmnmn
         btnSETT.BackgroundImage = My.Resources.settingsmnfn
@@ -351,15 +337,11 @@
         btnDASH.BackgroundImage = My.Resources.dashboardmnfn
         btnTRANSAC.BackgroundImage = My.Resources.transactionmnfn
 
-        Dim i As Integer
-        For i = 0 To 0
-            pnlUSERCONTROL.Controls.RemoveAt(i)
-        Next
-
-        Dim usercontrol As New ucREPORTS
-        usercontrol.Parent = pnlUSERCONTROL
+        pnlUSERCONTROL.Controls.Clear()
+        Dim usercontrol As New ucREPORTS()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(usercontrol)
         usercontrol.Show()
-        usercontrol.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         btnINDICATOR.Height = btnREPORTS.Height
@@ -476,7 +458,7 @@
         If btnITEMSTWasClicked = True Then
             btnITEMST.BackgroundImage = My.Resources.itemstocksmnmn
 
-        ElseIf btnITEMstWasClicked = False Then
+        ElseIf btnITEMSTWasClicked = False Then
             btnITEMST.BackgroundImage = My.Resources.itemstockshover
         End If
     End Sub
@@ -567,6 +549,8 @@
     Private Sub BTNCLOSE_Click(sender As Object, e As EventArgs) Handles BTNCLOSE.Click
         Me.Close()
     End Sub
+
+
 End Class
 
 

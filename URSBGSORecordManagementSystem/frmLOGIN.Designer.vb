@@ -22,7 +22,7 @@ Partial Class frmLOGIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlLOGO = New System.Windows.Forms.Panel()
         Me.pnlINFO = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnINFO = New System.Windows.Forms.PictureBox()
@@ -44,7 +44,7 @@ Partial Class frmLOGIN
         Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
         Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
+        Me.pnlLOGO.SuspendLayout()
         CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -58,22 +58,21 @@ Partial Class frmLOGIN
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlLOGO
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.finallogobg
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel1.Controls.Add(Me.pnlINFO)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.btnINFO)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(421, 486)
-        Me.Panel1.TabIndex = 0
+        Me.pnlLOGO.BackColor = System.Drawing.Color.White
+        Me.pnlLOGO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pnlLOGO.Controls.Add(Me.pnlINFO)
+        Me.pnlLOGO.Controls.Add(Me.Label3)
+        Me.pnlLOGO.Controls.Add(Me.btnINFO)
+        Me.pnlLOGO.Controls.Add(Me.Label2)
+        Me.pnlLOGO.Controls.Add(Me.Label1)
+        Me.pnlLOGO.Controls.Add(Me.PictureBox1)
+        Me.pnlLOGO.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pnlLOGO.Location = New System.Drawing.Point(0, 0)
+        Me.pnlLOGO.Name = "pnlLOGO"
+        Me.pnlLOGO.Size = New System.Drawing.Size(421, 486)
+        Me.pnlLOGO.TabIndex = 0
         '
         'pnlINFO
         '
@@ -331,8 +330,7 @@ Partial Class frmLOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.finalloginform
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(731, 486)
         Me.Controls.Add(Me.btnLOGIN)
@@ -342,7 +340,7 @@ Partial Class frmLOGIN
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlLOGO)
         Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
@@ -350,8 +348,8 @@ Partial Class frmLOGIN
         Me.Name = "frmLOGIN"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LOGIN"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlLOGO.ResumeLayout(False)
+        Me.pnlLOGO.PerformLayout()
         CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -371,7 +369,7 @@ Partial Class frmLOGIN
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlLOGO As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label

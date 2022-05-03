@@ -22,6 +22,7 @@ Partial Class ucUSERACCOUNT
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucUSERACCOUNT))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -30,11 +31,23 @@ Partial Class ucUSERACCOUNT
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.btnEDIT = New System.Windows.Forms.PictureBox()
         Me.btnVIEW = New System.Windows.Forms.PictureBox()
+        Me.dgvUSER = New System.Windows.Forms.DataGridView()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LoginnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsertypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
+        Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnADDUSER, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEDIT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnVIEW, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -117,6 +130,72 @@ Partial Class ucUSERACCOUNT
         Me.btnVIEW.TabIndex = 24
         Me.btnVIEW.TabStop = False
         '
+        'dgvUSER
+        '
+        Me.dgvUSER.AllowUserToAddRows = False
+        Me.dgvUSER.AllowUserToDeleteRows = False
+        Me.dgvUSER.AutoGenerateColumns = False
+        Me.dgvUSER.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dgvUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvUSER.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUSER.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.LoginnameDataGridViewTextBoxColumn, Me.UsertypeDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn})
+        Me.dgvUSER.DataSource = Me.TbluserBindingSource
+        Me.dgvUSER.GridColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.dgvUSER.Location = New System.Drawing.Point(328, 155)
+        Me.dgvUSER.Name = "dgvUSER"
+        Me.dgvUSER.ReadOnly = True
+        Me.dgvUSER.Size = New System.Drawing.Size(575, 388)
+        Me.dgvUSER.TabIndex = 26
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LoginnameDataGridViewTextBoxColumn
+        '
+        Me.LoginnameDataGridViewTextBoxColumn.DataPropertyName = "loginname"
+        Me.LoginnameDataGridViewTextBoxColumn.HeaderText = "loginname"
+        Me.LoginnameDataGridViewTextBoxColumn.Name = "LoginnameDataGridViewTextBoxColumn"
+        Me.LoginnameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UsertypeDataGridViewTextBoxColumn
+        '
+        Me.UsertypeDataGridViewTextBoxColumn.DataPropertyName = "usertype"
+        Me.UsertypeDataGridViewTextBoxColumn.HeaderText = "usertype"
+        Me.UsertypeDataGridViewTextBoxColumn.Name = "UsertypeDataGridViewTextBoxColumn"
+        Me.UsertypeDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'StatusDataGridViewTextBoxColumn
+        '
+        Me.StatusDataGridViewTextBoxColumn.DataPropertyName = "status"
+        Me.StatusDataGridViewTextBoxColumn.HeaderText = "status"
+        Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
+        Me.StatusDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TbluserBindingSource
+        '
+        Me.TbluserBindingSource.DataMember = "tbl_user"
+        Me.TbluserBindingSource.DataSource = Me.Ursbgso_dbDataSet
+        '
+        'Ursbgso_dbDataSet
+        '
+        Me.Ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
+        Me.Ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_userTableAdapter
+        '
+        Me.Tbl_userTableAdapter.ClearBeforeFill = True
+        '
         'ucUSERACCOUNT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -124,6 +203,7 @@ Partial Class ucUSERACCOUNT
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.finalmainmenubg
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Controls.Add(Me.dgvUSER)
         Me.Controls.Add(Me.txtSEARCH)
         Me.Controls.Add(Me.btnVIEW)
         Me.Controls.Add(Me.btnEDIT)
@@ -139,6 +219,9 @@ Partial Class ucUSERACCOUNT
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEDIT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnVIEW, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,4 +233,13 @@ Partial Class ucUSERACCOUNT
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents btnEDIT As PictureBox
     Friend WithEvents btnVIEW As PictureBox
+    Friend WithEvents dgvUSER As DataGridView
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LoginnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsertypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TbluserBindingSource As BindingSource
+    Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
+    Friend WithEvents Tbl_userTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter
 End Class

@@ -1,9 +1,12 @@
 ﻿Public Class frmLOGIN
     Private Sub FRMLOGIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
+        'Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
         btnSHOW.Hide() 'BTNSHOW IS A CUSTOMIZED BUTTON USING PICTUREBOX 
         btnHIDE.Hide() 'BTNHIDE IS A CUSTOMIZED BUTTON USING PICTUREBOX 
         pnlINFO.Hide()
+
+        roundedFORM(Me)
+        roundedPANELIN(pnlLOGO)
     End Sub
 
     Private Sub btnLOGIN_Click(sender As Object, e As EventArgs) Handles btnLOGIN.Click
@@ -30,15 +33,15 @@
                 frmMAINMENU.Show()
 
                 'HIDE OR DISABLE BUTTON
-                'frmMAINMENU.btnUSERACC.Hide()
-                'frmMAINMENU.btnSETTINGS.Hide()
+                frmMAINMENU.btnUSERACC.Hide()
+                frmMAINMENU.btnITEM.Hide()
+                frmMAINMENU.btnSETT.Hide()
 
                 'MOVE BUTTONS ON NAVIGATION BAR
-                'frmMAINMENU.btnSTUDP.Location = New Point(0, 166)
-                'frmMAINMENU.btnBOOKS.Location = New Point(0, 207)
-                'frmMAINMENU.btnBORROW.Location = New Point(0, 248)
-                'frmMAINMENU.btnRETURN.Location = New Point(0, 289)
-                'frmMAINMENU.btnREPORTS.Location = New Point(0, 330)
+                frmMAINMENU.btnBORP.Location = New Point(0, 204)
+                frmMAINMENU.btnTRANSAC.Location = New Point(0, 249)
+                frmMAINMENU.btnREPORTS.Location = New Point(0, 294)
+
                 Me.Close()
             End If
         Else
@@ -127,24 +130,24 @@
                 If dr(3) = "GSO Head" Then
                     frmMAINMENU.lblUSERTYPE.Text = "GSO Head"
                     frmMAINMENU.lblGREETINGS.Text = "Hello, GSO Head"
+
                     frmMAINMENU.Show()
                     Me.Close()
-
                 ElseIf dr(3) = "Staff" Then
                     frmMAINMENU.lblUSERTYPE.Text = "Staff"
                     frmMAINMENU.lblGREETINGS.Text = "Hello, Staff"
                     frmMAINMENU.Show()
 
                     'HIDE OR DISABLE BUTTON
-                    'frmMAINMENU.btnUSERACC.Hide()
-                    'frmMAINMENU.btnSETTINGS.Hide()
+                    frmMAINMENU.btnUSERACC.Hide()
+                    frmMAINMENU.btnITEM.Hide()
+                    frmMAINMENU.btnSETT.Hide()
 
                     'MOVE BUTTONS ON NAVIGATION BAR
-                    'frmMAINMENU.btnSTUDP.Location = New Point(0, 166)
-                    'frmMAINMENU.btnBOOKS.Location = New Point(0, 207)
-                    'frmMAINMENU.btnBORROW.Location = New Point(0, 248)
-                    'frmMAINMENU.btnRETURN.Location = New Point(0, 289)
-                    'frmMAINMENU.btnREPORTS.Location = New Point(0, 330)
+                    frmMAINMENU.btnBORP.Location = New Point(0, 204)
+                    frmMAINMENU.btnTRANSAC.Location = New Point(0, 249)
+                    frmMAINMENU.btnREPORTS.Location = New Point(0, 294)
+
                     Me.Close()
                 End If
             Else

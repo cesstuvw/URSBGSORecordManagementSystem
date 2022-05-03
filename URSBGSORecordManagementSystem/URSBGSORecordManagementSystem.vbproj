@@ -87,16 +87,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDASHBOARD.Designer.vb">
+      <DependentUpon>frmDASHBOARD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDASHBOARD.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLOADING.Designer.vb">
       <DependentUpon>frmLOADING.vb</DependentUpon>
     </Compile>
     <Compile Include="frmLOADING.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMAINMENU.Designer.vb">
-      <DependentUpon>frmMAINMENU.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMAINMENU.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLOGIN.vb">
@@ -104,6 +104,12 @@
     </Compile>
     <Compile Include="frmLOGIN.Designer.vb">
       <DependentUpon>frmLOGIN.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMAINMENU.Designer.vb">
+      <DependentUpon>frmMAINMENU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMAINMENU.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODULE.vb" />
@@ -123,6 +129,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Round.vb" />
     <Compile Include="ucBORROWERSPROFILE.Designer.vb">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </Compile>
@@ -139,6 +146,12 @@
       <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
     </Compile>
     <Compile Include="ucITEMSTOCKS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMODALUA.Designer.vb">
+      <DependentUpon>ucMODALUA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucMODALUA.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucREPORTS.Designer.vb">
@@ -172,14 +185,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmDASHBOARD.resx">
+      <DependentUpon>frmDASHBOARD.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLOADING.resx">
       <DependentUpon>frmLOADING.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMAINMENU.resx">
-      <DependentUpon>frmMAINMENU.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLOGIN.resx">
       <DependentUpon>frmLOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMAINMENU.resx">
+      <DependentUpon>frmMAINMENU.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -195,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucITEMSTOCKS.resx">
       <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMODALUA.resx">
+      <DependentUpon>ucMODALUA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucREPORTS.resx">
       <DependentUpon>ucREPORTS.vb</DependentUpon>
@@ -547,6 +566,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\adduserhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modalbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbuseracc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\savebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelntn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menumenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menumm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menufin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenufin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenuform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenuformbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
