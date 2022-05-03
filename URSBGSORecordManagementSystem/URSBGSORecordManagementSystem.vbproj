@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CE6B932-AE1A-4830-B819-8EDC51130D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>URSBGSORecordManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>URSBGSORecordManagementSystem</RootNamespace>
+    <AssemblyName>URSBGSORecordManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>URSBGSORecordManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>URSBGSORecordManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmLOADING.Designer.vb">
+      <DependentUpon>frmLOADING.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLOADING.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMAINMENU.Designer.vb">
+      <DependentUpon>frmMAINMENU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMAINMENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOGIN.Designer.vb">
+      <DependentUpon>frmLOGIN.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULE.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ucBORROWERSPROFILE.Designer.vb">
+      <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBORROWERSPROFILE.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucITEM.Designer.vb">
+      <DependentUpon>ucITEM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucITEM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucITEMSTOCKS.Designer.vb">
+      <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucITEMSTOCKS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucREPORTS.Designer.vb">
+      <DependentUpon>ucREPORTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucREPORTS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSETTINGS.Designer.vb">
+      <DependentUpon>ucSETTINGS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucSETTINGS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTRANSACTION.Designer.vb">
+      <DependentUpon>ucTRANSACTION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucTRANSACTION.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucUSERACCOUNT.Designer.vb">
+      <DependentUpon>ucUSERACCOUNT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucUSERACCOUNT.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ursbgso_dbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ursbgso_dbDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmLOADING.resx">
+      <DependentUpon>frmLOADING.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMAINMENU.resx">
+      <DependentUpon>frmMAINMENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLOGIN.resx">
+      <DependentUpon>frmLOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBORROWERSPROFILE.resx">
+      <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucITEM.resx">
+      <DependentUpon>ucITEM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucITEMSTOCKS.resx">
+      <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucREPORTS.resx">
+      <DependentUpon>ucREPORTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSETTINGS.resx">
+      <DependentUpon>ucSETTINGS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTRANSACTION.resx">
+      <DependentUpon>ucTRANSACTION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucUSERACCOUNT.resx">
+      <DependentUpon>ucUSERACCOUNT.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="ursbgso_dbDataSet.xsc">
+      <DependentUpon>ursbgso_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ursbgso_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ursbgso_dbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ursbgso_dbDataSet.xss">
+      <DependentUpon>ursbgso_dbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logobgform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalloginform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logintb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showpass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closehover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizehover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbtnhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidehover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemlogohd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titlelogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showinfouni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infopanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info-circle-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finallogobg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalmainmenubg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizemm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closemm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalminimizemm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalclosemm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logomm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizemmf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizemmf1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closemmf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilemenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactionmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profilepic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountselector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountfin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilefin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactionfin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsfin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsfin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboardmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilemn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactionmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemstocksmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilemngn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactionmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indicatorfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendardash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactiondash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactiondashb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofiledash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsdash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalmenubg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indicatormnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilemnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemstocksmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportsmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transactionmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccountmnmn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboardmnfn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logouta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowersprofilehover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboardhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itemstockshover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportshover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingshover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccounthover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduserbtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testtest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tttttttt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editdisable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewdisable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editenable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edithover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewenable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduserhover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
