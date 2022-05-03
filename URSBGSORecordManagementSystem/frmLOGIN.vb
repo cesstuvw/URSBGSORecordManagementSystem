@@ -38,9 +38,9 @@
                 frmMAINMENU.btnSETT.Hide()
 
                 'MOVE BUTTONS ON NAVIGATION BAR
-                frmMAINMENU.btnBORP.Location = New Point(0, 204)
-                frmMAINMENU.btnTRANSAC.Location = New Point(0, 249)
-                frmMAINMENU.btnREPORTS.Location = New Point(0, 294)
+                frmMAINMENU.btnBORP.Location = New Point(0, 228)
+                frmMAINMENU.btnTRANSAC.Location = New Point(0, 273)
+                frmMAINMENU.btnREPORTS.Location = New Point(0, 318)
 
                 Me.Close()
             End If

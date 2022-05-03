@@ -129,7 +129,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Round.vb" />
+    <Compile Include="ROUND.vb" />
     <Compile Include="ucBORROWERSPROFILE.Designer.vb">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </Compile>
@@ -614,6 +614,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mainmenuformbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TABLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uatb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

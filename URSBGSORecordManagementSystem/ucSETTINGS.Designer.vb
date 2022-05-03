@@ -41,8 +41,7 @@ Partial Class ucSETTINGS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.finalmainmenubg
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Controls.Add(Me.Label2)
         Me.DoubleBuffered = True
