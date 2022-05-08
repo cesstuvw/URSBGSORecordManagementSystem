@@ -4,9 +4,6 @@
         btnSHOW.Hide() 'BTNSHOW IS A CUSTOMIZED BUTTON USING PICTUREBOX 
         btnHIDE.Hide() 'BTNHIDE IS A CUSTOMIZED BUTTON USING PICTUREBOX 
         pnlINFO.Hide()
-
-        roundedFORM(Me)
-        roundedPANELIN(pnlLOGO)
     End Sub
 
     Private Sub btnLOGIN_Click(sender As Object, e As EventArgs) Handles btnLOGIN.Click
@@ -144,9 +141,9 @@
                     frmMAINMENU.btnSETT.Hide()
 
                     'MOVE BUTTONS ON NAVIGATION BAR
-                    frmMAINMENU.btnBORP.Location = New Point(0, 204)
-                    frmMAINMENU.btnTRANSAC.Location = New Point(0, 249)
-                    frmMAINMENU.btnREPORTS.Location = New Point(0, 294)
+                    frmMAINMENU.btnBORP.Location = New Point(0, 228)
+                    frmMAINMENU.btnTRANSAC.Location = New Point(0, 273)
+                    frmMAINMENU.btnREPORTS.Location = New Point(0, 318)
 
                     Me.Close()
                 End If
@@ -158,6 +155,7 @@
                 txtUSER.Focus()
                 txtUSER.Text = ""
                 txtUSER.ForeColor = ColorTranslator.FromHtml("#204AFF")
+                txtPASS.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
             End If
             con.Close()
         End If
@@ -182,7 +180,12 @@
     End Sub
 
     Private Sub btnCLOSE_Click(sender As Object, e As EventArgs) Handles BTNCLOSE.Click
-        Me.Close()
+        Dim response As DialogResult
+        response = MsgBox("Do you really want to exit?", vbYesNo + vbQuestion, "Exit System")
+
+        If response = MsgBoxResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 
     'UI EVENTS
@@ -202,28 +205,28 @@
         BTNCLOSE.Image = My.Resources.close
     End Sub
 
-    Private Sub btnLOGIN_MouseHover(sender As Object, e As EventArgs) Handles btnLOGIN.MouseHover
+    Private Sub btnLOGIN_MouseHover(sender As Object, e As EventArgs)
         btnLOGIN.BackgroundImage = My.Resources.loginbtnhover
     End Sub
 
-    Private Sub btnLOGIN_MouseLeave(sender As Object, e As EventArgs) Handles btnLOGIN.MouseLeave
+    Private Sub btnLOGIN_MouseLeave(sender As Object, e As EventArgs)
         btnLOGIN.BackgroundImage = My.Resources.loginbtn
     End Sub
 
     Private Sub btnSHOW_MouseHover(sender As Object, e As EventArgs) Handles btnSHOW.MouseHover
-        btnSHOW.Image = My.Resources.showhover
+        'btnSHOW.Image = My.Resources.showhover
     End Sub
 
     Private Sub btnSHOW_MouseLeave(sender As Object, e As EventArgs) Handles btnSHOW.MouseLeave
-        btnSHOW.Image = My.Resources.show
+        'btnSHOW.Image = My.Resources.show
     End Sub
 
     Private Sub btnHIDE_MouseHover(sender As Object, e As EventArgs) Handles btnHIDE.MouseHover
-        btnHIDE.Image = My.Resources.hidehover
+        'btnHIDE.Image = My.Resources.hidehover
     End Sub
 
     Private Sub btnHIDE_MouseLeave(sender As Object, e As EventArgs) Handles btnHIDE.MouseLeave
-        btnHIDE.Image = My.Resources.hide
+        'btnHIDE.Image = My.Resources.hide
     End Sub
 
     Private Sub btnINFO_MouseHover(sender As Object, e As EventArgs) Handles btnINFO.MouseHover
@@ -235,4 +238,5 @@
         pnlINFO.Hide()
         btnINFO.Image = My.Resources.Info_circle
     End Sub
+
 End Class

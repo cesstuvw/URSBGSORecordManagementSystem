@@ -87,6 +87,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomizedButton.vb" />
     <Compile Include="frmDASHBOARD.Designer.vb">
       <DependentUpon>frmDASHBOARD.vb</DependentUpon>
     </Compile>
@@ -134,6 +135,12 @@
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </Compile>
     <Compile Include="ucBORROWERSPROFILE.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDASHBOARD.Designer.vb">
+      <DependentUpon>ucDASHBOARD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucDASHBOARD.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucITEM.Designer.vb">
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucBORROWERSPROFILE.resx">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDASHBOARD.resx">
+      <DependentUpon>ucDASHBOARD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucITEM.resx">
       <DependentUpon>ucITEM.vb</DependentUpon>
@@ -620,6 +630,171 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\uatb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tabledgvbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uadisabletb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enabledadduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disablededit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabledsave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disabledcancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TESTBTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enabledsave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enabledcancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enablededit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\longsearchbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccount-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowers-profile-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-stocks-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowers-profile-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-stocks-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccount-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowers-profile-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-stocks-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\useraccount-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowers-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports-record-dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-fill 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-off-fill 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button-enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testsearch.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

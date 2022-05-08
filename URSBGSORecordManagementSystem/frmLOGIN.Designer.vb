@@ -31,31 +31,25 @@ Partial Class frmLOGIN
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtUSER = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnSHOW = New System.Windows.Forms.PictureBox()
         Me.btnHIDE = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtPASS = New System.Windows.Forms.TextBox()
-        Me.btnLOGIN = New System.Windows.Forms.Panel()
-        Me.lblLIBUTTON = New System.Windows.Forms.Label()
-        Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
-        Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtUSER = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLOGIN = New System.Windows.Forms.Button()
+        Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
+        Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
         Me.pnlLOGO.SuspendLayout()
         CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.btnSHOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnHIDE, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.btnLOGIN.SuspendLayout()
-        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlLOGO
@@ -168,63 +162,26 @@ Partial Class frmLOGIN
         Me.Label5.Text = "Log in with your registered " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "information."
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logintb
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel2.Controls.Add(Me.txtUSER)
-        Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(485, 217)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(183, 35)
-        Me.Panel2.TabIndex = 1
-        '
-        'txtUSER
-        '
-        Me.txtUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUSER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.txtUSER.Location = New System.Drawing.Point(47, 10)
-        Me.txtUSER.Name = "txtUSER"
-        Me.txtUSER.Size = New System.Drawing.Size(118, 16)
-        Me.txtUSER.TabIndex = 0
-        Me.txtUSER.Text = "Username"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.userlogin
-        Me.PictureBox2.Location = New System.Drawing.Point(13, 8)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(19, 19)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Panel3.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logintb
+        Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel3.Controls.Add(Me.btnSHOW)
         Me.Panel3.Controls.Add(Me.btnHIDE)
-        Me.Panel3.Controls.Add(Me.PictureBox3)
         Me.Panel3.Controls.Add(Me.txtPASS)
         Me.Panel3.Location = New System.Drawing.Point(486, 263)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(183, 35)
+        Me.Panel3.Size = New System.Drawing.Size(183, 33)
         Me.Panel3.TabIndex = 2
         '
         'btnSHOW
         '
         Me.btnSHOW.BackColor = System.Drawing.Color.Transparent
         Me.btnSHOW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnSHOW.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.show
-        Me.btnSHOW.Location = New System.Drawing.Point(152, 8)
+        Me.btnSHOW.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.eye_fill_1
+        Me.btnSHOW.Location = New System.Drawing.Point(150, 8)
         Me.btnSHOW.Name = "btnSHOW"
-        Me.btnSHOW.Size = New System.Drawing.Size(19, 19)
+        Me.btnSHOW.Size = New System.Drawing.Size(18, 18)
         Me.btnSHOW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnSHOW.TabIndex = 4
         Me.btnSHOW.TabStop = False
@@ -233,84 +190,24 @@ Partial Class frmLOGIN
         '
         Me.btnHIDE.BackColor = System.Drawing.Color.Transparent
         Me.btnHIDE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnHIDE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.hide
-        Me.btnHIDE.Location = New System.Drawing.Point(152, 8)
+        Me.btnHIDE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.eye_off_fill_2
+        Me.btnHIDE.Location = New System.Drawing.Point(150, 8)
         Me.btnHIDE.Name = "btnHIDE"
-        Me.btnHIDE.Size = New System.Drawing.Size(19, 19)
+        Me.btnHIDE.Size = New System.Drawing.Size(18, 18)
         Me.btnHIDE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnHIDE.TabIndex = 3
         Me.btnHIDE.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.passlogin
-        Me.PictureBox3.Location = New System.Drawing.Point(12, 9)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(19, 19)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
         '
         'txtPASS
         '
         Me.txtPASS.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPASS.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPASS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.txtPASS.Location = New System.Drawing.Point(46, 10)
+        Me.txtPASS.Location = New System.Drawing.Point(15, 8)
         Me.txtPASS.Name = "txtPASS"
-        Me.txtPASS.Size = New System.Drawing.Size(105, 16)
+        Me.txtPASS.Size = New System.Drawing.Size(131, 16)
         Me.txtPASS.TabIndex = 0
         Me.txtPASS.Text = "Password"
-        '
-        'btnLOGIN
-        '
-        Me.btnLOGIN.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGIN.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.loginbtn
-        Me.btnLOGIN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnLOGIN.Controls.Add(Me.lblLIBUTTON)
-        Me.btnLOGIN.Location = New System.Drawing.Point(487, 316)
-        Me.btnLOGIN.Name = "btnLOGIN"
-        Me.btnLOGIN.Size = New System.Drawing.Size(183, 35)
-        Me.btnLOGIN.TabIndex = 3
-        '
-        'lblLIBUTTON
-        '
-        Me.lblLIBUTTON.AutoSize = True
-        Me.lblLIBUTTON.BackColor = System.Drawing.Color.Transparent
-        Me.lblLIBUTTON.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLIBUTTON.ForeColor = System.Drawing.Color.White
-        Me.lblLIBUTTON.Location = New System.Drawing.Point(67, 9)
-        Me.lblLIBUTTON.Name = "lblLIBUTTON"
-        Me.lblLIBUTTON.Size = New System.Drawing.Size(48, 16)
-        Me.lblLIBUTTON.TabIndex = 0
-        Me.lblLIBUTTON.Text = "Log In"
-        '
-        'BTNCLOSE
-        '
-        Me.BTNCLOSE.BackColor = System.Drawing.Color.Transparent
-        Me.BTNCLOSE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTNCLOSE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.close
-        Me.BTNCLOSE.Location = New System.Drawing.Point(696, 16)
-        Me.BTNCLOSE.Name = "BTNCLOSE"
-        Me.BTNCLOSE.Size = New System.Drawing.Size(19, 19)
-        Me.BTNCLOSE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BTNCLOSE.TabIndex = 3
-        Me.BTNCLOSE.TabStop = False
-        '
-        'BTNMINIMIZE
-        '
-        Me.BTNMINIMIZE.BackColor = System.Drawing.Color.Transparent
-        Me.BTNMINIMIZE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTNMINIMIZE.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BTNMINIMIZE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.minimize
-        Me.BTNMINIMIZE.Location = New System.Drawing.Point(672, 16)
-        Me.BTNMINIMIZE.Name = "BTNMINIMIZE"
-        Me.BTNMINIMIZE.Size = New System.Drawing.Size(19, 19)
-        Me.BTNMINIMIZE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BTNMINIMIZE.TabIndex = 3
-        Me.BTNMINIMIZE.TabStop = False
         '
         'Label6
         '
@@ -325,6 +222,66 @@ Partial Class frmLOGIN
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "General Service Office’s"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtUSER
+        '
+        Me.txtUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUSER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.txtUSER.Location = New System.Drawing.Point(16, 8)
+        Me.txtUSER.Name = "txtUSER"
+        Me.txtUSER.Size = New System.Drawing.Size(153, 16)
+        Me.txtUSER.TabIndex = 0
+        Me.txtUSER.Text = "Username"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel2.Controls.Add(Me.txtUSER)
+        Me.Panel2.Location = New System.Drawing.Point(485, 217)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(183, 33)
+        Me.Panel2.TabIndex = 1
+        '
+        'btnLOGIN
+        '
+        Me.btnLOGIN.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnLOGIN.FlatAppearance.BorderSize = 0
+        Me.btnLOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLOGIN.Font = New System.Drawing.Font("Arial", 9.4!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLOGIN.ForeColor = System.Drawing.Color.White
+        Me.btnLOGIN.Location = New System.Drawing.Point(487, 316)
+        Me.btnLOGIN.Name = "btnLOGIN"
+        Me.btnLOGIN.Size = New System.Drawing.Size(183, 35)
+        Me.btnLOGIN.TabIndex = 4
+        Me.btnLOGIN.Text = "Log in"
+        Me.btnLOGIN.UseVisualStyleBackColor = False
+        '
+        'BTNMINIMIZE
+        '
+        Me.BTNMINIMIZE.BackColor = System.Drawing.Color.Transparent
+        Me.BTNMINIMIZE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTNMINIMIZE.Cursor = System.Windows.Forms.Cursors.Default
+        Me.BTNMINIMIZE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.minimize
+        Me.BTNMINIMIZE.Location = New System.Drawing.Point(672, 16)
+        Me.BTNMINIMIZE.Name = "BTNMINIMIZE"
+        Me.BTNMINIMIZE.Size = New System.Drawing.Size(19, 19)
+        Me.BTNMINIMIZE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BTNMINIMIZE.TabIndex = 3
+        Me.BTNMINIMIZE.TabStop = False
+        '
+        'BTNCLOSE
+        '
+        Me.BTNCLOSE.BackColor = System.Drawing.Color.Transparent
+        Me.BTNCLOSE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BTNCLOSE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.close
+        Me.BTNCLOSE.Location = New System.Drawing.Point(696, 16)
+        Me.BTNCLOSE.Name = "BTNCLOSE"
+        Me.BTNCLOSE.Size = New System.Drawing.Size(19, 19)
+        Me.BTNCLOSE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BTNCLOSE.TabIndex = 3
+        Me.BTNCLOSE.TabStop = False
         '
         'frmLOGIN
         '
@@ -352,18 +309,14 @@ Partial Class frmLOGIN
         Me.pnlLOGO.PerformLayout()
         CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.btnSHOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnHIDE, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.btnLOGIN.ResumeLayout(False)
-        Me.btnLOGIN.PerformLayout()
-        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -373,16 +326,10 @@ Partial Class frmLOGIN
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents txtUSER As TextBox
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents txtPASS As TextBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnHIDE As PictureBox
     Friend WithEvents btnSHOW As PictureBox
-    Friend WithEvents btnLOGIN As Panel
-    Friend WithEvents lblLIBUTTON As Label
     Friend WithEvents BTNCLOSE As PictureBox
     Friend WithEvents BTNMINIMIZE As PictureBox
     Friend WithEvents btnINFO As PictureBox
@@ -391,4 +338,7 @@ Partial Class frmLOGIN
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents pnlINFO As Panel
+    Friend WithEvents txtUSER As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnLOGIN As Button
 End Class

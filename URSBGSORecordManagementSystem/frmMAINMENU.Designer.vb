@@ -22,21 +22,12 @@ Partial Class frmMAINMENU
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMAINMENU))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblUSERTYPE = New System.Windows.Forms.Label()
         Me.pnlMENU = New System.Windows.Forms.Panel()
-        Me.pnlDASHBOARD = New System.Windows.Forms.Panel()
-        Me.pnlUSERCONTROL = New System.Windows.Forms.Panel()
-        Me.lblTIMEPERIOD = New System.Windows.Forms.Label()
-        Me.lblTIME = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblGREETINGS = New System.Windows.Forms.Label()
-        Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
-        Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
-        Me.btnINDICATOR = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnOUT = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlINDICATOR = New System.Windows.Forms.Panel()
         Me.btnREPORTS = New System.Windows.Forms.Button()
         Me.btnSETT = New System.Windows.Forms.Button()
         Me.btnTRANSAC = New System.Windows.Forms.Button()
@@ -46,10 +37,12 @@ Partial Class frmMAINMENU
         Me.btnUSERACC = New System.Windows.Forms.Button()
         Me.btnDASH = New System.Windows.Forms.Button()
         Me.btnLOGOUTA = New System.Windows.Forms.PictureBox()
-        Me.pnlLOGOUT = New System.Windows.Forms.Panel()
-        Me.btnLOGOUT = New System.Windows.Forms.Label()
         Me.btnLOGMENU = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
+        Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
+        Me.pnlDASHBOARD = New System.Windows.Forms.Panel()
+        Me.pnlUSERCONTROL = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -57,16 +50,19 @@ Partial Class frmMAINMENU
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblTODAY = New System.Windows.Forms.Label()
         Me.lblDAY = New System.Windows.Forms.Label()
+        Me.lblTIMEPERIOD = New System.Windows.Forms.Label()
+        Me.lblTIME = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblGREETINGS = New System.Windows.Forms.Label()
+        Me.btnRETURNING = New System.Windows.Forms.Button()
         Me.pnlMENU.SuspendLayout()
-        Me.pnlDASHBOARD.SuspendLayout()
-        CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnINDICATOR, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLOGOUTA, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlLOGOUT.SuspendLayout()
         CType(Me.btnLOGMENU, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDASHBOARD.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -76,7 +72,7 @@ Partial Class frmMAINMENU
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(97, 622)
+        Me.Label1.Location = New System.Drawing.Point(97, 633)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 17
@@ -88,7 +84,7 @@ Partial Class frmMAINMENU
         Me.lblUSERTYPE.BackColor = System.Drawing.Color.Transparent
         Me.lblUSERTYPE.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUSERTYPE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblUSERTYPE.Location = New System.Drawing.Point(96, 608)
+        Me.lblUSERTYPE.Location = New System.Drawing.Point(96, 619)
         Me.lblUSERTYPE.Name = "lblUSERTYPE"
         Me.lblUSERTYPE.Size = New System.Drawing.Size(79, 16)
         Me.lblUSERTYPE.TabIndex = 18
@@ -98,7 +94,10 @@ Partial Class frmMAINMENU
         '
         Me.pnlMENU.BackColor = System.Drawing.Color.White
         Me.pnlMENU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pnlMENU.Controls.Add(Me.PictureBox2)
+        Me.pnlMENU.Controls.Add(Me.btnRETURNING)
+        Me.pnlMENU.Controls.Add(Me.btnOUT)
+        Me.pnlMENU.Controls.Add(Me.Panel1)
+        Me.pnlMENU.Controls.Add(Me.pnlINDICATOR)
         Me.pnlMENU.Controls.Add(Me.btnREPORTS)
         Me.pnlMENU.Controls.Add(Me.btnSETT)
         Me.pnlMENU.Controls.Add(Me.btnTRANSAC)
@@ -110,7 +109,6 @@ Partial Class frmMAINMENU
         Me.pnlMENU.Controls.Add(Me.lblUSERTYPE)
         Me.pnlMENU.Controls.Add(Me.btnDASH)
         Me.pnlMENU.Controls.Add(Me.btnLOGOUTA)
-        Me.pnlMENU.Controls.Add(Me.pnlLOGOUT)
         Me.pnlMENU.Controls.Add(Me.btnLOGMENU)
         Me.pnlMENU.Controls.Add(Me.PictureBox1)
         Me.pnlMENU.Dock = System.Windows.Forms.DockStyle.Left
@@ -119,90 +117,175 @@ Partial Class frmMAINMENU
         Me.pnlMENU.Size = New System.Drawing.Size(282, 705)
         Me.pnlMENU.TabIndex = 21
         '
-        'pnlDASHBOARD
+        'btnOUT
         '
-        Me.pnlDASHBOARD.Controls.Add(Me.pnlUSERCONTROL)
-        Me.pnlDASHBOARD.Controls.Add(Me.Panel5)
-        Me.pnlDASHBOARD.Controls.Add(Me.Panel4)
-        Me.pnlDASHBOARD.Controls.Add(Me.Panel3)
-        Me.pnlDASHBOARD.Controls.Add(Me.Panel2)
-        Me.pnlDASHBOARD.Controls.Add(Me.lblTIMEPERIOD)
-        Me.pnlDASHBOARD.Controls.Add(Me.lblTIME)
-        Me.pnlDASHBOARD.Controls.Add(Me.Label3)
-        Me.pnlDASHBOARD.Controls.Add(Me.Label2)
-        Me.pnlDASHBOARD.Controls.Add(Me.lblGREETINGS)
-        Me.pnlDASHBOARD.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDASHBOARD.Name = "pnlDASHBOARD"
-        Me.pnlDASHBOARD.Size = New System.Drawing.Size(1324, 705)
-        Me.pnlDASHBOARD.TabIndex = 26
+        Me.btnOUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.btnOUT.FlatAppearance.BorderSize = 0
+        Me.btnOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOUT.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOUT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnOUT.Location = New System.Drawing.Point(167, 585)
+        Me.btnOUT.Name = "btnOUT"
+        Me.btnOUT.Size = New System.Drawing.Size(71, 31)
+        Me.btnOUT.TabIndex = 27
+        Me.btnOUT.Text = "Logout"
+        Me.btnOUT.UseVisualStyleBackColor = False
         '
-        'pnlUSERCONTROL
+        'Panel1
         '
-        Me.pnlUSERCONTROL.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.pnlUSERCONTROL.Location = New System.Drawing.Point(0, 0)
-        Me.pnlUSERCONTROL.Name = "pnlUSERCONTROL"
-        Me.pnlUSERCONTROL.Size = New System.Drawing.Size(1324, 705)
-        Me.pnlUSERCONTROL.TabIndex = 36
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(54, 617)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(30, 30)
+        Me.Panel1.TabIndex = 26
         '
-        'lblTIMEPERIOD
+        'pnlINDICATOR
         '
-        Me.lblTIMEPERIOD.AutoSize = True
-        Me.lblTIMEPERIOD.BackColor = System.Drawing.Color.Transparent
-        Me.lblTIMEPERIOD.Font = New System.Drawing.Font("Arial", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTIMEPERIOD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblTIMEPERIOD.Location = New System.Drawing.Point(869, 93)
-        Me.lblTIMEPERIOD.Name = "lblTIMEPERIOD"
-        Me.lblTIMEPERIOD.Size = New System.Drawing.Size(40, 23)
-        Me.lblTIMEPERIOD.TabIndex = 30
-        Me.lblTIMEPERIOD.Text = "AM"
+        Me.pnlINDICATOR.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pnlINDICATOR.Location = New System.Drawing.Point(0, 167)
+        Me.pnlINDICATOR.Name = "pnlINDICATOR"
+        Me.pnlINDICATOR.Size = New System.Drawing.Size(5, 38)
+        Me.pnlINDICATOR.TabIndex = 0
         '
-        'lblTIME
+        'btnREPORTS
         '
-        Me.lblTIME.AutoSize = True
-        Me.lblTIME.BackColor = System.Drawing.Color.Transparent
-        Me.lblTIME.Font = New System.Drawing.Font("Arial", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTIME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblTIME.Location = New System.Drawing.Point(812, 93)
-        Me.lblTIME.Name = "lblTIME"
-        Me.lblTIME.Size = New System.Drawing.Size(61, 24)
-        Me.lblTIME.TabIndex = 31
-        Me.lblTIME.Text = "00:00"
+        Me.btnREPORTS.BackColor = System.Drawing.Color.Transparent
+        Me.btnREPORTS.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.reports_menu
+        Me.btnREPORTS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnREPORTS.FlatAppearance.BorderSize = 0
+        Me.btnREPORTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnREPORTS.Location = New System.Drawing.Point(0, 526)
+        Me.btnREPORTS.Name = "btnREPORTS"
+        Me.btnREPORTS.Size = New System.Drawing.Size(282, 42)
+        Me.btnREPORTS.TabIndex = 21
+        Me.btnREPORTS.UseVisualStyleBackColor = False
         '
-        'Label3
+        'btnSETT
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(328, 117)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 15)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Welcome back!"
+        Me.btnSETT.BackColor = System.Drawing.Color.Transparent
+        Me.btnSETT.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.settings_menu
+        Me.btnSETT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnSETT.FlatAppearance.BorderSize = 0
+        Me.btnSETT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSETT.Location = New System.Drawing.Point(0, 481)
+        Me.btnSETT.Name = "btnSETT"
+        Me.btnSETT.Size = New System.Drawing.Size(282, 42)
+        Me.btnSETT.TabIndex = 8
+        Me.btnSETT.UseVisualStyleBackColor = False
         '
-        'Label2
+        'btnTRANSAC
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(327, 47)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 16)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "DASHBOARD"
+        Me.btnTRANSAC.BackColor = System.Drawing.Color.Transparent
+        Me.btnTRANSAC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transaction_menu
+        Me.btnTRANSAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnTRANSAC.FlatAppearance.BorderSize = 0
+        Me.btnTRANSAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTRANSAC.Location = New System.Drawing.Point(0, 391)
+        Me.btnTRANSAC.Name = "btnTRANSAC"
+        Me.btnTRANSAC.Size = New System.Drawing.Size(282, 42)
+        Me.btnTRANSAC.TabIndex = 6
+        Me.btnTRANSAC.UseVisualStyleBackColor = False
         '
-        'lblGREETINGS
+        'btnBORP
         '
-        Me.lblGREETINGS.AutoSize = True
-        Me.lblGREETINGS.BackColor = System.Drawing.Color.Transparent
-        Me.lblGREETINGS.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGREETINGS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblGREETINGS.Location = New System.Drawing.Point(324, 92)
-        Me.lblGREETINGS.Name = "lblGREETINGS"
-        Me.lblGREETINGS.Size = New System.Drawing.Size(183, 26)
-        Me.lblGREETINGS.TabIndex = 27
-        Me.lblGREETINGS.Text = "Hello, GSO Head"
+        Me.btnBORP.BackColor = System.Drawing.Color.Transparent
+        Me.btnBORP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowers_profile_menu
+        Me.btnBORP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnBORP.FlatAppearance.BorderSize = 0
+        Me.btnBORP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBORP.Location = New System.Drawing.Point(0, 346)
+        Me.btnBORP.Name = "btnBORP"
+        Me.btnBORP.Size = New System.Drawing.Size(282, 42)
+        Me.btnBORP.TabIndex = 7
+        Me.btnBORP.UseVisualStyleBackColor = False
+        '
+        'btnITEMST
+        '
+        Me.btnITEMST.BackColor = System.Drawing.Color.Transparent
+        Me.btnITEMST.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_stocks_menu
+        Me.btnITEMST.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnITEMST.FlatAppearance.BorderSize = 0
+        Me.btnITEMST.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnITEMST.Location = New System.Drawing.Point(0, 301)
+        Me.btnITEMST.Name = "btnITEMST"
+        Me.btnITEMST.Size = New System.Drawing.Size(282, 42)
+        Me.btnITEMST.TabIndex = 5
+        Me.btnITEMST.UseVisualStyleBackColor = False
+        '
+        'btnITEM
+        '
+        Me.btnITEM.BackColor = System.Drawing.Color.Transparent
+        Me.btnITEM.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_menu
+        Me.btnITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnITEM.FlatAppearance.BorderSize = 0
+        Me.btnITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnITEM.Location = New System.Drawing.Point(0, 256)
+        Me.btnITEM.Name = "btnITEM"
+        Me.btnITEM.Size = New System.Drawing.Size(282, 42)
+        Me.btnITEM.TabIndex = 4
+        Me.btnITEM.UseVisualStyleBackColor = False
+        '
+        'btnUSERACC
+        '
+        Me.btnUSERACC.BackColor = System.Drawing.Color.Transparent
+        Me.btnUSERACC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.useraccount_menu
+        Me.btnUSERACC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnUSERACC.FlatAppearance.BorderSize = 0
+        Me.btnUSERACC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUSERACC.Location = New System.Drawing.Point(0, 211)
+        Me.btnUSERACC.Name = "btnUSERACC"
+        Me.btnUSERACC.Size = New System.Drawing.Size(282, 42)
+        Me.btnUSERACC.TabIndex = 3
+        Me.btnUSERACC.UseVisualStyleBackColor = False
+        '
+        'btnDASH
+        '
+        Me.btnDASH.BackColor = System.Drawing.Color.Transparent
+        Me.btnDASH.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.dashboard_menu_selected
+        Me.btnDASH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnDASH.FlatAppearance.BorderSize = 0
+        Me.btnDASH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDASH.Location = New System.Drawing.Point(0, 166)
+        Me.btnDASH.Name = "btnDASH"
+        Me.btnDASH.Size = New System.Drawing.Size(282, 42)
+        Me.btnDASH.TabIndex = 3
+        Me.btnDASH.UseVisualStyleBackColor = False
+        '
+        'btnLOGOUTA
+        '
+        Me.btnLOGOUTA.BackColor = System.Drawing.Color.Transparent
+        Me.btnLOGOUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnLOGOUTA.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnLOGOUTA.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logouta
+        Me.btnLOGOUTA.Location = New System.Drawing.Point(216, 619)
+        Me.btnLOGOUTA.Name = "btnLOGOUTA"
+        Me.btnLOGOUTA.Size = New System.Drawing.Size(25, 25)
+        Me.btnLOGOUTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnLOGOUTA.TabIndex = 25
+        Me.btnLOGOUTA.TabStop = False
+        '
+        'btnLOGMENU
+        '
+        Me.btnLOGMENU.BackColor = System.Drawing.Color.Transparent
+        Me.btnLOGMENU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnLOGMENU.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnLOGMENU.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logout
+        Me.btnLOGMENU.Location = New System.Drawing.Point(216, 608)
+        Me.btnLOGMENU.Name = "btnLOGMENU"
+        Me.btnLOGMENU.Size = New System.Drawing.Size(25, 25)
+        Me.btnLOGMENU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnLOGMENU.TabIndex = 23
+        Me.btnLOGMENU.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logomm
+        Me.PictureBox1.Location = New System.Drawing.Point(47, 54)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(208, 71)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'BTNMINIMIZE
         '
@@ -229,226 +312,64 @@ Partial Class frmMAINMENU
         Me.BTNCLOSE.TabIndex = 20
         Me.BTNCLOSE.TabStop = False
         '
-        'btnINDICATOR
+        'pnlDASHBOARD
         '
-        Me.btnINDICATOR.BackColor = System.Drawing.Color.Transparent
-        Me.btnINDICATOR.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.indicatormnfn
-        Me.btnINDICATOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnINDICATOR.Image = CType(resources.GetObject("btnINDICATOR.Image"), System.Drawing.Image)
-        Me.btnINDICATOR.Location = New System.Drawing.Point(0, 183)
-        Me.btnINDICATOR.Name = "btnINDICATOR"
-        Me.btnINDICATOR.Size = New System.Drawing.Size(5, 42)
-        Me.btnINDICATOR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnINDICATOR.TabIndex = 25
-        Me.btnINDICATOR.TabStop = False
+        Me.pnlDASHBOARD.Controls.Add(Me.pnlUSERCONTROL)
+        Me.pnlDASHBOARD.Controls.Add(Me.Panel5)
+        Me.pnlDASHBOARD.Controls.Add(Me.Panel4)
+        Me.pnlDASHBOARD.Controls.Add(Me.Panel3)
+        Me.pnlDASHBOARD.Controls.Add(Me.Panel2)
+        Me.pnlDASHBOARD.Controls.Add(Me.lblTIMEPERIOD)
+        Me.pnlDASHBOARD.Controls.Add(Me.lblTIME)
+        Me.pnlDASHBOARD.Controls.Add(Me.Label3)
+        Me.pnlDASHBOARD.Controls.Add(Me.Label2)
+        Me.pnlDASHBOARD.Controls.Add(Me.lblGREETINGS)
+        Me.pnlDASHBOARD.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDASHBOARD.Name = "pnlDASHBOARD"
+        Me.pnlDASHBOARD.Size = New System.Drawing.Size(1324, 705)
+        Me.pnlDASHBOARD.TabIndex = 22
         '
-        'PictureBox2
+        'pnlUSERCONTROL
         '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.profilepic
-        Me.PictureBox2.Location = New System.Drawing.Point(57, 606)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 22
-        Me.PictureBox2.TabStop = False
-        '
-        'btnREPORTS
-        '
-        Me.btnREPORTS.BackColor = System.Drawing.Color.Transparent
-        Me.btnREPORTS.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.reportsmnfn
-        Me.btnREPORTS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnREPORTS.FlatAppearance.BorderSize = 0
-        Me.btnREPORTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnREPORTS.Location = New System.Drawing.Point(0, 498)
-        Me.btnREPORTS.Name = "btnREPORTS"
-        Me.btnREPORTS.Size = New System.Drawing.Size(282, 42)
-        Me.btnREPORTS.TabIndex = 21
-        Me.btnREPORTS.UseVisualStyleBackColor = False
-        '
-        'btnSETT
-        '
-        Me.btnSETT.BackColor = System.Drawing.Color.Transparent
-        Me.btnSETT.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.settingsmnfn
-        Me.btnSETT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnSETT.FlatAppearance.BorderSize = 0
-        Me.btnSETT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSETT.Location = New System.Drawing.Point(0, 453)
-        Me.btnSETT.Name = "btnSETT"
-        Me.btnSETT.Size = New System.Drawing.Size(282, 42)
-        Me.btnSETT.TabIndex = 8
-        Me.btnSETT.UseVisualStyleBackColor = False
-        '
-        'btnTRANSAC
-        '
-        Me.btnTRANSAC.BackColor = System.Drawing.Color.Transparent
-        Me.btnTRANSAC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transactionmnfn
-        Me.btnTRANSAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnTRANSAC.FlatAppearance.BorderSize = 0
-        Me.btnTRANSAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTRANSAC.Location = New System.Drawing.Point(0, 408)
-        Me.btnTRANSAC.Name = "btnTRANSAC"
-        Me.btnTRANSAC.Size = New System.Drawing.Size(282, 42)
-        Me.btnTRANSAC.TabIndex = 6
-        Me.btnTRANSAC.UseVisualStyleBackColor = False
-        '
-        'btnBORP
-        '
-        Me.btnBORP.BackColor = System.Drawing.Color.Transparent
-        Me.btnBORP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowersprofilemngn
-        Me.btnBORP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBORP.FlatAppearance.BorderSize = 0
-        Me.btnBORP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBORP.Location = New System.Drawing.Point(0, 363)
-        Me.btnBORP.Name = "btnBORP"
-        Me.btnBORP.Size = New System.Drawing.Size(282, 42)
-        Me.btnBORP.TabIndex = 7
-        Me.btnBORP.UseVisualStyleBackColor = False
-        '
-        'btnITEMST
-        '
-        Me.btnITEMST.BackColor = System.Drawing.Color.Transparent
-        Me.btnITEMST.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.itemstocksmnfn
-        Me.btnITEMST.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnITEMST.FlatAppearance.BorderSize = 0
-        Me.btnITEMST.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnITEMST.Location = New System.Drawing.Point(0, 318)
-        Me.btnITEMST.Name = "btnITEMST"
-        Me.btnITEMST.Size = New System.Drawing.Size(282, 42)
-        Me.btnITEMST.TabIndex = 5
-        Me.btnITEMST.UseVisualStyleBackColor = False
-        '
-        'btnITEM
-        '
-        Me.btnITEM.BackColor = System.Drawing.Color.Transparent
-        Me.btnITEM.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.itemmnfn
-        Me.btnITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnITEM.FlatAppearance.BorderSize = 0
-        Me.btnITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnITEM.Location = New System.Drawing.Point(0, 273)
-        Me.btnITEM.Name = "btnITEM"
-        Me.btnITEM.Size = New System.Drawing.Size(282, 42)
-        Me.btnITEM.TabIndex = 4
-        Me.btnITEM.UseVisualStyleBackColor = False
-        '
-        'btnUSERACC
-        '
-        Me.btnUSERACC.BackColor = System.Drawing.Color.Transparent
-        Me.btnUSERACC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.useraccountmnfn
-        Me.btnUSERACC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnUSERACC.FlatAppearance.BorderSize = 0
-        Me.btnUSERACC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUSERACC.Location = New System.Drawing.Point(0, 228)
-        Me.btnUSERACC.Name = "btnUSERACC"
-        Me.btnUSERACC.Size = New System.Drawing.Size(282, 42)
-        Me.btnUSERACC.TabIndex = 3
-        Me.btnUSERACC.UseVisualStyleBackColor = False
-        '
-        'btnDASH
-        '
-        Me.btnDASH.BackColor = System.Drawing.Color.Transparent
-        Me.btnDASH.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.dashboardmnmn
-        Me.btnDASH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnDASH.FlatAppearance.BorderSize = 0
-        Me.btnDASH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDASH.Location = New System.Drawing.Point(0, 183)
-        Me.btnDASH.Name = "btnDASH"
-        Me.btnDASH.Size = New System.Drawing.Size(282, 42)
-        Me.btnDASH.TabIndex = 3
-        Me.btnDASH.UseVisualStyleBackColor = False
-        '
-        'btnLOGOUTA
-        '
-        Me.btnLOGOUTA.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGOUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLOGOUTA.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnLOGOUTA.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logouta
-        Me.btnLOGOUTA.Location = New System.Drawing.Point(216, 608)
-        Me.btnLOGOUTA.Name = "btnLOGOUTA"
-        Me.btnLOGOUTA.Size = New System.Drawing.Size(25, 25)
-        Me.btnLOGOUTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLOGOUTA.TabIndex = 25
-        Me.btnLOGOUTA.TabStop = False
-        '
-        'pnlLOGOUT
-        '
-        Me.pnlLOGOUT.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logoutbg
-        Me.pnlLOGOUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pnlLOGOUT.Controls.Add(Me.btnLOGOUT)
-        Me.pnlLOGOUT.Location = New System.Drawing.Point(167, 574)
-        Me.pnlLOGOUT.Name = "pnlLOGOUT"
-        Me.pnlLOGOUT.Size = New System.Drawing.Size(71, 31)
-        Me.pnlLOGOUT.TabIndex = 24
-        '
-        'btnLOGOUT
-        '
-        Me.btnLOGOUT.AutoSize = True
-        Me.btnLOGOUT.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGOUT.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLOGOUT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnLOGOUT.Location = New System.Drawing.Point(5, 7)
-        Me.btnLOGOUT.Name = "btnLOGOUT"
-        Me.btnLOGOUT.Size = New System.Drawing.Size(61, 16)
-        Me.btnLOGOUT.TabIndex = 0
-        Me.btnLOGOUT.Text = "Log out"
-        '
-        'btnLOGMENU
-        '
-        Me.btnLOGMENU.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGMENU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLOGMENU.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnLOGMENU.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logout
-        Me.btnLOGMENU.Location = New System.Drawing.Point(216, 608)
-        Me.btnLOGMENU.Name = "btnLOGMENU"
-        Me.btnLOGMENU.Size = New System.Drawing.Size(25, 25)
-        Me.btnLOGMENU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLOGMENU.TabIndex = 23
-        Me.btnLOGMENU.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logomm
-        Me.PictureBox1.Location = New System.Drawing.Point(47, 61)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(208, 71)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pnlUSERCONTROL.Location = New System.Drawing.Point(0, 0)
+        Me.pnlUSERCONTROL.Name = "pnlUSERCONTROL"
+        Me.pnlUSERCONTROL.Size = New System.Drawing.Size(1324, 705)
+        Me.pnlUSERCONTROL.TabIndex = 54
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Transparent
-        Me.Panel5.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.reportsdash
+        Me.Panel5.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.reports_record_dashboard
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel5.Location = New System.Drawing.Point(629, 374)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(280, 181)
-        Me.Panel5.TabIndex = 32
+        Me.Panel5.TabIndex = 50
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Transparent
-        Me.Panel4.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowersprofiledash
+        Me.Panel4.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowers_dashboard
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel4.Location = New System.Drawing.Point(331, 374)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(270, 181)
-        Me.Panel4.TabIndex = 33
+        Me.Panel4.TabIndex = 51
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Panel3.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transactiondashb
+        Me.Panel3.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transaction_dashboard
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel3.Location = New System.Drawing.Point(534, 168)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(375, 181)
-        Me.Panel3.TabIndex = 34
+        Me.Panel3.TabIndex = 52
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Panel2.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.calendardash
+        Me.Panel2.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.date_dashboard
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.lblTODAY)
@@ -456,7 +377,7 @@ Partial Class frmMAINMENU
         Me.Panel2.Location = New System.Drawing.Point(330, 168)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(177, 181)
-        Me.Panel2.TabIndex = 35
+        Me.Panel2.TabIndex = 53
         '
         'Label4
         '
@@ -491,6 +412,79 @@ Partial Class frmMAINMENU
         Me.lblDAY.TabIndex = 0
         Me.lblDAY.Text = "01"
         '
+        'lblTIMEPERIOD
+        '
+        Me.lblTIMEPERIOD.AutoSize = True
+        Me.lblTIMEPERIOD.BackColor = System.Drawing.Color.Transparent
+        Me.lblTIMEPERIOD.Font = New System.Drawing.Font("Arial", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTIMEPERIOD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblTIMEPERIOD.Location = New System.Drawing.Point(869, 93)
+        Me.lblTIMEPERIOD.Name = "lblTIMEPERIOD"
+        Me.lblTIMEPERIOD.Size = New System.Drawing.Size(40, 23)
+        Me.lblTIMEPERIOD.TabIndex = 48
+        Me.lblTIMEPERIOD.Text = "AM"
+        '
+        'lblTIME
+        '
+        Me.lblTIME.AutoSize = True
+        Me.lblTIME.BackColor = System.Drawing.Color.Transparent
+        Me.lblTIME.Font = New System.Drawing.Font("Arial", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTIME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblTIME.Location = New System.Drawing.Point(812, 93)
+        Me.lblTIME.Name = "lblTIME"
+        Me.lblTIME.Size = New System.Drawing.Size(61, 24)
+        Me.lblTIME.TabIndex = 49
+        Me.lblTIME.Text = "00:00"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(328, 117)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 15)
+        Me.Label3.TabIndex = 47
+        Me.Label3.Text = "Welcome back!"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(327, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 16)
+        Me.Label2.TabIndex = 46
+        Me.Label2.Text = "DASHBOARD"
+        '
+        'lblGREETINGS
+        '
+        Me.lblGREETINGS.AutoSize = True
+        Me.lblGREETINGS.BackColor = System.Drawing.Color.Transparent
+        Me.lblGREETINGS.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGREETINGS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblGREETINGS.Location = New System.Drawing.Point(324, 92)
+        Me.lblGREETINGS.Name = "lblGREETINGS"
+        Me.lblGREETINGS.Size = New System.Drawing.Size(178, 26)
+        Me.lblGREETINGS.TabIndex = 45
+        Me.lblGREETINGS.Text = "Hello, User Type"
+        '
+        'btnRETURNING
+        '
+        Me.btnRETURNING.BackColor = System.Drawing.Color.Transparent
+        Me.btnRETURNING.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.settings_menu
+        Me.btnRETURNING.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnRETURNING.FlatAppearance.BorderSize = 0
+        Me.btnRETURNING.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRETURNING.Location = New System.Drawing.Point(0, 436)
+        Me.btnRETURNING.Name = "btnRETURNING"
+        Me.btnRETURNING.Size = New System.Drawing.Size(282, 42)
+        Me.btnRETURNING.TabIndex = 8
+        Me.btnRETURNING.UseVisualStyleBackColor = False
+        '
         'frmMAINMENU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -500,7 +494,6 @@ Partial Class frmMAINMENU
         Me.ClientSize = New System.Drawing.Size(1324, 705)
         Me.Controls.Add(Me.BTNMINIMIZE)
         Me.Controls.Add(Me.BTNCLOSE)
-        Me.Controls.Add(Me.btnINDICATOR)
         Me.Controls.Add(Me.pnlMENU)
         Me.Controls.Add(Me.pnlDASHBOARD)
         Me.DoubleBuffered = True
@@ -510,17 +503,13 @@ Partial Class frmMAINMENU
         Me.Text = "MAIN MENU"
         Me.pnlMENU.ResumeLayout(False)
         Me.pnlMENU.PerformLayout()
-        Me.pnlDASHBOARD.ResumeLayout(False)
-        Me.pnlDASHBOARD.PerformLayout()
-        CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnINDICATOR, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLOGOUTA, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlLOGOUT.ResumeLayout(False)
-        Me.pnlLOGOUT.PerformLayout()
         CType(Me.btnLOGMENU, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDASHBOARD.ResumeLayout(False)
+        Me.pnlDASHBOARD.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -539,13 +528,12 @@ Partial Class frmMAINMENU
     Friend WithEvents btnBORP As Button
     Friend WithEvents btnITEMST As Button
     Friend WithEvents btnITEM As Button
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnLOGMENU As PictureBox
-    Friend WithEvents btnINDICATOR As PictureBox
     Friend WithEvents btnREPORTS As Button
-    Friend WithEvents pnlLOGOUT As Panel
-    Friend WithEvents btnLOGOUT As Label
     Friend WithEvents btnLOGOUTA As PictureBox
+    Friend WithEvents pnlINDICATOR As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnOUT As Button
     Friend WithEvents pnlDASHBOARD As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel4 As Panel
@@ -560,4 +548,5 @@ Partial Class frmMAINMENU
     Friend WithEvents Label2 As Label
     Friend WithEvents lblGREETINGS As Label
     Friend WithEvents pnlUSERCONTROL As Panel
+    Friend WithEvents btnRETURNING As Button
 End Class
