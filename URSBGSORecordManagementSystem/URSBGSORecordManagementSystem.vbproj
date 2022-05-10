@@ -130,7 +130,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ROUND.vb" />
     <Compile Include="ucBORROWERSPROFILE.Designer.vb">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </Compile>
@@ -155,16 +154,16 @@
     <Compile Include="ucITEMSTOCKS.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMODALUA.Designer.vb">
-      <DependentUpon>ucMODALUA.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucMODALUA.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ucREPORTS.Designer.vb">
       <DependentUpon>ucREPORTS.vb</DependentUpon>
     </Compile>
     <Compile Include="ucREPORTS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRETURNING.Designer.vb">
+      <DependentUpon>ucRETURNING.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucRETURNING.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucSETTINGS.Designer.vb">
@@ -221,9 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucITEMSTOCKS.resx">
       <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucMODALUA.resx">
-      <DependentUpon>ucMODALUA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucREPORTS.resx">
       <DependentUpon>ucREPORTS.vb</DependentUpon>
@@ -795,6 +791,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\testsearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\returning-menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

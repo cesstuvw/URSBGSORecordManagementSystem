@@ -46,6 +46,8 @@
             txtUSER.Text = "Username"
             txtPASS.Text = "Password"
             txtPASS.UseSystemPasswordChar = False
+            btnSHOW.Hide()
+            btnHIDE.Hide()
             txtUSER.Focus()
             txtUSER.Text = ""
             txtUSER.ForeColor = ColorTranslator.FromHtml("#204AFF")
@@ -151,6 +153,8 @@
                 MsgBox("The username or password is incorrect.", vbOKOnly + vbCritical, "Login Error")
                 txtUSER.Text = "Username"
                 txtPASS.Text = "Password"
+                btnSHOW.Hide()
+                btnHIDE.Hide()
                 txtPASS.UseSystemPasswordChar = False
                 txtUSER.Focus()
                 txtUSER.Text = ""

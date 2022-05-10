@@ -37,7 +37,6 @@ Partial Class ucUSERACCOUNT
         Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
-        Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlPS = New System.Windows.Forms.Panel()
@@ -47,6 +46,7 @@ Partial Class ucUSERACCOUNT
         Me.lblCPASS = New System.Windows.Forms.Label()
         Me.txtCPASS = New System.Windows.Forms.TextBox()
         Me.pnlLN = New System.Windows.Forms.Panel()
+        Me.lblLN = New System.Windows.Forms.Label()
         Me.txtLNAME = New System.Windows.Forms.TextBox()
         Me.pnlUT = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT3 = New System.Windows.Forms.Panel()
@@ -55,9 +55,9 @@ Partial Class ucUSERACCOUNT
         Me.lblUTYPE = New System.Windows.Forms.Label()
         Me.cboUTYPE = New System.Windows.Forms.ComboBox()
         Me.pnlST = New System.Windows.Forms.Panel()
+        Me.lblSTATUS = New System.Windows.Forms.Label()
         Me.pnlCLEANST3 = New System.Windows.Forms.Panel()
         Me.pnlCLEANST1 = New System.Windows.Forms.Panel()
-        Me.lblSTATUS = New System.Windows.Forms.Label()
         Me.pnlCLEANST = New System.Windows.Forms.Panel()
         Me.cboSTATUS = New System.Windows.Forms.ComboBox()
         Me.btnSAVE = New System.Windows.Forms.Button()
@@ -66,7 +66,6 @@ Partial Class ucUSERACCOUNT
         Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.btnCREATE = New System.Windows.Forms.Button()
         Me.txtUNCOPY = New System.Windows.Forms.TextBox()
-        Me.lblUSER = New System.Windows.Forms.Label()
         Me.pnlUS = New System.Windows.Forms.Panel()
         Me.txtUSER = New System.Windows.Forms.TextBox()
         Me.btnCANCELDGV = New System.Windows.Forms.Button()
@@ -77,8 +76,9 @@ Partial Class ucUSERACCOUNT
         Me.txtCOLN = New System.Windows.Forms.TextBox()
         Me.txtCOCPW = New System.Windows.Forms.TextBox()
         Me.cboCOST = New System.Windows.Forms.ComboBox()
-        Me.lblLN = New System.Windows.Forms.Label()
         Me.cboCOUT = New System.Windows.Forms.ComboBox()
+        Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
+        Me.lblUSER = New System.Windows.Forms.Label()
         CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,7 +108,6 @@ Partial Class ucUSERACCOUNT
         '
         Me.dgvUSER.AllowUserToAddRows = False
         Me.dgvUSER.AllowUserToDeleteRows = False
-        Me.dgvUSER.AllowUserToOrderColumns = True
         Me.dgvUSER.AllowUserToResizeColumns = False
         Me.dgvUSER.AllowUserToResizeRows = False
         Me.dgvUSER.AutoGenerateColumns = False
@@ -169,7 +168,6 @@ Partial Class ucUSERACCOUNT
         Me.UsernameDataGridViewTextBoxColumn.HeaderText = "USERNAME"
         Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
         Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UsernameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.UsernameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'PasswordDataGridViewTextBoxColumn
@@ -228,10 +226,6 @@ Partial Class ucUSERACCOUNT
         Me.txtSEARCH.Size = New System.Drawing.Size(630, 16)
         Me.txtSEARCH.TabIndex = 28
         Me.txtSEARCH.Text = "Search user"
-        '
-        'Tbl_userTableAdapter
-        '
-        Me.Tbl_userTableAdapter.ClearBeforeFill = True
         '
         'pnlSEARCH
         '
@@ -328,6 +322,16 @@ Partial Class ucUSERACCOUNT
         Me.pnlLN.Size = New System.Drawing.Size(204, 36)
         Me.pnlLN.TabIndex = 51
         '
+        'lblLN
+        '
+        Me.lblLN.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblLN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblLN.Location = New System.Drawing.Point(16, 10)
+        Me.lblLN.Name = "lblLN"
+        Me.lblLN.Size = New System.Drawing.Size(170, 17)
+        Me.lblLN.TabIndex = 57
+        Me.lblLN.Text = "Login Name"
+        '
         'txtLNAME
         '
         Me.txtLNAME.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -407,15 +411,25 @@ Partial Class ucUSERACCOUNT
         'pnlST
         '
         Me.pnlST.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlST.Controls.Add(Me.lblSTATUS)
         Me.pnlST.Controls.Add(Me.pnlCLEANST3)
         Me.pnlST.Controls.Add(Me.pnlCLEANST1)
-        Me.pnlST.Controls.Add(Me.lblSTATUS)
         Me.pnlST.Controls.Add(Me.pnlCLEANST)
         Me.pnlST.Controls.Add(Me.cboSTATUS)
         Me.pnlST.Location = New System.Drawing.Point(1074, 504)
         Me.pnlST.Name = "pnlST"
         Me.pnlST.Size = New System.Drawing.Size(204, 36)
         Me.pnlST.TabIndex = 51
+        '
+        'lblSTATUS
+        '
+        Me.lblSTATUS.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblSTATUS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblSTATUS.Location = New System.Drawing.Point(16, 9)
+        Me.lblSTATUS.Name = "lblSTATUS"
+        Me.lblSTATUS.Size = New System.Drawing.Size(170, 17)
+        Me.lblSTATUS.TabIndex = 60
+        Me.lblSTATUS.Text = "Status"
         '
         'pnlCLEANST3
         '
@@ -433,16 +447,6 @@ Partial Class ucUSERACCOUNT
         Me.pnlCLEANST1.TabIndex = 59
         Me.pnlCLEANST1.Visible = False
         '
-        'lblSTATUS
-        '
-        Me.lblSTATUS.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblSTATUS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblSTATUS.Location = New System.Drawing.Point(16, 9)
-        Me.lblSTATUS.Name = "lblSTATUS"
-        Me.lblSTATUS.Size = New System.Drawing.Size(170, 17)
-        Me.lblSTATUS.TabIndex = 57
-        Me.lblSTATUS.Text = "Status"
-        '
         'pnlCLEANST
         '
         Me.pnlCLEANST.Location = New System.Drawing.Point(3, 0)
@@ -453,8 +457,8 @@ Partial Class ucUSERACCOUNT
         '
         'cboSTATUS
         '
-        Me.cboSTATUS.AutoCompleteCustomSource.AddRange(New String() {"GSO Head", "Staff"})
-        Me.cboSTATUS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cboSTATUS.AutoCompleteCustomSource.AddRange(New String() {"Active", "Inactive"})
+        Me.cboSTATUS.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboSTATUS.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboSTATUS.Enabled = False
         Me.cboSTATUS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -553,16 +557,6 @@ Partial Class ucUSERACCOUNT
         Me.txtUNCOPY.Size = New System.Drawing.Size(98, 13)
         Me.txtUNCOPY.TabIndex = 56
         Me.txtUNCOPY.Visible = False
-        '
-        'lblUSER
-        '
-        Me.lblUSER.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblUSER.Location = New System.Drawing.Point(14, 9)
-        Me.lblUSER.Name = "lblUSER"
-        Me.lblUSER.Size = New System.Drawing.Size(170, 17)
-        Me.lblUSER.TabIndex = 56
-        Me.lblUSER.Text = "Username"
         '
         'pnlUS
         '
@@ -681,16 +675,6 @@ Partial Class ucUSERACCOUNT
         Me.cboCOST.TabIndex = 61
         Me.cboCOST.Visible = False
         '
-        'lblLN
-        '
-        Me.lblLN.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblLN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblLN.Location = New System.Drawing.Point(16, 10)
-        Me.lblLN.Name = "lblLN"
-        Me.lblLN.Size = New System.Drawing.Size(170, 17)
-        Me.lblLN.TabIndex = 57
-        Me.lblLN.Text = "Login Name"
-        '
         'cboCOUT
         '
         Me.cboCOUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -701,6 +685,20 @@ Partial Class ucUSERACCOUNT
         Me.cboCOUT.Size = New System.Drawing.Size(121, 21)
         Me.cboCOUT.TabIndex = 61
         Me.cboCOUT.Visible = False
+        '
+        'Tbl_userTableAdapter
+        '
+        Me.Tbl_userTableAdapter.ClearBeforeFill = True
+        '
+        'lblUSER
+        '
+        Me.lblUSER.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblUSER.Location = New System.Drawing.Point(14, 9)
+        Me.lblUSER.Name = "lblUSER"
+        Me.lblUSER.Size = New System.Drawing.Size(170, 17)
+        Me.lblUSER.TabIndex = 56
+        Me.lblUSER.Text = "Username"
         '
         'ucUSERACCOUNT
         '
@@ -757,10 +755,7 @@ Partial Class ucUSERACCOUNT
     End Sub
     Friend WithEvents Label2 As Label
     Friend WithEvents dgvUSER As DataGridView
-    Friend WithEvents TbluserBindingSource As BindingSource
-    Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents txtSEARCH As TextBox
-    Friend WithEvents Tbl_userTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter
     Friend WithEvents pnlSEARCH As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnEDIT As Button
@@ -777,21 +772,14 @@ Partial Class ucUSERACCOUNT
     Friend WithEvents cboUTYPE As ComboBox
     Friend WithEvents cboSTATUS As ComboBox
     Friend WithEvents btnCREATE As Button
-    Friend WithEvents lblSTATUS As Label
     Friend WithEvents lblCPASS As Label
     Friend WithEvents txtUNCOPY As TextBox
-    Friend WithEvents lblUSER As Label
     Friend WithEvents txtPASS As TextBox
     Friend WithEvents pnlUS As Panel
     Friend WithEvents lblUTYPE As Label
     Friend WithEvents lblPASS As Label
     Friend WithEvents txtUSER As TextBox
     Friend WithEvents btnCANCELDGV As Button
-    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LoginnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UsertypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents pnlCLEANUT1 As Panel
     Friend WithEvents pnlCLEANUT As Panel
     Friend WithEvents pnlCLEANST3 As Panel
@@ -807,4 +795,14 @@ Partial Class ucUSERACCOUNT
     Friend WithEvents cboCOST As ComboBox
     Friend WithEvents lblLN As Label
     Friend WithEvents cboCOUT As ComboBox
+    Friend WithEvents lblSTATUS As Label
+    Friend WithEvents TbluserBindingSource As BindingSource
+    Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
+    Friend WithEvents Tbl_userTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LoginnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsertypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents lblUSER As Label
 End Class

@@ -32,45 +32,45 @@ Partial Class ucITEMSTOCKS
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
-        Me.dgvUSER = New System.Windows.Forms.DataGridView()
-        Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
-        Me.TblitemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_itemTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter()
+        Me.dgvITEM = New System.Windows.Forms.DataGridView()
         Me.ItemCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ItemCategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AvailableStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pnlUT = New System.Windows.Forms.Panel()
-        Me.pnlCLEANUT3 = New System.Windows.Forms.Panel()
-        Me.pnlCLEANUT2 = New System.Windows.Forms.Panel()
-        Me.pnlCLEANUT1 = New System.Windows.Forms.Panel()
-        Me.lblCATEGORY = New System.Windows.Forms.Label()
-        Me.pnlCLEANUT = New System.Windows.Forms.Panel()
-        Me.cboCATEGORY = New System.Windows.Forms.ComboBox()
+        Me.TblitemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
+        Me.pnlADDED = New System.Windows.Forms.Panel()
+        Me.lblADDED = New System.Windows.Forms.Label()
+        Me.txtADDEDSTOCK = New System.Windows.Forms.TextBox()
         Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.btnSAVE = New System.Windows.Forms.Button()
-        Me.pnlITEMCODE = New System.Windows.Forms.Panel()
+        Me.pnlCODE = New System.Windows.Forms.Panel()
         Me.lblITEMCODE = New System.Windows.Forms.Label()
         Me.txtITEMCODE = New System.Windows.Forms.TextBox()
-        Me.btnCANCELDGV = New System.Windows.Forms.Button()
-        Me.btnUPDATE = New System.Windows.Forms.Button()
-        Me.btnEDIT = New System.Windows.Forms.Button()
-        Me.btnCREATE = New System.Windows.Forms.Button()
-        Me.pnlPS = New System.Windows.Forms.Panel()
+        Me.pnlNAME = New System.Windows.Forms.Panel()
         Me.lblITEMNAME = New System.Windows.Forms.Label()
-        Me.txtPASS = New System.Windows.Forms.TextBox()
-        Me.pnlLN = New System.Windows.Forms.Panel()
+        Me.txtITEMNAME = New System.Windows.Forms.TextBox()
+        Me.pnlAVAILABLE = New System.Windows.Forms.Panel()
         Me.lblSTOCK = New System.Windows.Forms.Label()
         Me.txtAVAILABLE = New System.Windows.Forms.TextBox()
+        Me.Tbl_itemTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter()
+        Me.pnlSTOCKID = New System.Windows.Forms.Panel()
+        Me.lblSTOCKID = New System.Windows.Forms.Label()
+        Me.txtSTOCK = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtDATE = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSEARCH.SuspendLayout()
-        CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvITEM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblitemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlUT.SuspendLayout()
-        Me.pnlITEMCODE.SuspendLayout()
-        Me.pnlPS.SuspendLayout()
-        Me.pnlLN.SuspendLayout()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlADDED.SuspendLayout()
+        Me.pnlCODE.SuspendLayout()
+        Me.pnlNAME.SuspendLayout()
+        Me.pnlAVAILABLE.SuspendLayout()
+        Me.pnlSTOCKID.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -114,7 +114,7 @@ Partial Class ucITEMSTOCKS
         Me.txtSEARCH.Name = "txtSEARCH"
         Me.txtSEARCH.Size = New System.Drawing.Size(630, 16)
         Me.txtSEARCH.TabIndex = 88
-        Me.txtSEARCH.Text = "Search user"
+        Me.txtSEARCH.Text = "Search item"
         '
         'pnlSEARCH
         '
@@ -125,17 +125,17 @@ Partial Class ucITEMSTOCKS
         Me.pnlSEARCH.Size = New System.Drawing.Size(705, 38)
         Me.pnlSEARCH.TabIndex = 90
         '
-        'dgvUSER
+        'dgvITEM
         '
-        Me.dgvUSER.AllowUserToAddRows = False
-        Me.dgvUSER.AllowUserToDeleteRows = False
-        Me.dgvUSER.AllowUserToResizeColumns = False
-        Me.dgvUSER.AllowUserToResizeRows = False
-        Me.dgvUSER.AutoGenerateColumns = False
-        Me.dgvUSER.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.dgvUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvUSER.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvUSER.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvITEM.AllowUserToAddRows = False
+        Me.dgvITEM.AllowUserToDeleteRows = False
+        Me.dgvITEM.AllowUserToResizeColumns = False
+        Me.dgvITEM.AllowUserToResizeRows = False
+        Me.dgvITEM.AutoGenerateColumns = False
+        Me.dgvITEM.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dgvITEM.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvITEM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvITEM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -143,11 +143,11 @@ Partial Class ucITEMSTOCKS
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvUSER.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgvUSER.ColumnHeadersHeight = 65
-        Me.dgvUSER.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvUSER.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ItemCodeDataGridViewTextBoxColumn, Me.ItemNameDataGridViewTextBoxColumn, Me.ItemCategoryDataGridViewTextBoxColumn, Me.AvailableStockDataGridViewTextBoxColumn})
-        Me.dgvUSER.DataSource = Me.TblitemBindingSource
+        Me.dgvITEM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvITEM.ColumnHeadersHeight = 65
+        Me.dgvITEM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvITEM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ItemCodeDataGridViewTextBoxColumn, Me.ItemNameDataGridViewTextBoxColumn, Me.ItemCategoryDataGridViewTextBoxColumn, Me.AvailableStockDataGridViewTextBoxColumn})
+        Me.dgvITEM.DataSource = Me.TblitemBindingSource
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -155,13 +155,13 @@ Partial Class ucITEMSTOCKS
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvUSER.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvUSER.EnableHeadersVisualStyles = False
-        Me.dgvUSER.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.dgvUSER.Location = New System.Drawing.Point(348, 165)
-        Me.dgvUSER.Name = "dgvUSER"
-        Me.dgvUSER.ReadOnly = True
-        Me.dgvUSER.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvITEM.DefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvITEM.EnableHeadersVisualStyles = False
+        Me.dgvITEM.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dgvITEM.Location = New System.Drawing.Point(348, 165)
+        Me.dgvITEM.Name = "dgvITEM"
+        Me.dgvITEM.ReadOnly = True
+        Me.dgvITEM.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -169,32 +169,18 @@ Partial Class ucITEMSTOCKS
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvUSER.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvUSER.RowHeadersVisible = False
-        Me.dgvUSER.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgvITEM.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvITEM.RowHeadersVisible = False
+        Me.dgvITEM.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvUSER.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvUSER.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvUSER.RowTemplate.DividerHeight = 1
-        Me.dgvUSER.RowTemplate.Height = 45
-        Me.dgvUSER.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvUSER.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvUSER.Size = New System.Drawing.Size(660, 469)
-        Me.dgvUSER.TabIndex = 89
-        '
-        'Ursbgso_dbDataSet
-        '
-        Me.Ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
-        Me.Ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblitemBindingSource
-        '
-        Me.TblitemBindingSource.DataMember = "tbl_item"
-        Me.TblitemBindingSource.DataSource = Me.Ursbgso_dbDataSet
-        '
-        'Tbl_itemTableAdapter
-        '
-        Me.Tbl_itemTableAdapter.ClearBeforeFill = True
+        Me.dgvITEM.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvITEM.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvITEM.RowTemplate.DividerHeight = 1
+        Me.dgvITEM.RowTemplate.Height = 45
+        Me.dgvITEM.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvITEM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.dgvITEM.Size = New System.Drawing.Size(660, 469)
+        Me.dgvITEM.TabIndex = 89
         '
         'ItemCodeDataGridViewTextBoxColumn
         '
@@ -203,6 +189,7 @@ Partial Class ucITEMSTOCKS
         Me.ItemCodeDataGridViewTextBoxColumn.HeaderText = "ITEM CODE"
         Me.ItemCodeDataGridViewTextBoxColumn.Name = "ItemCodeDataGridViewTextBoxColumn"
         Me.ItemCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'ItemNameDataGridViewTextBoxColumn
         '
@@ -211,6 +198,7 @@ Partial Class ucITEMSTOCKS
         Me.ItemNameDataGridViewTextBoxColumn.HeaderText = "ITEM NAME"
         Me.ItemNameDataGridViewTextBoxColumn.Name = "ItemNameDataGridViewTextBoxColumn"
         Me.ItemNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'ItemCategoryDataGridViewTextBoxColumn
         '
@@ -219,6 +207,7 @@ Partial Class ucITEMSTOCKS
         Me.ItemCategoryDataGridViewTextBoxColumn.HeaderText = "ITEM CATEGORY"
         Me.ItemCategoryDataGridViewTextBoxColumn.Name = "ItemCategoryDataGridViewTextBoxColumn"
         Me.ItemCategoryDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemCategoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'AvailableStockDataGridViewTextBoxColumn
         '
@@ -227,80 +216,49 @@ Partial Class ucITEMSTOCKS
         Me.AvailableStockDataGridViewTextBoxColumn.HeaderText = "AVAILABLE STOCK"
         Me.AvailableStockDataGridViewTextBoxColumn.Name = "AvailableStockDataGridViewTextBoxColumn"
         Me.AvailableStockDataGridViewTextBoxColumn.ReadOnly = True
+        Me.AvailableStockDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
-        'pnlUT
+        'TblitemBindingSource
         '
-        Me.pnlUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlUT.Controls.Add(Me.pnlCLEANUT3)
-        Me.pnlUT.Controls.Add(Me.pnlCLEANUT2)
-        Me.pnlUT.Controls.Add(Me.pnlCLEANUT1)
-        Me.pnlUT.Controls.Add(Me.lblCATEGORY)
-        Me.pnlUT.Controls.Add(Me.pnlCLEANUT)
-        Me.pnlUT.Controls.Add(Me.cboCATEGORY)
-        Me.pnlUT.Location = New System.Drawing.Point(1074, 356)
-        Me.pnlUT.Name = "pnlUT"
-        Me.pnlUT.Size = New System.Drawing.Size(204, 36)
-        Me.pnlUT.TabIndex = 101
+        Me.TblitemBindingSource.DataMember = "tbl_item"
+        Me.TblitemBindingSource.DataSource = Me.Ursbgso_dbDataSet
         '
-        'pnlCLEANUT3
+        'Ursbgso_dbDataSet
         '
-        Me.pnlCLEANUT3.Location = New System.Drawing.Point(178, 0)
-        Me.pnlCLEANUT3.Name = "pnlCLEANUT3"
-        Me.pnlCLEANUT3.Size = New System.Drawing.Size(26, 36)
-        Me.pnlCLEANUT3.TabIndex = 59
-        Me.pnlCLEANUT3.Visible = False
+        Me.Ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
+        Me.Ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'pnlCLEANUT2
+        'pnlADDED
         '
-        Me.pnlCLEANUT2.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlCLEANUT2.Location = New System.Drawing.Point(-1, 5)
-        Me.pnlCLEANUT2.Name = "pnlCLEANUT2"
-        Me.pnlCLEANUT2.Size = New System.Drawing.Size(19, 27)
-        Me.pnlCLEANUT2.TabIndex = 89
-        Me.pnlCLEANUT2.Visible = False
+        Me.pnlADDED.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlADDED.Controls.Add(Me.lblADDED)
+        Me.pnlADDED.Controls.Add(Me.txtADDEDSTOCK)
+        Me.pnlADDED.Location = New System.Drawing.Point(1074, 424)
+        Me.pnlADDED.Name = "pnlADDED"
+        Me.pnlADDED.Size = New System.Drawing.Size(204, 36)
+        Me.pnlADDED.TabIndex = 101
         '
-        'pnlCLEANUT1
+        'lblADDED
         '
-        Me.pnlCLEANUT1.Location = New System.Drawing.Point(4, 26)
-        Me.pnlCLEANUT1.Name = "pnlCLEANUT1"
-        Me.pnlCLEANUT1.Size = New System.Drawing.Size(185, 10)
-        Me.pnlCLEANUT1.TabIndex = 59
-        Me.pnlCLEANUT1.Visible = False
+        Me.lblADDED.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblADDED.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblADDED.Location = New System.Drawing.Point(14, 9)
+        Me.lblADDED.Name = "lblADDED"
+        Me.lblADDED.Size = New System.Drawing.Size(170, 17)
+        Me.lblADDED.TabIndex = 61
+        Me.lblADDED.Text = "No of Stock to be Added"
         '
-        'lblCATEGORY
+        'txtADDEDSTOCK
         '
-        Me.lblCATEGORY.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblCATEGORY.Location = New System.Drawing.Point(16, 9)
-        Me.lblCATEGORY.Name = "lblCATEGORY"
-        Me.lblCATEGORY.Size = New System.Drawing.Size(170, 17)
-        Me.lblCATEGORY.TabIndex = 61
-        Me.lblCATEGORY.Text = "Item Category"
-        '
-        'pnlCLEANUT
-        '
-        Me.pnlCLEANUT.Location = New System.Drawing.Point(3, 0)
-        Me.pnlCLEANUT.Name = "pnlCLEANUT"
-        Me.pnlCLEANUT.Size = New System.Drawing.Size(185, 9)
-        Me.pnlCLEANUT.TabIndex = 59
-        Me.pnlCLEANUT.Visible = False
-        '
-        'cboCATEGORY
-        '
-        Me.cboCATEGORY.AutoCompleteCustomSource.AddRange(New String() {"GSO Head", "Staff"})
-        Me.cboCATEGORY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.cboCATEGORY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.cboCATEGORY.Enabled = False
-        Me.cboCATEGORY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboCATEGORY.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.cboCATEGORY.FormattingEnabled = True
-        Me.cboCATEGORY.Location = New System.Drawing.Point(16, 6)
-        Me.cboCATEGORY.Name = "cboCATEGORY"
-        Me.cboCATEGORY.Size = New System.Drawing.Size(173, 25)
-        Me.cboCATEGORY.TabIndex = 35
-        Me.cboCATEGORY.Text = "Item Category"
-        Me.cboCATEGORY.Visible = False
+        Me.txtADDEDSTOCK.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtADDEDSTOCK.Enabled = False
+        Me.txtADDEDSTOCK.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtADDEDSTOCK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.txtADDEDSTOCK.Location = New System.Drawing.Point(17, 9)
+        Me.txtADDEDSTOCK.Name = "txtADDEDSTOCK"
+        Me.txtADDEDSTOCK.Size = New System.Drawing.Size(167, 17)
+        Me.txtADDEDSTOCK.TabIndex = 59
+        Me.txtADDEDSTOCK.Text = "No of Stock to be Added"
         '
         'btnCANCEL
         '
@@ -312,7 +270,7 @@ Partial Class ucITEMSTOCKS
         Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnCANCEL.ForeColor = System.Drawing.Color.White
         Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 474)
+        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 492)
         Me.btnCANCEL.Name = "btnCANCEL"
         Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
         Me.btnCANCEL.TabIndex = 100
@@ -328,23 +286,23 @@ Partial Class ucITEMSTOCKS
         Me.btnSAVE.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnSAVE.ForeColor = System.Drawing.Color.White
         Me.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSAVE.Location = New System.Drawing.Point(1074, 474)
+        Me.btnSAVE.Location = New System.Drawing.Point(1074, 492)
         Me.btnSAVE.Name = "btnSAVE"
         Me.btnSAVE.Size = New System.Drawing.Size(158, 36)
         Me.btnSAVE.TabIndex = 99
-        Me.btnSAVE.Text = "Save Item"
+        Me.btnSAVE.Text = "Add Stock"
         Me.btnSAVE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSAVE.UseVisualStyleBackColor = False
         '
-        'pnlITEMCODE
+        'pnlCODE
         '
-        Me.pnlITEMCODE.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlITEMCODE.Controls.Add(Me.lblITEMCODE)
-        Me.pnlITEMCODE.Controls.Add(Me.txtITEMCODE)
-        Me.pnlITEMCODE.Location = New System.Drawing.Point(1074, 256)
-        Me.pnlITEMCODE.Name = "pnlITEMCODE"
-        Me.pnlITEMCODE.Size = New System.Drawing.Size(204, 36)
-        Me.pnlITEMCODE.TabIndex = 98
+        Me.pnlCODE.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlCODE.Controls.Add(Me.lblITEMCODE)
+        Me.pnlCODE.Controls.Add(Me.txtITEMCODE)
+        Me.pnlCODE.Location = New System.Drawing.Point(1074, 274)
+        Me.pnlCODE.Name = "pnlCODE"
+        Me.pnlCODE.Size = New System.Drawing.Size(204, 36)
+        Me.pnlCODE.TabIndex = 98
         '
         'lblITEMCODE
         '
@@ -368,127 +326,56 @@ Partial Class ucITEMSTOCKS
         Me.txtITEMCODE.TabIndex = 33
         Me.txtITEMCODE.Text = "Item Code"
         '
-        'btnCANCELDGV
+        'pnlNAME
         '
-        Me.btnCANCELDGV.BackColor = System.Drawing.Color.White
-        Me.btnCANCELDGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCANCELDGV.Enabled = False
-        Me.btnCANCELDGV.FlatAppearance.BorderSize = 0
-        Me.btnCANCELDGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCANCELDGV.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnCANCELDGV.ForeColor = System.Drawing.Color.White
-        Me.btnCANCELDGV.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCELDGV.Location = New System.Drawing.Point(1242, 474)
-        Me.btnCANCELDGV.Name = "btnCANCELDGV"
-        Me.btnCANCELDGV.Size = New System.Drawing.Size(36, 36)
-        Me.btnCANCELDGV.TabIndex = 97
-        Me.btnCANCELDGV.UseVisualStyleBackColor = False
-        Me.btnCANCELDGV.Visible = False
-        '
-        'btnUPDATE
-        '
-        Me.btnUPDATE.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUPDATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnUPDATE.Enabled = False
-        Me.btnUPDATE.FlatAppearance.BorderSize = 0
-        Me.btnUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUPDATE.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnUPDATE.ForeColor = System.Drawing.Color.White
-        Me.btnUPDATE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnUPDATE.Location = New System.Drawing.Point(1074, 474)
-        Me.btnUPDATE.Name = "btnUPDATE"
-        Me.btnUPDATE.Size = New System.Drawing.Size(158, 36)
-        Me.btnUPDATE.TabIndex = 96
-        Me.btnUPDATE.Text = "Update Item"
-        Me.btnUPDATE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnUPDATE.UseVisualStyleBackColor = False
-        Me.btnUPDATE.Visible = False
-        '
-        'btnEDIT
-        '
-        Me.btnEDIT.BackColor = System.Drawing.Color.White
-        Me.btnEDIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnEDIT.Enabled = False
-        Me.btnEDIT.FlatAppearance.BorderSize = 0
-        Me.btnEDIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEDIT.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnEDIT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btnEDIT.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEDIT.Location = New System.Drawing.Point(1072, 195)
-        Me.btnEDIT.Name = "btnEDIT"
-        Me.btnEDIT.Size = New System.Drawing.Size(204, 36)
-        Me.btnEDIT.TabIndex = 92
-        Me.btnEDIT.Text = "Edit Item"
-        Me.btnEDIT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnEDIT.UseVisualStyleBackColor = False
-        '
-        'btnCREATE
-        '
-        Me.btnCREATE.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCREATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCREATE.FlatAppearance.BorderSize = 0
-        Me.btnCREATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCREATE.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnCREATE.ForeColor = System.Drawing.Color.White
-        Me.btnCREATE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCREATE.Location = New System.Drawing.Point(1072, 144)
-        Me.btnCREATE.Name = "btnCREATE"
-        Me.btnCREATE.Size = New System.Drawing.Size(204, 36)
-        Me.btnCREATE.TabIndex = 93
-        Me.btnCREATE.Text = "Add New Item"
-        Me.btnCREATE.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCREATE.UseVisualStyleBackColor = False
-        '
-        'pnlPS
-        '
-        Me.pnlPS.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlPS.Controls.Add(Me.lblITEMNAME)
-        Me.pnlPS.Controls.Add(Me.txtPASS)
-        Me.pnlPS.Location = New System.Drawing.Point(1074, 306)
-        Me.pnlPS.Name = "pnlPS"
-        Me.pnlPS.Size = New System.Drawing.Size(204, 36)
-        Me.pnlPS.TabIndex = 94
+        Me.pnlNAME.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlNAME.Controls.Add(Me.lblITEMNAME)
+        Me.pnlNAME.Controls.Add(Me.txtITEMNAME)
+        Me.pnlNAME.Location = New System.Drawing.Point(1074, 324)
+        Me.pnlNAME.Name = "pnlNAME"
+        Me.pnlNAME.Size = New System.Drawing.Size(204, 36)
+        Me.pnlNAME.TabIndex = 94
         '
         'lblITEMNAME
         '
         Me.lblITEMNAME.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.lblITEMNAME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblITEMNAME.Location = New System.Drawing.Point(16, 10)
+        Me.lblITEMNAME.Location = New System.Drawing.Point(14, 9)
         Me.lblITEMNAME.Name = "lblITEMNAME"
         Me.lblITEMNAME.Size = New System.Drawing.Size(170, 17)
-        Me.lblITEMNAME.TabIndex = 57
+        Me.lblITEMNAME.TabIndex = 59
         Me.lblITEMNAME.Text = "Item Name"
         '
-        'txtPASS
+        'txtITEMNAME
         '
-        Me.txtPASS.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPASS.Enabled = False
-        Me.txtPASS.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPASS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.txtPASS.Location = New System.Drawing.Point(19, 10)
-        Me.txtPASS.Name = "txtPASS"
-        Me.txtPASS.Size = New System.Drawing.Size(167, 17)
-        Me.txtPASS.TabIndex = 32
-        Me.txtPASS.Text = "Password"
+        Me.txtITEMNAME.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtITEMNAME.Enabled = False
+        Me.txtITEMNAME.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtITEMNAME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.txtITEMNAME.Location = New System.Drawing.Point(17, 9)
+        Me.txtITEMNAME.Name = "txtITEMNAME"
+        Me.txtITEMNAME.Size = New System.Drawing.Size(167, 17)
+        Me.txtITEMNAME.TabIndex = 32
+        Me.txtITEMNAME.Text = "Item Name"
         '
-        'pnlLN
+        'pnlAVAILABLE
         '
-        Me.pnlLN.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.pnlLN.Controls.Add(Me.lblSTOCK)
-        Me.pnlLN.Controls.Add(Me.txtAVAILABLE)
-        Me.pnlLN.Location = New System.Drawing.Point(1074, 406)
-        Me.pnlLN.Name = "pnlLN"
-        Me.pnlLN.Size = New System.Drawing.Size(204, 36)
-        Me.pnlLN.TabIndex = 95
+        Me.pnlAVAILABLE.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlAVAILABLE.Controls.Add(Me.lblSTOCK)
+        Me.pnlAVAILABLE.Controls.Add(Me.txtAVAILABLE)
+        Me.pnlAVAILABLE.Location = New System.Drawing.Point(1074, 374)
+        Me.pnlAVAILABLE.Name = "pnlAVAILABLE"
+        Me.pnlAVAILABLE.Size = New System.Drawing.Size(204, 36)
+        Me.pnlAVAILABLE.TabIndex = 95
         '
         'lblSTOCK
         '
         Me.lblSTOCK.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.lblSTOCK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblSTOCK.Location = New System.Drawing.Point(16, 10)
+        Me.lblSTOCK.Location = New System.Drawing.Point(14, 9)
         Me.lblSTOCK.Name = "lblSTOCK"
         Me.lblSTOCK.Size = New System.Drawing.Size(170, 17)
-        Me.lblSTOCK.TabIndex = 57
+        Me.lblSTOCK.TabIndex = 58
         Me.lblSTOCK.Text = "Available Stock"
         '
         'txtAVAILABLE
@@ -497,11 +384,80 @@ Partial Class ucITEMSTOCKS
         Me.txtAVAILABLE.Enabled = False
         Me.txtAVAILABLE.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAVAILABLE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.txtAVAILABLE.Location = New System.Drawing.Point(19, 10)
+        Me.txtAVAILABLE.Location = New System.Drawing.Point(17, 9)
         Me.txtAVAILABLE.Name = "txtAVAILABLE"
         Me.txtAVAILABLE.Size = New System.Drawing.Size(167, 17)
         Me.txtAVAILABLE.TabIndex = 36
         Me.txtAVAILABLE.Text = "Availabe Stock"
+        '
+        'Tbl_itemTableAdapter
+        '
+        Me.Tbl_itemTableAdapter.ClearBeforeFill = True
+        '
+        'pnlSTOCKID
+        '
+        Me.pnlSTOCKID.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlSTOCKID.Controls.Add(Me.lblSTOCKID)
+        Me.pnlSTOCKID.Controls.Add(Me.txtSTOCK)
+        Me.pnlSTOCKID.Location = New System.Drawing.Point(1074, 223)
+        Me.pnlSTOCKID.Name = "pnlSTOCKID"
+        Me.pnlSTOCKID.Size = New System.Drawing.Size(204, 36)
+        Me.pnlSTOCKID.TabIndex = 98
+        '
+        'lblSTOCKID
+        '
+        Me.lblSTOCKID.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblSTOCKID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblSTOCKID.Location = New System.Drawing.Point(14, 9)
+        Me.lblSTOCKID.Name = "lblSTOCKID"
+        Me.lblSTOCKID.Size = New System.Drawing.Size(170, 17)
+        Me.lblSTOCKID.TabIndex = 59
+        Me.lblSTOCKID.Text = "Stock ID"
+        '
+        'txtSTOCK
+        '
+        Me.txtSTOCK.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSTOCK.Enabled = False
+        Me.txtSTOCK.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSTOCK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.txtSTOCK.Location = New System.Drawing.Point(17, 9)
+        Me.txtSTOCK.Name = "txtSTOCK"
+        Me.txtSTOCK.Size = New System.Drawing.Size(167, 17)
+        Me.txtSTOCK.TabIndex = 33
+        Me.txtSTOCK.Text = "Stock ID"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(1070, 142)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(204, 44)
+        Me.Label4.TabIndex = 102
+        Me.Label4.Text = "SELECT AN ITEM TO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ADD NEW STOCK."
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.txtDATE)
+        Me.Panel2.Location = New System.Drawing.Point(1075, 618)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(204, 36)
+        Me.Panel2.TabIndex = 101
+        Me.Panel2.Visible = False
+        '
+        'txtDATE
+        '
+        Me.txtDATE.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDATE.Enabled = False
+        Me.txtDATE.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDATE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.txtDATE.Location = New System.Drawing.Point(19, 10)
+        Me.txtDATE.Name = "txtDATE"
+        Me.txtDATE.Size = New System.Drawing.Size(167, 17)
+        Me.txtDATE.TabIndex = 59
+        Me.txtDATE.Visible = False
         '
         'ucITEMSTOCKS
         '
@@ -509,36 +465,40 @@ Partial Class ucITEMSTOCKS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Controls.Add(Me.pnlUT)
-        Me.Controls.Add(Me.btnCANCEL)
-        Me.Controls.Add(Me.btnSAVE)
-        Me.Controls.Add(Me.pnlITEMCODE)
-        Me.Controls.Add(Me.btnCANCELDGV)
-        Me.Controls.Add(Me.btnUPDATE)
-        Me.Controls.Add(Me.btnEDIT)
-        Me.Controls.Add(Me.btnCREATE)
-        Me.Controls.Add(Me.pnlPS)
-        Me.Controls.Add(Me.pnlLN)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnlADDED)
+        Me.Controls.Add(Me.pnlSTOCKID)
+        Me.Controls.Add(Me.pnlCODE)
+        Me.Controls.Add(Me.pnlNAME)
+        Me.Controls.Add(Me.pnlAVAILABLE)
         Me.Controls.Add(Me.txtSEARCH)
         Me.Controls.Add(Me.pnlSEARCH)
-        Me.Controls.Add(Me.dgvUSER)
+        Me.Controls.Add(Me.dgvITEM)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.btnCANCEL)
+        Me.Controls.Add(Me.btnSAVE)
         Me.DoubleBuffered = True
         Me.Name = "ucITEMSTOCKS"
         Me.Size = New System.Drawing.Size(1324, 705)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSEARCH.ResumeLayout(False)
-        CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvITEM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblitemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlUT.ResumeLayout(False)
-        Me.pnlITEMCODE.ResumeLayout(False)
-        Me.pnlITEMCODE.PerformLayout()
-        Me.pnlPS.ResumeLayout(False)
-        Me.pnlPS.PerformLayout()
-        Me.pnlLN.ResumeLayout(False)
-        Me.pnlLN.PerformLayout()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlADDED.ResumeLayout(False)
+        Me.pnlADDED.PerformLayout()
+        Me.pnlCODE.ResumeLayout(False)
+        Me.pnlCODE.PerformLayout()
+        Me.pnlNAME.ResumeLayout(False)
+        Me.pnlNAME.PerformLayout()
+        Me.pnlAVAILABLE.ResumeLayout(False)
+        Me.pnlAVAILABLE.PerformLayout()
+        Me.pnlSTOCKID.ResumeLayout(False)
+        Me.pnlSTOCKID.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -549,7 +509,16 @@ Partial Class ucITEMSTOCKS
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txtSEARCH As TextBox
     Friend WithEvents pnlSEARCH As Panel
-    Friend WithEvents dgvUSER As DataGridView
+    Friend WithEvents dgvITEM As DataGridView
+    Friend WithEvents pnlADDED As Panel
+    Friend WithEvents btnCANCEL As Button
+    Friend WithEvents btnSAVE As Button
+    Friend WithEvents pnlCODE As Panel
+    Friend WithEvents txtITEMCODE As TextBox
+    Friend WithEvents pnlNAME As Panel
+    Friend WithEvents txtITEMNAME As TextBox
+    Friend WithEvents pnlAVAILABLE As Panel
+    Friend WithEvents txtAVAILABLE As TextBox
     Friend WithEvents ItemCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ItemCategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -557,26 +526,15 @@ Partial Class ucITEMSTOCKS
     Friend WithEvents TblitemBindingSource As BindingSource
     Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents Tbl_itemTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter
-    Friend WithEvents pnlUT As Panel
-    Friend WithEvents pnlCLEANUT3 As Panel
-    Friend WithEvents pnlCLEANUT2 As Panel
-    Friend WithEvents pnlCLEANUT1 As Panel
-    Friend WithEvents lblCATEGORY As Label
-    Friend WithEvents pnlCLEANUT As Panel
-    Friend WithEvents cboCATEGORY As ComboBox
-    Friend WithEvents btnCANCEL As Button
-    Friend WithEvents btnSAVE As Button
-    Friend WithEvents pnlITEMCODE As Panel
+    Friend WithEvents pnlSTOCKID As Panel
+    Friend WithEvents txtSTOCK As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtADDEDSTOCK As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txtDATE As TextBox
+    Friend WithEvents lblSTOCKID As Label
     Friend WithEvents lblITEMCODE As Label
-    Friend WithEvents txtITEMCODE As TextBox
-    Friend WithEvents btnCANCELDGV As Button
-    Friend WithEvents btnUPDATE As Button
-    Friend WithEvents btnEDIT As Button
-    Friend WithEvents btnCREATE As Button
-    Friend WithEvents pnlPS As Panel
     Friend WithEvents lblITEMNAME As Label
-    Friend WithEvents txtPASS As TextBox
-    Friend WithEvents pnlLN As Panel
     Friend WithEvents lblSTOCK As Label
-    Friend WithEvents txtAVAILABLE As TextBox
+    Friend WithEvents lblADDED As Label
 End Class

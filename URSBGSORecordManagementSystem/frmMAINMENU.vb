@@ -73,7 +73,6 @@
 
     End Sub
 
-
     Private Sub btnDASH_Click(sender As Object, e As EventArgs) Handles btnDASH.Click
         pnlUSERCONTROL.Hide()
         pnlDASHBOARD.BringToFront()
@@ -347,7 +346,56 @@
         btnREPORTSWasClicked = False
     End Sub
 
-    Private Sub btnSETT_Click(sender As Object, e As EventArgs) Handles btnSETT.Click, btnRETURNING.Click
+
+    Private Sub btnRET_Click(sender As Object, e As EventArgs) Handles btnRET.Click
+        pnlUSERCONTROL.Show()
+        pnlUSERCONTROL.BringToFront()
+        pnlMENU.BringToFront()
+        BTNCLOSE.BringToFront()
+        BTNMINIMIZE.BringToFront()
+        'pnlDASHBOARD.SendToBack()
+
+        btnDASH.BackgroundImage = My.Resources.dashboard_menu
+        btnUSERACC.BackgroundImage = My.Resources.useraccount_menu
+        btnITEM.BackgroundImage = My.Resources.item_menu
+        btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
+        btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
+        btnTRANSAC.BackgroundImage = My.Resources.transaction_menu_selected
+        btnSETT.BackgroundImage = My.Resources.settings_menu
+        btnREPORTS.BackgroundImage = My.Resources.reports_menu
+
+        pnlUSERCONTROL.Controls.Clear()
+        Dim Returning As New ucRETURNING()
+        'usercontrol.TopLevel = False
+        pnlUSERCONTROL.Controls.Add(Returning)
+        Returning.Show()
+
+        'Dim i As Integer
+        'For i = 0 To 0
+        '    pnlUSERCONTROL.Controls.RemoveAt(i)
+        'Next
+
+        'Dim Transaction As New ucTRANSACTION
+        'Transaction.Parent = pnlUSERCONTROL
+        'Transaction.Show()
+        'Transaction.Dock = DockStyle.Fill
+
+        'SHOW BUTTON INDICATOR
+        pnlINDICATOR.Height = btnRET.Height - 3
+        pnlINDICATOR.Top = btnTRANSAC.Top
+        pnlINDICATOR.BringToFront()
+
+        btnDASHWasClicked = False
+        btnUSERACWasClicked = False
+        btnITEMWasClicked = False
+        btnITEMSTWasClicked = False
+        btnBORPCWasClicked = False
+        btnTRANSACWasClicked = True
+        btnSETTWasClicked = False
+        btnREPORTSWasClicked = False
+    End Sub
+
+    Private Sub btnSETT_Click(sender As Object, e As EventArgs) Handles btnSETT.Click
         pnlUSERCONTROL.Show()
         pnlUSERCONTROL.BringToFront()
         pnlMENU.BringToFront()
@@ -574,7 +622,7 @@
         End If
     End Sub
 
-    Private Sub btnSETT_MouseHover(sender As Object, e As EventArgs) Handles btnSETT.MouseHover, btnRETURNING.MouseHover
+    Private Sub btnSETT_MouseHover(sender As Object, e As EventArgs) Handles btnSETT.MouseHover, btnRET.MouseHover
         If btnSETTWasClicked = True Then
             btnSETT.BackgroundImage = My.Resources.settings_menu_selected
 
@@ -583,7 +631,7 @@
         End If
     End Sub
 
-    Private Sub btnSETT_MouseLeave(sender As Object, e As EventArgs) Handles btnSETT.MouseLeave, btnRETURNING.MouseLeave
+    Private Sub btnSETT_MouseLeave(sender As Object, e As EventArgs) Handles btnSETT.MouseLeave, btnRET.MouseLeave
         If btnSETTWasClicked = True Then
             btnSETT.BackgroundImage = My.Resources.settings_menu_selected
 
@@ -622,7 +670,6 @@
             Application.Exit()
         End If
     End Sub
-
 
 End Class
 

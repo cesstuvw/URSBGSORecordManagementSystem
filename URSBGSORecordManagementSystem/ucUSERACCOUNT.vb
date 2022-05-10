@@ -104,7 +104,6 @@
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
 
-
         Me.Tbl_userTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_user)
 
         If txtPASS.Enabled = False And txtUSER.Enabled = False And txtCPASS.Enabled = False And txtLNAME.Enabled = False And cboSTATUS.Enabled = False And cboUTYPE.Enabled = False Then
@@ -119,18 +118,17 @@
 
         cboSTATUS.Items.Add("Active")
         cboSTATUS.Items.Add("Inactive")
-
     End Sub
 
-    Private Sub refreshGrid()
+    Private Sub dgvUSER_Refresh()
         Me.Tbl_userTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_user)
     End Sub
 
     '---------------------------------- CREATE A NEW ACCOUNT  BUTTON ---------------------------------'
     Private Sub btnCREATE_Click(sender As Object, e As EventArgs) Handles btnCREATE.Click
-
         btnCANCEL.BackColor = Color.White
         btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+        btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         'pnlCLEANST.Visible = False
         'pnlCLEANST1.Visible = False
         'pnlCLEANST2.Visible = False
@@ -148,9 +146,15 @@
         Function_Enabled()
         txtUSER.Focus()
         txtUSER.Text = ""
+        btnCANCELDGV.Visible = False
+        btnCANCEL.Visible = True
+        btnUPDATE.Visible = False
+        btnEDIT.Enabled = False
         Function_EnabledPanel()
         Function_Display()
         Function_TextFormat()
+
+        dgvUSER.Enabled = True
 
         If txtUSER.Text = "" Then
             txtUSER.ForeColor = ColorTranslator.FromHtml("#204AFF")
@@ -160,7 +164,6 @@
     '---------------------------------- SAVE BUTTON ---------------------------------'
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
         'ERROR TRAPPING
-        'btnSAVE.Text = "Save Account"
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         If txtUSER.Text = "Username" Or txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
@@ -199,10 +202,9 @@
             con.Close()
         End If
 
-
-        'SAVING A NEW USER
+        'SAVING A NEW PROFILE
         OpenCon()
-        cmd.CommandText = "insert into tbl_user values(@un,@pw,@ln,@ut,@stat)"
+        cmd.CommandText = "insert into tbl_profile values( @un, @pw, @ln, @ut, @stat)"
         cmd.Parameters.Clear()
         cmd.Parameters.AddWithValue("un", txtUSER.Text)
         cmd.Parameters.AddWithValue("pw", txtPASS.Text)
@@ -225,8 +227,7 @@
         Function_DontDisplay()
         Function_Clean()
         Function_TextFormat()
-        refreshGrid()
-
+        dgvUSER_Refresh()
     End Sub
 
 
@@ -263,6 +264,7 @@
         Function_Clean()
         btnEDIT.BackColor = Color.White
         btnCANCEL.BackColor = Color.White
+        btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
 
         btnCANCEL.Enabled = True
         btnCANCEL.Visible = True
@@ -299,8 +301,6 @@
         btnUPDATE.Visible = True
         btnUPDATE.Enabled = False
         btnSAVE.Visible = False
-
-
     End Sub
 
 
@@ -369,19 +369,19 @@
 
     '---------------------------------- UPDATE BUTTON ---------------------------------'
     Private Sub btnUPDATE_Click(sender As Object, e As EventArgs) Handles btnUPDATE.Click
+        'Error Trapping
+
         If txtPASS.Text <> txtCOPW.Text And txtLNAME.Text <> txtCOLN.Text And cboUTYPE.Text <> cboCOUT.Text And cboSTATUS.Text <> cboCOST.Text Then
             OpenCon()
             cmd.CommandText = "Select * from tbl_user where password = '" & txtPASS.Text & "' and loginname = '" & txtLNAME.Text & "' and usertype = '" & cboUTYPE.Text & "' and status = '" & cboSTATUS.Text & "'"
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
-                MsgBox("No changes has been made", vbOKOnly + vbInformation, "Update")
+                MsgBox("No changes have been made.", vbOKOnly + vbInformation, "Update")
                 con.Close()
                 Exit Sub
             End If
             con.Close()
         End If
-
-        'Error Trapping
         If txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
             Exit Sub
@@ -405,6 +405,7 @@
             Exit Sub
         End If
 
+        'Updating Code
         OpenCon()
         cmd.CommandText = "Update tbl_user set username=@un, password=@pw, loginname=@ln, usertype=@ut, status=@stat where username=@un"
         cmd.Parameters.Clear()
@@ -431,7 +432,7 @@
         Function_DontDisplay()
         Function_Clean()
         Function_TextFormat()
-        refreshGrid()
+        dgvUSER_Refresh()
     End Sub
 
 
@@ -619,6 +620,4 @@
             txtCPASS.Focus()
         End If
     End Sub
-
-
 End Class
