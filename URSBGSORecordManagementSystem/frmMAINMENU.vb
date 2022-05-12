@@ -73,7 +73,6 @@
         ''usercontrol.TopLevel = False
         'pnlUSERCONTROL.Controls.Add(Dashboard)
         'Dashboard.Show()
-
     End Sub
 
     Private Sub btnDASH_Click(sender As Object, e As EventArgs) Handles btnDASH.Click
@@ -481,8 +480,8 @@
         btnREPORTS.BackgroundImage = My.Resources.reports_menu_selected
 
         pnlUSERCONTROL.Controls.Clear()
-        Dim Reports As New ucREPORTS()
-        'usercontrol.TopLevel = False
+        Dim Reports As New frmREPORTS()
+        Reports.TopLevel = False
         pnlUSERCONTROL.Controls.Add(Reports)
         Reports.Show()
 

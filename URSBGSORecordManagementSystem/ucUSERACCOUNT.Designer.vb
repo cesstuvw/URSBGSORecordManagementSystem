@@ -38,7 +38,6 @@ Partial Class ucUSERACCOUNT
         Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlPS = New System.Windows.Forms.Panel()
         Me.lblPASS = New System.Windows.Forms.Label()
         Me.txtPASS = New System.Windows.Forms.TextBox()
@@ -63,12 +62,11 @@ Partial Class ucUSERACCOUNT
         Me.btnSAVE = New System.Windows.Forms.Button()
         Me.btnEDIT = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.btnCREATE = New System.Windows.Forms.Button()
         Me.txtUNCOPY = New System.Windows.Forms.TextBox()
         Me.pnlUS = New System.Windows.Forms.Panel()
+        Me.lblUSER = New System.Windows.Forms.Label()
         Me.txtUSER = New System.Windows.Forms.TextBox()
-        Me.btnCANCELDGV = New System.Windows.Forms.Button()
         Me.pnlCLEANST2 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT2 = New System.Windows.Forms.Panel()
         Me.btnUPDATE = New System.Windows.Forms.Button()
@@ -78,18 +76,20 @@ Partial Class ucUSERACCOUNT
         Me.cboCOST = New System.Windows.Forms.ComboBox()
         Me.cboCOUT = New System.Windows.Forms.ComboBox()
         Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
-        Me.lblUSER = New System.Windows.Forms.Label()
+        Me.btnCANCELDGV = New System.Windows.Forms.Button()
+        Me.btnCANCEL = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSEARCH.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlPS.SuspendLayout()
         Me.pnlCPS.SuspendLayout()
         Me.pnlLN.SuspendLayout()
         Me.pnlUT.SuspendLayout()
         Me.pnlST.SuspendLayout()
         Me.pnlUS.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -235,18 +235,6 @@ Partial Class ucUSERACCOUNT
         Me.pnlSEARCH.Name = "pnlSEARCH"
         Me.pnlSEARCH.Size = New System.Drawing.Size(705, 38)
         Me.pnlSEARCH.TabIndex = 48
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox1.Location = New System.Drawing.Point(665, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'pnlPS
         '
@@ -515,22 +503,6 @@ Partial Class ucUSERACCOUNT
         Me.Panel1.Size = New System.Drawing.Size(705, 511)
         Me.Panel1.TabIndex = 54
         '
-        'btnCANCEL
-        '
-        Me.btnCANCEL.BackColor = System.Drawing.Color.White
-        Me.btnCANCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCANCEL.Enabled = False
-        Me.btnCANCEL.FlatAppearance.BorderSize = 0
-        Me.btnCANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnCANCEL.ForeColor = System.Drawing.Color.White
-        Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 572)
-        Me.btnCANCEL.Name = "btnCANCEL"
-        Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
-        Me.btnCANCEL.TabIndex = 53
-        Me.btnCANCEL.UseVisualStyleBackColor = False
-        '
         'btnCREATE
         '
         Me.btnCREATE.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -568,6 +540,16 @@ Partial Class ucUSERACCOUNT
         Me.pnlUS.Size = New System.Drawing.Size(204, 36)
         Me.pnlUS.TabIndex = 55
         '
+        'lblUSER
+        '
+        Me.lblUSER.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblUSER.Location = New System.Drawing.Point(14, 9)
+        Me.lblUSER.Name = "lblUSER"
+        Me.lblUSER.Size = New System.Drawing.Size(170, 17)
+        Me.lblUSER.TabIndex = 56
+        Me.lblUSER.Text = "Username"
+        '
         'txtUSER
         '
         Me.txtUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -579,23 +561,6 @@ Partial Class ucUSERACCOUNT
         Me.txtUSER.Size = New System.Drawing.Size(167, 17)
         Me.txtUSER.TabIndex = 33
         Me.txtUSER.Text = "Username"
-        '
-        'btnCANCELDGV
-        '
-        Me.btnCANCELDGV.BackColor = System.Drawing.Color.White
-        Me.btnCANCELDGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCANCELDGV.Enabled = False
-        Me.btnCANCELDGV.FlatAppearance.BorderSize = 0
-        Me.btnCANCELDGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCANCELDGV.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnCANCELDGV.ForeColor = System.Drawing.Color.White
-        Me.btnCANCELDGV.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCELDGV.Location = New System.Drawing.Point(1242, 572)
-        Me.btnCANCELDGV.Name = "btnCANCELDGV"
-        Me.btnCANCELDGV.Size = New System.Drawing.Size(36, 36)
-        Me.btnCANCELDGV.TabIndex = 53
-        Me.btnCANCELDGV.UseVisualStyleBackColor = False
-        Me.btnCANCELDGV.Visible = False
         '
         'pnlCLEANST2
         '
@@ -690,15 +655,50 @@ Partial Class ucUSERACCOUNT
         '
         Me.Tbl_userTableAdapter.ClearBeforeFill = True
         '
-        'lblUSER
+        'btnCANCELDGV
         '
-        Me.lblUSER.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblUSER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblUSER.Location = New System.Drawing.Point(14, 9)
-        Me.lblUSER.Name = "lblUSER"
-        Me.lblUSER.Size = New System.Drawing.Size(170, 17)
-        Me.lblUSER.TabIndex = 56
-        Me.lblUSER.Text = "Username"
+        Me.btnCANCELDGV.BackColor = System.Drawing.Color.White
+        Me.btnCANCELDGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCANCELDGV.Enabled = False
+        Me.btnCANCELDGV.FlatAppearance.BorderSize = 0
+        Me.btnCANCELDGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCANCELDGV.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.btnCANCELDGV.ForeColor = System.Drawing.Color.White
+        Me.btnCANCELDGV.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
+        Me.btnCANCELDGV.Location = New System.Drawing.Point(1242, 572)
+        Me.btnCANCELDGV.Name = "btnCANCELDGV"
+        Me.btnCANCELDGV.Size = New System.Drawing.Size(36, 36)
+        Me.btnCANCELDGV.TabIndex = 53
+        Me.btnCANCELDGV.UseVisualStyleBackColor = False
+        Me.btnCANCELDGV.Visible = False
+        '
+        'btnCANCEL
+        '
+        Me.btnCANCEL.BackColor = System.Drawing.Color.White
+        Me.btnCANCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCANCEL.Enabled = False
+        Me.btnCANCEL.FlatAppearance.BorderSize = 0
+        Me.btnCANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.btnCANCEL.ForeColor = System.Drawing.Color.White
+        Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
+        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 572)
+        Me.btnCANCEL.Name = "btnCANCEL"
+        Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
+        Me.btnCANCEL.TabIndex = 53
+        Me.btnCANCEL.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox1.Location = New System.Drawing.Point(665, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'ucUSERACCOUNT
         '
@@ -738,7 +738,6 @@ Partial Class ucUSERACCOUNT
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSEARCH.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPS.ResumeLayout(False)
         Me.pnlPS.PerformLayout()
         Me.pnlCPS.ResumeLayout(False)
@@ -749,6 +748,7 @@ Partial Class ucUSERACCOUNT
         Me.pnlST.ResumeLayout(False)
         Me.pnlUS.ResumeLayout(False)
         Me.pnlUS.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

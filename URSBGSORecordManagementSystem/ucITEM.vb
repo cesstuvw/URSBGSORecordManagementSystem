@@ -156,11 +156,18 @@
         End If
 
         If txtITEMNAME.Text <> txtCOITNM.Text Then
-            MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Saving")
-            btnCANCEL.Enabled = True
-            Exit Sub
+            OpenCon()
+            cmd.CommandText = "Select * from tbl_item where ItemName = '" & txtITEMNAME.Text & "'"
+            dr = cmd.ExecuteReader()
+            If dr.HasRows Then
+                MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Saving")
+                con.Close()
+                btnCANCEL.Enabled = True
+                txtITEMNAME.Focus()
+                Exit Sub
+            End If
+            con.Close()
         End If
-
 
         'Saving item
         OpenCon()

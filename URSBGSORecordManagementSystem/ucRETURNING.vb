@@ -54,7 +54,6 @@
         lblNO.Hide()
     End Sub
 
-
     Private Sub Function_DontDisplayItem()
         lblCODE.Show()
         lblNAME.Show()
@@ -203,6 +202,16 @@
         cmd.Parameters.AddWithValue("rdate", Format(Date.Now, "yyyy-MM-dd"))
         cmd.ExecuteNonQuery()
         con.Close()
+
+
+        OpenCon()
+        cmd.CommandText = "Delete from tbl_transaction where TransNo = @transno and itemname = @itemname"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("transno", txtNO.Text)
+        cmd.Parameters.AddWithValue("itemname", txtITNAME.Text)
+        cmd.ExecuteNonQuery()
+        con.Close()
+        dgvTRANSAC_Refresh()
 
 
         MsgBox("Returned successfully", vbOKOnly + vbInformation, "Transaction Recorded")

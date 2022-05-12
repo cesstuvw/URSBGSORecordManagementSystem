@@ -207,6 +207,22 @@
             con.Close()
         End If
 
+
+        If txtQUAN.Text > txtSTOCK.Text Then
+            MsgBox("This item is not enough for borrowing or it's out of stock", vbOKOnly + vbCritical, "Transaction error")
+            'TXTITEMC.Text = ""
+            'TXTITEMN.Text = ""
+            'TXTITEMCAT.Text = ""
+            'TXTAVAILSTOCK.Text = ""
+            txtQUAN.Text = ""
+
+            Exit Sub
+        ElseIf TXTQUAN.Text = 0 Then
+            MsgBox("Please input a quantity that is greater than zero", vbOKOnly + vbCritical, "Transaction error")
+            txtQUAN.Focus()
+        End If
+
+
         OpenCon()
         cmd.CommandText = "insert into tbl_itemcart (TransNo, BorrowersID, BorrowersName, BorrowersType, Itemcode, Itemname, Quantity, DateBorrowed) values (@transno, @bid, @fulln, @btype, @itemc, @itemn, @qty, @dateb)"
         cmd.Parameters.Clear()
@@ -264,8 +280,8 @@
             cmd.Parameters.AddWithValue("dborrow", dgvTRANSAC.Rows(i).Cells(7).Value.ToString)
             cmd.ExecuteNonQuery()
             con.Close()
-
         Next
+
         Dim updateqty As Integer
         For i = 0 To dgvTRANSAC.Rows.Count - 1
             OpenCon()

@@ -33,7 +33,6 @@ Partial Class ucRETURNING
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtREMOVE = New System.Windows.Forms.TextBox()
         Me.txtCOITNAME = New System.Windows.Forms.TextBox()
         Me.btnREMOVE = New System.Windows.Forms.Button()
@@ -43,12 +42,20 @@ Partial Class ucRETURNING
         Me.btnITEM = New System.Windows.Forms.Button()
         Me.btnUSER = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.pnlSTOCK = New System.Windows.Forms.Panel()
         Me.lblQUAN = New System.Windows.Forms.Label()
         Me.txtQUAN = New System.Windows.Forms.TextBox()
         Me.dgvRETURN = New System.Windows.Forms.DataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ReturnNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TransNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BorrowersNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateBorrowedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateReturnedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblreturnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -76,7 +83,6 @@ Partial Class ucRETURNING
         Me.txtSEARCHNAME = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.txtSEARCHPROF = New System.Windows.Forms.TextBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.dgvTRANSAC = New System.Windows.Forms.DataGridView()
         Me.TransNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -89,25 +95,19 @@ Partial Class ucRETURNING
         Me.DateBorrowedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateReturnedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TbltransactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
-        Me.TblreturnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_transactionTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_transactionTableAdapter()
         Me.Tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
-        Me.ReturnNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TransNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BorrowersNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemCodeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateBorrowedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateReturnedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.btnCANCEL = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlSEARCH.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlNO.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.pnlSTOCK.SuspendLayout()
         CType(Me.dgvRETURN, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.pnlCODE.SuspendLayout()
@@ -117,12 +117,12 @@ Partial Class ucRETURNING
         Me.Panel1.SuspendLayout()
         Me.pnlITEM.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbltransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -145,18 +145,6 @@ Partial Class ucRETURNING
         Me.pnlSEARCH.Name = "pnlSEARCH"
         Me.pnlSEARCH.Size = New System.Drawing.Size(543, 38)
         Me.pnlSEARCH.TabIndex = 111
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox1.Location = New System.Drawing.Point(512, 8)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'txtREMOVE
         '
@@ -274,22 +262,6 @@ Partial Class ucRETURNING
         Me.Panel2.Size = New System.Drawing.Size(137, 36)
         Me.Panel2.TabIndex = 125
         '
-        'btnCANCEL
-        '
-        Me.btnCANCEL.BackColor = System.Drawing.Color.White
-        Me.btnCANCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCANCEL.Enabled = False
-        Me.btnCANCEL.FlatAppearance.BorderSize = 0
-        Me.btnCANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
-        Me.btnCANCEL.ForeColor = System.Drawing.Color.White
-        Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 594)
-        Me.btnCANCEL.Name = "btnCANCEL"
-        Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
-        Me.btnCANCEL.TabIndex = 144
-        Me.btnCANCEL.UseVisualStyleBackColor = False
-        '
         'pnlSTOCK
         '
         Me.pnlSTOCK.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
@@ -378,17 +350,82 @@ Partial Class ucRETURNING
         Me.dgvRETURN.Size = New System.Drawing.Size(660, 469)
         Me.dgvRETURN.TabIndex = 132
         '
-        'PictureBox2
+        'ReturnNoDataGridViewTextBoxColumn
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox2.Location = New System.Drawing.Point(665, 11)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
+        Me.ReturnNoDataGridViewTextBoxColumn.DataPropertyName = "ReturnNo"
+        Me.ReturnNoDataGridViewTextBoxColumn.HeaderText = "NO."
+        Me.ReturnNoDataGridViewTextBoxColumn.Name = "ReturnNoDataGridViewTextBoxColumn"
+        Me.ReturnNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ReturnNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ReturnNoDataGridViewTextBoxColumn.Width = 85
+        '
+        'TransNoDataGridViewTextBoxColumn
+        '
+        Me.TransNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo"
+        Me.TransNoDataGridViewTextBoxColumn.HeaderText = "TRANSACTION NO."
+        Me.TransNoDataGridViewTextBoxColumn.Name = "TransNoDataGridViewTextBoxColumn"
+        Me.TransNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TransNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.TransNoDataGridViewTextBoxColumn.Width = 125
+        '
+        'BorrowersNameDataGridViewTextBoxColumn
+        '
+        Me.BorrowersNameDataGridViewTextBoxColumn.DataPropertyName = "BorrowersName"
+        Me.BorrowersNameDataGridViewTextBoxColumn.HeaderText = "FULL NAME"
+        Me.BorrowersNameDataGridViewTextBoxColumn.Name = "BorrowersNameDataGridViewTextBoxColumn"
+        Me.BorrowersNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BorrowersNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.BorrowersNameDataGridViewTextBoxColumn.Width = 145
+        '
+        'ItemCodeDataGridViewTextBoxColumn
+        '
+        Me.ItemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode"
+        Me.ItemCodeDataGridViewTextBoxColumn.HeaderText = "ITEM CODE"
+        Me.ItemCodeDataGridViewTextBoxColumn.Name = "ItemCodeDataGridViewTextBoxColumn"
+        Me.ItemCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ItemNameDataGridViewTextBoxColumn
+        '
+        Me.ItemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName"
+        Me.ItemNameDataGridViewTextBoxColumn.HeaderText = "ITEM NAME"
+        Me.ItemNameDataGridViewTextBoxColumn.Name = "ItemNameDataGridViewTextBoxColumn"
+        Me.ItemNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QuantityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateBorrowedDataGridViewTextBoxColumn
+        '
+        Me.DateBorrowedDataGridViewTextBoxColumn.DataPropertyName = "DateBorrowed"
+        Me.DateBorrowedDataGridViewTextBoxColumn.HeaderText = "DATE BORROWED"
+        Me.DateBorrowedDataGridViewTextBoxColumn.Name = "DateBorrowedDataGridViewTextBoxColumn"
+        Me.DateBorrowedDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateBorrowedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateReturnedDataGridViewTextBoxColumn
+        '
+        Me.DateReturnedDataGridViewTextBoxColumn.DataPropertyName = "DateReturned"
+        Me.DateReturnedDataGridViewTextBoxColumn.HeaderText = "DATE RETURNED"
+        Me.DateReturnedDataGridViewTextBoxColumn.Name = "DateReturnedDataGridViewTextBoxColumn"
+        Me.DateReturnedDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateReturnedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'TblreturnBindingSource
+        '
+        Me.TblreturnBindingSource.DataMember = "tbl_return"
+        Me.TblreturnBindingSource.DataSource = Me.Ursbgso_dbDataSet
+        '
+        'Ursbgso_dbDataSet
+        '
+        Me.Ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
+        Me.Ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panel3
         '
@@ -651,7 +688,7 @@ Partial Class ucRETURNING
         Me.pnlITEM.Controls.Add(Me.txtSEARCHNAME)
         Me.pnlITEM.Controls.Add(Me.Panel6)
         Me.pnlITEM.Controls.Add(Me.Panel7)
-        Me.pnlITEM.Location = New System.Drawing.Point(0, 650)
+        Me.pnlITEM.Location = New System.Drawing.Point(0, 0)
         Me.pnlITEM.Name = "pnlITEM"
         Me.pnlITEM.Size = New System.Drawing.Size(1324, 705)
         Me.pnlITEM.TabIndex = 150
@@ -688,18 +725,6 @@ Partial Class ucRETURNING
         Me.txtSEARCHPROF.Size = New System.Drawing.Size(630, 16)
         Me.txtSEARCHPROF.TabIndex = 106
         Me.txtSEARCHPROF.Text = "Search profile"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox3.Location = New System.Drawing.Point(665, 10)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
         '
         'Panel7
         '
@@ -844,16 +869,6 @@ Partial Class ucRETURNING
         Me.TbltransactionBindingSource.DataMember = "tbl_transaction"
         Me.TbltransactionBindingSource.DataSource = Me.Ursbgso_dbDataSet
         '
-        'Ursbgso_dbDataSet
-        '
-        Me.Ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
-        Me.Ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblreturnBindingSource
-        '
-        Me.TblreturnBindingSource.DataMember = "tbl_return"
-        Me.TblreturnBindingSource.DataSource = Me.Ursbgso_dbDataSet
-        '
         'Tbl_transactionTableAdapter
         '
         Me.Tbl_transactionTableAdapter.ClearBeforeFill = True
@@ -862,72 +877,57 @@ Partial Class ucRETURNING
         '
         Me.Tbl_returnTableAdapter.ClearBeforeFill = True
         '
-        'ReturnNoDataGridViewTextBoxColumn
+        'PictureBox3
         '
-        Me.ReturnNoDataGridViewTextBoxColumn.DataPropertyName = "ReturnNo"
-        Me.ReturnNoDataGridViewTextBoxColumn.HeaderText = "NO."
-        Me.ReturnNoDataGridViewTextBoxColumn.Name = "ReturnNoDataGridViewTextBoxColumn"
-        Me.ReturnNoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ReturnNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ReturnNoDataGridViewTextBoxColumn.Width = 85
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox3.Location = New System.Drawing.Point(665, 10)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
         '
-        'TransNoDataGridViewTextBoxColumn
+        'btnCANCEL
         '
-        Me.TransNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo"
-        Me.TransNoDataGridViewTextBoxColumn.HeaderText = "TRANSACTION NO."
-        Me.TransNoDataGridViewTextBoxColumn.Name = "TransNoDataGridViewTextBoxColumn"
-        Me.TransNoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TransNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.TransNoDataGridViewTextBoxColumn.Width = 125
+        Me.btnCANCEL.BackColor = System.Drawing.Color.White
+        Me.btnCANCEL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCANCEL.Enabled = False
+        Me.btnCANCEL.FlatAppearance.BorderSize = 0
+        Me.btnCANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
+        Me.btnCANCEL.ForeColor = System.Drawing.Color.White
+        Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
+        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 594)
+        Me.btnCANCEL.Name = "btnCANCEL"
+        Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
+        Me.btnCANCEL.TabIndex = 144
+        Me.btnCANCEL.UseVisualStyleBackColor = False
         '
-        'BorrowersNameDataGridViewTextBoxColumn
+        'PictureBox2
         '
-        Me.BorrowersNameDataGridViewTextBoxColumn.DataPropertyName = "BorrowersName"
-        Me.BorrowersNameDataGridViewTextBoxColumn.HeaderText = "FULL NAME"
-        Me.BorrowersNameDataGridViewTextBoxColumn.Name = "BorrowersNameDataGridViewTextBoxColumn"
-        Me.BorrowersNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BorrowersNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.BorrowersNameDataGridViewTextBoxColumn.Width = 145
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox2.Location = New System.Drawing.Point(665, 11)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
         '
-        'ItemCodeDataGridViewTextBoxColumn
+        'PictureBox1
         '
-        Me.ItemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode"
-        Me.ItemCodeDataGridViewTextBoxColumn.HeaderText = "ITEM CODE"
-        Me.ItemCodeDataGridViewTextBoxColumn.Name = "ItemCodeDataGridViewTextBoxColumn"
-        Me.ItemCodeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ItemCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ItemNameDataGridViewTextBoxColumn
-        '
-        Me.ItemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName"
-        Me.ItemNameDataGridViewTextBoxColumn.HeaderText = "ITEM NAME"
-        Me.ItemNameDataGridViewTextBoxColumn.Name = "ItemNameDataGridViewTextBoxColumn"
-        Me.ItemNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ItemNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QuantityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DateBorrowedDataGridViewTextBoxColumn
-        '
-        Me.DateBorrowedDataGridViewTextBoxColumn.DataPropertyName = "DateBorrowed"
-        Me.DateBorrowedDataGridViewTextBoxColumn.HeaderText = "DATE BORROWED"
-        Me.DateBorrowedDataGridViewTextBoxColumn.Name = "DateBorrowedDataGridViewTextBoxColumn"
-        Me.DateBorrowedDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateBorrowedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DateReturnedDataGridViewTextBoxColumn
-        '
-        Me.DateReturnedDataGridViewTextBoxColumn.DataPropertyName = "DateReturned"
-        Me.DateReturnedDataGridViewTextBoxColumn.HeaderText = "DATE RETURNED"
-        Me.DateReturnedDataGridViewTextBoxColumn.Name = "DateReturnedDataGridViewTextBoxColumn"
-        Me.DateReturnedDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateReturnedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox1.Location = New System.Drawing.Point(512, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'ucRETURNING
         '
@@ -960,7 +960,6 @@ Partial Class ucRETURNING
         Me.Name = "ucRETURNING"
         Me.Size = New System.Drawing.Size(1324, 705)
         Me.pnlSEARCH.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlNO.ResumeLayout(False)
         Me.pnlNO.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -968,7 +967,8 @@ Partial Class ucRETURNING
         Me.pnlSTOCK.ResumeLayout(False)
         Me.pnlSTOCK.PerformLayout()
         CType(Me.dgvRETURN, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -986,12 +986,12 @@ Partial Class ucRETURNING
         Me.pnlITEM.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbltransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
