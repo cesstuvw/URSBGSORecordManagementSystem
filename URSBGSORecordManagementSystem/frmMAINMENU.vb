@@ -5,6 +5,7 @@
     Dim btnITEMSTWasClicked As Boolean = False
     Dim btnBORPCWasClicked As Boolean = False
     Dim btnTRANSACWasClicked As Boolean = False
+    Dim btnRETWasClicked As Boolean = False
     Dim btnSETTWasClicked As Boolean = False
     Dim btnREPORTSWasClicked As Boolean = False
 
@@ -38,6 +39,7 @@
         btnITEMST.FlatAppearance.MouseOverBackColor = btnITEMST.BackColor
         btnBORP.FlatAppearance.MouseOverBackColor = btnBORP.BackColor
         btnTRANSAC.FlatAppearance.MouseOverBackColor = btnTRANSAC.BackColor
+        btnRET.FlatAppearance.MouseOverBackColor = btnRET.BackColor
         btnSETT.FlatAppearance.MouseOverBackColor = btnSETT.BackColor
         btnREPORTS.FlatAppearance.MouseOverBackColor = btnREPORTS.BackColor
         btnDASH.FlatAppearance.MouseDownBackColor = btnDASH.BackColor
@@ -46,6 +48,7 @@
         btnITEMST.FlatAppearance.MouseDownBackColor = btnITEMST.BackColor
         btnBORP.FlatAppearance.MouseDownBackColor = btnBORP.BackColor
         btnTRANSAC.FlatAppearance.MouseDownBackColor = btnTRANSAC.BackColor
+        btnRET.FlatAppearance.MouseDownBackColor = btnRET.BackColor
         btnSETT.FlatAppearance.MouseDownBackColor = btnSETT.BackColor
         btnREPORTS.FlatAppearance.MouseDownBackColor = btnREPORTS.BackColor
 
@@ -88,6 +91,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -102,6 +106,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
     End Sub
@@ -119,6 +124,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -149,6 +155,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
     End Sub
@@ -167,6 +174,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -181,6 +189,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
 
@@ -215,6 +224,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu_selected
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -229,6 +239,7 @@
         btnITEMSTWasClicked = True
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
 
@@ -263,6 +274,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu_selected
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -294,6 +306,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = True
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
     End Sub
@@ -312,6 +325,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu_selected
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -342,6 +356,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = True
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
     End Sub
@@ -360,7 +375,8 @@
         btnITEM.BackgroundImage = My.Resources.item_menu
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
-        btnTRANSAC.BackgroundImage = My.Resources.transaction_menu_selected
+        btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.retuning_menu_selected
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -382,7 +398,7 @@
 
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnRET.Height - 3
-        pnlINDICATOR.Top = btnTRANSAC.Top
+        pnlINDICATOR.Top = btnRET.Top
         pnlINDICATOR.BringToFront()
 
         btnDASHWasClicked = False
@@ -390,7 +406,8 @@
         btnITEMWasClicked = False
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
-        btnTRANSACWasClicked = True
+        btnTRANSACWasClicked = False
+        btnRETWasClicked = True
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
     End Sub
@@ -409,6 +426,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu_selected
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -439,6 +457,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = True
         btnREPORTSWasClicked = False
     End Sub
@@ -457,6 +476,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
+        btnRET.BackgroundImage = My.Resources.returning_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu_selected
 
@@ -487,6 +507,7 @@
         btnITEMSTWasClicked = False
         btnBORPCWasClicked = False
         btnTRANSACWasClicked = False
+        btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = True
     End Sub
@@ -622,7 +643,23 @@
         End If
     End Sub
 
-    Private Sub btnSETT_MouseHover(sender As Object, e As EventArgs) Handles btnSETT.MouseHover, btnRET.MouseHover
+    Private Sub btnRET_MouseHover(sender As Object, e As EventArgs) Handles btnRET.MouseHover
+        If btnRETWasClicked = True Then
+            btnRET.BackgroundImage = My.Resources.retuning_menu_selected
+        ElseIf btnRETWasclicked = False Then
+            btnRET.BackgroundImage = My.Resources.returning_menu_hover
+        End If
+    End Sub
+    Private Sub btnRET_MouseLeave(sender As Object, e As EventArgs) Handles btnRET.MouseLeave
+        If btnRETWasClicked = True Then
+            btnRET.BackgroundImage = My.Resources.retuning_menu_selected
+
+        ElseIf btnRETWasClicked = False Then
+            btnRET.BackgroundImage = My.Resources.returning_menu
+        End If
+    End Sub
+
+    Private Sub btnSETT_MouseHover(sender As Object, e As EventArgs) Handles btnSETT.MouseHover
         If btnSETTWasClicked = True Then
             btnSETT.BackgroundImage = My.Resources.settings_menu_selected
 
@@ -631,7 +668,7 @@
         End If
     End Sub
 
-    Private Sub btnSETT_MouseLeave(sender As Object, e As EventArgs) Handles btnSETT.MouseLeave, btnRET.MouseLeave
+    Private Sub btnSETT_MouseLeave(sender As Object, e As EventArgs) Handles btnSETT.MouseLeave
         If btnSETTWasClicked = True Then
             btnSETT.BackgroundImage = My.Resources.settings_menu_selected
 

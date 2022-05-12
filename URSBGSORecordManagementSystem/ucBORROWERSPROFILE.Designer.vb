@@ -23,10 +23,10 @@ Partial Class ucBORROWERSPROFILE
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnEDIT = New System.Windows.Forms.Button()
         Me.btnCANCEL = New System.Windows.Forms.Button()
@@ -44,7 +44,6 @@ Partial Class ucBORROWERSPROFILE
         Me.btnCREATE = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlCON = New System.Windows.Forms.Panel()
-        Me.lblCONTACT = New System.Windows.Forms.Label()
         Me.txtCONTACT = New System.Windows.Forms.TextBox()
         Me.dgvPROFILE = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,14 +67,15 @@ Partial Class ucBORROWERSPROFILE
         Me.lblLN = New System.Windows.Forms.Label()
         Me.txtLNAME = New System.Windows.Forms.TextBox()
         Me.pnlTYPE = New System.Windows.Forms.Panel()
+        Me.lblTYPE = New System.Windows.Forms.Label()
         Me.pnlCLEANUT3 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT1 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT2 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT = New System.Windows.Forms.Panel()
-        Me.lblTYPE = New System.Windows.Forms.Label()
         Me.cboTYPE = New System.Windows.Forms.ComboBox()
         Me.txtCOLN = New System.Windows.Forms.TextBox()
         Me.Tbl_profileTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter()
+        Me.lblCONTACT = New System.Windows.Forms.Label()
         Me.pnlID.SuspendLayout()
         Me.pnlCON.SuspendLayout()
         CType(Me.dgvPROFILE, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,8 +162,8 @@ Partial Class ucBORROWERSPROFILE
         Me.lblID.Location = New System.Drawing.Point(14, 9)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(175, 17)
-        Me.lblID.TabIndex = 64
-        Me.lblID.Text = "Borrower's ID"
+        Me.lblID.TabIndex = 65
+        Me.lblID.Text = "Borrower ID"
         '
         'txtID
         '
@@ -175,7 +175,7 @@ Partial Class ucBORROWERSPROFILE
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(170, 17)
         Me.txtID.TabIndex = 34
-        Me.txtID.Text = "Borrower's ID"
+        Me.txtID.Text = "Borrower ID"
         '
         'cboCOTY
         '
@@ -307,16 +307,6 @@ Partial Class ucBORROWERSPROFILE
         Me.pnlCON.Size = New System.Drawing.Size(204, 36)
         Me.pnlCON.TabIndex = 68
         '
-        'lblCONTACT
-        '
-        Me.lblCONTACT.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblCONTACT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblCONTACT.Location = New System.Drawing.Point(14, 9)
-        Me.lblCONTACT.Name = "lblCONTACT"
-        Me.lblCONTACT.Size = New System.Drawing.Size(170, 17)
-        Me.lblCONTACT.TabIndex = 62
-        Me.lblCONTACT.Text = "Contact No."
-        '
         'txtCONTACT
         '
         Me.txtCONTACT.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -324,6 +314,7 @@ Partial Class ucBORROWERSPROFILE
         Me.txtCONTACT.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCONTACT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
         Me.txtCONTACT.Location = New System.Drawing.Point(17, 9)
+        Me.txtCONTACT.MaxLength = 11
         Me.txtCONTACT.Name = "txtCONTACT"
         Me.txtCONTACT.Size = New System.Drawing.Size(167, 17)
         Me.txtCONTACT.TabIndex = 37
@@ -340,60 +331,59 @@ Partial Class ucBORROWERSPROFILE
         Me.dgvPROFILE.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvPROFILE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvPROFILE.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPROFILE.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPROFILE.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPROFILE.ColumnHeadersHeight = 65
         Me.dgvPROFILE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvPROFILE.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.FNameDataGridViewTextBoxColumn, Me.MNameDataGridViewTextBoxColumn, Me.LNameDataGridViewTextBoxColumn, Me.BorrowersTypeDataGridViewTextBoxColumn, Me.ContactNoDataGridViewTextBoxColumn})
         Me.dgvPROFILE.DataSource = Me.TblprofileBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPROFILE.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPROFILE.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPROFILE.EnableHeadersVisualStyles = False
         Me.dgvPROFILE.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.dgvPROFILE.Location = New System.Drawing.Point(348, 165)
         Me.dgvPROFILE.Name = "dgvPROFILE"
         Me.dgvPROFILE.ReadOnly = True
         Me.dgvPROFILE.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPROFILE.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPROFILE.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvPROFILE.RowHeadersVisible = False
         Me.dgvPROFILE.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvPROFILE.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvPROFILE.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvPROFILE.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.dgvPROFILE.RowTemplate.DividerHeight = 1
         Me.dgvPROFILE.RowTemplate.Height = 45
-        Me.dgvPROFILE.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvPROFILE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvPROFILE.Size = New System.Drawing.Size(660, 469)
         Me.dgvPROFILE.TabIndex = 63
         '
         'DataGridViewTextBoxColumn1
         '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "BorrowersID"
         Me.DataGridViewTextBoxColumn1.HeaderText = "ID"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
         Me.DataGridViewTextBoxColumn1.ReadOnly = True
         Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 85
         '
         'FNameDataGridViewTextBoxColumn
         '
@@ -581,16 +571,26 @@ Partial Class ucBORROWERSPROFILE
         'pnlTYPE
         '
         Me.pnlTYPE.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.pnlTYPE.Controls.Add(Me.lblTYPE)
         Me.pnlTYPE.Controls.Add(Me.pnlCLEANUT3)
         Me.pnlTYPE.Controls.Add(Me.pnlCLEANUT1)
         Me.pnlTYPE.Controls.Add(Me.pnlCLEANUT2)
         Me.pnlTYPE.Controls.Add(Me.pnlCLEANUT)
-        Me.pnlTYPE.Controls.Add(Me.lblTYPE)
         Me.pnlTYPE.Controls.Add(Me.cboTYPE)
         Me.pnlTYPE.Location = New System.Drawing.Point(1074, 456)
         Me.pnlTYPE.Name = "pnlTYPE"
         Me.pnlTYPE.Size = New System.Drawing.Size(204, 36)
         Me.pnlTYPE.TabIndex = 67
+        '
+        'lblTYPE
+        '
+        Me.lblTYPE.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblTYPE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblTYPE.Location = New System.Drawing.Point(17, 9)
+        Me.lblTYPE.Name = "lblTYPE"
+        Me.lblTYPE.Size = New System.Drawing.Size(170, 17)
+        Me.lblTYPE.TabIndex = 91
+        Me.lblTYPE.Text = "Borrower Type"
         '
         'pnlCLEANUT3
         '
@@ -625,16 +625,6 @@ Partial Class ucBORROWERSPROFILE
         Me.pnlCLEANUT.TabIndex = 63
         Me.pnlCLEANUT.Visible = False
         '
-        'lblTYPE
-        '
-        Me.lblTYPE.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblTYPE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblTYPE.Location = New System.Drawing.Point(17, 9)
-        Me.lblTYPE.Name = "lblTYPE"
-        Me.lblTYPE.Size = New System.Drawing.Size(170, 17)
-        Me.lblTYPE.TabIndex = 61
-        Me.lblTYPE.Text = "Borrower's Type"
-        '
         'cboTYPE
         '
         Me.cboTYPE.AutoCompleteCustomSource.AddRange(New String() {"Faculty", "Student"})
@@ -649,7 +639,7 @@ Partial Class ucBORROWERSPROFILE
         Me.cboTYPE.Name = "cboTYPE"
         Me.cboTYPE.Size = New System.Drawing.Size(173, 25)
         Me.cboTYPE.TabIndex = 35
-        Me.cboTYPE.Text = "Borrower's Type"
+        Me.cboTYPE.Text = "Borrower Type"
         Me.cboTYPE.Visible = False
         '
         'txtCOLN
@@ -665,6 +655,16 @@ Partial Class ucBORROWERSPROFILE
         'Tbl_profileTableAdapter
         '
         Me.Tbl_profileTableAdapter.ClearBeforeFill = True
+        '
+        'lblCONTACT
+        '
+        Me.lblCONTACT.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblCONTACT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblCONTACT.Location = New System.Drawing.Point(14, 9)
+        Me.lblCONTACT.Name = "lblCONTACT"
+        Me.lblCONTACT.Size = New System.Drawing.Size(170, 17)
+        Me.lblCONTACT.TabIndex = 63
+        Me.lblCONTACT.Text = "Contact No."
         '
         'ucBORROWERSPROFILE
         '
@@ -748,25 +748,25 @@ Partial Class ucBORROWERSPROFILE
     Friend WithEvents cboTYPE As ComboBox
     Friend WithEvents txtID As TextBox
     Friend WithEvents txtFNAME As TextBox
-    Friend WithEvents lblTYPE As Label
     Friend WithEvents pnlCLEANUT1 As Panel
     Friend WithEvents pnlCLEANUT2 As Panel
     Friend WithEvents pnlCLEANUT As Panel
     Friend WithEvents pnlCLEANUT3 As Panel
     Friend WithEvents txtCOLN As TextBox
-    Friend WithEvents lblID As Label
     Friend WithEvents lblFN As Label
     Friend WithEvents lblMN As Label
     Friend WithEvents lblLN As Label
-    Friend WithEvents lblCONTACT As Label
     Friend WithEvents BorrowersIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TblprofileBindingSource As BindingSource
+    Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
+    Friend WithEvents Tbl_profileTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter
+    Friend WithEvents lblID As Label
+    Friend WithEvents lblTYPE As Label
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents FNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BorrowersTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ContactNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TblprofileBindingSource As BindingSource
-    Friend WithEvents Ursbgso_dbDataSet As ursbgso_dbDataSet
-    Friend WithEvents Tbl_profileTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter
+    Friend WithEvents lblCONTACT As Label
 End Class

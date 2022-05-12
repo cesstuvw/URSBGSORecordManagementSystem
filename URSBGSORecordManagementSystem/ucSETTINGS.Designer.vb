@@ -114,7 +114,7 @@ Partial Class ucSETTINGS
         Me.btnCANCELDGV.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnCANCELDGV.ForeColor = System.Drawing.Color.White
         Me.btnCANCELDGV.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCELDGV.Location = New System.Drawing.Point(1242, 380)
+        Me.btnCANCELDGV.Location = New System.Drawing.Point(1242, 375)
         Me.btnCANCELDGV.Name = "btnCANCELDGV"
         Me.btnCANCELDGV.Size = New System.Drawing.Size(36, 36)
         Me.btnCANCELDGV.TabIndex = 97
@@ -131,7 +131,7 @@ Partial Class ucSETTINGS
         Me.btnUPDATE.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnUPDATE.ForeColor = System.Drawing.Color.White
         Me.btnUPDATE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnUPDATE.Location = New System.Drawing.Point(1074, 380)
+        Me.btnUPDATE.Location = New System.Drawing.Point(1074, 375)
         Me.btnUPDATE.Name = "btnUPDATE"
         Me.btnUPDATE.Size = New System.Drawing.Size(158, 36)
         Me.btnUPDATE.TabIndex = 96
@@ -341,7 +341,7 @@ Partial Class ucSETTINGS
         Me.btnSAVE.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnSAVE.ForeColor = System.Drawing.Color.White
         Me.btnSAVE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSAVE.Location = New System.Drawing.Point(1074, 380)
+        Me.btnSAVE.Location = New System.Drawing.Point(1074, 375)
         Me.btnSAVE.Name = "btnSAVE"
         Me.btnSAVE.Size = New System.Drawing.Size(158, 36)
         Me.btnSAVE.TabIndex = 99
@@ -359,7 +359,7 @@ Partial Class ucSETTINGS
         Me.btnCANCEL.Font = New System.Drawing.Font("Arial", 9.8!, System.Drawing.FontStyle.Bold)
         Me.btnCANCEL.ForeColor = System.Drawing.Color.White
         Me.btnCANCEL.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cancel_button_icon
-        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 380)
+        Me.btnCANCEL.Location = New System.Drawing.Point(1242, 375)
         Me.btnCANCEL.Name = "btnCANCEL"
         Me.btnCANCEL.Size = New System.Drawing.Size(36, 36)
         Me.btnCANCEL.TabIndex = 100

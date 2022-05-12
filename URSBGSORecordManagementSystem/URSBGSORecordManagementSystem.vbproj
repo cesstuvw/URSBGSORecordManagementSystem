@@ -88,12 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomizedButton.vb" />
-    <Compile Include="frmDASHBOARD.Designer.vb">
-      <DependentUpon>frmDASHBOARD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmDASHBOARD.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmLOADING.Designer.vb">
       <DependentUpon>frmLOADING.vb</DependentUpon>
     </Compile>
@@ -111,6 +105,12 @@
       <DependentUpon>frmMAINMENU.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMAINMENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmREPORTS.Designer.vb">
+      <DependentUpon>frmREPORTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmREPORTS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODULE.vb" />
@@ -191,9 +191,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmDASHBOARD.resx">
-      <DependentUpon>frmDASHBOARD.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLOADING.resx">
       <DependentUpon>frmLOADING.vb</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMAINMENU.resx">
       <DependentUpon>frmMAINMENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmREPORTS.resx">
+      <DependentUpon>frmREPORTS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -223,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucREPORTS.resx">
       <DependentUpon>ucREPORTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRETURNING.resx">
+      <DependentUpon>ucRETURNING.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucSETTINGS.resx">
       <DependentUpon>ucSETTINGS.vb</DependentUpon>
@@ -451,9 +454,6 @@
     <None Include="Resources\indicatorfn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\calendardash.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\transactiondash.png" />
   </ItemGroup>
   <ItemGroup>
@@ -535,16 +535,10 @@
     <None Include="Resources\useraccounthover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\adduser.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tablebg.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adduserbtn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\testtest.png" />
@@ -569,9 +563,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\viewhover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adduserhover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\modalbg.png" />
@@ -766,18 +757,6 @@
     <None Include="Resources\search-icon-test.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add-user-button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-box.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\edit-user-button.png" />
   </ItemGroup>
   <ItemGroup>
@@ -793,7 +772,16 @@
     <None Include="Resources\testsearch.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\returning-menu-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retuning-menu-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\returning-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sheer1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

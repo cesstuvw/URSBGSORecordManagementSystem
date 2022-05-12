@@ -42,7 +42,7 @@
         txtFNAME.Text = "First Name"
         txtMNAME.Text = "Middle Name"
         txtLNAME.Text = "Last Name"
-        cboTYPE.Text = "Borrower's Type"
+        cboTYPE.Text = "Borrower Type"
         txtCONTACT.Text = "Contact No."
 
         'txtID.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
@@ -135,17 +135,17 @@
 
     '---------------------------------- SAVE BUTTON ---------------------------------'
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
-        'ERROR TRAPPING
+        'ERROR TRAPPINGbo
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
-        If txtID.Text = "Borrower's ID" Or txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower's Type" Then
+        If txtID.Text = "Borrower ID" Or txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Saving")
             btnCANCEL.Enabled = True
             Exit Sub
         End If
 
         If cboTYPE.Text <> "Faculty" And cboTYPE.Text <> "Student" Then
-            MsgBox("Unknown borrower's type!", vbOKOnly + vbCritical, "Error Saving")
+            MsgBox("Unknown borrower type!", vbOKOnly + vbCritical, "Error Saving")
             cboTYPE.Focus()
             Exit Sub
         End If
@@ -155,7 +155,7 @@
             cmd.CommandText = "Select * from tbl_profile where borrowersid = '" & txtID.Text & "' "
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
-                MsgBox("Sorry, borrower's ID already exists.", vbOKOnly + vbCritical, "Error Saving")
+                MsgBox("Sorry, borrower ID already exists.", vbOKOnly + vbCritical, "Error Saving")
                 con.Close()
                 txtID.Focus()
                 Exit Sub
@@ -179,7 +179,7 @@
         MsgBox("New Account has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
-        txtID.Text = "Borrower's ID"
+        txtID.Text = "Borrower ID"
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
         btnEDIT.Enabled = False
@@ -201,7 +201,7 @@
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         btnSAVE.Enabled = False
-        txtID.Text = "Borrower's ID"
+        txtID.Text = "Borrower ID"
         Function_TextFormat()
         dgvPROFILE.Enabled = True
         btnEDIT.Enabled = False
@@ -312,7 +312,7 @@
         End If
 
         'Error Trapping
-        If txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower's Type" Or txtCONTACT.Text = "Contact No." Then
+        If txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Or txtCONTACT.Text = "Contact No." Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
             Exit Sub
         End If
@@ -338,7 +338,7 @@
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
 
-        txtID.Text = "Borrower's ID"
+        txtID.Text = "Borrower ID"
         btnUPDATE.Enabled = False
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
@@ -404,7 +404,7 @@
 
     '---------------------------------- TXT AND CBO EVENTS ON FOCUS ---------------------------------'
     Private Sub txtID_Enter(sender As Object, e As EventArgs) Handles txtID.Enter
-        If txtID.Text = "Borrower's ID" Then
+        If txtID.Text = "Borrower ID" Then
             txtID.Text = ""
             txtID.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
@@ -412,7 +412,7 @@
 
     Private Sub txtID_Leave(sender As Object, e As EventArgs) Handles txtID.Leave
         If txtID.Text = "" Then
-            txtID.Text = "Borrower's ID"
+            txtID.Text = "Borrower ID"
             txtID.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
@@ -460,7 +460,7 @@
     End Sub
 
     Private Sub cboTYPE_Enter(sender As Object, e As EventArgs) Handles cboTYPE.Enter
-        If cboTYPE.Text = "Borrower's Type" Then
+        If cboTYPE.Text = "Borrower Type" Then
             cboTYPE.Text = ""
             cboTYPE.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
@@ -468,7 +468,7 @@
 
     Private Sub cboTYPE_Leave(sender As Object, e As EventArgs) Handles cboTYPE.Leave
         If cboTYPE.Text = "" Then
-            cboTYPE.Text = "Borrower's Type"
+            cboTYPE.Text = "Borrower Type"
             cboTYPE.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
@@ -484,6 +484,12 @@
         If txtCONTACT.Text = "" Then
             txtCONTACT.Text = "Contact No."
             txtCONTACT.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
+        End If
+    End Sub
+
+    Private Sub txtCONTACT_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCONTACT.KeyPress
+        If e.KeyChar <> ControlChars.Back Then
+            e.Handled = Not (Char.IsDigit(e.KeyChar))
         End If
     End Sub
 
@@ -545,6 +551,5 @@
             txtLNAME.Focus()
         End If
     End Sub
-
 
 End Class

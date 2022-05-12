@@ -86,6 +86,7 @@
         pnlCLEANST2.Visible = True
         pnlCLEANST3.Visible = True
     End Sub
+
     Private Sub Function_DisableClean()
         pnlCLEANUT.Visible = False
         pnlCLEANUT1.Visible = False
@@ -95,6 +96,10 @@
         pnlCLEANST1.Visible = False
         pnlCLEANST2.Visible = False
         pnlCLEANST3.Visible = False
+    End Sub
+
+    Private Sub dgvUSER_Refresh()
+        Me.Tbl_userTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_user)
     End Sub
 
     Private Sub ucUSERACCOUNT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -120,9 +125,6 @@
         cboSTATUS.Items.Add("Inactive")
     End Sub
 
-    Private Sub dgvUSER_Refresh()
-        Me.Tbl_userTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_user)
-    End Sub
 
     '---------------------------------- CREATE A NEW ACCOUNT  BUTTON ---------------------------------'
     Private Sub btnCREATE_Click(sender As Object, e As EventArgs) Handles btnCREATE.Click
@@ -204,7 +206,7 @@
 
         'SAVING A NEW PROFILE
         OpenCon()
-        cmd.CommandText = "insert into tbl_profile values( @un, @pw, @ln, @ut, @stat)"
+        cmd.CommandText = "insert into tbl_user values ( @un, @pw, @ln, @ut, @stat)"
         cmd.Parameters.Clear()
         cmd.Parameters.AddWithValue("un", txtUSER.Text)
         cmd.Parameters.AddWithValue("pw", txtPASS.Text)

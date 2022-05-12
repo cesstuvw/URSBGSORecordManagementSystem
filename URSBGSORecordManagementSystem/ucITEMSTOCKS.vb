@@ -205,7 +205,7 @@
     End Sub
 
 
-    '---------------------------------- TXT EVENTS ON FOCUS ---------------------------------'
+    '---------------------------------- TXT EVENTS -----------------------------------'
     Private Sub txtADDEDSTOCK_Enter(sender As Object, e As EventArgs) Handles txtADDEDSTOCK.Enter
         If txtADDEDSTOCK.Text = "No of Stock to be Added" Then
             txtADDEDSTOCK.Text = ""
@@ -215,7 +215,7 @@
 
     Private Sub TXTaddedstock_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtADDEDSTOCK.KeyPress
         If e.KeyChar <> ControlChars.Back Then
-            e.Handled = Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = ".")
+            e.Handled = Not (Char.IsDigit(e.KeyChar))
         End If
     End Sub
 End Class
