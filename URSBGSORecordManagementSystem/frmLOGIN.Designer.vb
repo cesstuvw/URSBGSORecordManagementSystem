@@ -22,6 +22,8 @@ Partial Class frmLOGIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLOGIN))
         Me.pnlLOGO = New System.Windows.Forms.Panel()
         Me.pnlINFO = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -39,6 +41,7 @@ Partial Class frmLOGIN
         Me.txtUSER = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnLOGIN = New System.Windows.Forms.Button()
+        Me.tmrTIME = New System.Windows.Forms.Timer(Me.components)
         Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
         Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
         Me.pnlLOGO.SuspendLayout()
@@ -91,9 +94,9 @@ Partial Class frmLOGIN
         'btnINFO
         '
         Me.btnINFO.BackColor = System.Drawing.Color.Transparent
+        Me.btnINFO.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.Info_circle
         Me.btnINFO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnINFO.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnINFO.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.Info_circle
         Me.btnINFO.Location = New System.Drawing.Point(384, 16)
         Me.btnINFO.Name = "btnINFO"
         Me.btnINFO.Size = New System.Drawing.Size(19, 19)
@@ -126,7 +129,8 @@ Partial Class frmLOGIN
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.systemlogo
+        Me.PictureBox1.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.systemlogo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(140, 158)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(131, 131)
@@ -258,6 +262,11 @@ Partial Class frmLOGIN
         Me.btnLOGIN.Text = "Log in"
         Me.btnLOGIN.UseVisualStyleBackColor = False
         '
+        'tmrTIME
+        '
+        Me.tmrTIME.Enabled = True
+        Me.tmrTIME.Interval = 1000
+        '
         'BTNMINIMIZE
         '
         Me.BTNMINIMIZE.BackColor = System.Drawing.Color.Transparent
@@ -274,8 +283,8 @@ Partial Class frmLOGIN
         'BTNCLOSE
         '
         Me.BTNCLOSE.BackColor = System.Drawing.Color.Transparent
+        Me.BTNCLOSE.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.close
         Me.BTNCLOSE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BTNCLOSE.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.close
         Me.BTNCLOSE.Location = New System.Drawing.Point(696, 16)
         Me.BTNCLOSE.Name = "BTNCLOSE"
         Me.BTNCLOSE.Size = New System.Drawing.Size(19, 19)
@@ -291,20 +300,21 @@ Partial Class frmLOGIN
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(731, 486)
         Me.Controls.Add(Me.btnLOGIN)
-        Me.Controls.Add(Me.BTNMINIMIZE)
-        Me.Controls.Add(Me.BTNCLOSE)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.pnlLOGO)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.BTNMINIMIZE)
+        Me.Controls.Add(Me.BTNCLOSE)
+        Me.Controls.Add(Me.pnlLOGO)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLOGIN"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "LOGIN"
+        Me.Text = "GSO RECORD MANAGEMENT SYSTEM"
         Me.pnlLOGO.ResumeLayout(False)
         Me.pnlLOGO.PerformLayout()
         CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).EndInit()
@@ -341,4 +351,5 @@ Partial Class frmLOGIN
     Friend WithEvents txtUSER As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnLOGIN As Button
+    Friend WithEvents tmrTIME As Timer
 End Class

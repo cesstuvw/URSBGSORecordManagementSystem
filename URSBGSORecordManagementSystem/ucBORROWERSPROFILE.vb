@@ -1,4 +1,21 @@
 ﻿Public Class ucBORROWERSPROFILE
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Format(Date.Now, "yyyy-MM-dd"))
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         txtID.Enabled = True
         txtFNAME.Enabled = True
@@ -176,7 +193,9 @@
         cmd.ExecuteNonQuery()
         con.Close()
 
-        MsgBox("New Account has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
+        MsgBox("New Profile has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
+        activity = "Added a new profile. Name: " + txtLNAME.Text + "," + txtFNAME.Text + txtMNAME.Text
+        actlog()
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         txtID.Text = "Borrower ID"
@@ -335,6 +354,8 @@
         cmd.ExecuteNonQuery()
         con.Close()
         MsgBox("Record has been updated", vbOKOnly + vbInformation, "Successfully updated")
+        activity = "Updated an existing profile. Name: " + txtLNAME.Text + "," + txtFNAME.Text + txtMNAME.Text
+        actlog()
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
 

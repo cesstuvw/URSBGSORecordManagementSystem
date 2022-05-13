@@ -9,7 +9,8 @@
     Dim btnSETTWasClicked As Boolean = False
     Dim btnREPORTSWasClicked As Boolean = False
 
-    'REMOVE SCREEN FLICKERING WHEN CHANGING PANNELS
+
+    'REMOVE SCREEN FLICKERING WHEN CHANGING PANELS
     Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams
@@ -19,9 +20,35 @@
     End Property
 
     Private Sub frmMAINMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
+        'dashboard counts
+        Dim profile As String
+        OpenCon()
+        cmd.CommandText = "Select count(borrowersid) from tbl_profile"
+        profile = cmd.ExecuteScalar()
+        lblPROFILE.Text = profile
+        con.Close()
 
-        DoubleBuffered = True
+        Dim transaction As String
+        OpenCon()
+        cmd.CommandText = "Select count(transno) from tbl_transaction"
+        transaction = cmd.ExecuteScalar()
+        lblTRANSAC.Text = transaction
+        con.Close()
+
+        Dim item As String
+        OpenCon()
+        cmd.CommandText = "Select count(itemcode) from tbl_item"
+        item = cmd.ExecuteScalar()
+        lblITEM.Text = item
+        con.Close()
+
+        Dim returnn As String
+        OpenCon()
+        cmd.CommandText = "Select count(returnno) from tbl_return"
+        returnn = cmd.ExecuteScalar()
+        lblRETURN.Text = returnn
+        con.Close()
+
         btnLOGOUTA.Hide()
         btnOUT.Hide()
 
@@ -55,24 +82,6 @@
         'HIDE USERCONTROL PANEL TO SHOW DASHBOARD 
         pnlDASHBOARD.Show()
         pnlUSERCONTROL.Hide()
-
-        'pnlUSERCONTROL.Controls.Clear()
-        'Dim usercontrol As New ucUSERACCOUNT()
-        ''usercontrol.TopLevel = False
-        'pnlUSERCONTROL.Controls.Add(usercontrol)
-        'usercontrol.Show()
-
-        'Load usercontrol
-        'Dim Dashboard As New ucDASHBOARD
-        'Dashboard.Parent = pnlUSERCONTROL
-        'Dashboard.Show()
-        'Dashboard.Dock = DockStyle.Fill
-
-        'pnlUSERCONTROL.Controls.Clear()
-        'Dim Dashboard As New ucDASHBOARD()
-        ''usercontrol.TopLevel = False
-        'pnlUSERCONTROL.Controls.Add(Dashboard)
-        'Dashboard.Show()
     End Sub
 
     Private Sub btnDASH_Click(sender As Object, e As EventArgs) Handles btnDASH.Click
@@ -90,7 +99,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -108,6 +117,35 @@
         btnRETWasClicked = False
         btnSETTWasClicked = False
         btnREPORTSWasClicked = False
+
+        'dashboard counts
+        Dim profile As String
+        OpenCon()
+        cmd.CommandText = "Select count(borrowersid) from tbl_profile"
+        profile = cmd.ExecuteScalar()
+        lblPROFILE.Text = profile
+        con.Close()
+
+        Dim transaction As String
+        OpenCon()
+        cmd.CommandText = "Select count(transno) from tbl_transaction"
+        transaction = cmd.ExecuteScalar()
+        lblTRANSAC.Text = transaction
+        con.Close()
+
+        Dim item As String
+        OpenCon()
+        cmd.CommandText = "Select count(itemcode) from tbl_item"
+        item = cmd.ExecuteScalar()
+        lblITEM.Text = item
+        con.Close()
+
+        Dim returnn As String
+        OpenCon()
+        cmd.CommandText = "Select count(returnno) from tbl_return"
+        returnn = cmd.ExecuteScalar()
+        lblRETURN.Text = returnn
+        con.Close()
     End Sub
 
     Private Sub btnUSERACC_Click(sender As Object, e As EventArgs) Handles btnUSERACC.Click
@@ -123,7 +161,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -173,7 +211,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -223,7 +261,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu_selected
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -273,7 +311,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu_selected
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -324,7 +362,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu_selected
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -375,7 +413,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.retuning_menu_selected
+        btnRET.BackgroundImage = My.Resources.return_menu_selected
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -425,7 +463,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu_selected
         btnREPORTS.BackgroundImage = My.Resources.reports_menu
 
@@ -475,7 +513,7 @@
         btnITEMST.BackgroundImage = My.Resources.item_stocks_menu
         btnBORP.BackgroundImage = My.Resources.borrowers_profile_menu
         btnTRANSAC.BackgroundImage = My.Resources.transaction_menu
-        btnRET.BackgroundImage = My.Resources.returning_menu
+        btnRET.BackgroundImage = My.Resources.return_menu
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu_selected
 
@@ -644,17 +682,17 @@
 
     Private Sub btnRET_MouseHover(sender As Object, e As EventArgs) Handles btnRET.MouseHover
         If btnRETWasClicked = True Then
-            btnRET.BackgroundImage = My.Resources.retuning_menu_selected
+            btnRET.BackgroundImage = My.Resources.return_menu_selected
         ElseIf btnRETWasclicked = False Then
-            btnRET.BackgroundImage = My.Resources.returning_menu_hover
+            btnRET.BackgroundImage = My.Resources.return_menu_hover
         End If
     End Sub
     Private Sub btnRET_MouseLeave(sender As Object, e As EventArgs) Handles btnRET.MouseLeave
         If btnRETWasClicked = True Then
-            btnRET.BackgroundImage = My.Resources.retuning_menu_selected
+            btnRET.BackgroundImage = My.Resources.return_menu_selected
 
         ElseIf btnRETWasClicked = False Then
-            btnRET.BackgroundImage = My.Resources.returning_menu
+            btnRET.BackgroundImage = My.Resources.return_menu
         End If
     End Sub
 
@@ -694,7 +732,7 @@
     End Sub
 
     'WINDOW CONTROLS
-    Private Sub BTNMINIMIZE_Click(sender As Object, e As EventArgs) Handles BTNMINIMIZE.Click
+    Private Sub BTNMINIMIZE_Click(sender As Object, e As EventArgs) Handles BTNMINIMIZE.Click, PictureBox2.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
@@ -707,14 +745,12 @@
         End If
     End Sub
 
+    Private Sub tmrTIME_Tick(sender As Object, e As EventArgs) Handles tmrTIME.Tick
+        lblTIME.Text = Format(TimeOfDay, "hh:mm")
+        lblTIMEPERIOD.Text = Format(TimeOfDay, "tt")
+        lblMONTH.Text = Format(DateTime.Today.ToString("MMM"))
+        lblTODAY.Text = Format(DateTime.Today.ToString("dddd"))
+        lblDAY.Text = Format(DateTime.Today.ToString("dd"))
+    End Sub
 End Class
-
-
-''Private Sub timerLOADING_Tick(sender As Object, e As EventArgs) Handles timerLOADING.Tick
-''    If loader.Value < loader.Maximum Then
-''        loader.Value = loader.Value + 1
-''    Else
-''        pnlLOADING.Hide()
-''    End If
-''End Sub
 

@@ -23,19 +23,9 @@ Partial Class frmREPORTS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.tbl_returnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
-        Me.tbl_transactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tbl_profileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tbl_itemstockBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.tbl_itemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tbl_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.INDICATOR = New System.Windows.Forms.Panel()
@@ -46,64 +36,34 @@ Partial Class frmREPORTS
         Me.btnITEMREP = New System.Windows.Forms.Button()
         Me.btnACTREP = New System.Windows.Forms.Button()
         Me.btnUAREP = New System.Windows.Forms.Button()
+        Me.pnlUA = New System.Windows.Forms.Panel()
+        Me.pnlREP = New System.Windows.Forms.Panel()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
-        Me.rptRETURN = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.rptTRANSAC = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.rptPROFILE = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.rptITEMST = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.rptITEM = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.rptUSER = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnUNFILTER = New System.Windows.Forms.Button()
+        Me.btnFILTER = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cboUSERTYPE = New System.Windows.Forms.ComboBox()
         Me.tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
-        Me.tbl_itemTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter()
-        Me.tbl_itemstockTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemstockTableAdapter()
-        Me.tbl_profileTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter()
-        Me.tbl_transactionTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_transactionTableAdapter()
-        Me.tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
-        CType(Me.tbl_returnBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbl_transactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbl_profileBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbl_itemstockBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tbl_itemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_userBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.pnlUA.SuspendLayout()
         Me.pnlREPORT.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'tbl_returnBindingSource
-        '
-        Me.tbl_returnBindingSource.DataMember = "tbl_return"
-        Me.tbl_returnBindingSource.DataSource = Me.ursbgso_dbDataSet
-        '
-        'ursbgso_dbDataSet
-        '
-        Me.ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
-        Me.ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tbl_transactionBindingSource
-        '
-        Me.tbl_transactionBindingSource.DataMember = "tbl_transaction"
-        Me.tbl_transactionBindingSource.DataSource = Me.ursbgso_dbDataSet
-        '
-        'tbl_profileBindingSource
-        '
-        Me.tbl_profileBindingSource.DataMember = "tbl_profile"
-        Me.tbl_profileBindingSource.DataSource = Me.ursbgso_dbDataSet
-        '
-        'tbl_itemstockBindingSource
-        '
-        Me.tbl_itemstockBindingSource.DataMember = "tbl_itemstock"
-        Me.tbl_itemstockBindingSource.DataSource = Me.ursbgso_dbDataSet
-        '
-        'tbl_itemBindingSource
-        '
-        Me.tbl_itemBindingSource.DataMember = "tbl_item"
-        Me.tbl_itemBindingSource.DataSource = Me.ursbgso_dbDataSet
         '
         'tbl_userBindingSource
         '
         Me.tbl_userBindingSource.DataMember = "tbl_user"
         Me.tbl_userBindingSource.DataSource = Me.ursbgso_dbDataSet
+        '
+        'ursbgso_dbDataSet
+        '
+        Me.ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
+        Me.ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label2
         '
@@ -146,229 +106,235 @@ Partial Class frmREPORTS
         'btnRETREP
         '
         Me.btnRETREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnRETREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.return_menu_reports
         Me.btnRETREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnRETREP.FlatAppearance.BorderSize = 0
         Me.btnRETREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRETREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnRETREP.ForeColor = System.Drawing.Color.White
-        Me.btnRETREP.Location = New System.Drawing.Point(277, 349)
+        Me.btnRETREP.Location = New System.Drawing.Point(268, 343)
         Me.btnRETREP.Name = "btnRETREP"
-        Me.btnRETREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnRETREP.Size = New System.Drawing.Size(280, 42)
         Me.btnRETREP.TabIndex = 3
-        Me.btnRETREP.Text = "           Return"
         Me.btnRETREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRETREP.UseVisualStyleBackColor = False
         '
         'btnTRANSREP
         '
         Me.btnTRANSREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnTRANSREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transaction_menu_reports
         Me.btnTRANSREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnTRANSREP.FlatAppearance.BorderSize = 0
         Me.btnTRANSREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTRANSREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnTRANSREP.ForeColor = System.Drawing.Color.White
-        Me.btnTRANSREP.Location = New System.Drawing.Point(274, 305)
+        Me.btnTRANSREP.Location = New System.Drawing.Point(268, 300)
         Me.btnTRANSREP.Name = "btnTRANSREP"
-        Me.btnTRANSREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnTRANSREP.Size = New System.Drawing.Size(280, 42)
         Me.btnTRANSREP.TabIndex = 3
-        Me.btnTRANSREP.Text = "           Transaction"
         Me.btnTRANSREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnTRANSREP.UseVisualStyleBackColor = False
         '
         'btnBPROREP
         '
         Me.btnBPROREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnBPROREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.profile_menu_reports
         Me.btnBPROREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnBPROREP.FlatAppearance.BorderSize = 0
         Me.btnBPROREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBPROREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnBPROREP.ForeColor = System.Drawing.Color.White
-        Me.btnBPROREP.Location = New System.Drawing.Point(277, 261)
+        Me.btnBPROREP.Location = New System.Drawing.Point(268, 257)
         Me.btnBPROREP.Name = "btnBPROREP"
-        Me.btnBPROREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnBPROREP.Size = New System.Drawing.Size(280, 42)
         Me.btnBPROREP.TabIndex = 3
-        Me.btnBPROREP.Text = "           Borrower's Profile"
         Me.btnBPROREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBPROREP.UseVisualStyleBackColor = False
         '
         'btnITSTREP
         '
         Me.btnITSTREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnITSTREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.itemstocks_menu_reports
         Me.btnITSTREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnITSTREP.FlatAppearance.BorderSize = 0
         Me.btnITSTREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnITSTREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnITSTREP.ForeColor = System.Drawing.Color.White
-        Me.btnITSTREP.Location = New System.Drawing.Point(277, 217)
+        Me.btnITSTREP.Location = New System.Drawing.Point(268, 214)
         Me.btnITSTREP.Name = "btnITSTREP"
-        Me.btnITSTREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnITSTREP.Size = New System.Drawing.Size(280, 42)
         Me.btnITSTREP.TabIndex = 3
-        Me.btnITSTREP.Text = "           Item Stock"
         Me.btnITSTREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnITSTREP.UseVisualStyleBackColor = False
         '
         'btnITEMREP
         '
         Me.btnITEMREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnITEMREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_menu_reports
         Me.btnITEMREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnITEMREP.FlatAppearance.BorderSize = 0
         Me.btnITEMREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnITEMREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnITEMREP.ForeColor = System.Drawing.Color.White
-        Me.btnITEMREP.Location = New System.Drawing.Point(277, 173)
+        Me.btnITEMREP.Location = New System.Drawing.Point(268, 171)
         Me.btnITEMREP.Name = "btnITEMREP"
-        Me.btnITEMREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnITEMREP.Size = New System.Drawing.Size(280, 42)
         Me.btnITEMREP.TabIndex = 3
-        Me.btnITEMREP.Text = "           Item"
         Me.btnITEMREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnITEMREP.UseVisualStyleBackColor = False
         '
         'btnACTREP
         '
         Me.btnACTREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnACTREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.activitylog_menu_reports
         Me.btnACTREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnACTREP.FlatAppearance.BorderSize = 0
         Me.btnACTREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnACTREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnACTREP.ForeColor = System.Drawing.Color.White
-        Me.btnACTREP.Location = New System.Drawing.Point(277, 129)
+        Me.btnACTREP.Location = New System.Drawing.Point(268, 128)
         Me.btnACTREP.Name = "btnACTREP"
-        Me.btnACTREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnACTREP.Size = New System.Drawing.Size(280, 42)
         Me.btnACTREP.TabIndex = 3
-        Me.btnACTREP.Text = "           Activity Log"
         Me.btnACTREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnACTREP.UseVisualStyleBackColor = False
         '
         'btnUAREP
         '
         Me.btnUAREP.BackColor = System.Drawing.Color.Transparent
+        Me.btnUAREP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.useraccount_menu_reports
         Me.btnUAREP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnUAREP.FlatAppearance.BorderSize = 0
         Me.btnUAREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUAREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnUAREP.ForeColor = System.Drawing.Color.White
-        Me.btnUAREP.Location = New System.Drawing.Point(277, 85)
+        Me.btnUAREP.Location = New System.Drawing.Point(268, 85)
         Me.btnUAREP.Name = "btnUAREP"
-        Me.btnUAREP.Size = New System.Drawing.Size(217, 42)
+        Me.btnUAREP.Size = New System.Drawing.Size(280, 42)
         Me.btnUAREP.TabIndex = 3
-        Me.btnUAREP.Text = "           User Account"
         Me.btnUAREP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnUAREP.UseVisualStyleBackColor = False
+        '
+        'pnlUA
+        '
+        Me.pnlUA.Controls.Add(Me.pnlREP)
+        Me.pnlUA.Controls.Add(Me.pnlREPORT)
+        Me.pnlUA.Location = New System.Drawing.Point(0, 0)
+        Me.pnlUA.Name = "pnlUA"
+        Me.pnlUA.Size = New System.Drawing.Size(1324, 705)
+        Me.pnlUA.TabIndex = 26
+        '
+        'pnlREP
+        '
+        Me.pnlREP.Location = New System.Drawing.Point(0, 0)
+        Me.pnlREP.Name = "pnlREP"
+        Me.pnlREP.Size = New System.Drawing.Size(1324, 705)
+        Me.pnlREP.TabIndex = 27
         '
         'pnlREPORT
         '
         Me.pnlREPORT.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.pnlREPORT.Controls.Add(Me.rptRETURN)
-        Me.pnlREPORT.Controls.Add(Me.rptTRANSAC)
-        Me.pnlREPORT.Controls.Add(Me.rptPROFILE)
-        Me.pnlREPORT.Controls.Add(Me.rptITEMST)
-        Me.pnlREPORT.Controls.Add(Me.rptITEM)
         Me.pnlREPORT.Controls.Add(Me.rptUSER)
-        Me.pnlREPORT.Location = New System.Drawing.Point(531, 51)
+        Me.pnlREPORT.Controls.Add(Me.Label3)
+        Me.pnlREPORT.Controls.Add(Me.Label1)
+        Me.pnlREPORT.Controls.Add(Me.btnUNFILTER)
+        Me.pnlREPORT.Controls.Add(Me.btnFILTER)
+        Me.pnlREPORT.Controls.Add(Me.Panel2)
+        Me.pnlREPORT.Location = New System.Drawing.Point(531, 58)
         Me.pnlREPORT.Name = "pnlREPORT"
         Me.pnlREPORT.Size = New System.Drawing.Size(756, 618)
-        Me.pnlREPORT.TabIndex = 25
-        '
-        'rptRETURN
-        '
-        ReportDataSource1.Name = "DataSet_RETURN"
-        ReportDataSource1.Value = Me.tbl_returnBindingSource
-        Me.rptRETURN.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.rptRETURN.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptRETURN.rdlc"
-        Me.rptRETURN.Location = New System.Drawing.Point(20, 17)
-        Me.rptRETURN.Name = "rptRETURN"
-        Me.rptRETURN.ServerReport.BearerToken = Nothing
-        Me.rptRETURN.Size = New System.Drawing.Size(718, 581)
-        Me.rptRETURN.TabIndex = 5
-        Me.rptRETURN.Visible = False
-        '
-        'rptTRANSAC
-        '
-        ReportDataSource2.Name = "DataSet_TRANSACTION"
-        ReportDataSource2.Value = Me.tbl_transactionBindingSource
-        Me.rptTRANSAC.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.rptTRANSAC.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptTRANSAC.rdlc"
-        Me.rptTRANSAC.Location = New System.Drawing.Point(20, 17)
-        Me.rptTRANSAC.Name = "rptTRANSAC"
-        Me.rptTRANSAC.ServerReport.BearerToken = Nothing
-        Me.rptTRANSAC.Size = New System.Drawing.Size(718, 581)
-        Me.rptTRANSAC.TabIndex = 4
-        Me.rptTRANSAC.Visible = False
-        '
-        'rptPROFILE
-        '
-        ReportDataSource3.Name = "DataSet_BorrowersProfile"
-        ReportDataSource3.Value = Me.tbl_profileBindingSource
-        Me.rptPROFILE.LocalReport.DataSources.Add(ReportDataSource3)
-        Me.rptPROFILE.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptPROFILE.rdlc"
-        Me.rptPROFILE.Location = New System.Drawing.Point(20, 17)
-        Me.rptPROFILE.Name = "rptPROFILE"
-        Me.rptPROFILE.ServerReport.BearerToken = Nothing
-        Me.rptPROFILE.Size = New System.Drawing.Size(718, 581)
-        Me.rptPROFILE.TabIndex = 3
-        Me.rptPROFILE.Visible = False
-        '
-        'rptITEMST
-        '
-        ReportDataSource4.Name = "DataSet_ITEMSTOCK"
-        ReportDataSource4.Value = Me.tbl_itemstockBindingSource
-        Me.rptITEMST.LocalReport.DataSources.Add(ReportDataSource4)
-        Me.rptITEMST.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptITEMST.rdlc"
-        Me.rptITEMST.Location = New System.Drawing.Point(20, 17)
-        Me.rptITEMST.Name = "rptITEMST"
-        Me.rptITEMST.ServerReport.BearerToken = Nothing
-        Me.rptITEMST.Size = New System.Drawing.Size(718, 581)
-        Me.rptITEMST.TabIndex = 2
-        Me.rptITEMST.Visible = False
-        '
-        'rptITEM
-        '
-        ReportDataSource5.Name = "DataSet_ITEM"
-        ReportDataSource5.Value = Me.tbl_itemBindingSource
-        Me.rptITEM.LocalReport.DataSources.Add(ReportDataSource5)
-        Me.rptITEM.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptITEM.rdlc"
-        Me.rptITEM.Location = New System.Drawing.Point(20, 17)
-        Me.rptITEM.Name = "rptITEM"
-        Me.rptITEM.ServerReport.BearerToken = Nothing
-        Me.rptITEM.Size = New System.Drawing.Size(718, 581)
-        Me.rptITEM.TabIndex = 1
-        Me.rptITEM.Visible = False
+        Me.pnlREPORT.TabIndex = 26
         '
         'rptUSER
         '
-        ReportDataSource6.Name = "DataSet_USERACCOUNT"
-        ReportDataSource6.Value = Me.tbl_userBindingSource
-        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource6)
+        Me.rptUSER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.rptUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
+        ReportDataSource2.Name = "DataSet_USERACCOUNT"
+        ReportDataSource2.Value = Me.tbl_userBindingSource
+        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource2)
         Me.rptUSER.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptUSERACCOUNT.rdlc"
-        Me.rptUSER.Location = New System.Drawing.Point(20, 17)
+        Me.rptUSER.Location = New System.Drawing.Point(21, 72)
         Me.rptUSER.Name = "rptUSER"
         Me.rptUSER.ServerReport.BearerToken = Nothing
-        Me.rptUSER.Size = New System.Drawing.Size(718, 581)
-        Me.rptUSER.TabIndex = 0
+        Me.rptUSER.Size = New System.Drawing.Size(716, 527)
+        Me.rptUSER.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(349, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(117, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Filter by User Type"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(20, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(139, 19)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "USER ACCOUNT"
+        '
+        'btnUNFILTER
+        '
+        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
+        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
+        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnUNFILTER.Name = "btnUNFILTER"
+        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNFILTER.TabIndex = 4
+        Me.btnUNFILTER.Text = "Unfilter"
+        Me.btnUNFILTER.UseVisualStyleBackColor = False
+        Me.btnUNFILTER.Visible = False
+        '
+        'btnFILTER
+        '
+        Me.btnFILTER.BackColor = System.Drawing.Color.White
+        Me.btnFILTER.FlatAppearance.BorderSize = 0
+        Me.btnFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnFILTER.Name = "btnFILTER"
+        Me.btnFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnFILTER.TabIndex = 3
+        Me.btnFILTER.Text = "Filter"
+        Me.btnFILTER.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.cboUSERTYPE)
+        Me.Panel2.Location = New System.Drawing.Point(473, 20)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(141, 35)
+        Me.Panel2.TabIndex = 2
+        '
+        'cboUSERTYPE
+        '
+        Me.cboUSERTYPE.AutoCompleteCustomSource.AddRange(New String() {"GSO Head", "Staff"})
+        Me.cboUSERTYPE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboUSERTYPE.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboUSERTYPE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cboUSERTYPE.FormattingEnabled = True
+        Me.cboUSERTYPE.Items.AddRange(New Object() {"GSO Head", "Staff"})
+        Me.cboUSERTYPE.Location = New System.Drawing.Point(7, 5)
+        Me.cboUSERTYPE.Name = "cboUSERTYPE"
+        Me.cboUSERTYPE.Size = New System.Drawing.Size(127, 24)
+        Me.cboUSERTYPE.TabIndex = 2
         '
         'tbl_userTableAdapter
         '
         Me.tbl_userTableAdapter.ClearBeforeFill = True
-        '
-        'tbl_itemTableAdapter
-        '
-        Me.tbl_itemTableAdapter.ClearBeforeFill = True
-        '
-        'tbl_itemstockTableAdapter
-        '
-        Me.tbl_itemstockTableAdapter.ClearBeforeFill = True
-        '
-        'tbl_profileTableAdapter
-        '
-        Me.tbl_profileTableAdapter.ClearBeforeFill = True
-        '
-        'tbl_transactionTableAdapter
-        '
-        Me.tbl_transactionTableAdapter.ClearBeforeFill = True
-        '
-        'tbl_returnTableAdapter
-        '
-        Me.tbl_returnTableAdapter.ClearBeforeFill = True
         '
         'frmREPORTS
         '
@@ -376,21 +342,20 @@ Partial Class frmREPORTS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1324, 705)
-        Me.Controls.Add(Me.pnlREPORT)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlUA)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmREPORTS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmREPORTS"
-        CType(Me.tbl_returnBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_transactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_profileBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_itemstockBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_itemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbl_userBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.pnlUA.ResumeLayout(False)
         Me.pnlREPORT.ResumeLayout(False)
+        Me.pnlREPORT.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -405,26 +370,19 @@ Partial Class frmREPORTS
     Friend WithEvents btnACTREP As Button
     Friend WithEvents btnUAREP As Button
     Friend WithEvents INDICATOR As Panel
-    Friend WithEvents pnlREPORT As Panel
-    Friend WithEvents rptUSER As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents btnTRANSREP As Button
+    Friend WithEvents btnITSTREP As Button
+    Friend WithEvents pnlUA As Panel
     Friend WithEvents tbl_userBindingSource As BindingSource
     Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents tbl_userTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter
-    Friend WithEvents rptITEM As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents tbl_itemBindingSource As BindingSource
-    Friend WithEvents tbl_itemTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter
-    Friend WithEvents rptITEMST As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents tbl_itemstockBindingSource As BindingSource
-    Friend WithEvents tbl_itemstockTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_itemstockTableAdapter
-    Friend WithEvents rptPROFILE As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents tbl_profileBindingSource As BindingSource
-    Friend WithEvents tbl_profileTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter
-    Friend WithEvents rptTRANSAC As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents tbl_transactionBindingSource As BindingSource
-    Friend WithEvents tbl_transactionTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_transactionTableAdapter
-    Friend WithEvents rptRETURN As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents tbl_returnBindingSource As BindingSource
-    Friend WithEvents tbl_returnTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter
-    Friend WithEvents btnTRANSREP As Button
-    Friend WithEvents btnITSTREP As Button
+    Friend WithEvents pnlREPORT As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnUNFILTER As Button
+    Friend WithEvents btnFILTER As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cboUSERTYPE As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents pnlREP As Panel
+    Friend WithEvents rptUSER As Microsoft.Reporting.WinForms.ReportViewer
 End Class

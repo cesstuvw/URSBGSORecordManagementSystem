@@ -6,33 +6,33 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.47396in</Width>
+              <Width>1.32043in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.50637in</Height>
+              <Height>0.70848in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,7 +43,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>RETURN NO.</Value>
+                              <Value>RETURN </Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>NO.</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -169,7 +184,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEM CODE</Value>
+                              <Value>ITEM </Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>CODE</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -211,7 +241,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEM NAME</Value>
+                              <Value>ITEM </Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>NAME</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -295,7 +340,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DATE BOROWED</Value>
+                              <Value>DATE </Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>BOROWED</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -337,7 +397,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DATE RETURNED</Value>
+                              <Value>DATE </Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>RETURNED</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -690,197 +765,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet_RETURN</DataSetName>
-        <Top>4.04784in</Top>
-        <Left>0.90508in</Left>
-        <Height>0.80054in</Height>
-        <Width>11.79168in</Width>
+        <Top>0.79784in</Top>
+        <Left>1.63331in</Left>
+        <Height>1.00265in</Height>
+        <Width>10.56345in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox12">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>UNIVERSITY OF RIZAL SYSTEM </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>ExtraBold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.10976in</Top>
-        <Left>5.46398in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Binangonan, Rizal</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.38706in</Top>
-        <Left>5.46398in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Republic of the Philippines</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.84587in</Top>
-        <Left>5.46398in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Image Name="URSLOGO">
-        <Source>Embedded</Source>
-        <Value>URSLOGO</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>0.74518in</Top>
-        <Left>4.69245in</Left>
-        <Height>1.07292in</Height>
-        <Width>0.70208in</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Line Name="Line1">
-        <Top>2.73476in</Top>
-        <Left>1.2496in</Left>
-        <Height>0in</Height>
-        <Width>11.05208in</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Color>#204aff</Color>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Textbox Name="Textbox17">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Record Management System for </Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>General Services Office</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>2.01254in</Top>
-        <Left>4.73794in</Left>
-        <Height>0.47618in</Height>
-        <Width>4.52083in</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox23">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -902,11 +796,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>3.48997in</Top>
+        <Top>0.23997in</Top>
         <Left>5.36576in</Left>
         <Height>0.25in</Height>
         <Width>3.14583in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -923,6 +817,198 @@
   </Body>
   <Width>13.5664in</Width>
   <Page>
+    <PageHeader>
+      <Height>3.0056in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox17">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>UNIVERSITY OF RIZAL SYSTEM </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>ExtraBold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>1.13467in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Binangonan, Rizal</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>1.41197in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox22">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Republic of the Philippines</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>0.87078in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="URSLOGO2">
+          <Source>Embedded</Source>
+          <Value>URSLOGO</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.77009in</Top>
+          <Left>4.52839in</Left>
+          <Height>1.07292in</Height>
+          <Width>0.70208in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox24">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Record Management System for </Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>General Services Office</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>2.03745in</Top>
+          <Left>4.61242in</Left>
+          <Height>0.47618in</Height>
+          <Width>4.52083in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line2">
+          <Top>2.75967in</Top>
+          <Left>2.66039in</Left>
+          <Height>0in</Height>
+          <Width>7.82172in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Color>#204aff</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
     <PageFooter>
       <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
@@ -944,7 +1030,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.375in</Top>
-          <Left>12.05465in</Left>
+          <Left>11.21168in</Left>
           <Height>0.25in</Height>
           <Width>0.3125in</Width>
           <Style>
@@ -973,7 +1059,7 @@
           </Paragraphs>
           <rd:DefaultName>OverallTotalPages</rd:DefaultName>
           <Top>0.375in</Top>
-          <Left>12.70742in</Left>
+          <Left>11.86444in</Left>
           <Height>0.25in</Height>
           <Width>0.32292in</Width>
           <ZIndex>1</ZIndex>
@@ -1003,7 +1089,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.375in</Top>
-          <Left>11.53381in</Left>
+          <Left>10.69084in</Left>
           <Height>0.25in</Height>
           <Width>0.38542in</Width>
           <ZIndex>2</ZIndex>
@@ -1035,7 +1121,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox20</rd:DefaultName>
           <Top>0.375in</Top>
-          <Left>0.59701in</Left>
+          <Left>0.87904in</Left>
           <Height>0.25in</Height>
           <Width>2.85417in</Width>
           <ZIndex>3</ZIndex>
@@ -1065,7 +1151,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.375in</Top>
-          <Left>12.447in</Left>
+          <Left>11.60402in</Left>
           <Height>0.25in</Height>
           <Width>0.17709in</Width>
           <ZIndex>4</ZIndex>

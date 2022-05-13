@@ -1,4 +1,21 @@
 ﻿Public Class ucSETTINGS
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         txtCATCODE.Enabled = False
         txtCATNAME.Enabled = True
@@ -132,6 +149,8 @@
         con.Close()
 
         MsgBox("New Item has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
+        activity = "Added a new category. Category: " + txtCATNAME.Text
+        actlog()
         txtCATCODE.Text = "Category Code"
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
@@ -265,8 +284,9 @@
         cmd.Parameters.AddWithValue("catname", txtCATNAME.Text)
         cmd.ExecuteNonQuery()
         con.Close()
-        MsgBox("Record has been updated", vbOKOnly + vbInformation, "Successfully updated")
-
+        MsgBox("Category has been updated", vbOKOnly + vbInformation, "Successfully updated")
+        activity = "Updated an existing category. Category: " + txtCATNAME.Text
+        actlog()
 
         txtCATCODE.Text = "Category Code"
         txtCATNAME.Text = "Category Name"

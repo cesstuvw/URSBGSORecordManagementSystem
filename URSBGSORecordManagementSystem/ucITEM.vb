@@ -1,4 +1,21 @@
 ﻿Public Class ucITEM
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         txtITEMCODE.Enabled = False
         txtITEMNAME.Enabled = True
@@ -91,8 +108,6 @@
 
     Private Sub ucITEM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
-        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
-        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
 
@@ -181,11 +196,14 @@
         con.Close()
 
         MsgBox("New Item has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
+        activity = "Added a new item. Item Name: " + txtITEMNAME.Text
+        actlog()
         txtITEMCODE.Text = "Item Code"
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
         btnEDIT.Enabled = False
         dgvITEM.Enabled = True
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         Function_Disabled()
         Function_DisabledPanel()
@@ -213,6 +231,7 @@
         txtAVAILABLE.Text = "Available Stock"
         cboCATEGORY.Text = "Item Category"
         txtITEMNAME.Text = "Item Name"
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
     End Sub
 
@@ -304,11 +323,19 @@
             Exit Sub
         End If
 
-        If txtITEMNAME.Text <> txtCOITNM.Text Then
-            MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Saving")
-            btnCANCELDGV.Enabled = True
-            Exit Sub
-        End If
+        'If txtITEMNAME.Text <> txtCOITNM.Text Then
+        '    OpenCon()
+        '    cmd.CommandText = "Select * from tbl_item where ItemName = '" & txtITEMNAME.Text & "'"
+        '    dr = cmd.ExecuteReader()
+        '    If dr.HasRows Then
+        '        MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Updating")
+        '        con.Close()
+        '        btnCANCEL.Enabled = True
+        '        txtITEMNAME.Focus()
+        '        Exit Sub
+        '    End If
+        '    con.Close()
+        'End If
 
         If txtITEMNAME.Text <> txtCOITNM.Text And cboCATEGORY.Text <> cboCOCAT.Text Then
             OpenCon()
@@ -331,8 +358,8 @@
         cmd.ExecuteNonQuery()
         con.Close()
         MsgBox("Record has been updated", vbOKOnly + vbInformation, "Successfully updated")
-
-
+        activity = "Updated an existing item. Item Name: " + txtITEMNAME.Text
+        actlog()
         txtITEMCODE.Text = "Item Code"
         txtAVAILABLE.Text = "Available Stock"
         cboCATEGORY.Text = "Item Category"

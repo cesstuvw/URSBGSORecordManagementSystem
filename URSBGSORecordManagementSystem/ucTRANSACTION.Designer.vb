@@ -84,6 +84,7 @@ Partial Class ucTRANSACTION
         Me.TransNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvTRANSAC = New System.Windows.Forms.DataGridView()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnREMOVE = New System.Windows.Forms.Button()
@@ -106,11 +107,10 @@ Partial Class ucTRANSACTION
         Me.AvailableStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.txtSEARCHPROF = New System.Windows.Forms.TextBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtSEARCHITEM = New System.Windows.Forms.TextBox()
         Me.pnlBG = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnCANCEL = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlNO.SuspendLayout()
         CType(Me.TblitemcartBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,14 +126,14 @@ Partial Class ucTRANSACTION
         Me.pnlSTOCK.SuspendLayout()
         CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSEARCH.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel6.SuspendLayout()
         CType(Me.dgvPROFILE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvITEM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
-        Me.pnlBG.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlBG.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -672,6 +672,18 @@ Partial Class ucTRANSACTION
         Me.pnlSEARCH.Size = New System.Drawing.Size(543, 38)
         Me.pnlSEARCH.TabIndex = 88
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox1.Location = New System.Drawing.Point(507, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'txtSEARCH
         '
         Me.txtSEARCH.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -994,6 +1006,18 @@ Partial Class ucTRANSACTION
         Me.txtSEARCHPROF.TabIndex = 106
         Me.txtSEARCHPROF.Text = "Search profile"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox3.Location = New System.Drawing.Point(665, 10)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
         'txtSEARCHITEM
         '
         Me.txtSEARCHITEM.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -1018,18 +1042,6 @@ Partial Class ucTRANSACTION
         Me.pnlBG.TabIndex = 106
         Me.pnlBG.Visible = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox3.Location = New System.Drawing.Point(665, 10)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
         'btnCANCEL
         '
         Me.btnCANCEL.BackColor = System.Drawing.Color.White
@@ -1045,18 +1057,6 @@ Partial Class ucTRANSACTION
         Me.btnCANCEL.Size = New System.Drawing.Size(36, 79)
         Me.btnCANCEL.TabIndex = 98
         Me.btnCANCEL.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox1.Location = New System.Drawing.Point(507, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'ucTRANSACTION
         '
@@ -1114,6 +1114,7 @@ Partial Class ucTRANSACTION
         Me.pnlSTOCK.PerformLayout()
         CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSEARCH.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -1121,10 +1122,9 @@ Partial Class ucTRANSACTION
         CType(Me.dgvITEM, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlBG.ResumeLayout(False)
         Me.pnlBG.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

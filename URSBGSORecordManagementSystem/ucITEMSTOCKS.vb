@@ -1,4 +1,21 @@
 ﻿Public Class ucITEMSTOCKS
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Disabled()
         txtSTOCK.Enabled = False
         txtITEMCODE.Enabled = False
@@ -115,7 +132,7 @@
     '---------------------------------- SAVE BUTTON ---------------------------------'
     'ERROR TRAPPING
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
-        If txtADDEDSTOCK.Text = "" Then
+        If txtADDEDSTOCK.Text = "No of Stock to be Added" Then
             MsgBox("Please put the number of stock to be added.", vbOKOnly + vbCritical, "Error Saving")
             txtADDEDSTOCK.Focus()
             Exit Sub
@@ -149,8 +166,8 @@
         cmd.ExecuteNonQuery()
         con.Close()
         MsgBox("Stock Added!", vbOKOnly + vbInformation, "Saving Successful")
-
-
+        activity = "Added new stock for Item: " + txtITEMNAME.Text
+        actlog()
         txtADDEDSTOCK.Enabled = False
         Function_TextFormat()
         Function_DontDisplay()

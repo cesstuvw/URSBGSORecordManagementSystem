@@ -1,4 +1,21 @@
 ﻿Public Class ucRETURNING
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         btnSAVE.Enabled = True
         btnCANCEL.Enabled = True
@@ -62,7 +79,7 @@
     End Sub
 
     Private Sub Function_TextFormat()
- 
+
         txtNO.Text = "Transaction No."
         txtRNO.Text = "Borrower ID"
         txtFULLNAME.Text = "Full Name"
@@ -171,7 +188,7 @@
             Exit Sub
         End If
 
-        Dim updateqty
+        Dim updateqty = ""
         OpenCon()
         cmd.CommandText = "Select * from tbl_item where Itemcode = '" & txtITCODE.Text & "' "
         dr = cmd.ExecuteReader
@@ -215,6 +232,8 @@
 
 
         MsgBox("Returned successfully", vbOKOnly + vbInformation, "Transaction Recorded")
+        activity = "Returned an item. Item: " + txtITNAME.Text + "|" + "Quantity:" + txtQUAN.Text
+        actlog()
         Function_TextFormat()
         btnSEL.Enabled = True
         btnSAVE.Enabled = False
@@ -296,7 +315,4 @@
         btnSAVE.Enabled = True
         btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
     End Sub
-
-
-
 End Class

@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.48125in</Width>
+              <Width>1.91142in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.48125in</Width>
+              <Width>1.91142in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.48125in</Width>
+              <Width>1.91142in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.48125in</Width>
+              <Width>1.91142in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -358,197 +358,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet_USERACCOUNT</DataSetName>
-        <Top>4.20833in</Top>
-        <Left>3.86507in</Left>
+        <Top>1.02666in</Top>
+        <Left>2.77258in</Left>
         <Height>0.63542in</Height>
-        <Width>5.925in</Width>
+        <Width>7.64568in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox11">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>UNIVERSITY OF RIZAL SYSTEM </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>ExtraBold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.14458in</Top>
-        <Left>5.49528in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox12">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Binangonan, Rizal</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>1.42188in</Top>
-        <Left>5.49528in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox13">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Republic of the Philippines</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.88069in</Top>
-        <Left>5.49528in</Left>
-        <Height>0.25in</Height>
-        <Width>3.14583in</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Image Name="URSLOGO">
-        <Source>Embedded</Source>
-        <Value>URSLOGO</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>0.78in</Top>
-        <Left>4.72375in</Left>
-        <Height>1.07292in</Height>
-        <Width>0.70208in</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Line Name="Line1">
-        <Top>2.76958in</Top>
-        <Left>0.9059in</Left>
-        <Height>0in</Height>
-        <Width>11.05208in</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Color>#204aff</Color>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Record Management System for </Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>General Services Office</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>2.04736in</Top>
-        <Left>4.76924in</Left>
-        <Height>0.47618in</Height>
-        <Width>4.52083in</Width>
-        <ZIndex>6</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox15">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -570,11 +389,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>3.60938in</Top>
-        <Left>5.24528in</Left>
-        <Height>0.25in</Height>
+        <Top>0.48438in</Top>
+        <Left>5.0225in</Left>
+        <Height>0.32267in</Height>
         <Width>3.14583in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -586,11 +405,203 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>7.33333in</Height>
+    <Height>2.45018in</Height>
     <Style />
   </Body>
-  <Width>13.52708in</Width>
+  <Width>12.1425in</Width>
   <Page>
+    <PageHeader>
+      <Height>2.96429in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox16">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>UNIVERSITY OF RIZAL SYSTEM </Value>
+                  <Style>
+                    <FontSize>12pt</FontSize>
+                    <FontWeight>ExtraBold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>1.13467in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox17">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Binangonan, Rizal</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>1.41197in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Republic of the Philippines</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>0.87078in</Top>
+          <Left>5.29992in</Left>
+          <Height>0.25in</Height>
+          <Width>3.14583in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="URSLOGO2">
+          <Source>Embedded</Source>
+          <Value>URSLOGO</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.77009in</Top>
+          <Left>4.52839in</Left>
+          <Height>1.07292in</Height>
+          <Width>0.70208in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Line Name="Line2">
+          <Top>2.75967in</Top>
+          <Left>2.66039in</Left>
+          <Height>0in</Height>
+          <Width>7.82172in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Color>#204aff</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox22">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Record Management System for </Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>General Services Office</Value>
+                  <Style>
+                    <FontSize>11pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox11</rd:DefaultName>
+          <Top>2.03745in</Top>
+          <Left>4.61242in</Left>
+          <Height>0.47618in</Height>
+          <Width>4.52083in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
     <PageFooter>
       <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
@@ -612,7 +623,7 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.405in</Top>
-          <Left>11.54181in</Left>
+          <Left>11.16681in</Left>
           <Height>0.25in</Height>
           <Width>0.3125in</Width>
           <Style>
@@ -641,7 +652,7 @@
           </Paragraphs>
           <rd:DefaultName>OverallTotalPages</rd:DefaultName>
           <Top>0.405in</Top>
-          <Left>12.19458in</Left>
+          <Left>11.81958in</Left>
           <Height>0.25in</Height>
           <Width>0.32292in</Width>
           <ZIndex>1</ZIndex>
@@ -671,7 +682,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.405in</Top>
-          <Left>11.02097in</Left>
+          <Left>10.64597in</Left>
           <Height>0.25in</Height>
           <Width>0.38542in</Width>
           <ZIndex>2</ZIndex>
@@ -703,7 +714,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox20</rd:DefaultName>
           <Top>0.405in</Top>
-          <Left>0.70917in</Left>
+          <Left>0.83417in</Left>
           <Height>0.25in</Height>
           <Width>2.85417in</Width>
           <ZIndex>3</ZIndex>
@@ -733,7 +744,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.405in</Top>
-          <Left>11.93416in</Left>
+          <Left>11.55916in</Left>
           <Height>0.25in</Height>
           <Width>0.17709in</Width>
           <ZIndex>4</ZIndex>

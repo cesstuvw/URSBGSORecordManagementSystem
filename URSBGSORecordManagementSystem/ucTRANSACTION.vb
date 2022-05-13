@@ -1,4 +1,21 @@
 ﻿Public Class ucTRANSACTION
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         btnSAVE.Enabled = True
         btnCANCEL.Enabled = True
@@ -47,7 +64,6 @@
         'lblNO.Hide()
         lblSTOCK.Hide()
     End Sub
-
 
     Private Sub Function_DontDisplayItem()
         lblCODE.Show()
@@ -163,6 +179,7 @@
     '---------------------------------- ADD ITEM BUTTON ---------------------------------'
     Private Sub btnITEM_Click(sender As Object, e As EventArgs) Handles btnITEM.Click
         'btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+        txtQUAN.BackColor = Color.White
         btnADD.BackColor = ColorTranslator.FromHtml("#204aff")
         lblQUAN.Hide()
         pnlQUAN.BackColor = Color.White
@@ -190,7 +207,7 @@
             cmd.ExecuteNonQuery()
             dr = cmd.ExecuteReader
             If dr.HasRows = True Then
-                MsgBox("Sorry you have a same Item ", vbOKOnly + vbCritical, "Error Add Item")
+                MsgBox("Sorry, you have a same Item on your cart", vbOKOnly + vbCritical, "Error Add Item")
                 con.Close()
                 lblCODE.Show()
                 lblNAME.Show()
@@ -210,14 +227,12 @@
 
         If txtQUAN.Text > txtSTOCK.Text Then
             MsgBox("This item is not enough for borrowing or it's out of stock", vbOKOnly + vbCritical, "Transaction error")
-            'TXTITEMC.Text = ""
-            'TXTITEMN.Text = ""
-            'TXTITEMCAT.Text = ""
-            'TXTAVAILSTOCK.Text = ""
-            txtQUAN.Text = ""
-
+            Function_DontDisplayItem()
+            Function_DisabledPanel()
+            txtQUAN.Enabled = False
+            pnlQUAN.BackColor = ColorTranslator.FromHtml("#f0f0f0")
             Exit Sub
-        ElseIf TXTQUAN.Text = 0 Then
+        ElseIf txtQUAN.Text = 0 Then
             MsgBox("Please input a quantity that is greater than zero", vbOKOnly + vbCritical, "Transaction error")
             txtQUAN.Focus()
         End If
@@ -302,8 +317,8 @@
         Next
 
         MsgBox("Transaction has been Recorded ", vbOKOnly + vbInformation, "Transaction Recorded")
-
-
+        activity = "Made a transaction. Item: " + txtITNAME.Text + "|" + "Quantity:" + txtQUAN.Text
+        actlog()
         OpenCon()
         cmd.CommandText = "delete from tbl_itemcart"
         cmd.ExecuteNonQuery()
@@ -495,7 +510,4 @@
             e.Handled = Not (Char.IsDigit(e.KeyChar))
         End If
     End Sub
-
-
-
 End Class

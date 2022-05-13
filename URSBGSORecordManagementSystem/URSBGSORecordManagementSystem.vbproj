@@ -112,7 +112,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomizedButton.vb" />
     <Compile Include="frmLOADING.Designer.vb">
       <DependentUpon>frmLOADING.vb</DependentUpon>
     </Compile>
@@ -155,6 +154,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="My Project\UCrptPROFILE.Designer.vb">
+      <DependentUpon>UCrptPROFILE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\UCrptPROFILE.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrptACTIVITY.Designer.vb">
+      <DependentUpon>UCrptACTIVITY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCrptACTIVITY.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrptITEM.Designer.vb">
+      <DependentUpon>UCrptITEM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCrptITEM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrptITEMSTOCK.Designer.vb">
+      <DependentUpon>UCrptITEMSTOCK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCrptITEMSTOCK.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucBORROWERSPROFILE.Designer.vb">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </Compile>
@@ -179,16 +202,22 @@
     <Compile Include="ucITEMSTOCKS.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucREPORTS.Designer.vb">
-      <DependentUpon>ucREPORTS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucREPORTS.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ucRETURNING.Designer.vb">
       <DependentUpon>ucRETURNING.vb</DependentUpon>
     </Compile>
     <Compile Include="ucRETURNING.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrptRETURN.Designer.vb">
+      <DependentUpon>UCrptRETURN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCrptRETURN.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCrptTRANSAC.Designer.vb">
+      <DependentUpon>UCrptTRANSAC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCrptTRANSAC.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucSETTINGS.Designer.vb">
@@ -214,6 +243,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ursbgso_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ursbgso_dbDataSet.vb">
+      <DependentUpon>ursbgso_dbDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmLOADING.resx">
@@ -234,12 +266,25 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\UCrptPROFILE.resx">
+      <DependentUpon>UCrptPROFILE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptACTIVITY.rdlc" />
     <EmbeddedResource Include="rptITEM.rdlc" />
+    <EmbeddedResource Include="UCrptITEM.resx">
+      <DependentUpon>UCrptITEM.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptITEMST.rdlc" />
+    <EmbeddedResource Include="UCrptITEMSTOCK.resx">
+      <DependentUpon>UCrptITEMSTOCK.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptPROFILE.rdlc" />
     <EmbeddedResource Include="rptRETURN.rdlc" />
     <EmbeddedResource Include="rptTRANSAC.rdlc" />
     <EmbeddedResource Include="rptUSERACCOUNT.rdlc" />
+    <EmbeddedResource Include="UCrptACTIVITY.resx">
+      <DependentUpon>UCrptACTIVITY.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucBORROWERSPROFILE.resx">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
     </EmbeddedResource>
@@ -252,11 +297,14 @@
     <EmbeddedResource Include="ucITEMSTOCKS.resx">
       <DependentUpon>ucITEMSTOCKS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucREPORTS.resx">
-      <DependentUpon>ucREPORTS.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucRETURNING.resx">
       <DependentUpon>ucRETURNING.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCrptRETURN.resx">
+      <DependentUpon>UCrptRETURN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCrptTRANSAC.resx">
+      <DependentUpon>UCrptTRANSAC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucSETTINGS.resx">
       <DependentUpon>ucSETTINGS.vb</DependentUpon>
@@ -297,25 +345,13 @@
     <None Include="Resources\systemlogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logobgform.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\finalloginform.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logintb.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginbtn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\passlogin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\show.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\userlogin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\showpass.png" />
@@ -327,16 +363,10 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\closehover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimizehover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginbtnhover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hidehover.png" />
@@ -384,16 +414,10 @@
     <None Include="Resources\loader.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\menubg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\finalminimizemm.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\finalclosemm.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logomm.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimizemmf.png" />
@@ -405,67 +429,22 @@
     <None Include="Resources\closemmf.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\useraccountmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\borrowersprofilemenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transactionmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingsmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reportsmenu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profilepic.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logout.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\selector.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\useraccountselector.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\useraccountfin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrowersprofilefin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\transactionfin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingsfin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reportsfin.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dashboardmnmn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\useraccountmn.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\borrowersprofilemn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transactionmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingsmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reportsmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\useraccountmnfn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\itemmnfn.png" />
@@ -477,31 +456,13 @@
     <None Include="Resources\borrowersprofilemngn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\transactionmnfn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reportsmnfn.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\indicatorfn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transactiondash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transactiondashb.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrowersprofiledash.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reportsdash.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\searchbar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingsmnfn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\finalmenubg.png" />
@@ -522,25 +483,7 @@
     <None Include="Resources\itemstocksmnmn.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reportsmnmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingsmnmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transactionmnmn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\useraccountmnmn.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dashboardmnfn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logoutbg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logouta.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\borrowersprofilehover.png" />
@@ -555,25 +498,7 @@
     <None Include="Resources\itemstockshover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\reportshover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\settingshover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\transaction hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\useraccounthover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tablebg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\testtest.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tttttttt.png" />
@@ -582,25 +507,13 @@
     <None Include="Resources\editdisable.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\viewdisable.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\editenable.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edithover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\viewenable.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\viewhover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\modalbg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sheer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Rectangle 43.png" />
@@ -613,36 +526,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancelntn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mainmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menumenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\testmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menum.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menumm.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menufin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mainmenufin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mainmenuform.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mainmenuformbg.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TABLE.png" />
@@ -667,9 +550,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\disabledcancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TESTBTN.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\enabledsave.png" />
@@ -801,9 +681,6 @@
     <None Include="Resources\cancel-button-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\testsearch.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\returning-menu-hover.png" />
   </ItemGroup>
   <ItemGroup>
@@ -813,12 +690,32 @@
     <None Include="Resources\returning-menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sheer1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\useraccount-menu-reports.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Cube-1s-200px %281%29.gif" />
+    <None Include="Resources\systemlogo1.png" />
+    <None Include="Resources\testsearch.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\logomm.png" />
+    <None Include="Resources\return-menu.png" />
+    <None Include="Resources\return-menu-hover.png" />
+    <None Include="Resources\return-menu-selected.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\logoutho.png" />
+    <None Include="Resources\logouthoo.png" />
+    <None Include="Resources\item-dahboard.png" />
+    <None Include="Resources\return-dashboard-dark.png" />
+    <None Include="Resources\logged-dashboard.png" />
+    <None Include="Resources\history-fill 2.png" />
+    <None Include="Resources\return-dashboard-light.png" />
+    <None Include="Resources\activitylog-menu-reports.png" />
+    <None Include="Resources\useraccount-menu-reports1.png" />
+    <None Include="Resources\item-menu-reports.png" />
+    <None Include="Resources\itemstocks-menu-reports.png" />
+    <None Include="Resources\profile-menu-reports.png" />
+    <None Include="Resources\transaction-menu-reports.png" />
+    <None Include="Resources\return-menu-reports.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

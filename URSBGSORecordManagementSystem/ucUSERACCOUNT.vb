@@ -1,4 +1,21 @@
 ﻿Public Class ucUSERACCOUNT
+    Dim username As String = frmMAINMENU.lblUSERNAME.Text
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", username.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub Function_Enabled()
         btnSAVE.Enabled = True
         btnCANCEL.Enabled = True
@@ -217,8 +234,12 @@
         con.Close()
 
         MsgBox("New Account has been Saved!", vbOKOnly + vbInformation, "Saving Successful")
+        activity = "Added a new account. Username: " + txtUSER.Text
+        actlog()
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         txtUSER.Text = "Username"
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
@@ -419,6 +440,11 @@
         cmd.ExecuteNonQuery()
         con.Close()
         MsgBox("Record has been updated", vbOKOnly + vbInformation, "Successfully updated")
+        activity = "Updated an existing account. Username: " + txtUSER.Text
+        'activity = "Updated an existing account. frmMAINMENU.lblUSERTYPE.Text: " + txtUSER.Text
+        actlog()
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
 
