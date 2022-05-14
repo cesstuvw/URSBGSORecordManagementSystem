@@ -10,25 +10,12 @@
 
             .AddWithValue("un", username.Replace("@", ""))
             .AddWithValue("act", activity)
-            .AddWithValue("dt", Date.Now())
+            .AddWithValue("dt", DateTime.Now())
         End With
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
 
-    Private Sub Function_Enabled()
-        btnSAVE.Enabled = True
-        btnCANCEL.Enabled = True
-        txtNO.Enabled = True
-        txtRNO.Enabled = True
-        txtFULLNAME.Enabled = True
-        txtTYPE.Enabled = True
-        txtITCODE.Enabled = True
-        txtITNAME.Enabled = True
-        txtQUAN.Enabled = True
-        txtDATE.Enabled = True
-
-    End Sub
 
     Private Sub Function_Disabled()
         btnSAVE.Enabled = False
@@ -63,16 +50,6 @@
         lblTYPE.Show()
         lblDATE.Show()
         lblNO.Show()
-    End Sub
-
-    Private Sub Function_DontDisplayTans()
-        lblTRANSAC.Hide()
-        lblRETURN.Hide()
-        lblFULL.Hide()
-        lblQUAN.Hide()
-        lblFULL.Hide()
-        lblDATE.Hide()
-        lblNO.Hide()
     End Sub
 
     Private Sub Function_DontDisplayItem()
@@ -110,18 +87,6 @@
         pnlNAME.BackColor = ColorTranslator.FromHtml("#f0f0f0")
     End Sub
 
-    'Private Sub Function_EnabledPanel()
-    '    pnlNO.BackColor = Color.White
-    '    pnlID.BackColor = Color.White
-    '    pnlFULL.BackColor = Color.White
-    '    pnlTYPE.BackColor = Color.White
-    '    pnlCODE.BackColor = Color.White
-    '    pnlNAME.BackColor = Color.White
-    '    lblQUAN.BackColor = Color.White
-    '    pnlSTOCK.BackColor = Color.White
-
-    'End Sub
-
     Private Sub dgvRETURN_Refresh()
         Me.Tbl_returnTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_return)
     End Sub
@@ -129,7 +94,6 @@
     Private Sub dgvTRANSAC_Refresh()
         Me.Tbl_transactionTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_transaction)
     End Sub
-
 
     Private Sub Getmax()
         OpenCon()
@@ -227,7 +191,6 @@
         cmd.ExecuteNonQuery()
         con.Close()
 
-
         OpenCon()
         cmd.CommandText = "Delete from tbl_transaction where TransNo = @transno and itemname = @itemname"
         cmd.Parameters.Clear()
@@ -236,7 +199,6 @@
         cmd.ExecuteNonQuery()
         con.Close()
         dgvTRANSAC_Refresh()
-
 
         MsgBox("Returned successfully", vbOKOnly + vbInformation, "Transaction Recorded")
         activity = "Returned an item. Item: " + txtITNAME.Text + "|" + "Quantity:" + txtQUAN.Text

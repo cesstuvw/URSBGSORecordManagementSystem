@@ -23,10 +23,10 @@ Partial Class ucITEM
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
@@ -48,6 +48,7 @@ Partial Class ucITEM
         Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.btnSAVE = New System.Windows.Forms.Button()
         Me.pnlCATEGORY = New System.Windows.Forms.Panel()
+        Me.lblCATEGORY = New System.Windows.Forms.Label()
         Me.pnlCLEANUT3 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT2 = New System.Windows.Forms.Panel()
         Me.pnlCLEANUT1 = New System.Windows.Forms.Panel()
@@ -63,7 +64,6 @@ Partial Class ucITEM
         Me.Tbl_itemTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemTableAdapter()
         Me.txtCOITNM = New System.Windows.Forms.TextBox()
         Me.cboCOCAT = New System.Windows.Forms.ComboBox()
-        Me.lblCATEGORY = New System.Windows.Forms.Label()
         Me.pnlSEARCH.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCODE.SuspendLayout()
@@ -342,6 +342,16 @@ Partial Class ucITEM
         Me.pnlCATEGORY.Size = New System.Drawing.Size(204, 36)
         Me.pnlCATEGORY.TabIndex = 87
         '
+        'lblCATEGORY
+        '
+        Me.lblCATEGORY.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblCATEGORY.Location = New System.Drawing.Point(16, 9)
+        Me.lblCATEGORY.Name = "lblCATEGORY"
+        Me.lblCATEGORY.Size = New System.Drawing.Size(170, 17)
+        Me.lblCATEGORY.TabIndex = 92
+        Me.lblCATEGORY.Text = "Item Category"
+        '
         'pnlCLEANUT3
         '
         Me.pnlCLEANUT3.Location = New System.Drawing.Point(178, 0)
@@ -403,44 +413,44 @@ Partial Class ucITEM
         Me.dgvITEM.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvITEM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvITEM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvITEM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvITEM.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvITEM.ColumnHeadersHeight = 65
         Me.dgvITEM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvITEM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ItemCodeDataGridViewTextBoxColumn, Me.ItemNameDataGridViewTextBoxColumn, Me.ItemCategoryDataGridViewTextBoxColumn, Me.AvailableStockDataGridViewTextBoxColumn})
         Me.dgvITEM.DataSource = Me.TblitemBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvITEM.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvITEM.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvITEM.EnableHeadersVisualStyles = False
         Me.dgvITEM.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.dgvITEM.Location = New System.Drawing.Point(348, 165)
         Me.dgvITEM.Name = "dgvITEM"
         Me.dgvITEM.ReadOnly = True
         Me.dgvITEM.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvITEM.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvITEM.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvITEM.RowHeadersVisible = False
         Me.dgvITEM.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvITEM.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvITEM.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvITEM.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.dgvITEM.RowTemplate.DividerHeight = 1
         Me.dgvITEM.RowTemplate.Height = 45
@@ -519,16 +529,6 @@ Partial Class ucITEM
         Me.cboCOCAT.Size = New System.Drawing.Size(121, 21)
         Me.cboCOCAT.TabIndex = 89
         Me.cboCOCAT.Visible = False
-        '
-        'lblCATEGORY
-        '
-        Me.lblCATEGORY.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblCATEGORY.Location = New System.Drawing.Point(16, 9)
-        Me.lblCATEGORY.Name = "lblCATEGORY"
-        Me.lblCATEGORY.Size = New System.Drawing.Size(170, 17)
-        Me.lblCATEGORY.TabIndex = 92
-        Me.lblCATEGORY.Text = "Item Category"
         '
         'ucITEM
         '

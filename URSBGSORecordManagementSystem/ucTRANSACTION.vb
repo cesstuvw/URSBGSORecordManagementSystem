@@ -226,8 +226,8 @@
         End If
 
 
-        If txtQUAN.Text > txtSTOCK.Text Then
-            MsgBox("This item is not enough for borrowing or it's out of stock", vbOKOnly + vbCritical, "Transaction error")
+        If txtSTOCK.Text = "0" Then
+            MsgBox("No stock available", vbOKOnly + vbCritical, "Transaction failed!")
             Function_DontDisplayItem()
             Function_DisabledPanel()
             txtQUAN.Text = "Quantity"
@@ -236,8 +236,18 @@
             Exit Sub
         End If
 
-        If txtQUAN.Text = 0 Then
-            MsgBox("Please input a quantity that is greater than zero", vbOKOnly + vbCritical, "Transaction error")
+        If Val(txtSTOCK.Text) < Val(txtQUAN.Text) Then
+            MsgBox("This item is not enough for borrowing or it's out of stock", vbOKOnly + vbCritical, "Transaction failed!")
+            Function_DontDisplayItem()
+            Function_DisabledPanel()
+            txtQUAN.Text = "Quantity"
+            txtQUAN.Enabled = False
+            pnlQUAN.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+            Exit Sub
+        End If
+
+        If txtQUAN.Text = "0" Then
+            MsgBox("Please input a quantity that is greater than zero", vbOKOnly + vbCritical, "Transaction failed!")
             txtQUAN.Focus()
             Exit Sub
         End If
@@ -364,7 +374,6 @@
 
     '---------------------------------- DATA GRID VIEW ---------------------------------'
     Private Sub DGVPROFILE_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPROFILE.CellClick
-
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = dgvPROFILE.Rows(e.RowIndex)
@@ -446,21 +455,21 @@
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_Enter(sender As Object, e As EventArgs) Handles txtSEARCHITEM.Enter
+    Private Sub txtSEARCHITEM_Enter(sender As Object, e As EventArgs)
         If txtSEARCHITEM.Text = "Search item" Then
             txtSEARCHITEM.Text = ""
             txtSEARCHITEM.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_Leave(sender As Object, e As EventArgs) Handles txtSEARCHITEM.Leave
+    Private Sub txtSEARCHITEM_Leave(sender As Object, e As EventArgs)
         If txtSEARCHITEM.Text = "" Then
             txtSEARCHITEM.Text = "Search item"
             txtSEARCHITEM.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCHITEM.TextChanged
+    Private Sub txtSEARCHITEM_TextChanged(sender As Object, e As EventArgs)
         TblitemBindingSource.Filter = "ItemName Like '%" & txtSEARCHITEM.Text & "%' "
 
         If txtSEARCHITEM.Text = "Search item" Then
@@ -471,21 +480,21 @@
         End If
     End Sub
 
-    Private Sub txtSEARCHPROF_Enter(sender As Object, e As EventArgs) Handles txtSEARCHPROF.Enter
+    Private Sub txtSEARCHPROF_Enter(sender As Object, e As EventArgs)
         If txtSEARCHPROF.Text = "Search profile" Then
             txtSEARCHPROF.Text = ""
             txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
     End Sub
 
-    Private Sub txtSEARCHPROF_Leave(sender As Object, e As EventArgs) Handles txtSEARCHPROF.Leave
+    Private Sub txtSEARCHPROF_Leave(sender As Object, e As EventArgs)
         If txtSEARCHPROF.Text = "" Then
             txtSEARCHPROF.Text = "Search profile"
             txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
-    Private Sub txtSEARCHprof_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCHPROF.TextChanged
+    Private Sub txtSEARCHprof_TextChanged(sender As Object, e As EventArgs)
         TblprofileBindingSource.Filter = "Lname like '%" & txtSEARCHPROF.Text & "%' "
 
         If txtSEARCHPROF.Text = "Search profile" Then

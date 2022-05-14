@@ -148,18 +148,7 @@
         btnCANCEL.BackColor = Color.White
         btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
-        'pnlCLEANST.Visible = False
-        'pnlCLEANST1.Visible = False
-        'pnlCLEANST2.Visible = False
-        'pnlCLEANST3.Visible = False
-
-        'pnlCLEANUT.Visible = False
-        'pnlCLEANUT1.Visible = False
-        'pnlCLEANUT2.Visible = False
-        'pnlCLEANUT3.Visible = False
         Function_DisableClean()
-
-        'btnSAVE.Text = "Save Account"
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         Function_Enabled()

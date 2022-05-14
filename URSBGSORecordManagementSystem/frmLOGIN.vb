@@ -17,7 +17,7 @@
             .Clear()
             .AddWithValue("un", txtUSER.Text)
             .AddWithValue("act", activity)
-            .AddWithValue("dt", Date.Now())
+            .AddWithValue("dt", DateTime.Now())
         End With
         cmd.ExecuteNonQuery()
         con.Close()

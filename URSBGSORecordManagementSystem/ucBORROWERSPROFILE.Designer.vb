@@ -44,6 +44,7 @@ Partial Class ucBORROWERSPROFILE
         Me.btnCREATE = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlCON = New System.Windows.Forms.Panel()
+        Me.lblCONTACT = New System.Windows.Forms.Label()
         Me.txtCONTACT = New System.Windows.Forms.TextBox()
         Me.dgvPROFILE = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,7 +76,6 @@ Partial Class ucBORROWERSPROFILE
         Me.cboTYPE = New System.Windows.Forms.ComboBox()
         Me.txtCOLN = New System.Windows.Forms.TextBox()
         Me.Tbl_profileTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter()
-        Me.lblCONTACT = New System.Windows.Forms.Label()
         Me.pnlID.SuspendLayout()
         Me.pnlCON.SuspendLayout()
         CType(Me.dgvPROFILE, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -306,6 +306,16 @@ Partial Class ucBORROWERSPROFILE
         Me.pnlCON.Name = "pnlCON"
         Me.pnlCON.Size = New System.Drawing.Size(204, 36)
         Me.pnlCON.TabIndex = 68
+        '
+        'lblCONTACT
+        '
+        Me.lblCONTACT.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblCONTACT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblCONTACT.Location = New System.Drawing.Point(14, 9)
+        Me.lblCONTACT.Name = "lblCONTACT"
+        Me.lblCONTACT.Size = New System.Drawing.Size(170, 17)
+        Me.lblCONTACT.TabIndex = 63
+        Me.lblCONTACT.Text = "Contact No."
         '
         'txtCONTACT
         '
@@ -655,16 +665,6 @@ Partial Class ucBORROWERSPROFILE
         'Tbl_profileTableAdapter
         '
         Me.Tbl_profileTableAdapter.ClearBeforeFill = True
-        '
-        'lblCONTACT
-        '
-        Me.lblCONTACT.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblCONTACT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblCONTACT.Location = New System.Drawing.Point(14, 9)
-        Me.lblCONTACT.Name = "lblCONTACT"
-        Me.lblCONTACT.Size = New System.Drawing.Size(170, 17)
-        Me.lblCONTACT.TabIndex = 63
-        Me.lblCONTACT.Text = "Contact No."
         '
         'ucBORROWERSPROFILE
         '

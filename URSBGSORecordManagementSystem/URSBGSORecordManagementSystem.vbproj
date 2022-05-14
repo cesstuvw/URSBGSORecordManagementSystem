@@ -190,12 +190,6 @@
     <Compile Include="ucBORROWERSPROFILE.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDASHBOARD.Designer.vb">
-      <DependentUpon>ucDASHBOARD.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ucDASHBOARD.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ucITEM.Designer.vb">
       <DependentUpon>ucITEM.vb</DependentUpon>
     </Compile>
@@ -296,9 +290,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucBORROWERSPROFILE.resx">
       <DependentUpon>ucBORROWERSPROFILE.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucDASHBOARD.resx">
-      <DependentUpon>ucDASHBOARD.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucITEM.resx">
       <DependentUpon>ucITEM.vb</DependentUpon>
@@ -727,6 +718,8 @@
     <None Include="Resources\return-menu-reports.png" />
     <None Include="Resources\cubecube.gif" />
     <None Include="Resources\cubeloading.gif" />
+    <None Include="Resources\showinfouni1.png" />
+    <None Include="Resources\logged-dashboard1.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

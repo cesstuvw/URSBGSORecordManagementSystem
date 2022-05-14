@@ -23,14 +23,14 @@ Partial Class ucRETURNING
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -76,6 +76,16 @@ Partial Class ucRETURNING
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.dgvTRANSAC = New System.Windows.Forms.DataGridView()
+        Me.TransNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BorrowersIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BorrowersNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BorrowersTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemCodeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ItemNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateBorrowedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateReturnedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TbltransactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_transactionTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_transactionTableAdapter()
         Me.btnCANCEL = New System.Windows.Forms.Button()
@@ -94,34 +104,6 @@ Partial Class ucRETURNING
         Me.DateReturnedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblreturnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
-        Me.pnlMENU = New System.Windows.Forms.Panel()
-        Me.btnRET = New System.Windows.Forms.Button()
-        Me.btnOUT = New System.Windows.Forms.Button()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.pnlINDICATOR = New System.Windows.Forms.Panel()
-        Me.btnREPORTS = New System.Windows.Forms.Button()
-        Me.btnSETT = New System.Windows.Forms.Button()
-        Me.btnTRANSAC = New System.Windows.Forms.Button()
-        Me.btnBORP = New System.Windows.Forms.Button()
-        Me.btnITEMST = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnUSERACC = New System.Windows.Forms.Button()
-        Me.lblUSERNAME = New System.Windows.Forms.Label()
-        Me.lblUSERTYPE = New System.Windows.Forms.Label()
-        Me.btnDASH = New System.Windows.Forms.Button()
-        Me.btnLOGOUTA = New System.Windows.Forms.PictureBox()
-        Me.btnLOGMENU = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.DateReturnedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateBorrowedDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ItemCodeDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BorrowersTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BorrowersNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BorrowersIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TransNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dgvTRANSAC = New System.Windows.Forms.DataGridView()
         Me.pnlSEARCH.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlNO.SuspendLayout()
@@ -140,15 +122,11 @@ Partial Class ucRETURNING
         Me.Panel6.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
+        CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbltransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.dgvRETURN, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlMENU.SuspendLayout()
-        CType(Me.btnLOGOUTA, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnLOGMENU, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -607,7 +585,6 @@ Partial Class ucRETURNING
         'pnlITEM
         '
         Me.pnlITEM.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.pnlITEM.Controls.Add(Me.pnlMENU)
         Me.pnlITEM.Controls.Add(Me.txtSEARCHNAME)
         Me.pnlITEM.Controls.Add(Me.Panel6)
         Me.pnlITEM.Controls.Add(Me.Panel7)
@@ -657,6 +634,135 @@ Partial Class ucRETURNING
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(937, 474)
         Me.Panel7.TabIndex = 104
+        '
+        'dgvTRANSAC
+        '
+        Me.dgvTRANSAC.AllowUserToAddRows = False
+        Me.dgvTRANSAC.AllowUserToDeleteRows = False
+        Me.dgvTRANSAC.AllowUserToResizeColumns = False
+        Me.dgvTRANSAC.AllowUserToResizeRows = False
+        Me.dgvTRANSAC.AutoGenerateColumns = False
+        Me.dgvTRANSAC.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dgvTRANSAC.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvTRANSAC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvTRANSAC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTRANSAC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvTRANSAC.ColumnHeadersHeight = 65
+        Me.dgvTRANSAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvTRANSAC.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransNoDataGridViewTextBoxColumn1, Me.BorrowersIdDataGridViewTextBoxColumn, Me.BorrowersNameDataGridViewTextBoxColumn1, Me.BorrowersTypeDataGridViewTextBoxColumn, Me.ItemCodeDataGridViewTextBoxColumn1, Me.ItemNameDataGridViewTextBoxColumn1, Me.QuantityDataGridViewTextBoxColumn1, Me.DateBorrowedDataGridViewTextBoxColumn1, Me.DateReturnedDataGridViewTextBoxColumn1})
+        Me.dgvTRANSAC.DataSource = Me.TbltransactionBindingSource
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTRANSAC.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvTRANSAC.EnableHeadersVisualStyles = False
+        Me.dgvTRANSAC.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dgvTRANSAC.Location = New System.Drawing.Point(22, 22)
+        Me.dgvTRANSAC.Name = "dgvTRANSAC"
+        Me.dgvTRANSAC.ReadOnly = True
+        Me.dgvTRANSAC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTRANSAC.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvTRANSAC.RowHeadersVisible = False
+        Me.dgvTRANSAC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvTRANSAC.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvTRANSAC.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvTRANSAC.RowTemplate.DividerHeight = 1
+        Me.dgvTRANSAC.RowTemplate.Height = 45
+        Me.dgvTRANSAC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.dgvTRANSAC.Size = New System.Drawing.Size(892, 432)
+        Me.dgvTRANSAC.TabIndex = 62
+        '
+        'TransNoDataGridViewTextBoxColumn1
+        '
+        Me.TransNoDataGridViewTextBoxColumn1.DataPropertyName = "TransNo"
+        Me.TransNoDataGridViewTextBoxColumn1.HeaderText = "TRANSACTION NO."
+        Me.TransNoDataGridViewTextBoxColumn1.Name = "TransNoDataGridViewTextBoxColumn1"
+        Me.TransNoDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.TransNoDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.TransNoDataGridViewTextBoxColumn1.Width = 125
+        '
+        'BorrowersIdDataGridViewTextBoxColumn
+        '
+        Me.BorrowersIdDataGridViewTextBoxColumn.DataPropertyName = "BorrowersId"
+        Me.BorrowersIdDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.BorrowersIdDataGridViewTextBoxColumn.Name = "BorrowersIdDataGridViewTextBoxColumn"
+        Me.BorrowersIdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BorrowersIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'BorrowersNameDataGridViewTextBoxColumn1
+        '
+        Me.BorrowersNameDataGridViewTextBoxColumn1.DataPropertyName = "BorrowersName"
+        Me.BorrowersNameDataGridViewTextBoxColumn1.HeaderText = "FULL NAME"
+        Me.BorrowersNameDataGridViewTextBoxColumn1.Name = "BorrowersNameDataGridViewTextBoxColumn1"
+        Me.BorrowersNameDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.BorrowersNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'BorrowersTypeDataGridViewTextBoxColumn
+        '
+        Me.BorrowersTypeDataGridViewTextBoxColumn.DataPropertyName = "BorrowersType"
+        Me.BorrowersTypeDataGridViewTextBoxColumn.HeaderText = "TYPE"
+        Me.BorrowersTypeDataGridViewTextBoxColumn.Name = "BorrowersTypeDataGridViewTextBoxColumn"
+        Me.BorrowersTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BorrowersTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ItemCodeDataGridViewTextBoxColumn1
+        '
+        Me.ItemCodeDataGridViewTextBoxColumn1.DataPropertyName = "ItemCode"
+        Me.ItemCodeDataGridViewTextBoxColumn1.HeaderText = "ITEM CODE"
+        Me.ItemCodeDataGridViewTextBoxColumn1.Name = "ItemCodeDataGridViewTextBoxColumn1"
+        Me.ItemCodeDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ItemCodeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ItemNameDataGridViewTextBoxColumn1
+        '
+        Me.ItemNameDataGridViewTextBoxColumn1.DataPropertyName = "ItemName"
+        Me.ItemNameDataGridViewTextBoxColumn1.HeaderText = "ITEM NAME"
+        Me.ItemNameDataGridViewTextBoxColumn1.Name = "ItemNameDataGridViewTextBoxColumn1"
+        Me.ItemNameDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ItemNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'QuantityDataGridViewTextBoxColumn1
+        '
+        Me.QuantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn1.HeaderText = "QUANTITY"
+        Me.QuantityDataGridViewTextBoxColumn1.Name = "QuantityDataGridViewTextBoxColumn1"
+        Me.QuantityDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.QuantityDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateBorrowedDataGridViewTextBoxColumn1
+        '
+        Me.DateBorrowedDataGridViewTextBoxColumn1.DataPropertyName = "DateBorrowed"
+        Me.DateBorrowedDataGridViewTextBoxColumn1.HeaderText = "DATE BORROWED"
+        Me.DateBorrowedDataGridViewTextBoxColumn1.Name = "DateBorrowedDataGridViewTextBoxColumn1"
+        Me.DateBorrowedDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DateBorrowedDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateReturnedDataGridViewTextBoxColumn1
+        '
+        Me.DateReturnedDataGridViewTextBoxColumn1.DataPropertyName = "DateReturned"
+        Me.DateReturnedDataGridViewTextBoxColumn1.HeaderText = "DATE RETURNED"
+        Me.DateReturnedDataGridViewTextBoxColumn1.Name = "DateReturnedDataGridViewTextBoxColumn1"
+        Me.DateReturnedDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DateReturnedDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'TbltransactionBindingSource
         '
@@ -845,369 +951,6 @@ Partial Class ucRETURNING
         '
         Me.Tbl_returnTableAdapter.ClearBeforeFill = True
         '
-        'pnlMENU
-        '
-        Me.pnlMENU.BackColor = System.Drawing.Color.White
-        Me.pnlMENU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pnlMENU.Controls.Add(Me.btnRET)
-        Me.pnlMENU.Controls.Add(Me.btnOUT)
-        Me.pnlMENU.Controls.Add(Me.Panel9)
-        Me.pnlMENU.Controls.Add(Me.pnlINDICATOR)
-        Me.pnlMENU.Controls.Add(Me.btnREPORTS)
-        Me.pnlMENU.Controls.Add(Me.btnSETT)
-        Me.pnlMENU.Controls.Add(Me.btnTRANSAC)
-        Me.pnlMENU.Controls.Add(Me.btnBORP)
-        Me.pnlMENU.Controls.Add(Me.btnITEMST)
-        Me.pnlMENU.Controls.Add(Me.Button1)
-        Me.pnlMENU.Controls.Add(Me.btnUSERACC)
-        Me.pnlMENU.Controls.Add(Me.lblUSERNAME)
-        Me.pnlMENU.Controls.Add(Me.lblUSERTYPE)
-        Me.pnlMENU.Controls.Add(Me.btnDASH)
-        Me.pnlMENU.Controls.Add(Me.btnLOGOUTA)
-        Me.pnlMENU.Controls.Add(Me.btnLOGMENU)
-        Me.pnlMENU.Controls.Add(Me.PictureBox4)
-        Me.pnlMENU.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pnlMENU.Location = New System.Drawing.Point(0, 0)
-        Me.pnlMENU.Name = "pnlMENU"
-        Me.pnlMENU.Size = New System.Drawing.Size(282, 705)
-        Me.pnlMENU.TabIndex = 105
-        '
-        'btnRET
-        '
-        Me.btnRET.BackColor = System.Drawing.Color.Transparent
-        Me.btnRET.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.return_menu
-        Me.btnRET.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnRET.FlatAppearance.BorderSize = 0
-        Me.btnRET.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRET.Location = New System.Drawing.Point(0, 436)
-        Me.btnRET.Name = "btnRET"
-        Me.btnRET.Size = New System.Drawing.Size(282, 42)
-        Me.btnRET.TabIndex = 8
-        Me.btnRET.UseVisualStyleBackColor = False
-        '
-        'btnOUT
-        '
-        Me.btnOUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btnOUT.FlatAppearance.BorderSize = 0
-        Me.btnOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOUT.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOUT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnOUT.Location = New System.Drawing.Point(167, 585)
-        Me.btnOUT.Name = "btnOUT"
-        Me.btnOUT.Size = New System.Drawing.Size(71, 31)
-        Me.btnOUT.TabIndex = 27
-        Me.btnOUT.Text = "Logout"
-        Me.btnOUT.UseVisualStyleBackColor = False
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel9.Location = New System.Drawing.Point(54, 619)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(30, 30)
-        Me.Panel9.TabIndex = 26
-        '
-        'pnlINDICATOR
-        '
-        Me.pnlINDICATOR.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlINDICATOR.Location = New System.Drawing.Point(0, 167)
-        Me.pnlINDICATOR.Name = "pnlINDICATOR"
-        Me.pnlINDICATOR.Size = New System.Drawing.Size(5, 38)
-        Me.pnlINDICATOR.TabIndex = 0
-        '
-        'btnREPORTS
-        '
-        Me.btnREPORTS.BackColor = System.Drawing.Color.Transparent
-        Me.btnREPORTS.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.reports_menu
-        Me.btnREPORTS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnREPORTS.FlatAppearance.BorderSize = 0
-        Me.btnREPORTS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnREPORTS.Location = New System.Drawing.Point(0, 526)
-        Me.btnREPORTS.Name = "btnREPORTS"
-        Me.btnREPORTS.Size = New System.Drawing.Size(282, 42)
-        Me.btnREPORTS.TabIndex = 21
-        Me.btnREPORTS.UseVisualStyleBackColor = False
-        '
-        'btnSETT
-        '
-        Me.btnSETT.BackColor = System.Drawing.Color.Transparent
-        Me.btnSETT.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.settings_menu
-        Me.btnSETT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnSETT.FlatAppearance.BorderSize = 0
-        Me.btnSETT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSETT.Location = New System.Drawing.Point(0, 481)
-        Me.btnSETT.Name = "btnSETT"
-        Me.btnSETT.Size = New System.Drawing.Size(282, 42)
-        Me.btnSETT.TabIndex = 8
-        Me.btnSETT.UseVisualStyleBackColor = False
-        '
-        'btnTRANSAC
-        '
-        Me.btnTRANSAC.BackColor = System.Drawing.Color.Transparent
-        Me.btnTRANSAC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transaction_menu
-        Me.btnTRANSAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnTRANSAC.FlatAppearance.BorderSize = 0
-        Me.btnTRANSAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTRANSAC.Location = New System.Drawing.Point(0, 391)
-        Me.btnTRANSAC.Name = "btnTRANSAC"
-        Me.btnTRANSAC.Size = New System.Drawing.Size(282, 42)
-        Me.btnTRANSAC.TabIndex = 6
-        Me.btnTRANSAC.UseVisualStyleBackColor = False
-        '
-        'btnBORP
-        '
-        Me.btnBORP.BackColor = System.Drawing.Color.Transparent
-        Me.btnBORP.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowers_profile_menu
-        Me.btnBORP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnBORP.FlatAppearance.BorderSize = 0
-        Me.btnBORP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBORP.Location = New System.Drawing.Point(0, 346)
-        Me.btnBORP.Name = "btnBORP"
-        Me.btnBORP.Size = New System.Drawing.Size(282, 42)
-        Me.btnBORP.TabIndex = 7
-        Me.btnBORP.UseVisualStyleBackColor = False
-        '
-        'btnITEMST
-        '
-        Me.btnITEMST.BackColor = System.Drawing.Color.Transparent
-        Me.btnITEMST.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_stocks_menu
-        Me.btnITEMST.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnITEMST.FlatAppearance.BorderSize = 0
-        Me.btnITEMST.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnITEMST.Location = New System.Drawing.Point(0, 301)
-        Me.btnITEMST.Name = "btnITEMST"
-        Me.btnITEMST.Size = New System.Drawing.Size(282, 42)
-        Me.btnITEMST.TabIndex = 5
-        Me.btnITEMST.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_menu
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(0, 256)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(282, 42)
-        Me.Button1.TabIndex = 4
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'btnUSERACC
-        '
-        Me.btnUSERACC.BackColor = System.Drawing.Color.Transparent
-        Me.btnUSERACC.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.useraccount_menu
-        Me.btnUSERACC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnUSERACC.FlatAppearance.BorderSize = 0
-        Me.btnUSERACC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUSERACC.Location = New System.Drawing.Point(0, 211)
-        Me.btnUSERACC.Name = "btnUSERACC"
-        Me.btnUSERACC.Size = New System.Drawing.Size(282, 42)
-        Me.btnUSERACC.TabIndex = 3
-        Me.btnUSERACC.UseVisualStyleBackColor = False
-        '
-        'lblUSERNAME
-        '
-        Me.lblUSERNAME.AutoSize = True
-        Me.lblUSERNAME.BackColor = System.Drawing.Color.Transparent
-        Me.lblUSERNAME.Font = New System.Drawing.Font("Arial", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUSERNAME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblUSERNAME.Location = New System.Drawing.Point(97, 635)
-        Me.lblUSERNAME.Name = "lblUSERNAME"
-        Me.lblUSERNAME.Size = New System.Drawing.Size(54, 12)
-        Me.lblUSERNAME.TabIndex = 18
-        Me.lblUSERNAME.Text = "username"
-        '
-        'lblUSERTYPE
-        '
-        Me.lblUSERTYPE.AutoSize = True
-        Me.lblUSERTYPE.BackColor = System.Drawing.Color.Transparent
-        Me.lblUSERTYPE.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUSERTYPE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblUSERTYPE.Location = New System.Drawing.Point(96, 619)
-        Me.lblUSERTYPE.Name = "lblUSERTYPE"
-        Me.lblUSERTYPE.Size = New System.Drawing.Size(77, 16)
-        Me.lblUSERTYPE.TabIndex = 18
-        Me.lblUSERTYPE.Text = "User Type"
-        '
-        'btnDASH
-        '
-        Me.btnDASH.BackColor = System.Drawing.Color.Transparent
-        Me.btnDASH.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.dashboard_menu_selected
-        Me.btnDASH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnDASH.FlatAppearance.BorderSize = 0
-        Me.btnDASH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDASH.Location = New System.Drawing.Point(0, 166)
-        Me.btnDASH.Name = "btnDASH"
-        Me.btnDASH.Size = New System.Drawing.Size(282, 42)
-        Me.btnDASH.TabIndex = 3
-        Me.btnDASH.UseVisualStyleBackColor = False
-        '
-        'btnLOGOUTA
-        '
-        Me.btnLOGOUTA.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGOUTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLOGOUTA.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnLOGOUTA.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logouthoo
-        Me.btnLOGOUTA.Location = New System.Drawing.Point(216, 619)
-        Me.btnLOGOUTA.Name = "btnLOGOUTA"
-        Me.btnLOGOUTA.Size = New System.Drawing.Size(25, 25)
-        Me.btnLOGOUTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLOGOUTA.TabIndex = 25
-        Me.btnLOGOUTA.TabStop = False
-        '
-        'btnLOGMENU
-        '
-        Me.btnLOGMENU.BackColor = System.Drawing.Color.Transparent
-        Me.btnLOGMENU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnLOGMENU.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnLOGMENU.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logout
-        Me.btnLOGMENU.Location = New System.Drawing.Point(216, 619)
-        Me.btnLOGMENU.Name = "btnLOGMENU"
-        Me.btnLOGMENU.Size = New System.Drawing.Size(25, 25)
-        Me.btnLOGMENU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnLOGMENU.TabIndex = 23
-        Me.btnLOGMENU.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logomm
-        Me.PictureBox4.Location = New System.Drawing.Point(47, 54)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(208, 71)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 0
-        Me.PictureBox4.TabStop = False
-        '
-        'DateReturnedDataGridViewTextBoxColumn1
-        '
-        Me.DateReturnedDataGridViewTextBoxColumn1.DataPropertyName = "DateReturned"
-        Me.DateReturnedDataGridViewTextBoxColumn1.HeaderText = "DATE RETURNED"
-        Me.DateReturnedDataGridViewTextBoxColumn1.Name = "DateReturnedDataGridViewTextBoxColumn1"
-        Me.DateReturnedDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DateReturnedDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DateBorrowedDataGridViewTextBoxColumn1
-        '
-        Me.DateBorrowedDataGridViewTextBoxColumn1.DataPropertyName = "DateBorrowed"
-        Me.DateBorrowedDataGridViewTextBoxColumn1.HeaderText = "DATE BORROWED"
-        Me.DateBorrowedDataGridViewTextBoxColumn1.Name = "DateBorrowedDataGridViewTextBoxColumn1"
-        Me.DateBorrowedDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DateBorrowedDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'QuantityDataGridViewTextBoxColumn1
-        '
-        Me.QuantityDataGridViewTextBoxColumn1.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn1.HeaderText = "QUANTITY"
-        Me.QuantityDataGridViewTextBoxColumn1.Name = "QuantityDataGridViewTextBoxColumn1"
-        Me.QuantityDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.QuantityDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ItemNameDataGridViewTextBoxColumn1
-        '
-        Me.ItemNameDataGridViewTextBoxColumn1.DataPropertyName = "ItemName"
-        Me.ItemNameDataGridViewTextBoxColumn1.HeaderText = "ITEM NAME"
-        Me.ItemNameDataGridViewTextBoxColumn1.Name = "ItemNameDataGridViewTextBoxColumn1"
-        Me.ItemNameDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.ItemNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'ItemCodeDataGridViewTextBoxColumn1
-        '
-        Me.ItemCodeDataGridViewTextBoxColumn1.DataPropertyName = "ItemCode"
-        Me.ItemCodeDataGridViewTextBoxColumn1.HeaderText = "ITEM CODE"
-        Me.ItemCodeDataGridViewTextBoxColumn1.Name = "ItemCodeDataGridViewTextBoxColumn1"
-        Me.ItemCodeDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.ItemCodeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'BorrowersTypeDataGridViewTextBoxColumn
-        '
-        Me.BorrowersTypeDataGridViewTextBoxColumn.DataPropertyName = "BorrowersType"
-        Me.BorrowersTypeDataGridViewTextBoxColumn.HeaderText = "TYPE"
-        Me.BorrowersTypeDataGridViewTextBoxColumn.Name = "BorrowersTypeDataGridViewTextBoxColumn"
-        Me.BorrowersTypeDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BorrowersTypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'BorrowersNameDataGridViewTextBoxColumn1
-        '
-        Me.BorrowersNameDataGridViewTextBoxColumn1.DataPropertyName = "BorrowersName"
-        Me.BorrowersNameDataGridViewTextBoxColumn1.HeaderText = "FULL NAME"
-        Me.BorrowersNameDataGridViewTextBoxColumn1.Name = "BorrowersNameDataGridViewTextBoxColumn1"
-        Me.BorrowersNameDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.BorrowersNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'BorrowersIdDataGridViewTextBoxColumn
-        '
-        Me.BorrowersIdDataGridViewTextBoxColumn.DataPropertyName = "BorrowersId"
-        Me.BorrowersIdDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.BorrowersIdDataGridViewTextBoxColumn.Name = "BorrowersIdDataGridViewTextBoxColumn"
-        Me.BorrowersIdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BorrowersIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'TransNoDataGridViewTextBoxColumn1
-        '
-        Me.TransNoDataGridViewTextBoxColumn1.DataPropertyName = "TransNo"
-        Me.TransNoDataGridViewTextBoxColumn1.HeaderText = "TRANSACTION NO."
-        Me.TransNoDataGridViewTextBoxColumn1.Name = "TransNoDataGridViewTextBoxColumn1"
-        Me.TransNoDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.TransNoDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.TransNoDataGridViewTextBoxColumn1.Width = 125
-        '
-        'dgvTRANSAC
-        '
-        Me.dgvTRANSAC.AllowUserToAddRows = False
-        Me.dgvTRANSAC.AllowUserToDeleteRows = False
-        Me.dgvTRANSAC.AllowUserToResizeColumns = False
-        Me.dgvTRANSAC.AllowUserToResizeRows = False
-        Me.dgvTRANSAC.AutoGenerateColumns = False
-        Me.dgvTRANSAC.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.dgvTRANSAC.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvTRANSAC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgvTRANSAC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTRANSAC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvTRANSAC.ColumnHeadersHeight = 65
-        Me.dgvTRANSAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvTRANSAC.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransNoDataGridViewTextBoxColumn1, Me.BorrowersIdDataGridViewTextBoxColumn, Me.BorrowersNameDataGridViewTextBoxColumn1, Me.BorrowersTypeDataGridViewTextBoxColumn, Me.ItemCodeDataGridViewTextBoxColumn1, Me.ItemNameDataGridViewTextBoxColumn1, Me.QuantityDataGridViewTextBoxColumn1, Me.DateBorrowedDataGridViewTextBoxColumn1, Me.DateReturnedDataGridViewTextBoxColumn1})
-        Me.dgvTRANSAC.DataSource = Me.TbltransactionBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTRANSAC.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvTRANSAC.EnableHeadersVisualStyles = False
-        Me.dgvTRANSAC.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.dgvTRANSAC.Location = New System.Drawing.Point(22, 22)
-        Me.dgvTRANSAC.Name = "dgvTRANSAC"
-        Me.dgvTRANSAC.ReadOnly = True
-        Me.dgvTRANSAC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTRANSAC.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvTRANSAC.RowHeadersVisible = False
-        Me.dgvTRANSAC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvTRANSAC.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvTRANSAC.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvTRANSAC.RowTemplate.DividerHeight = 1
-        Me.dgvTRANSAC.RowTemplate.Height = 45
-        Me.dgvTRANSAC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvTRANSAC.Size = New System.Drawing.Size(892, 432)
-        Me.dgvTRANSAC.TabIndex = 62
-        '
         'ucRETURNING
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1267,17 +1010,12 @@ Partial Class ucRETURNING
         Me.Panel6.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
+        CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbltransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.dgvRETURN, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblreturnBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlMENU.ResumeLayout(False)
-        Me.pnlMENU.PerformLayout()
-        CType(Me.btnLOGOUTA, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnLOGMENU, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvTRANSAC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1346,24 +1084,6 @@ Partial Class ucRETURNING
     Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DateBorrowedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DateReturnedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents pnlMENU As Panel
-    Friend WithEvents btnRET As Button
-    Friend WithEvents btnOUT As Button
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents pnlINDICATOR As Panel
-    Friend WithEvents btnREPORTS As Button
-    Friend WithEvents btnSETT As Button
-    Friend WithEvents btnTRANSAC As Button
-    Friend WithEvents btnBORP As Button
-    Friend WithEvents btnITEMST As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnUSERACC As Button
-    Friend WithEvents lblUSERNAME As Label
-    Friend WithEvents lblUSERTYPE As Label
-    Friend WithEvents btnDASH As Button
-    Friend WithEvents btnLOGOUTA As PictureBox
-    Friend WithEvents btnLOGMENU As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents dgvTRANSAC As DataGridView
     Friend WithEvents TransNoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents BorrowersIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

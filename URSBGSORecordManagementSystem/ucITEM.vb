@@ -354,6 +354,21 @@
             con.Close()
         End If
 
+
+        'If txtITEMNAME.Text <> txtCOCOITM.Text Then
+        '    OpenCon()
+        '    cmd.CommandText = "Select * from tbl_item where ItemName = '" & txtITEMNAME.Text & "'"
+        '    dr = cmd.ExecuteReader()
+        '    If dr.HasRows Then
+        '        MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Updating")
+        '        con.Close()
+        '        btnCANCEL.Enabled = True
+        '        txtITEMNAME.Focus()
+        '        Exit Sub
+        '    End If
+        '    con.Close()
+        'End If
+
         OpenCon()
         cmd.CommandText = "Update tbl_item Set Itemcode = @itmcode, ItemName = @itmname, ItemCategory = @itmcat where Itemcode = @itmcode"
         cmd.Parameters.Clear()

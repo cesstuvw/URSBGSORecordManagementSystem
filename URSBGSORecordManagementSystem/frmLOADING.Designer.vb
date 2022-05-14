@@ -23,7 +23,9 @@ Partial Class frmLOADING
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pbLOADER = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.pbLOADER, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pbLOADER
@@ -37,6 +39,17 @@ Partial Class frmLOADING
         Me.pbLOADER.TabIndex = 0
         Me.pbLOADER.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cubecube
+        Me.PictureBox2.Location = New System.Drawing.Point(447, 304)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(60, 55)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
         'frmLOADING
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -44,6 +57,7 @@ Partial Class frmLOADING
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(954, 662)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.pbLOADER)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -51,9 +65,11 @@ Partial Class frmLOADING
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmLOADING"
         CType(Me.pbLOADER, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pbLOADER As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

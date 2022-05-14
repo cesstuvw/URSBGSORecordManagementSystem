@@ -157,12 +157,6 @@
   <data name="dashboard_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cubecube" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cubecube.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="return-menu-selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\return-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="modalbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\modalbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,9 +202,6 @@
   <data name="transaction_menu_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaction-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="date-dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,6 +235,9 @@
   <data name="logomm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logomm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cubeloading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cubeloading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="enablededit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enablededit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -255,6 +249,9 @@
   </data>
   <data name="Info-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="showinfouni1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\showinfouni1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="transaction-dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaction-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -279,6 +276,9 @@
   </data>
   <data name="finalclosemm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\finalclosemm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="item_stocks_menu_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\item-stocks-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="return-dashboard-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\return-dashboard-dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,20 +388,26 @@
   <data name="dashboard_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancelntn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelntn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="titlelogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titlelogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="activitylog-menu-reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\activitylog-menu-reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item_stocks_menu_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\item-stocks-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="transaction_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transaction-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reports_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reports-menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye-off-fill 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye-off-fill 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="finalmenubg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\finalmenubg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="borrowers_profile_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrowers-profile-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -430,8 +436,8 @@
   <data name="closemm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closemm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Info_circle_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Info-circle-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboardhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboardhover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizemm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizemm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -451,6 +457,9 @@
   <data name="borrowersprofilemngn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\borrowersprofilemngn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logged-dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logged-dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -460,8 +469,8 @@
   <data name="return-menu-reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\return-menu-reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboardhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboardhover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cubecube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cubecube.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizehover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizehover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -475,8 +484,8 @@
   <data name="item-menu-reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\item-menu-reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="finalmenubg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\finalmenubg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="return-menu-selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="passlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\passlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -487,8 +496,8 @@
   <data name="item_stocks_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\item-stocks-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancelntn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelntn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Info_circle_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info-circle-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="finalloginform" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\finalloginform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -499,8 +508,8 @@
   <data name="history-fill 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\history-fill 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="indicator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indicator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="systemlogohd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\systemlogohd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -517,19 +526,16 @@
   <data name="item_menu_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\item-menu-selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closehover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closehover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logouthoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logouthoo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="returning_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\returning-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transaction_menu_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transaction-menu-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="closehover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closehover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cubeloading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cubeloading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logged-dashboard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logged-dashboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

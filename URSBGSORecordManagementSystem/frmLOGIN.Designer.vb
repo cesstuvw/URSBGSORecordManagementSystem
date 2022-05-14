@@ -37,26 +37,22 @@ Partial Class frmLOGIN
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnLOGIN = New System.Windows.Forms.Button()
         Me.tmrTIME = New System.Windows.Forms.Timer(Me.components)
-        Me.pnlLOADING = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnSHOW = New System.Windows.Forms.PictureBox()
         Me.btnHIDE = New System.Windows.Forms.PictureBox()
         Me.BTNMINIMIZE = New System.Windows.Forms.PictureBox()
         Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
-        Me.pnlINFO = New System.Windows.Forms.Panel()
-        Me.btnINFO = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnINFO = New System.Windows.Forms.PictureBox()
+        Me.pnlINFO = New System.Windows.Forms.Panel()
         Me.pnlLOGO.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.pnlLOADING.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSHOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnHIDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlLOGO
@@ -213,26 +209,6 @@ Partial Class frmLOGIN
         Me.tmrTIME.Enabled = True
         Me.tmrTIME.Interval = 1000
         '
-        'pnlLOADING
-        '
-        Me.pnlLOADING.BackColor = System.Drawing.Color.White
-        Me.pnlLOADING.Controls.Add(Me.PictureBox2)
-        Me.pnlLOADING.Location = New System.Drawing.Point(0, 0)
-        Me.pnlLOADING.Name = "pnlLOADING"
-        Me.pnlLOADING.Size = New System.Drawing.Size(731, 486)
-        Me.pnlLOADING.TabIndex = 5
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.cubecube
-        Me.PictureBox2.Location = New System.Drawing.Point(343, 217)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(60, 55)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
         'btnSHOW
         '
         Me.btnSHOW.BackColor = System.Drawing.Color.Transparent
@@ -282,14 +258,17 @@ Partial Class frmLOGIN
         Me.BTNCLOSE.TabIndex = 3
         Me.BTNCLOSE.TabStop = False
         '
-        'pnlINFO
+        'PictureBox1
         '
-        Me.pnlINFO.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.infopanel
-        Me.pnlINFO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pnlINFO.Location = New System.Drawing.Point(263, 16)
-        Me.pnlINFO.Name = "pnlINFO"
-        Me.pnlINFO.Size = New System.Drawing.Size(115, 35)
-        Me.pnlINFO.TabIndex = 4
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.systemlogo
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(140, 158)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(131, 131)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'btnINFO
         '
@@ -304,17 +283,14 @@ Partial Class frmLOGIN
         Me.btnINFO.TabIndex = 3
         Me.btnINFO.TabStop = False
         '
-        'PictureBox1
+        'pnlINFO
         '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.systemlogo
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(140, 158)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(131, 131)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pnlINFO.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.infopanel
+        Me.pnlINFO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pnlINFO.Location = New System.Drawing.Point(263, 16)
+        Me.pnlINFO.Name = "pnlINFO"
+        Me.pnlINFO.Size = New System.Drawing.Size(115, 35)
+        Me.pnlINFO.TabIndex = 4
         '
         'frmLOGIN
         '
@@ -323,7 +299,6 @@ Partial Class frmLOGIN
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(731, 486)
-        Me.Controls.Add(Me.pnlLOADING)
         Me.Controls.Add(Me.btnLOGIN)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
@@ -346,14 +321,12 @@ Partial Class frmLOGIN
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.pnlLOADING.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSHOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnHIDE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnINFO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -369,16 +342,14 @@ Partial Class frmLOGIN
     Friend WithEvents btnSHOW As PictureBox
     Friend WithEvents BTNCLOSE As PictureBox
     Friend WithEvents BTNMINIMIZE As PictureBox
-    Friend WithEvents btnINFO As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents pnlINFO As Panel
     Friend WithEvents txtUSER As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnLOGIN As Button
     Friend WithEvents tmrTIME As Timer
-    Friend WithEvents pnlLOADING As Panel
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents pnlINFO As Panel
+    Friend WithEvents btnINFO As PictureBox
 End Class

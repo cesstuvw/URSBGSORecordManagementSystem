@@ -823,6 +823,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property logged_dashboard1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("logged-dashboard1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property logomm() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("logomm", resourceCulture)
@@ -1226,6 +1236,16 @@ Namespace My.Resources
         Friend ReadOnly Property showinfouni() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("showinfouni", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property showinfouni1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("showinfouni1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -10,7 +10,7 @@
 
             .AddWithValue("un", username.Replace("@", ""))
             .AddWithValue("act", activity)
-            .AddWithValue("dt", Format(Date.Now, "yyyy-MM-dd"))
+            .AddWithValue("dt", Date.Now())
         End With
         cmd.ExecuteNonQuery()
         con.Close()
@@ -101,6 +101,7 @@
         pnlCLEANUT2.Visible = False
         pnlCLEANUT3.Visible = False
     End Sub
+
     Private Sub dgvPROFILE_Refresh()
         Me.Tbl_profileTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_profile)
     End Sub
@@ -152,10 +153,10 @@
 
     '---------------------------------- SAVE BUTTON ---------------------------------'
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
-        'ERROR TRAPPINGbo
+        'ERROR TRAPPING
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
-        If txtID.Text = "Borrower ID" Or txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Then
+        If txtID.Text = "Borrower ID" Or txtFNAME.Text = "First Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Saving")
             btnCANCEL.Enabled = True
             Exit Sub
@@ -184,6 +185,10 @@
                 Exit Sub
             End If
             con.Close()
+        End If
+
+        If txtMNAME.Text = "Middle Name" Then
+            txtMNAME.Text = ""
         End If
 
         'SAVING A NEW USER
@@ -339,7 +344,7 @@
         End If
 
         'Error Trapping
-        If txtFNAME.Text = "First Name" Or txtMNAME.Text = "Middle Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Or txtCONTACT.Text = "Contact No." Then
+        If txtFNAME.Text = "First Name" Or txtLNAME.Text = "Last Name" Or cboTYPE.Text = "Borrower Type" Or txtCONTACT.Text = "Contact No." Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
             Exit Sub
         End If
@@ -348,6 +353,10 @@
             MsgBox("Unknown user type!", vbOKOnly + vbCritical, "Error Updating")
             cboTYPE.Focus()
             Exit Sub
+        End If
+
+        If txtMNAME.Text = "Middle Name" Then
+            txtMNAME.Text = ""
         End If
 
         OpenCon()
@@ -362,11 +371,11 @@
         cmd.ExecuteNonQuery()
         con.Close()
         MsgBox("Record has been updated", vbOKOnly + vbInformation, "Successfully updated")
-        activity = "Updated an existing profile. Name: " + txtLNAME.Text + "," + txtFNAME.Text + txtMNAME.Text
+        activity = "Updated an existing profile. Name: " + txtLNAME.Text + "," + " " + txtFNAME.Text + " " + txtMNAME.Text
         actlog()
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
-
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         txtID.Text = "Borrower ID"
         btnUPDATE.Enabled = False
         btnUPDATE.Visible = False
