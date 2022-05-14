@@ -9,7 +9,8 @@
 
     Private Sub btnFILTER_Click(sender As Object, e As EventArgs) Handles btnFILTER.Click
         Me.rptACT.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
-        Me.tbl_activityTableAdapter.FillByDateTime(Me.ursbgso_dbDataSet.tbl_activity, dtDATETIME.Value.ToShortDateString, dtDATETIME1.Value.ToShortDateString)
+        Me.tbl_activityTableAdapter.FillByDateTime(Me.ursbgso_dbDataSet.tbl_activity, dtSTART.Value.ToShortDateString, dtEND.Value.ToShortDateString)
+        Me.rptACT.RefreshReport()
         btnFILTER.Visible = False
         btnUNFILTER.Visible = True
     End Sub

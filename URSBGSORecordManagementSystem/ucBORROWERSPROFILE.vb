@@ -167,6 +167,12 @@
             Exit Sub
         End If
 
+        If txtCONTACT.Text.Length < 11 Then
+            MsgBox("Invalid contact number!", vbOKOnly + vbCritical, "Error Saving")
+            txtCONTACT.Focus()
+            Exit Sub
+        End If
+
         If txtID.Text <> txtCOCON.Text Then
             OpenCon()
             cmd.CommandText = "Select * from tbl_profile where borrowersid = '" & txtID.Text & "' "
@@ -198,6 +204,8 @@
         actlog()
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         txtID.Text = "Borrower ID"
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
@@ -214,9 +222,9 @@
 
     '---------------------------------- CANCEL BUTTON ---------------------------------'
     Private Sub btnCANCEL_Click(sender As Object, e As EventArgs) Handles btnCANCEL.Click
-        btnCANCEL.Enabled = False
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCEL.Enabled = False
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         btnSAVE.Enabled = False
@@ -250,7 +258,7 @@
 
         btnSAVE.Enabled = False
         Function_Disabled()
-
+        btnCANCELDGV.Enabled = False
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = dgvPROFILE.Rows(e.RowIndex)
@@ -378,6 +386,7 @@
     Private Sub btnCANCELDGV_Click(sender As Object, e As EventArgs) Handles btnCANCELDGV.Click
         btnEDIT.BackColor = Color.White
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+
         btnCANCELDGV.Visible = False
         btnCANCELDGV.Enabled = False
         Function_Clean()

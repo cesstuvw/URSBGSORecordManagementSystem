@@ -110,6 +110,8 @@
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
 
         Me.Tbl_itemTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_item)
 
@@ -151,6 +153,8 @@
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         btnEDIT.Enabled = False
+        btnCANCEL.Enabled = True
+        btnCANCEL.Visible = True
 
         txtITEMNAME.Focus()
         txtITEMNAME.Text = ""
@@ -204,6 +208,7 @@
         btnEDIT.Enabled = False
         dgvITEM.Enabled = True
         btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         Function_Disabled()
         Function_DisabledPanel()
@@ -367,7 +372,8 @@
 
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
-
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         Function_Disabled()
         Function_Disabled()
         Function_DisabledPanel()

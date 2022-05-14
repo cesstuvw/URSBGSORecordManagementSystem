@@ -23,7 +23,7 @@ Partial Class UCrptACTIVITY
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_activityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
@@ -33,8 +33,8 @@ Partial Class UCrptACTIVITY
         Me.btnFILTER = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.dtDATETIME1 = New System.Windows.Forms.DateTimePicker()
-        Me.dtDATETIME = New System.Windows.Forms.DateTimePicker()
+        Me.dtEND = New System.Windows.Forms.DateTimePicker()
+        Me.dtSTART = New System.Windows.Forms.DateTimePicker()
         Me.rptACT = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tbl_activityTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_activityTableAdapter()
         CType(Me.tbl_activityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,8 +122,8 @@ Partial Class UCrptACTIVITY
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.dtDATETIME1)
-        Me.Panel2.Controls.Add(Me.dtDATETIME)
+        Me.Panel2.Controls.Add(Me.dtEND)
+        Me.Panel2.Controls.Add(Me.dtSTART)
         Me.Panel2.Location = New System.Drawing.Point(322, 20)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(292, 35)
@@ -140,36 +140,36 @@ Partial Class UCrptACTIVITY
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "to"
         '
-        'dtDATETIME1
+        'dtEND
         '
-        Me.dtDATETIME1.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME1.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME1.Location = New System.Drawing.Point(165, 8)
-        Me.dtDATETIME1.Name = "dtDATETIME1"
-        Me.dtDATETIME1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dtDATETIME1.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME1.TabIndex = 6
-        Me.dtDATETIME1.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
+        Me.dtEND.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtEND.CustomFormat = "yyyy-MM-dd"
+        Me.dtEND.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtEND.Location = New System.Drawing.Point(165, 8)
+        Me.dtEND.Name = "dtEND"
+        Me.dtEND.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dtEND.Size = New System.Drawing.Size(110, 20)
+        Me.dtEND.TabIndex = 6
+        Me.dtEND.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
         '
-        'dtDATETIME
+        'dtSTART
         '
-        Me.dtDATETIME.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME.Location = New System.Drawing.Point(16, 8)
-        Me.dtDATETIME.Name = "dtDATETIME"
-        Me.dtDATETIME.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME.TabIndex = 6
-        Me.dtDATETIME.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
+        Me.dtSTART.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtSTART.CustomFormat = "yyyy-MM-dd"
+        Me.dtSTART.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtSTART.Location = New System.Drawing.Point(16, 8)
+        Me.dtSTART.Name = "dtSTART"
+        Me.dtSTART.Size = New System.Drawing.Size(110, 20)
+        Me.dtSTART.TabIndex = 6
+        Me.dtSTART.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
         '
         'rptACT
         '
         Me.rptACT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptACT.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource1.Name = "DataSet_ACTIVITY"
-        ReportDataSource1.Value = Me.tbl_activityBindingSource
-        Me.rptACT.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet_ACTIVITY"
+        ReportDataSource2.Value = Me.tbl_activityBindingSource
+        Me.rptACT.LocalReport.DataSources.Add(ReportDataSource2)
         Me.rptACT.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptACTIVITY.rdlc"
         Me.rptACT.Location = New System.Drawing.Point(21, 72)
         Me.rptACT.Name = "rptACT"
@@ -205,11 +205,11 @@ Partial Class UCrptACTIVITY
     Friend WithEvents btnUNFILTER As Button
     Friend WithEvents btnFILTER As Button
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
+    Friend WithEvents dtSTART As DateTimePicker
+    Friend WithEvents Label2 As Label
+    Friend WithEvents dtEND As DateTimePicker
     Friend WithEvents rptACT As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents tbl_activityBindingSource As BindingSource
-    Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents tbl_activityTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_activityTableAdapter
-    Friend WithEvents dtDATETIME As DateTimePicker
-    Friend WithEvents Label2 As Label
-    Friend WithEvents dtDATETIME1 As DateTimePicker
 End Class

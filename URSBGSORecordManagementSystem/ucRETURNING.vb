@@ -22,6 +22,7 @@
         txtNO.Enabled = True
         txtRNO.Enabled = True
         txtFULLNAME.Enabled = True
+        txtTYPE.Enabled = True
         txtITCODE.Enabled = True
         txtITNAME.Enabled = True
         txtQUAN.Enabled = True
@@ -35,6 +36,7 @@
         txtNO.Enabled = False
         txtRNO.Enabled = False
         txtFULLNAME.Enabled = False
+        txtTYPE.Enabled = False
         txtITCODE.Enabled = False
         txtITNAME.Enabled = False
         txtQUAN.Enabled = False
@@ -47,6 +49,7 @@
         lblFULL.Hide()
         lblQUAN.Hide()
         lblFULL.Hide()
+        lblTYPE.Hide()
         lblDATE.Hide()
         lblNO.Hide()
     End Sub
@@ -57,6 +60,7 @@
         lblFULL.Show()
         lblQUAN.Show()
         lblFULL.Show()
+        lblTYPE.Show()
         lblDATE.Show()
         lblNO.Show()
     End Sub
@@ -83,6 +87,7 @@
         txtNO.Text = "Transaction No."
         txtRNO.Text = "Borrower ID"
         txtFULLNAME.Text = "Full Name"
+        txtTYPE.Text = "Borrower Type"
         txtITNAME.Text = "Item Name"
         txtITCODE.Text = "Item Code"
         txtQUAN.Text = "Quantity"
@@ -90,6 +95,7 @@
 
         txtNO.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         txtFULLNAME.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
+        txtTYPE.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         txtITCODE.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         txtITNAME.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         txtITNAME.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
@@ -207,11 +213,12 @@
 
 
         OpenCon()
-        cmd.CommandText = "insert into tbl_return values(@rno,@tno,@fulln,@itemc,@itemn,@qty,@bdate,@rdate)"
+        cmd.CommandText = "insert into tbl_return values(@rno, @tno, @fulln, @btype, @itemc, @itemn, @qty, @bdate, @rdate)"
         cmd.Parameters.Clear()
         cmd.Parameters.AddWithValue("rno", txtRNO.Text)
         cmd.Parameters.AddWithValue("tno", txtNO.Text)
         cmd.Parameters.AddWithValue("fulln", txtFULLNAME.Text)
+        cmd.Parameters.AddWithValue("btype", txtTYPE.Text)
         cmd.Parameters.AddWithValue("itemc", txtITCODE.Text)
         cmd.Parameters.AddWithValue("itemn", txtITNAME.Text)
         cmd.Parameters.AddWithValue("qty", txtQUAN.Text)
@@ -238,6 +245,7 @@
         btnSEL.Enabled = True
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         Function_DontDisplayUser()
         Function_DontDisplayItem()
@@ -273,16 +281,16 @@
     End Sub
 
     Private Sub txtSEARCHNAME_Enter(sender As Object, e As EventArgs) Handles txtSEARCHNAME.Enter
-        If txtSEARCHPROF.Text = "Search name" Then
-            txtSEARCHPROF.Text = ""
-            txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#204AFF")
+        If txtSEARCHNAME.Text = "Search name" Then
+            txtSEARCHNAME.Text = ""
+            txtSEARCHNAME.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
     End Sub
 
     Private Sub txtSEARCHNAME_Leave(sender As Object, e As EventArgs) Handles txtSEARCHNAME.Leave
-        If txtSEARCHPROF.Text = "" Then
-            txtSEARCHPROF.Text = "Search name"
-            txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
+        If txtSEARCHNAME.Text = "" Then
+            txtSEARCHNAME.Text = "Search name"
+            txtSEARCHNAME.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
@@ -291,7 +299,7 @@
 
         If txtSEARCHNAME.Text = "Search name" Then
             TbltransactionBindingSource.RemoveFilter()
-        ElseIf txtSEARCHPROF.Text = "" Then
+        ElseIf txtSEARCHNAME.Text = "" Then
             TbltransactionBindingSource.Filter = "BorrowersName like '%" & txtSEARCHNAME.Text & "%' "
         End If
     End Sub
@@ -302,6 +310,7 @@
             row = dgvTRANSAC.Rows(e.RowIndex)
             txtNO.Text = row.Cells(0).Value
             txtFULLNAME.Text = row.Cells(2).Value
+            txtTYPE.Text = row.Cells(3).Value
             txtITCODE.Text = row.Cells(4).Value
             txtITNAME.Text = row.Cells(5).Value
             txtQUAN.Text = row.Cells(6).Value

@@ -2901,6 +2901,8 @@ Partial Public Class ursbgso_dbDataSet
         
         Private columnBorrowersName As Global.System.Data.DataColumn
         
+        Private columnBorrowersType As Global.System.Data.DataColumn
+        
         Private columnItemCode As Global.System.Data.DataColumn
         
         Private columnItemName As Global.System.Data.DataColumn
@@ -2967,6 +2969,14 @@ Partial Public Class ursbgso_dbDataSet
         Public ReadOnly Property BorrowersNameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnBorrowersName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property BorrowersTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBorrowersType
             End Get
         End Property
         
@@ -3047,9 +3057,9 @@ Partial Public Class ursbgso_dbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_returnRow(ByVal ReturnNo As Integer, ByVal TransNo As String, ByVal BorrowersName As String, ByVal ItemCode As String, ByVal ItemName As String, ByVal Quantity As String, ByVal DateBorrowed As String, ByVal DateReturned As String) As tbl_returnRow
+        Public Overloads Function Addtbl_returnRow(ByVal ReturnNo As Integer, ByVal TransNo As String, ByVal BorrowersName As String, ByVal BorrowersType As String, ByVal ItemCode As String, ByVal ItemName As String, ByVal Quantity As String, ByVal DateBorrowed As String, ByVal DateReturned As String) As tbl_returnRow
             Dim rowtbl_returnRow As tbl_returnRow = CType(Me.NewRow,tbl_returnRow)
-            Dim columnValuesArray() As Object = New Object() {ReturnNo, TransNo, BorrowersName, ItemCode, ItemName, Quantity, DateBorrowed, DateReturned}
+            Dim columnValuesArray() As Object = New Object() {ReturnNo, TransNo, BorrowersName, BorrowersType, ItemCode, ItemName, Quantity, DateBorrowed, DateReturned}
             rowtbl_returnRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_returnRow)
             Return rowtbl_returnRow
@@ -3081,6 +3091,7 @@ Partial Public Class ursbgso_dbDataSet
             Me.columnReturnNo = MyBase.Columns("ReturnNo")
             Me.columnTransNo = MyBase.Columns("TransNo")
             Me.columnBorrowersName = MyBase.Columns("BorrowersName")
+            Me.columnBorrowersType = MyBase.Columns("BorrowersType")
             Me.columnItemCode = MyBase.Columns("ItemCode")
             Me.columnItemName = MyBase.Columns("ItemName")
             Me.columnQuantity = MyBase.Columns("Quantity")
@@ -3097,6 +3108,8 @@ Partial Public Class ursbgso_dbDataSet
             MyBase.Columns.Add(Me.columnTransNo)
             Me.columnBorrowersName = New Global.System.Data.DataColumn("BorrowersName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBorrowersName)
+            Me.columnBorrowersType = New Global.System.Data.DataColumn("BorrowersType", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBorrowersType)
             Me.columnItemCode = New Global.System.Data.DataColumn("ItemCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnItemCode)
             Me.columnItemName = New Global.System.Data.DataColumn("ItemName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3114,6 +3127,8 @@ Partial Public Class ursbgso_dbDataSet
             Me.columnTransNo.MaxLength = 45
             Me.columnBorrowersName.AllowDBNull = false
             Me.columnBorrowersName.MaxLength = 45
+            Me.columnBorrowersType.AllowDBNull = false
+            Me.columnBorrowersType.MaxLength = 45
             Me.columnItemCode.AllowDBNull = false
             Me.columnItemCode.MaxLength = 45
             Me.columnItemName.AllowDBNull = false
@@ -3404,7 +3419,7 @@ Partial Public Class ursbgso_dbDataSet
             Me.columnUsername.AllowDBNull = false
             Me.columnUsername.MaxLength = 45
             Me.columnActivity.AllowDBNull = false
-            Me.columnActivity.MaxLength = 45
+            Me.columnActivity.MaxLength = 300
             Me.columnDateTime.AllowDBNull = false
             Me.columnDateTime.MaxLength = 45
         End Sub
@@ -4165,6 +4180,17 @@ Partial Public Class ursbgso_dbDataSet
             End Get
             Set
                 Me(Me.tabletbl_return.BorrowersNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property BorrowersType() As String
+            Get
+                Return CType(Me(Me.tabletbl_return.BorrowersTypeColumn),String)
+            End Get
+            Set
+                Me(Me.tabletbl_return.BorrowersTypeColumn) = value
             End Set
         End Property
         
@@ -5489,12 +5515,33 @@ Namespace ursbgso_dbDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
+            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(1) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT `StockID`, `ItemCode`, `ItemName`, `AddedStock`, `DateAdded` FROM `tbl_ite"& _ 
                 "mstock`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT `StockID`, `ItemCode`, `ItemName`, `AddedStock`, `DateAdded` FROM `tbl_ite"& _ 
+                "mstock` where DateAdded between @param1 and @param2"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@param1"
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "DateAdded"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._commandCollection(1).Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@param2"
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "DateAdded"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._commandCollection(1).Parameters.Add(param)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5516,6 +5563,34 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As ursbgso_dbDataSet.tbl_itemstockDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ursbgso_dbDataSet.tbl_itemstockDataTable = New ursbgso_dbDataSet.tbl_itemstockDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByAdded(ByVal dataTable As ursbgso_dbDataSet.tbl_itemstockDataTable, ByVal param1 As Date, ByVal param2 As Date) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByAdded(ByVal param1 As Date, ByVal param2 As Date) As ursbgso_dbDataSet.tbl_itemstockDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
             Dim dataTable As ursbgso_dbDataSet.tbl_itemstockDataTable = New ursbgso_dbDataSet.tbl_itemstockDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -8833,6 +8908,7 @@ Namespace ursbgso_dbDataSetTableAdapters
             tableMapping.ColumnMappings.Add("ReturnNo", "ReturnNo")
             tableMapping.ColumnMappings.Add("TransNo", "TransNo")
             tableMapping.ColumnMappings.Add("BorrowersName", "BorrowersName")
+            tableMapping.ColumnMappings.Add("BorrowersType", "BorrowersType")
             tableMapping.ColumnMappings.Add("ItemCode", "ItemCode")
             tableMapping.ColumnMappings.Add("ItemName", "ItemName")
             tableMapping.ColumnMappings.Add("Quantity", "Quantity")
@@ -8842,9 +8918,9 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_return` WHERE ((`ReturnNo` = @p1) AND (`TransNo` = @p2) AND (`Bo"& _ 
-                "rrowersName` = @p3) AND (`ItemCode` = @p4) AND (`ItemName` = @p5) AND (`Quantity"& _ 
-                "` = @p6) AND (`DateBorrowed` = @p7) AND ((@p8 = 1 AND `DateReturned` IS NULL) OR"& _ 
-                " (`DateReturned` = @p9)))"
+                "rrowersName` = @p3) AND (`BorrowersType` = @p4) AND (`ItemCode` = @p5) AND (`Ite"& _ 
+                "mName` = @p6) AND (`Quantity` = @p7) AND (`DateBorrowed` = @p8) AND ((@p9 = 1 AN"& _ 
+                "D `DateReturned` IS NULL) OR (`DateReturned` = @p10)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -8872,32 +8948,39 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.ParameterName = "@p4"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemCode"
+            param.SourceColumn = "BorrowersType"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemName"
+            param.SourceColumn = "ItemCode"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Quantity"
+            param.SourceColumn = "ItemName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "DateBorrowed"
+            param.SourceColumn = "Quantity"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p8"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "DateBorrowed"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -8906,7 +8989,7 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.SourceColumnNullMapping = true
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p9"
+            param.ParameterName = "@p10"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
             param.SourceColumn = "DateReturned"
@@ -8914,9 +8997,9 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_return` (`ReturnNo`, `TransNo`, `BorrowersName`, `ItemCode`, `It"& _ 
-                "emName`, `Quantity`, `DateBorrowed`, `DateReturned`) VALUES (@p1, @p2, @p3, @p4,"& _ 
-                " @p5, @p6, @p7, @p8)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_return` (`ReturnNo`, `TransNo`, `BorrowersName`, `BorrowersType`"& _ 
+                ", `ItemCode`, `ItemName`, `Quantity`, `DateBorrowed`, `DateReturned`) VALUES (@p"& _ 
+                "1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -8944,32 +9027,39 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.ParameterName = "@p4"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemCode"
+            param.SourceColumn = "BorrowersType"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemName"
+            param.SourceColumn = "ItemCode"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Quantity"
+            param.SourceColumn = "ItemName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "DateBorrowed"
+            param.SourceColumn = "Quantity"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p8"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "DateBorrowed"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
             param.SourceColumn = "DateReturned"
@@ -8978,11 +9068,12 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_return` SET `ReturnNo` = @p1, `TransNo` = @p2, `BorrowersName` = @p3,"& _ 
-                " `ItemCode` = @p4, `ItemName` = @p5, `Quantity` = @p6, `DateBorrowed` = @p7, `Da"& _ 
-                "teReturned` = @p8 WHERE ((`ReturnNo` = @p9) AND (`TransNo` = @p10) AND (`Borrowe"& _ 
-                "rsName` = @p11) AND (`ItemCode` = @p12) AND (`ItemName` = @p13) AND (`Quantity` "& _ 
-                "= @p14) AND (`DateBorrowed` = @p15) AND ((@p16 = 1 AND `DateReturned` IS NULL) O"& _ 
-                "R (`DateReturned` = @p17)))"
+                " `BorrowersType` = @p4, `ItemCode` = @p5, `ItemName` = @p6, `Quantity` = @p7, `D"& _ 
+                "ateBorrowed` = @p8, `DateReturned` = @p9 WHERE ((`ReturnNo` = @p10) AND (`TransN"& _ 
+                "o` = @p11) AND (`BorrowersName` = @p12) AND (`BorrowersType` = @p13) AND (`ItemC"& _ 
+                "ode` = @p14) AND (`ItemName` = @p15) AND (`Quantity` = @p16) AND (`DateBorrowed`"& _ 
+                " = @p17) AND ((@p18 = 1 AND `DateReturned` IS NULL) OR (`DateReturned` = @p19)))"& _ 
+                ""
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -9010,39 +9101,46 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.ParameterName = "@p4"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemCode"
+            param.SourceColumn = "BorrowersType"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p5"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemName"
+            param.SourceColumn = "ItemCode"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p6"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Quantity"
+            param.SourceColumn = "ItemName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p7"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "DateBorrowed"
+            param.SourceColumn = "Quantity"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p8"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "DateReturned"
+            param.SourceColumn = "DateBorrowed"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p9"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "DateReturned"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p10"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -9050,49 +9148,56 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p10"
+            param.ParameterName = "@p11"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
             param.SourceColumn = "TransNo"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
+            param.ParameterName = "@p12"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
             param.SourceColumn = "BorrowersName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p12"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.IsNullable = true
-            param.SourceColumn = "ItemCode"
-            param.SourceVersion = Global.System.Data.DataRowVersion.Original
-            Me._adapter.UpdateCommand.Parameters.Add(param)
-            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p13"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "ItemName"
+            param.SourceColumn = "BorrowersType"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p14"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Quantity"
+            param.SourceColumn = "ItemCode"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p15"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "DateBorrowed"
+            param.SourceColumn = "ItemName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p16"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "Quantity"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p17"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "DateBorrowed"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p18"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -9101,7 +9206,7 @@ Namespace ursbgso_dbDataSetTableAdapters
             param.SourceColumnNullMapping = true
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p17"
+            param.ParameterName = "@p19"
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
             param.SourceColumn = "DateReturned"
@@ -9119,12 +9224,48 @@ Namespace ursbgso_dbDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
+            Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(2) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `ReturnNo`, `TransNo`, `BorrowersName`, `ItemCode`, `ItemName`, `Quantity`"& _ 
-                ", `DateBorrowed`, `DateReturned` FROM `tbl_return`"
+            Me._commandCollection(0).CommandText = "SELECT `ReturnNo`, `TransNo`, `BorrowersName`, `BorrowersType`, `ItemCode`, `Item"& _ 
+                "Name`, `Quantity`, `DateBorrowed`, `DateReturned` FROM `tbl_return`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT `ReturnNo`, `TransNo`, `BorrowersName`, `BorrowersType`, `ItemCode`, `Item"& _ 
+                "Name`, `Quantity`, `DateBorrowed`, `DateReturned` FROM `tbl_return` where DateRe"& _ 
+                "turned between @param1 and @param2"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@param1"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.Size = 45
+            param.IsNullable = true
+            param.SourceColumn = "DateReturned"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._commandCollection(1).Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@param2"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.Size = 45
+            param.IsNullable = true
+            param.SourceColumn = "DateReturned"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._commandCollection(1).Parameters.Add(param)
+            Me._commandCollection(2) = New Global.MySql.Data.MySqlClient.MySqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT `ReturnNo`, `TransNo`, `BorrowersName`, `BorrowersType`, `ItemCode`, `Item"& _ 
+                "Name`, `Quantity`, `DateBorrowed`, `DateReturned` FROM `tbl_return` where Borrow"& _ 
+                "ersType  = @param"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@param"
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.Size = 45
+            param.IsNullable = true
+            param.SourceColumn = "BorrowersType"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._commandCollection(2).Parameters.Add(param)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9146,6 +9287,84 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As ursbgso_dbDataSet.tbl_returnDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ursbgso_dbDataSet.tbl_returnDataTable = New ursbgso_dbDataSet.tbl_returnDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByDateR(ByVal dataTable As ursbgso_dbDataSet.tbl_returnDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            If (param2 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByDateR(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_returnDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (param1 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
+            End If
+            If (param2 Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
+            End If
+            Dim dataTable As ursbgso_dbDataSet.tbl_returnDataTable = New ursbgso_dbDataSet.tbl_returnDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByType(ByVal dataTable As ursbgso_dbDataSet.tbl_returnDataTable, ByVal param As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (param Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByType(ByVal param As String) As ursbgso_dbDataSet.tbl_returnDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (param Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("param")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param,String)
+            End If
             Dim dataTable As ursbgso_dbDataSet.tbl_returnDataTable = New ursbgso_dbDataSet.tbl_returnDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -9183,7 +9402,7 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p9 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p10 As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
             If (p2 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p2")
@@ -9215,12 +9434,17 @@ Namespace ursbgso_dbDataSetTableAdapters
             Else
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(p7,String)
             End If
-            If (p9 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (p8 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p8")
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(p9,String)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(p8,String)
+            End If
+            If (p10 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(p10,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -9241,7 +9465,7 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p9 As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,Integer)
             If (p2 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p2")
@@ -9274,9 +9498,14 @@ Namespace ursbgso_dbDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7,String)
             End If
             If (p8 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("p8")
             Else
                 Me.Adapter.InsertCommand.Parameters(7).Value = CType(p8,String)
+            End If
+            If (p9 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(p9,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -9306,14 +9535,16 @@ Namespace ursbgso_dbDataSetTableAdapters
                     ByVal p6 As String,  _
                     ByVal p7 As String,  _
                     ByVal p8 As String,  _
-                    ByVal p9 As Integer,  _
-                    ByVal p10 As String,  _
+                    ByVal p9 As String,  _
+                    ByVal p10 As Integer,  _
                     ByVal p11 As String,  _
                     ByVal p12 As String,  _
                     ByVal p13 As String,  _
                     ByVal p14 As String,  _
                     ByVal p15 As String,  _
-                    ByVal p17 As String) As Integer
+                    ByVal p16 As String,  _
+                    ByVal p17 As String,  _
+                    ByVal p19 As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,Integer)
             If (p2 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p2")
@@ -9346,16 +9577,16 @@ Namespace ursbgso_dbDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,String)
             End If
             If (p8 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("p8")
             Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,Integer)
-            If (p10 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p10")
+            If (p9 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,Integer)
             If (p11 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p11")
             Else
@@ -9381,12 +9612,22 @@ Namespace ursbgso_dbDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(p15,String)
             End If
-            If (p17 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            If (p16 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p16")
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(p16,String)
+            End If
+            If (p17 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p17")
+            Else
                 Me.Adapter.UpdateCommand.Parameters(16).Value = CType(p17,String)
+            End If
+            If (p19 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(p19,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -9407,8 +9648,25 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p9 As Integer, ByVal p10 As String, ByVal p11 As String, ByVal p12 As String, ByVal p13 As String, ByVal p14 As String, ByVal p15 As String, ByVal p17 As String) As Integer
-            Return Me.Update(p9, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p17)
+        Public Overloads Overridable Function Update( _
+                    ByVal p2 As String,  _
+                    ByVal p3 As String,  _
+                    ByVal p4 As String,  _
+                    ByVal p5 As String,  _
+                    ByVal p6 As String,  _
+                    ByVal p7 As String,  _
+                    ByVal p8 As String,  _
+                    ByVal p9 As String,  _
+                    ByVal p10 As Integer,  _
+                    ByVal p11 As String,  _
+                    ByVal p12 As String,  _
+                    ByVal p13 As String,  _
+                    ByVal p14 As String,  _
+                    ByVal p15 As String,  _
+                    ByVal p16 As String,  _
+                    ByVal p17 As String,  _
+                    ByVal p19 As String) As Integer
+            Return Me.Update(p10, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p19)
         End Function
     End Class
     

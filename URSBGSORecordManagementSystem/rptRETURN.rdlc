@@ -6,33 +6,36 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32043in</Width>
+              <Width>1.25645in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.25645in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.70848in</Height>
+              <Height>0.66667in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -43,22 +46,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>RETURN </Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#204aff</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>NO.</Value>
+                              <Value>RETURN NO.</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -142,7 +130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>BORROWER'S NAME</Value>
+                              <Value>BORROWER NAME</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -184,22 +172,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEM </Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#204aff</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>CODE</Value>
+                              <Value>BORROWER TYPE</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -241,22 +214,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ITEM </Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#204aff</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>NAME</Value>
+                              <Value>ITEM CODE</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -298,7 +256,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>QUANTITY</Value>
+                              <Value>ITEM NAME</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -340,22 +298,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DATE </Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#204aff</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>BOROWED</Value>
+                              <Value>QUAITITY</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -397,22 +340,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DATE </Value>
-                              <Style>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>#204aff</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>RETURNED</Value>
+                              <Value>DATE BORROWED</Value>
                               <Style>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -445,10 +373,52 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>DATE RETURNED</Value>
+                              <Style>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#204aff</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>#f2f2f2</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.29417in</Height>
+              <Height>0.25in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -544,6 +514,42 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>BorrowersName</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="BorrowersType">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!BorrowersType.Value</Value>
+                              <Style>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>BorrowersType</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -752,6 +758,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -764,18 +771,18 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet_RETURN</DataSetName>
-        <Top>0.79784in</Top>
-        <Left>1.63331in</Left>
-        <Height>1.00265in</Height>
-        <Width>10.56345in</Width>
+        <DataSetName>DataSet_Return</DataSetName>
+        <Top>1.03125in</Top>
+        <Left>0.50446in</Left>
+        <Height>0.91667in</Height>
+        <Width>11.30804in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox23">
+      <Textbox Name="Textbox24">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -796,9 +803,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.23997in</Top>
-        <Left>5.36576in</Left>
-        <Height>0.25in</Height>
+        <Top>0.48438in</Top>
+        <Left>5.0225in</Left>
+        <Height>0.32267in</Height>
         <Width>3.14583in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -812,17 +819,17 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>7.97994in</Height>
+    <Height>3.64583in</Height>
     <Style />
   </Body>
-  <Width>13.5664in</Width>
+  <Width>12.15625in</Width>
   <Page>
     <PageHeader>
-      <Height>3.0056in</Height>
+      <Height>3.01041in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox17">
+        <Textbox Name="Textbox16">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -890,7 +897,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox22">
+        <Textbox Name="Textbox19">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -940,7 +947,20 @@
             </Border>
           </Style>
         </Image>
-        <Textbox Name="Textbox24">
+        <Line Name="Line2">
+          <Top>2.75967in</Top>
+          <Left>2.66039in</Left>
+          <Height>0in</Height>
+          <Width>7.82172in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Color>#204aff</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox22">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -978,7 +998,7 @@
           <Left>4.61242in</Left>
           <Height>0.47618in</Height>
           <Width>4.52083in</Width>
-          <ZIndex>4</ZIndex>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -989,19 +1009,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line2">
-          <Top>2.75967in</Top>
-          <Left>2.66039in</Left>
-          <Height>0in</Height>
-          <Width>7.82172in</Width>
-          <ZIndex>5</ZIndex>
-          <Style>
-            <Border>
-              <Color>#204aff</Color>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
       </ReportItems>
       <Style>
         <Border>
@@ -1029,8 +1036,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.375in</Top>
-          <Left>11.21168in</Left>
+          <Top>0.405in</Top>
+          <Left>11.16681in</Left>
           <Height>0.25in</Height>
           <Width>0.3125in</Width>
           <Style>
@@ -1058,41 +1065,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>OverallTotalPages</rd:DefaultName>
-          <Top>0.375in</Top>
-          <Left>11.86444in</Left>
+          <Top>0.405in</Top>
+          <Left>11.81958in</Left>
           <Height>0.25in</Height>
           <Width>0.32292in</Width>
           <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox19">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Page</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox19</rd:DefaultName>
-          <Top>0.375in</Top>
-          <Left>10.69084in</Left>
-          <Height>0.25in</Height>
-          <Width>0.38542in</Width>
-          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1110,21 +1087,19 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>This is a system generated report.</Value>
-                  <Style>
-                    <FontStyle>Italic</FontStyle>
-                  </Style>
+                  <Value>Page</Value>
+                  <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox20</rd:DefaultName>
-          <Top>0.375in</Top>
-          <Left>0.87904in</Left>
+          <rd:DefaultName>Textbox19</rd:DefaultName>
+          <Top>0.405in</Top>
+          <Left>10.64597in</Left>
           <Height>0.25in</Height>
-          <Width>2.85417in</Width>
-          <ZIndex>3</ZIndex>
+          <Width>0.38542in</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1142,6 +1117,38 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
+                  <Value>This is a system generated report.</Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox20</rd:DefaultName>
+          <Top>0.405in</Top>
+          <Left>0.83417in</Left>
+          <Height>0.25in</Height>
+          <Width>2.85417in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox23">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
                   <Value>of</Value>
                   <Style />
                 </TextRun>
@@ -1150,8 +1157,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
-          <Top>0.375in</Top>
-          <Left>11.60402in</Left>
+          <Top>0.405in</Top>
+          <Left>11.55916in</Left>
           <Height>0.25in</Height>
           <Width>0.17709in</Width>
           <ZIndex>4</ZIndex>
@@ -1183,11 +1190,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>52743953-1166-4e70-bf5c-6467e5bd326f</rd:DataSourceID>
+      <rd:DataSourceID>d63c02e6-b40d-4e30-8b93-b435bb79fbfe</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet_RETURN">
+    <DataSet Name="DataSet_Return">
       <Query>
         <DataSourceName>ursbgso_dbDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1203,6 +1210,10 @@
         </Field>
         <Field Name="BorrowersName">
           <DataField>BorrowersName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BorrowersType">
+          <DataField>BorrowersType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ItemCode">
@@ -1407,5 +1418,5 @@ LyQRAAAAALyQRAAAAADwQhIBAAAAwAtJBAAAAAAvJBEAAAAAvJBEAAAAAPBCEgEAAADAC0kEAAAAAC8k
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>b7ad16ca-3824-4572-86d0-6c338a605d0a</rd:ReportID>
+  <rd:ReportID>9c71e6ee-43be-42dc-b112-86c894207995</rd:ReportID>
 </Report>

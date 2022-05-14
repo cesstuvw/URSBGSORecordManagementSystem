@@ -56,17 +56,24 @@
                 frmMAINMENU.lblLOGGED.Text = Format(TimeOfDay, "hh:mm tt")
                 frmMAINMENU.Show()
 
+
                 'HIDE OR DISABLE BUTTON
                 frmMAINMENU.btnUSERACC.Hide()
                 frmMAINMENU.btnITEM.Hide()
                 frmMAINMENU.btnSETT.Hide()
+                frmREPORTSHEAD.btnUAREP.Hide()
+                frmREPORTSHEAD.btnACTREP.Hide()
+                frmREPORTSHEAD.btnITEMREP.Hide()
+                frmREPORTSHEAD.btnITSTREP.Hide()
 
                 'MOVE BUTTONS ON NAVIGATION BAR
                 frmMAINMENU.btnBORP.Location = New Point(0, 211)
                 frmMAINMENU.btnTRANSAC.Location = New Point(0, 256)
                 frmMAINMENU.btnRET.Location = New Point(0, 301)
                 frmMAINMENU.btnREPORTS.Location = New Point(0, 346)
-
+                frmREPORTSHEAD.btnBPROREP.Location = New Point(268, 85)
+                frmREPORTSHEAD.btnTRANSREP.Location = New Point(268, 128)
+                frmREPORTSHEAD.btnRETREP.Location = New Point(268, 171)
                 Me.Close()
             End If
 
@@ -211,12 +218,19 @@
                     frmMAINMENU.btnUSERACC.Hide()
                     frmMAINMENU.btnITEM.Hide()
                     frmMAINMENU.btnSETT.Hide()
+                    frmREPORTSHEAD.btnUAREP.Hide()
+                    frmREPORTSHEAD.btnACTREP.Hide()
+                    frmREPORTSHEAD.btnITEMREP.Hide()
+                    frmREPORTSHEAD.btnITSTREP.Hide()
 
                     'MOVE BUTTONS ON NAVIGATION BAR
                     frmMAINMENU.btnBORP.Location = New Point(0, 211)
                     frmMAINMENU.btnTRANSAC.Location = New Point(0, 256)
                     frmMAINMENU.btnRET.Location = New Point(0, 301)
                     frmMAINMENU.btnREPORTS.Location = New Point(0, 346)
+                    frmREPORTSHEAD.btnBPROREP.Location = New Point(268, 85)
+                    frmREPORTSHEAD.btnTRANSREP.Location = New Point(268, 128)
+                    frmREPORTSHEAD.btnRETREP.Location = New Point(268, 171)
 
                     Me.Close()
                 End If

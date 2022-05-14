@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmREPORTS
+Partial Class frmREPORTSHEAD
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmREPORTS
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -249,9 +249,9 @@ Partial Class frmREPORTS
         '
         Me.rptUSER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource2.Name = "DataSet_USERACCOUNT"
-        ReportDataSource2.Value = Me.tbl_userBindingSource
-        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "DataSet_USERACCOUNT"
+        ReportDataSource1.Value = Me.tbl_userBindingSource
+        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rptUSER.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptUSERACCOUNT.rdlc"
         Me.rptUSER.Location = New System.Drawing.Point(21, 72)
         Me.rptUSER.Name = "rptUSER"
@@ -336,7 +336,7 @@ Partial Class frmREPORTS
         '
         Me.tbl_userTableAdapter.ClearBeforeFill = True
         '
-        'frmREPORTS
+        'frmREPORTSHEAD
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -345,7 +345,7 @@ Partial Class frmREPORTS
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlUA)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmREPORTS"
+        Me.Name = "frmREPORTSHEAD"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmREPORTS"
         CType(Me.tbl_userBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

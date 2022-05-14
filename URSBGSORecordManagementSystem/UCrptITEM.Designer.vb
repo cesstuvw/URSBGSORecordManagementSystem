@@ -146,7 +146,6 @@ Partial Class UCrptITEM
         Me.cboCATEGORY.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cboCATEGORY.FormattingEnabled = True
-        Me.cboCATEGORY.Items.AddRange(New Object() {"GSO Head", "Staff"})
         Me.cboCATEGORY.Location = New System.Drawing.Point(7, 5)
         Me.cboCATEGORY.Name = "cboCATEGORY"
         Me.cboCATEGORY.Size = New System.Drawing.Size(127, 24)

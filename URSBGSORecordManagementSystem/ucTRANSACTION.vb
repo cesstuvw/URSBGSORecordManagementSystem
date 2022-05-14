@@ -179,6 +179,7 @@
     '---------------------------------- ADD ITEM BUTTON ---------------------------------'
     Private Sub btnITEM_Click(sender As Object, e As EventArgs) Handles btnITEM.Click
         'btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+        btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         txtQUAN.BackColor = Color.White
         btnADD.BackColor = ColorTranslator.FromHtml("#204aff")
         lblQUAN.Hide()
@@ -229,12 +230,16 @@
             MsgBox("This item is not enough for borrowing or it's out of stock", vbOKOnly + vbCritical, "Transaction error")
             Function_DontDisplayItem()
             Function_DisabledPanel()
+            txtQUAN.Text = "Quantity"
             txtQUAN.Enabled = False
             pnlQUAN.BackColor = ColorTranslator.FromHtml("#f0f0f0")
             Exit Sub
-        ElseIf txtQUAN.Text = 0 Then
+        End If
+
+        If txtQUAN.Text = 0 Then
             MsgBox("Please input a quantity that is greater than zero", vbOKOnly + vbCritical, "Transaction error")
             txtQUAN.Focus()
+            Exit Sub
         End If
 
 
@@ -257,7 +262,6 @@
         btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         pnlQUAN.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnADD.BackColor = ColorTranslator.FromHtml("#AEBAEC")
-        btnSAVE.Enabled = False
         lblNO.Show()
         lblCODE.Show()
         lblNAME.Show()

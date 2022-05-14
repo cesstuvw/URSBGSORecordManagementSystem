@@ -22,44 +22,61 @@ Partial Class UCrptITEMSTOCK
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.tbl_itemstockBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
-        Me.rptITEMM = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnUNFILTER = New System.Windows.Forms.Button()
+        Me.btnFILTER = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dtDATETIME1 = New System.Windows.Forms.DateTimePicker()
-        Me.dtDATETIME = New System.Windows.Forms.DateTimePicker()
+        Me.dtEND = New System.Windows.Forms.DateTimePicker()
+        Me.dtSTART = New System.Windows.Forms.DateTimePicker()
+        Me.rptITEMST = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.tbl_itemstockTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_itemstockTableAdapter()
+        CType(Me.tbl_itemstockBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlREPORT.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tbl_itemstockBindingSource
+        '
+        Me.tbl_itemstockBindingSource.DataMember = "tbl_itemstock"
+        Me.tbl_itemstockBindingSource.DataSource = Me.ursbgso_dbDataSet
+        '
+        'ursbgso_dbDataSet
+        '
+        Me.ursbgso_dbDataSet.DataSetName = "ursbgso_dbDataSet"
+        Me.ursbgso_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'pnlREPORT
         '
         Me.pnlREPORT.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.pnlREPORT.Controls.Add(Me.rptITEMM)
+        Me.pnlREPORT.Controls.Add(Me.Label3)
         Me.pnlREPORT.Controls.Add(Me.Label1)
+        Me.pnlREPORT.Controls.Add(Me.btnUNFILTER)
+        Me.pnlREPORT.Controls.Add(Me.btnFILTER)
+        Me.pnlREPORT.Controls.Add(Me.Panel2)
+        Me.pnlREPORT.Controls.Add(Me.rptITEMST)
         Me.pnlREPORT.Location = New System.Drawing.Point(531, 58)
         Me.pnlREPORT.Name = "pnlREPORT"
         Me.pnlREPORT.Size = New System.Drawing.Size(756, 618)
-        Me.pnlREPORT.TabIndex = 28
+        Me.pnlREPORT.TabIndex = 29
         '
-        'rptITEMM
+        'Label3
         '
-        Me.rptITEMM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.rptITEMM.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource1.Name = "DataSet_ITEM"
-        ReportDataSource1.Value = Nothing
-        Me.rptITEMM.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.rptITEMM.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptITEM.rdlc"
-        Me.rptITEMM.Location = New System.Drawing.Point(21, 72)
-        Me.rptITEMM.Name = "rptITEMM"
-        Me.rptITEMM.ServerReport.BearerToken = Nothing
-        Me.rptITEMM.Size = New System.Drawing.Size(716, 527)
-        Me.rptITEMM.TabIndex = 6
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(223, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Filter by Date"
         '
         'Label1
         '
@@ -68,125 +85,131 @@ Partial Class UCrptITEMSTOCK
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(20, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 19)
+        Me.Label1.Size = New System.Drawing.Size(108, 19)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "ITEM"
+        Me.Label1.Text = "ITEM STOCK"
+        '
+        'btnUNFILTER
+        '
+        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
+        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
+        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnUNFILTER.Name = "btnUNFILTER"
+        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNFILTER.TabIndex = 4
+        Me.btnUNFILTER.Text = "Unfilter"
+        Me.btnUNFILTER.UseVisualStyleBackColor = False
+        Me.btnUNFILTER.Visible = False
+        '
+        'btnFILTER
+        '
+        Me.btnFILTER.BackColor = System.Drawing.Color.White
+        Me.btnFILTER.FlatAppearance.BorderSize = 0
+        Me.btnFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnFILTER.Name = "btnFILTER"
+        Me.btnFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnFILTER.TabIndex = 3
+        Me.btnFILTER.Text = "Filter"
+        Me.btnFILTER.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.dtEND)
+        Me.Panel2.Controls.Add(Me.dtSTART)
+        Me.Panel2.Location = New System.Drawing.Point(322, 20)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(292, 35)
+        Me.Panel2.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(747, 74)
+        Me.Label2.Location = New System.Drawing.Point(137, 10)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 16)
-        Me.Label2.TabIndex = 32
-        Me.Label2.Text = "Filter by Date"
+        Me.Label2.Size = New System.Drawing.Size(19, 16)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "to"
         '
-        'Button1
+        'dtEND
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(1156, 64)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(109, 35)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Unfilter"
-        Me.Button1.UseVisualStyleBackColor = False
-        Me.Button1.Visible = False
+        Me.dtEND.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtEND.CustomFormat = "yyyy-MM-dd"
+        Me.dtEND.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtEND.Location = New System.Drawing.Point(165, 8)
+        Me.dtEND.Name = "dtEND"
+        Me.dtEND.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dtEND.Size = New System.Drawing.Size(110, 20)
+        Me.dtEND.TabIndex = 6
+        Me.dtEND.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
         '
-        'Button2
+        'dtSTART
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(1156, 64)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 35)
-        Me.Button2.TabIndex = 30
-        Me.Button2.Text = "Filter"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.dtSTART.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtSTART.CustomFormat = "yyyy-MM-dd"
+        Me.dtSTART.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtSTART.Location = New System.Drawing.Point(16, 8)
+        Me.dtSTART.Name = "dtSTART"
+        Me.dtSTART.Size = New System.Drawing.Size(110, 20)
+        Me.dtSTART.TabIndex = 6
+        Me.dtSTART.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
         '
-        'Panel1
+        'rptITEMST
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.dtDATETIME1)
-        Me.Panel1.Controls.Add(Me.dtDATETIME)
-        Me.Panel1.Location = New System.Drawing.Point(849, 64)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(292, 35)
-        Me.Panel1.TabIndex = 29
+        Me.rptITEMST.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.rptITEMST.BorderStyle = System.Windows.Forms.BorderStyle.None
+        ReportDataSource2.Name = "DataSet_ITEMSTOCK"
+        ReportDataSource2.Value = Me.tbl_itemstockBindingSource
+        Me.rptITEMST.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.rptITEMST.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptITEMST.rdlc"
+        Me.rptITEMST.Location = New System.Drawing.Point(21, 72)
+        Me.rptITEMST.Name = "rptITEMST"
+        Me.rptITEMST.ServerReport.BearerToken = Nothing
+        Me.rptITEMST.Size = New System.Drawing.Size(716, 527)
+        Me.rptITEMST.TabIndex = 0
         '
-        'Label4
+        'tbl_itemstockTableAdapter
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(137, 10)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(19, 16)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "to"
-        '
-        'dtDATETIME1
-        '
-        Me.dtDATETIME1.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME1.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME1.Location = New System.Drawing.Point(165, 8)
-        Me.dtDATETIME1.Name = "dtDATETIME1"
-        Me.dtDATETIME1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dtDATETIME1.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME1.TabIndex = 6
-        Me.dtDATETIME1.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
-        '
-        'dtDATETIME
-        '
-        Me.dtDATETIME.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME.Location = New System.Drawing.Point(16, 8)
-        Me.dtDATETIME.Name = "dtDATETIME"
-        Me.dtDATETIME.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME.TabIndex = 6
-        Me.dtDATETIME.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
+        Me.tbl_itemstockTableAdapter.ClearBeforeFill = True
         '
         'UCrptITEMSTOCK
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlREPORT)
         Me.Name = "UCrptITEMSTOCK"
         Me.Size = New System.Drawing.Size(1324, 705)
+        CType(Me.tbl_itemstockBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlREPORT.ResumeLayout(False)
         Me.pnlREPORT.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents pnlREPORT As Panel
-    Friend WithEvents rptITEMM As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnUNFILTER As Button
+    Friend WithEvents btnFILTER As Button
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label4 As Label
-    Friend WithEvents dtDATETIME1 As DateTimePicker
-    Friend WithEvents dtDATETIME As DateTimePicker
+    Friend WithEvents dtEND As DateTimePicker
+    Friend WithEvents dtSTART As DateTimePicker
+    Friend WithEvents rptITEMST As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents tbl_itemstockBindingSource As BindingSource
+    Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
+    Friend WithEvents tbl_itemstockTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_itemstockTableAdapter
 End Class

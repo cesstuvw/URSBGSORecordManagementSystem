@@ -131,10 +131,16 @@
     <Compile Include="frmMAINMENU.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmREPORTS.Designer.vb">
-      <DependentUpon>frmREPORTS.vb</DependentUpon>
+    <Compile Include="frmREPORTSHEAD.Designer.vb">
+      <DependentUpon>frmREPORTSHEAD.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmREPORTS.vb">
+    <Compile Include="frmREPORTSHEAD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmREPORTSSTAFF.Designer.vb">
+      <DependentUpon>frmREPORTSSTAFF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmREPORTSSTAFF.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODULE.vb" />
@@ -154,10 +160,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="My Project\UCrptPROFILE.Designer.vb">
+    <Compile Include="UCrptPROFILE.Designer.vb">
       <DependentUpon>UCrptPROFILE.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\UCrptPROFILE.vb">
+    <Compile Include="UCrptPROFILE.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCrptACTIVITY.Designer.vb">
@@ -257,8 +263,11 @@
     <EmbeddedResource Include="frmMAINMENU.resx">
       <DependentUpon>frmMAINMENU.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmREPORTS.resx">
-      <DependentUpon>frmREPORTS.vb</DependentUpon>
+    <EmbeddedResource Include="frmREPORTSHEAD.resx">
+      <DependentUpon>frmREPORTSHEAD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmREPORTSSTAFF.resx">
+      <DependentUpon>frmREPORTSSTAFF.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -266,11 +275,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\UCrptPROFILE.resx">
+    <EmbeddedResource Include="UCrptPROFILE.resx">
       <DependentUpon>UCrptPROFILE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptACTIVITY.rdlc" />
     <EmbeddedResource Include="rptITEM.rdlc" />
+    <EmbeddedResource Include="rptRETURN.rdlc" />
     <EmbeddedResource Include="UCrptITEM.resx">
       <DependentUpon>UCrptITEM.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,7 +289,6 @@
       <DependentUpon>UCrptITEMSTOCK.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptPROFILE.rdlc" />
-    <EmbeddedResource Include="rptRETURN.rdlc" />
     <EmbeddedResource Include="rptTRANSAC.rdlc" />
     <EmbeddedResource Include="rptUSERACCOUNT.rdlc" />
     <EmbeddedResource Include="UCrptACTIVITY.resx">
@@ -716,6 +725,8 @@
     <None Include="Resources\profile-menu-reports.png" />
     <None Include="Resources\transaction-menu-reports.png" />
     <None Include="Resources\return-menu-reports.png" />
+    <None Include="Resources\cubecube.gif" />
+    <None Include="Resources\cubeloading.gif" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

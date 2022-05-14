@@ -20,6 +20,7 @@
     End Property
 
     Private Sub frmMAINMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'dashboard counts
         Dim profile As String
         OpenCon()
@@ -517,11 +518,26 @@
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu_selected
 
-        pnlUSERCONTROL.Controls.Clear()
-        Dim Reports As New frmREPORTS()
-        Reports.TopLevel = False
-        pnlUSERCONTROL.Controls.Add(Reports)
-        Reports.Show()
+        'pnlUSERCONTROL.Controls.Clear()
+        'Dim ReportHead As New frmREPORTSHEAD()
+        'ReportHead.TopLevel = False
+        'pnlUSERCONTROL.Controls.Add(ReportHead)
+        'ReportHead.Show()
+
+        If lblUSERTYPE.Text = "GSO Head" Then
+            pnlUSERCONTROL.Controls.Clear()
+            Dim ReportHead As New frmREPORTSHEAD()
+            ReportHead.TopLevel = False
+            pnlUSERCONTROL.Controls.Add(ReportHead)
+            ReportHead.Show()
+        ElseIf lblUSERTYPE.Text = "Staff" Then
+            pnlUSERCONTROL.Controls.Clear()
+            Dim ReportStaff As New frmREPORTSSTAFF()
+            ReportStaff.TopLevel = False
+            pnlUSERCONTROL.Controls.Add(ReportStaff)
+            ReportStaff.Show()
+        End If
+
 
         'Dim i As Integer
         'For i = 0 To 0
