@@ -188,15 +188,6 @@
         pnlUSERCONTROL.Controls.Add(UserAccount)
         UserAccount.Show()
 
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim UserAccount As New ucUSERACCOUNT
-        'UserAccount.Parent = pnlUSERCONTROL
-        'UserAccount.Show()
-        'UserAccount.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnUSERACC.Height - 3
@@ -253,15 +244,6 @@
         pnlUSERCONTROL.Controls.Add(Item)
         Item.Show()
 
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Item As New ucITEM
-        'Item.Parent = pnlUSERCONTROL
-        'Item.Show()
-        'Item.Dock = DockStyle.Fill
     End Sub
 
     Private Sub btnITEMST_Click(sender As Object, e As EventArgs) Handles btnITEMST.Click
@@ -302,16 +284,6 @@
         'usercontrol.TopLevel = False
         pnlUSERCONTROL.Controls.Add(ItemStocks)
         ItemStocks.Show()
-
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim ItemStocks As New ucITEMSTOCKS
-        'ItemStocks.Parent = pnlUSERCONTROL
-        'ItemStocks.Show()
-        'ItemStocks.Dock = DockStyle.Fill
     End Sub
 
     Private Sub btnBORP_Click(sender As Object, e As EventArgs) Handles btnBORP.Click
@@ -338,16 +310,6 @@
         'usercontrol.TopLevel = False
         pnlUSERCONTROL.Controls.Add(Borrowers)
         Borrowers.Show()
-
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Borrowers As New ucBORROWERSPROFILE
-        'Borrowers.Parent = pnlUSERCONTROL
-        'Borrowers.Show()
-        'Borrowers.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnBORP.Height - 3
@@ -388,16 +350,6 @@
         'usercontrol.TopLevel = False
         pnlUSERCONTROL.Controls.Add(Transaction)
         Transaction.Show()
-
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Transaction As New ucTRANSACTION
-        'Transaction.Parent = pnlUSERCONTROL
-        'Transaction.Show()
-        'Transaction.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnTRANSAC.Height - 3
@@ -440,16 +392,6 @@
         pnlUSERCONTROL.Controls.Add(Returning)
         Returning.Show()
 
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Transaction As New ucTRANSACTION
-        'Transaction.Parent = pnlUSERCONTROL
-        'Transaction.Show()
-        'Transaction.Dock = DockStyle.Fill
-
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnRET.Height - 3
         pnlINDICATOR.Top = btnRET.Top
@@ -490,16 +432,6 @@
         pnlUSERCONTROL.Controls.Add(Settings)
         Settings.Show()
 
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Settings As New ucSETTINGS
-        'Settings.Parent = pnlUSERCONTROL
-        'Settings.Show()
-        'Settings.Dock = DockStyle.Fill
-
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnSETT.Height - 3
         pnlINDICATOR.Top = btnSETT.Top
@@ -534,12 +466,6 @@
         btnSETT.BackgroundImage = My.Resources.settings_menu
         btnREPORTS.BackgroundImage = My.Resources.reports_menu_selected
 
-        'pnlUSERCONTROL.Controls.Clear()
-        'Dim ReportHead As New frmREPORTSHEAD()
-        'ReportHead.TopLevel = False
-        'pnlUSERCONTROL.Controls.Add(ReportHead)
-        'ReportHead.Show()
-
         If lblUSERTYPE.Text = "GSO Head" Then
             pnlUSERCONTROL.Controls.Clear()
             Dim ReportHead As New frmREPORTSHEAD()
@@ -553,17 +479,6 @@
             pnlUSERCONTROL.Controls.Add(ReportStaff)
             ReportStaff.Show()
         End If
-
-
-        'Dim i As Integer
-        'For i = 0 To 0
-        '    pnlUSERCONTROL.Controls.RemoveAt(i)
-        'Next
-
-        'Dim Reports As New ucREPORTS
-        'Reports.Parent = pnlUSERCONTROL
-        'Reports.Show()
-        'Reports.Dock = DockStyle.Fill
 
         'SHOW BUTTON INDICATOR
         pnlINDICATOR.Height = btnREPORTS.Height - 3
@@ -595,7 +510,7 @@
 
     Private Sub btnOUT_Click(sender As Object, e As EventArgs) Handles btnOUT.Click
         Dim response As DialogResult
-        response = MsgBox("Do you really want to logout?", vbYesNo + vbQuestion, "Logout")
+        response = MsgBox("Do you really want to leave?", vbYesNo + vbQuestion, "Logout")
 
         If response = MsgBoxResult.Yes Then
             activity = "Logged out"

@@ -23,14 +23,14 @@ Partial Class ucRETURNING
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -93,6 +93,8 @@ Partial Class ucRETURNING
         Me.lblTYPE = New System.Windows.Forms.Label()
         Me.txtTYPE = New System.Windows.Forms.TextBox()
         Me.dgvRETURN = New System.Windows.Forms.DataGridView()
+        Me.TblreturnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
         Me.ReturnNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TransNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BorrowersNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -102,8 +104,6 @@ Partial Class ucRETURNING
         Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateBorrowedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateReturnedDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TblreturnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
         Me.pnlSEARCH.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlNO.SuspendLayout()
@@ -137,9 +137,9 @@ Partial Class ucRETURNING
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(327, 47)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 16)
+        Me.Label2.Size = New System.Drawing.Size(65, 16)
         Me.Label2.TabIndex = 22
-        Me.Label2.Text = "RETURNING"
+        Me.Label2.Text = "RETURN"
         '
         'pnlSEARCH
         '
@@ -588,7 +588,7 @@ Partial Class ucRETURNING
         Me.pnlITEM.Controls.Add(Me.txtSEARCHNAME)
         Me.pnlITEM.Controls.Add(Me.Panel6)
         Me.pnlITEM.Controls.Add(Me.Panel7)
-        Me.pnlITEM.Location = New System.Drawing.Point(0, 0)
+        Me.pnlITEM.Location = New System.Drawing.Point(0, 650)
         Me.pnlITEM.Name = "pnlITEM"
         Me.pnlITEM.Size = New System.Drawing.Size(1324, 705)
         Me.pnlITEM.TabIndex = 150
@@ -646,44 +646,44 @@ Partial Class ucRETURNING
         Me.dgvTRANSAC.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvTRANSAC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvTRANSAC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTRANSAC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTRANSAC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvTRANSAC.ColumnHeadersHeight = 65
         Me.dgvTRANSAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvTRANSAC.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransNoDataGridViewTextBoxColumn1, Me.BorrowersIdDataGridViewTextBoxColumn, Me.BorrowersNameDataGridViewTextBoxColumn1, Me.BorrowersTypeDataGridViewTextBoxColumn, Me.ItemCodeDataGridViewTextBoxColumn1, Me.ItemNameDataGridViewTextBoxColumn1, Me.QuantityDataGridViewTextBoxColumn1, Me.DateBorrowedDataGridViewTextBoxColumn1, Me.DateReturnedDataGridViewTextBoxColumn1})
         Me.dgvTRANSAC.DataSource = Me.TbltransactionBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvTRANSAC.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTRANSAC.DefaultCellStyle = DataGridViewCellStyle10
         Me.dgvTRANSAC.EnableHeadersVisualStyles = False
         Me.dgvTRANSAC.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.dgvTRANSAC.Location = New System.Drawing.Point(22, 22)
         Me.dgvTRANSAC.Name = "dgvTRANSAC"
         Me.dgvTRANSAC.ReadOnly = True
         Me.dgvTRANSAC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvTRANSAC.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvTRANSAC.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvTRANSAC.RowHeadersVisible = False
         Me.dgvTRANSAC.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvTRANSAC.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvTRANSAC.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvTRANSAC.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.dgvTRANSAC.RowTemplate.DividerHeight = 1
         Me.dgvTRANSAC.RowTemplate.Height = 45
@@ -832,115 +832,50 @@ Partial Class ucRETURNING
         Me.dgvRETURN.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvRETURN.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvRETURN.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRETURN.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer), CType(CType(252, Byte), Integer))
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRETURN.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvRETURN.ColumnHeadersHeight = 65
         Me.dgvRETURN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvRETURN.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ReturnNoDataGridViewTextBoxColumn, Me.TransNoDataGridViewTextBoxColumn, Me.BorrowersNameDataGridViewTextBoxColumn, Me.BorrowersTypeDataGridViewTextBoxColumn1, Me.ItemCodeDataGridViewTextBoxColumn, Me.ItemNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.DateBorrowedDataGridViewTextBoxColumn, Me.DateReturnedDataGridViewTextBoxColumn})
         Me.dgvRETURN.DataSource = Me.TblreturnBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvRETURN.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvRETURN.DefaultCellStyle = DataGridViewCellStyle14
         Me.dgvRETURN.EnableHeadersVisualStyles = False
         Me.dgvRETURN.GridColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.dgvRETURN.Location = New System.Drawing.Point(348, 165)
         Me.dgvRETURN.Name = "dgvRETURN"
         Me.dgvRETURN.ReadOnly = True
         Me.dgvRETURN.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRETURN.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRETURN.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.dgvRETURN.RowHeadersVisible = False
         Me.dgvRETURN.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvRETURN.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvRETURN.RowsDefaultCellStyle = DataGridViewCellStyle16
         Me.dgvRETURN.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.dgvRETURN.RowTemplate.DividerHeight = 1
         Me.dgvRETURN.RowTemplate.Height = 45
         Me.dgvRETURN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvRETURN.Size = New System.Drawing.Size(660, 469)
         Me.dgvRETURN.TabIndex = 132
-        '
-        'ReturnNoDataGridViewTextBoxColumn
-        '
-        Me.ReturnNoDataGridViewTextBoxColumn.DataPropertyName = "ReturnNo"
-        Me.ReturnNoDataGridViewTextBoxColumn.HeaderText = "NO."
-        Me.ReturnNoDataGridViewTextBoxColumn.Name = "ReturnNoDataGridViewTextBoxColumn"
-        Me.ReturnNoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ReturnNoDataGridViewTextBoxColumn.Width = 85
-        '
-        'TransNoDataGridViewTextBoxColumn
-        '
-        Me.TransNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo"
-        Me.TransNoDataGridViewTextBoxColumn.HeaderText = "TRANSACTION NO."
-        Me.TransNoDataGridViewTextBoxColumn.Name = "TransNoDataGridViewTextBoxColumn"
-        Me.TransNoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'BorrowersNameDataGridViewTextBoxColumn
-        '
-        Me.BorrowersNameDataGridViewTextBoxColumn.DataPropertyName = "BorrowersName"
-        Me.BorrowersNameDataGridViewTextBoxColumn.HeaderText = "FULL NAME"
-        Me.BorrowersNameDataGridViewTextBoxColumn.Name = "BorrowersNameDataGridViewTextBoxColumn"
-        Me.BorrowersNameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.BorrowersNameDataGridViewTextBoxColumn.Width = 185
-        '
-        'BorrowersTypeDataGridViewTextBoxColumn1
-        '
-        Me.BorrowersTypeDataGridViewTextBoxColumn1.DataPropertyName = "BorrowersType"
-        Me.BorrowersTypeDataGridViewTextBoxColumn1.HeaderText = "TYPE"
-        Me.BorrowersTypeDataGridViewTextBoxColumn1.Name = "BorrowersTypeDataGridViewTextBoxColumn1"
-        Me.BorrowersTypeDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ItemCodeDataGridViewTextBoxColumn
-        '
-        Me.ItemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode"
-        Me.ItemCodeDataGridViewTextBoxColumn.HeaderText = "ITEM CODE"
-        Me.ItemCodeDataGridViewTextBoxColumn.Name = "ItemCodeDataGridViewTextBoxColumn"
-        Me.ItemCodeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ItemNameDataGridViewTextBoxColumn
-        '
-        Me.ItemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName"
-        Me.ItemNameDataGridViewTextBoxColumn.HeaderText = "ITEM NAME"
-        Me.ItemNameDataGridViewTextBoxColumn.Name = "ItemNameDataGridViewTextBoxColumn"
-        Me.ItemNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DateBorrowedDataGridViewTextBoxColumn
-        '
-        Me.DateBorrowedDataGridViewTextBoxColumn.DataPropertyName = "DateBorrowed"
-        Me.DateBorrowedDataGridViewTextBoxColumn.HeaderText = "DATE BORROWED"
-        Me.DateBorrowedDataGridViewTextBoxColumn.Name = "DateBorrowedDataGridViewTextBoxColumn"
-        Me.DateBorrowedDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DateReturnedDataGridViewTextBoxColumn
-        '
-        Me.DateReturnedDataGridViewTextBoxColumn.DataPropertyName = "DateReturned"
-        Me.DateReturnedDataGridViewTextBoxColumn.HeaderText = "DATE RETURNED"
-        Me.DateReturnedDataGridViewTextBoxColumn.Name = "DateReturnedDataGridViewTextBoxColumn"
-        Me.DateReturnedDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TblreturnBindingSource
         '
@@ -950,6 +885,80 @@ Partial Class ucRETURNING
         'Tbl_returnTableAdapter
         '
         Me.Tbl_returnTableAdapter.ClearBeforeFill = True
+        '
+        'ReturnNoDataGridViewTextBoxColumn
+        '
+        Me.ReturnNoDataGridViewTextBoxColumn.DataPropertyName = "ReturnNo"
+        Me.ReturnNoDataGridViewTextBoxColumn.HeaderText = "NO."
+        Me.ReturnNoDataGridViewTextBoxColumn.Name = "ReturnNoDataGridViewTextBoxColumn"
+        Me.ReturnNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ReturnNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ReturnNoDataGridViewTextBoxColumn.Width = 85
+        '
+        'TransNoDataGridViewTextBoxColumn
+        '
+        Me.TransNoDataGridViewTextBoxColumn.DataPropertyName = "TransNo"
+        Me.TransNoDataGridViewTextBoxColumn.HeaderText = "TRANSACTION NO."
+        Me.TransNoDataGridViewTextBoxColumn.Name = "TransNoDataGridViewTextBoxColumn"
+        Me.TransNoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TransNoDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'BorrowersNameDataGridViewTextBoxColumn
+        '
+        Me.BorrowersNameDataGridViewTextBoxColumn.DataPropertyName = "BorrowersName"
+        Me.BorrowersNameDataGridViewTextBoxColumn.HeaderText = "FULL NAME"
+        Me.BorrowersNameDataGridViewTextBoxColumn.Name = "BorrowersNameDataGridViewTextBoxColumn"
+        Me.BorrowersNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.BorrowersNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.BorrowersNameDataGridViewTextBoxColumn.Width = 185
+        '
+        'BorrowersTypeDataGridViewTextBoxColumn1
+        '
+        Me.BorrowersTypeDataGridViewTextBoxColumn1.DataPropertyName = "BorrowersType"
+        Me.BorrowersTypeDataGridViewTextBoxColumn1.HeaderText = "TYPE"
+        Me.BorrowersTypeDataGridViewTextBoxColumn1.Name = "BorrowersTypeDataGridViewTextBoxColumn1"
+        Me.BorrowersTypeDataGridViewTextBoxColumn1.ReadOnly = True
+        Me.BorrowersTypeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ItemCodeDataGridViewTextBoxColumn
+        '
+        Me.ItemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode"
+        Me.ItemCodeDataGridViewTextBoxColumn.HeaderText = "ITEM CODE"
+        Me.ItemCodeDataGridViewTextBoxColumn.Name = "ItemCodeDataGridViewTextBoxColumn"
+        Me.ItemCodeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'ItemNameDataGridViewTextBoxColumn
+        '
+        Me.ItemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName"
+        Me.ItemNameDataGridViewTextBoxColumn.HeaderText = "ITEM NAME"
+        Me.ItemNameDataGridViewTextBoxColumn.Name = "ItemNameDataGridViewTextBoxColumn"
+        Me.ItemNameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ItemNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "QUANTITY"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QuantityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateBorrowedDataGridViewTextBoxColumn
+        '
+        Me.DateBorrowedDataGridViewTextBoxColumn.DataPropertyName = "DateBorrowed"
+        Me.DateBorrowedDataGridViewTextBoxColumn.HeaderText = "DATE BORROWED"
+        Me.DateBorrowedDataGridViewTextBoxColumn.Name = "DateBorrowedDataGridViewTextBoxColumn"
+        Me.DateBorrowedDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateBorrowedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DateReturnedDataGridViewTextBoxColumn
+        '
+        Me.DateReturnedDataGridViewTextBoxColumn.DataPropertyName = "DateReturned"
+        Me.DateReturnedDataGridViewTextBoxColumn.HeaderText = "DATE RETURNED"
+        Me.DateReturnedDataGridViewTextBoxColumn.Name = "DateReturnedDataGridViewTextBoxColumn"
+        Me.DateReturnedDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateReturnedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'ucRETURNING
         '
@@ -1075,15 +1084,6 @@ Partial Class ucRETURNING
     Friend WithEvents dgvRETURN As DataGridView
     Friend WithEvents TblreturnBindingSource As BindingSource
     Friend WithEvents Tbl_returnTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter
-    Friend WithEvents ReturnNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TransNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BorrowersNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents BorrowersTypeDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ItemCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DateBorrowedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DateReturnedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents dgvTRANSAC As DataGridView
     Friend WithEvents TransNoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents BorrowersIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -1094,4 +1094,13 @@ Partial Class ucRETURNING
     Friend WithEvents QuantityDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DateBorrowedDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DateReturnedDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ReturnNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TransNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BorrowersNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BorrowersTypeDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ItemCodeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DateBorrowedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DateReturnedDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -42,6 +42,7 @@ Partial Class ucITEM
         Me.lblITEMNAME = New System.Windows.Forms.Label()
         Me.txtITEMNAME = New System.Windows.Forms.TextBox()
         Me.pnlAVAILABLE = New System.Windows.Forms.Panel()
+        Me.lblSTOCK = New System.Windows.Forms.Label()
         Me.txtAVAILABLE = New System.Windows.Forms.TextBox()
         Me.btnEDIT = New System.Windows.Forms.Button()
         Me.btnCANCEL = New System.Windows.Forms.Button()
@@ -65,7 +66,6 @@ Partial Class ucITEM
         Me.cboCOCAT = New System.Windows.Forms.ComboBox()
         Me.txtCOITC = New System.Windows.Forms.TextBox()
         Me.txtCOA = New System.Windows.Forms.TextBox()
-        Me.lblSTOCK = New System.Windows.Forms.Label()
         Me.pnlSEARCH.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCODE.SuspendLayout()
@@ -256,6 +256,16 @@ Partial Class ucITEM
         Me.pnlAVAILABLE.Size = New System.Drawing.Size(204, 36)
         Me.pnlAVAILABLE.TabIndex = 80
         '
+        'lblSTOCK
+        '
+        Me.lblSTOCK.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.lblSTOCK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblSTOCK.Location = New System.Drawing.Point(16, 10)
+        Me.lblSTOCK.Name = "lblSTOCK"
+        Me.lblSTOCK.Size = New System.Drawing.Size(170, 17)
+        Me.lblSTOCK.TabIndex = 59
+        Me.lblSTOCK.Text = "Available Stock"
+        '
         'txtAVAILABLE
         '
         Me.txtAVAILABLE.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -338,7 +348,7 @@ Partial Class ucITEM
         '
         Me.lblCATEGORY.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.lblCATEGORY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblCATEGORY.Location = New System.Drawing.Point(16, 9)
+        Me.lblCATEGORY.Location = New System.Drawing.Point(14, 9)
         Me.lblCATEGORY.Name = "lblCATEGORY"
         Me.lblCATEGORY.Size = New System.Drawing.Size(170, 17)
         Me.lblCATEGORY.TabIndex = 92
@@ -541,16 +551,6 @@ Partial Class ucITEM
         Me.txtCOA.Size = New System.Drawing.Size(93, 13)
         Me.txtCOA.TabIndex = 88
         Me.txtCOA.Visible = False
-        '
-        'lblSTOCK
-        '
-        Me.lblSTOCK.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.lblSTOCK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblSTOCK.Location = New System.Drawing.Point(16, 10)
-        Me.lblSTOCK.Name = "lblSTOCK"
-        Me.lblSTOCK.Size = New System.Drawing.Size(170, 17)
-        Me.lblSTOCK.TabIndex = 59
-        Me.lblSTOCK.Text = "Available Stock"
         '
         'ucITEM
         '

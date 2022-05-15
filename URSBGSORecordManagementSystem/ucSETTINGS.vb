@@ -173,13 +173,13 @@
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         btnCANCELDGV.Visible = False
         btnCANCELDGV.Enabled = False
-        btnCANCELDGV.Enabled = False
         btnEDIT.Enabled = True
         btnSAVE.Enabled = False
 
         btnCANCEL.Enabled = False
         btnEDIT.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
         dgvCATEGORY.Enabled = True
@@ -316,6 +316,8 @@
         Function_DontDisplay()
         Function_TextFormat()
         btnUPDATE.Enabled = False
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnCANCELDGV.Enabled = False
         btnEDIT.Enabled = False
         dgvCATEGORY.Enabled = True
@@ -327,9 +329,8 @@
     Private Sub btnCANCELDGV_Click(sender As Object, e As EventArgs) Handles btnCANCELDGV.Click
         btnEDIT.BackColor = Color.White
         btnUPDATE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+        btnCANCELDGV.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnCANCELDGV.Visible = False
-        btnCANCELDGV.Enabled = False
-        btnCANCELDGV.Enabled = False
         dgvCATEGORY.Enabled = True
         btnEDIT.Enabled = True
 

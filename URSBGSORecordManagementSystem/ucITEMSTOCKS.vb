@@ -133,13 +133,13 @@
     'ERROR TRAPPING
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
         If txtADDEDSTOCK.Text = "No of Stock to be Added" Then
-            MsgBox("Please put the number of stock to be added.", vbOKOnly + vbCritical, "Error Saving")
+            MsgBox("Please put the number of stock to be added.", vbOKOnly + vbCritical, "Adding Stock Failed")
             txtADDEDSTOCK.Focus()
             Exit Sub
         End If
 
         If txtADDEDSTOCK.Text < 1 Then
-            MsgBox("Invalid number of added stock!", vbOKOnly + vbCritical, "Error Saving")
+            MsgBox("Invalid number of added stock!", vbOKOnly + vbCritical, "Adding Stock Failed")
             txtADDEDSTOCK.Focus()
         End If
 

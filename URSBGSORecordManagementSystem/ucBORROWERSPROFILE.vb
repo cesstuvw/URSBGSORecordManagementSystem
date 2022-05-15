@@ -115,8 +115,8 @@
 
         Me.Tbl_profileTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_profile)
 
-        cboTYPE.Items.Add("Faculty")
         cboTYPE.Items.Add("Student")
+        cboTYPE.Items.Add("Faculty")
     End Sub
 
 

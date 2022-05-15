@@ -38,6 +38,7 @@ Partial Class ucUSERACCOUNT
         Me.Ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.txtSEARCH = New System.Windows.Forms.TextBox()
         Me.pnlSEARCH = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlPS = New System.Windows.Forms.Panel()
         Me.lblPASS = New System.Windows.Forms.Label()
         Me.txtPASS = New System.Windows.Forms.TextBox()
@@ -78,18 +79,17 @@ Partial Class ucUSERACCOUNT
         Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
         Me.btnCANCELDGV = New System.Windows.Forms.Button()
         Me.btnCANCEL = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSEARCH.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlPS.SuspendLayout()
         Me.pnlCPS.SuspendLayout()
         Me.pnlLN.SuspendLayout()
         Me.pnlUT.SuspendLayout()
         Me.pnlST.SuspendLayout()
         Me.pnlUS.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -235,6 +235,18 @@ Partial Class ucUSERACCOUNT
         Me.pnlSEARCH.Name = "pnlSEARCH"
         Me.pnlSEARCH.Size = New System.Drawing.Size(705, 38)
         Me.pnlSEARCH.TabIndex = 48
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
+        Me.PictureBox1.Location = New System.Drawing.Point(665, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'pnlPS
         '
@@ -688,18 +700,6 @@ Partial Class ucUSERACCOUNT
         Me.btnCANCEL.TabIndex = 53
         Me.btnCANCEL.UseVisualStyleBackColor = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.testsearch
-        Me.PictureBox1.Location = New System.Drawing.Point(665, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'ucUSERACCOUNT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -738,6 +738,7 @@ Partial Class ucUSERACCOUNT
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSEARCH.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPS.ResumeLayout(False)
         Me.pnlPS.PerformLayout()
         Me.pnlCPS.ResumeLayout(False)
@@ -748,7 +749,6 @@ Partial Class ucUSERACCOUNT
         Me.pnlST.ResumeLayout(False)
         Me.pnlUS.ResumeLayout(False)
         Me.pnlUS.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
