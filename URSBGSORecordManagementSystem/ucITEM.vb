@@ -115,14 +115,6 @@
 
         Me.Tbl_itemTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_item)
 
-        'cboCATEGORY.Items.Add("Audio")
-        'cboCATEGORY.Items.Add("Appliances")
-        'cboCATEGORY.Items.Add("Furnitures & Decarations")
-        'cboCATEGORY.Items.Add("Rooms/Venue")
-        'cboCATEGORY.Items.Add("Cleaning Tools")
-        'cboCATEGORY.Items.Add("Gardening Tools")
-        'cboCATEGORY.Items.Add("Sports")
-
         OpenCon()
         cmd.CommandText = "Select * from tbl_category"
         dr = cmd.ExecuteReader
@@ -342,9 +334,9 @@
         '    con.Close()
         'End If
 
-        If txtITEMNAME.Text <> txtCOITNM.Text And cboCATEGORY.Text <> cboCOCAT.Text Then
+        If txtITEMNAME.Text <> txtCOITNM.Text And cboCATEGORY.Text <> cboCOCAT.Text And txtAVAILABLE.Text <> txtCOA.Text And txtITEMCODE.Text <> txtCOITC.Text Then
             OpenCon()
-            cmd.CommandText = "Select * from tbl_item where itemname = '" & txtITEMNAME.Text & "' and itemcategory = '" & cboCATEGORY.Text & "'"
+            cmd.CommandText = "Select * from tbl_item where itemname = '" & txtITEMNAME.Text & "' and itemcategory = '" & cboCATEGORY.Text & "' and availablestock = '" & txtAVAILABLE.Text & " ' and itemcode = '" & txtITEMCODE.Text & "'"
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 MsgBox("No changes have been made.", vbOKOnly + vbInformation, "Update")
@@ -354,20 +346,21 @@
             con.Close()
         End If
 
+        If txtITEMNAME.Text <> txtCOITNM.Text Then
+            OpenCon()
+            cmd.CommandText = "Select * from tbl_item where ItemName = '" & txtITEMNAME.Text & "' and itemcategory = '" & cboCATEGORY.Text & "'"
+            dr = cmd.ExecuteReader()
+            If dr.HasRows Then
+                MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Updating")
+                con.Close()
+                btnCANCEL.Enabled = True
+                txtITEMNAME.Focus()
+                Exit Sub
+            End If
+            con.Close()
+        End If
 
-        'If txtITEMNAME.Text <> txtCOCOITM.Text Then
-        '    OpenCon()
-        '    cmd.CommandText = "Select * from tbl_item where ItemName = '" & txtITEMNAME.Text & "'"
-        '    dr = cmd.ExecuteReader()
-        '    If dr.HasRows Then
-        '        MsgBox("Item already exist!", vbOKOnly + vbCritical, "Error Updating")
-        '        con.Close()
-        '        btnCANCEL.Enabled = True
-        '        txtITEMNAME.Focus()
-        '        Exit Sub
-        '    End If
-        '    con.Close()
-        'End If
+
 
         OpenCon()
         cmd.CommandText = "Update tbl_item Set Itemcode = @itmcode, ItemName = @itmname, ItemCategory = @itmcat where Itemcode = @itmcode"

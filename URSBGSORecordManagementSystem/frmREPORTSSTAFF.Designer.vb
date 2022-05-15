@@ -23,7 +23,7 @@ Partial Class frmREPORTSSTAFF
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_profileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -34,13 +34,13 @@ Partial Class frmREPORTSSTAFF
         Me.btnBPROREP = New System.Windows.Forms.Button()
         Me.tbl_profileTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_profileTableAdapter()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
+        Me.rptPROFILE = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnUNFILTER = New System.Windows.Forms.Button()
+        Me.btnFILTER = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cboTYPE = New System.Windows.Forms.ComboBox()
-        Me.btnFILTER = New System.Windows.Forms.Button()
-        Me.btnUNFILTER = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.rptPROFILE = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.pnlBP = New System.Windows.Forms.Panel()
         Me.pnlREPS = New System.Windows.Forms.Panel()
         CType(Me.tbl_profileBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,7 +104,7 @@ Partial Class frmREPORTSSTAFF
         Me.btnRETREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRETREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnRETREP.ForeColor = System.Drawing.Color.White
-        Me.btnRETREP.Location = New System.Drawing.Point(268, 171)
+        Me.btnRETREP.Location = New System.Drawing.Point(268, 169)
         Me.btnRETREP.Name = "btnRETREP"
         Me.btnRETREP.Size = New System.Drawing.Size(280, 42)
         Me.btnRETREP.TabIndex = 3
@@ -120,7 +120,7 @@ Partial Class frmREPORTSSTAFF
         Me.btnTRANSREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTRANSREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnTRANSREP.ForeColor = System.Drawing.Color.White
-        Me.btnTRANSREP.Location = New System.Drawing.Point(268, 128)
+        Me.btnTRANSREP.Location = New System.Drawing.Point(268, 127)
         Me.btnTRANSREP.Name = "btnTRANSREP"
         Me.btnTRANSREP.Size = New System.Drawing.Size(280, 42)
         Me.btnTRANSREP.TabIndex = 3
@@ -161,6 +161,71 @@ Partial Class frmREPORTSSTAFF
         Me.pnlREPORT.Size = New System.Drawing.Size(756, 618)
         Me.pnlREPORT.TabIndex = 29
         '
+        'rptPROFILE
+        '
+        Me.rptPROFILE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.rptPROFILE.BorderStyle = System.Windows.Forms.BorderStyle.None
+        ReportDataSource3.Name = "DataSet_BorrowersProfile"
+        ReportDataSource3.Value = Me.tbl_profileBindingSource
+        Me.rptPROFILE.LocalReport.DataSources.Add(ReportDataSource3)
+        Me.rptPROFILE.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptPROFILE.rdlc"
+        Me.rptPROFILE.Location = New System.Drawing.Point(21, 72)
+        Me.rptPROFILE.Name = "rptPROFILE"
+        Me.rptPROFILE.ServerReport.BearerToken = Nothing
+        Me.rptPROFILE.Size = New System.Drawing.Size(716, 527)
+        Me.rptPROFILE.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(325, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(141, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Filter by Borrower Type"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(20, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(196, 19)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "BORROWER'S PROFILE"
+        '
+        'btnUNFILTER
+        '
+        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
+        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
+        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnUNFILTER.Name = "btnUNFILTER"
+        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNFILTER.TabIndex = 4
+        Me.btnUNFILTER.Text = "Unfilter"
+        Me.btnUNFILTER.UseVisualStyleBackColor = False
+        Me.btnUNFILTER.Visible = False
+        '
+        'btnFILTER
+        '
+        Me.btnFILTER.BackColor = System.Drawing.Color.White
+        Me.btnFILTER.FlatAppearance.BorderSize = 0
+        Me.btnFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnFILTER.Name = "btnFILTER"
+        Me.btnFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnFILTER.TabIndex = 3
+        Me.btnFILTER.Text = "Filter"
+        Me.btnFILTER.UseVisualStyleBackColor = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
@@ -182,71 +247,6 @@ Partial Class frmREPORTSSTAFF
         Me.cboTYPE.Name = "cboTYPE"
         Me.cboTYPE.Size = New System.Drawing.Size(127, 24)
         Me.cboTYPE.TabIndex = 2
-        '
-        'btnFILTER
-        '
-        Me.btnFILTER.BackColor = System.Drawing.Color.White
-        Me.btnFILTER.FlatAppearance.BorderSize = 0
-        Me.btnFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnFILTER.Location = New System.Drawing.Point(629, 20)
-        Me.btnFILTER.Name = "btnFILTER"
-        Me.btnFILTER.Size = New System.Drawing.Size(109, 35)
-        Me.btnFILTER.TabIndex = 3
-        Me.btnFILTER.Text = "Filter"
-        Me.btnFILTER.UseVisualStyleBackColor = False
-        '
-        'btnUNFILTER
-        '
-        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
-        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
-        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
-        Me.btnUNFILTER.Name = "btnUNFILTER"
-        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
-        Me.btnUNFILTER.TabIndex = 4
-        Me.btnUNFILTER.Text = "Unfilter"
-        Me.btnUNFILTER.UseVisualStyleBackColor = False
-        Me.btnUNFILTER.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(20, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 19)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "BORROWER'S PROFILE"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(325, 29)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(141, 16)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Filter by Borrower Type"
-        '
-        'rptPROFILE
-        '
-        Me.rptPROFILE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.rptPROFILE.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource2.Name = "DataSet_BorrowersProfile"
-        ReportDataSource2.Value = Me.tbl_profileBindingSource
-        Me.rptPROFILE.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.rptPROFILE.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptPROFILE.rdlc"
-        Me.rptPROFILE.Location = New System.Drawing.Point(21, 72)
-        Me.rptPROFILE.Name = "rptPROFILE"
-        Me.rptPROFILE.ServerReport.BearerToken = Nothing
-        Me.rptPROFILE.Size = New System.Drawing.Size(716, 527)
-        Me.rptPROFILE.TabIndex = 6
         '
         'pnlBP
         '

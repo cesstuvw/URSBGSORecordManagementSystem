@@ -205,11 +205,11 @@ Partial Class UCrptACTIVITY
     Friend WithEvents btnUNFILTER As Button
     Friend WithEvents btnFILTER As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents dtSTART As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents dtEND As DateTimePicker
     Friend WithEvents rptACT As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents tbl_activityBindingSource As BindingSource
+    Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents tbl_activityTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_activityTableAdapter
 End Class

@@ -331,7 +331,7 @@
 
     '---------------------------------- UPDATE BUTTON ---------------------------------'
     Private Sub btnUPDATE_Click(sender As Object, e As EventArgs) Handles btnUPDATE.Click
-        If txtFNAME.Text <> txtCOFN.Text And txtLNAME.Text <> txtCOLN.Text And txtMNAME.Text <> txtCOMN.Text And cboTYPE.Text <> cboCOTY.Text And txtCONTACT.Text <> txtCOCON.Text Then
+        If txtFNAME.Text <> txtCOFN.Text And txtLNAME.Text <> txtCOLN.Text And cboTYPE.Text <> cboCOTY.Text And txtCONTACT.Text <> txtCOCON.Text Then
             OpenCon()
             cmd.CommandText = "Select * from tbl_profile where fname = '" & txtFNAME.Text & "' and mname = '" & txtMNAME.Text & "' and lname = '" & txtLNAME.Text & "' and contactno = '" & txtCONTACT.Text & "' and borrowerstype = '" & cboTYPE.Text & "' "
             dr = cmd.ExecuteReader()
@@ -352,6 +352,12 @@
         If cboTYPE.Text <> "Faculty" And cboTYPE.Text <> "Student" Then
             MsgBox("Unknown user type!", vbOKOnly + vbCritical, "Error Updating")
             cboTYPE.Focus()
+            Exit Sub
+        End If
+
+        If txtCONTACT.Text.Length < 11 Then
+            MsgBox("Invalid contact number!", vbOKOnly + vbCritical, "Error Saving")
+            txtCONTACT.Focus()
             Exit Sub
         End If
 

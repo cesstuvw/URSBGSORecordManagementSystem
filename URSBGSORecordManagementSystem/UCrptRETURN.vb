@@ -31,19 +31,35 @@
     End Sub
 
 
-    Private Sub btnFILTERD_Click(sender As Object, e As EventArgs) Handles btnFILTERD.Click
+    Private Sub btnDATE_Click(sender As Object, e As EventArgs) Handles btnDATE.Click
         Me.rptRETURN.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
-        Me.tbl_returnTableAdapter.FillByDateR(Me.ursbgso_dbDataSet.tbl_return, dtDATETIME.Value.ToShortDateString, dtDATETIME1.Value.ToShortDateString)
+        Me.tbl_returnTableAdapter.FillByDateR(Me.ursbgso_dbDataSet.tbl_return, dtSTART.Value.ToShortDateString, dtEND.Value.ToShortDateString)
         Me.rptRETURN.RefreshReport()
-        btnFILTERD.Visible = False
-        btnUNFILTERD.Visible = True
+        btnDATE.Visible = False
+        btnUNDATE.Visible = True
     End Sub
 
-    Private Sub btnUNFILTERD_Click(sender As Object, e As EventArgs) Handles btnUNFILTER.Click
+    Private Sub btnUNDATE_Click(sender As Object, e As EventArgs) Handles btnUNDATE.Click
         Me.rptRETURN.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.tbl_returnTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_return)
         Me.rptRETURN.RefreshReport()
-        btnFILTERD.Visible = True
-        btnUNFILTERD.Visible = False
+        btnDATE.Visible = True
+        btnUNDATE.Visible = False
     End Sub
+
+    'Private Sub btnFILTER_Click(sender As Object, e As EventArgs) Handles btnFILTER.Click
+    '    Me.rptITEMST.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+    '    Me.tbl_itemstockTableAdapter.FillByAdded(Me.ursbgso_dbDataSet.tbl_itemstock, dtSTART.Value.ToShortDateString, dtEND.Value.ToShortDateString)
+    '    Me.rptITEMST.RefreshReport()
+    '    btnFILTER.Visible = False
+    '    btnUNFILTER.Visible = True
+    'End Sub
+
+    'Private Sub btnUNFILTER_Click(sender As Object, e As EventArgs) Handles btnUNFILTER.Click
+    '    Me.rptITEMST.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+    '    Me.tbl_itemstockTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_itemstock)
+    '    Me.rptITEMST.RefreshReport()
+    '    btnFILTER.Visible = True
+    '    btnUNFILTER.Visible = False
+    'End Sub
 End Class

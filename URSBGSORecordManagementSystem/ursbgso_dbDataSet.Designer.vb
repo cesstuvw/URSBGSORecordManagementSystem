@@ -3419,7 +3419,7 @@ Partial Public Class ursbgso_dbDataSet
             Me.columnUsername.AllowDBNull = false
             Me.columnUsername.MaxLength = 45
             Me.columnActivity.AllowDBNull = false
-            Me.columnActivity.MaxLength = 300
+            Me.columnActivity.MaxLength = 400
             Me.columnDateTime.AllowDBNull = false
             Me.columnDateTime.MaxLength = 45
         End Sub
@@ -9895,7 +9895,7 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByDateTime(ByVal dataTable As ursbgso_dbDataSet.tbl_activityDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
+        Public Overloads Overridable Function FillByDateAndTime(ByVal dataTable As ursbgso_dbDataSet.tbl_activityDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("param1")
@@ -9918,7 +9918,7 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDateTime(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_activityDataTable
+        Public Overloads Overridable Function GetDataByDateAndTime(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_activityDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("param1")

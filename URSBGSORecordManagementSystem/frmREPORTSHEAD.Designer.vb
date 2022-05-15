@@ -23,7 +23,7 @@ Partial Class frmREPORTSHEAD
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_userBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -112,7 +112,7 @@ Partial Class frmREPORTSHEAD
         Me.btnRETREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRETREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnRETREP.ForeColor = System.Drawing.Color.White
-        Me.btnRETREP.Location = New System.Drawing.Point(268, 343)
+        Me.btnRETREP.Location = New System.Drawing.Point(268, 337)
         Me.btnRETREP.Name = "btnRETREP"
         Me.btnRETREP.Size = New System.Drawing.Size(280, 42)
         Me.btnRETREP.TabIndex = 3
@@ -128,7 +128,7 @@ Partial Class frmREPORTSHEAD
         Me.btnTRANSREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTRANSREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnTRANSREP.ForeColor = System.Drawing.Color.White
-        Me.btnTRANSREP.Location = New System.Drawing.Point(268, 300)
+        Me.btnTRANSREP.Location = New System.Drawing.Point(268, 295)
         Me.btnTRANSREP.Name = "btnTRANSREP"
         Me.btnTRANSREP.Size = New System.Drawing.Size(280, 42)
         Me.btnTRANSREP.TabIndex = 3
@@ -144,7 +144,7 @@ Partial Class frmREPORTSHEAD
         Me.btnBPROREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBPROREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnBPROREP.ForeColor = System.Drawing.Color.White
-        Me.btnBPROREP.Location = New System.Drawing.Point(268, 257)
+        Me.btnBPROREP.Location = New System.Drawing.Point(268, 253)
         Me.btnBPROREP.Name = "btnBPROREP"
         Me.btnBPROREP.Size = New System.Drawing.Size(280, 42)
         Me.btnBPROREP.TabIndex = 3
@@ -160,7 +160,7 @@ Partial Class frmREPORTSHEAD
         Me.btnITSTREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnITSTREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnITSTREP.ForeColor = System.Drawing.Color.White
-        Me.btnITSTREP.Location = New System.Drawing.Point(268, 214)
+        Me.btnITSTREP.Location = New System.Drawing.Point(268, 211)
         Me.btnITSTREP.Name = "btnITSTREP"
         Me.btnITSTREP.Size = New System.Drawing.Size(280, 42)
         Me.btnITSTREP.TabIndex = 3
@@ -176,7 +176,7 @@ Partial Class frmREPORTSHEAD
         Me.btnITEMREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnITEMREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnITEMREP.ForeColor = System.Drawing.Color.White
-        Me.btnITEMREP.Location = New System.Drawing.Point(268, 171)
+        Me.btnITEMREP.Location = New System.Drawing.Point(268, 169)
         Me.btnITEMREP.Name = "btnITEMREP"
         Me.btnITEMREP.Size = New System.Drawing.Size(280, 42)
         Me.btnITEMREP.TabIndex = 3
@@ -192,7 +192,7 @@ Partial Class frmREPORTSHEAD
         Me.btnACTREP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnACTREP.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.btnACTREP.ForeColor = System.Drawing.Color.White
-        Me.btnACTREP.Location = New System.Drawing.Point(268, 128)
+        Me.btnACTREP.Location = New System.Drawing.Point(268, 127)
         Me.btnACTREP.Name = "btnACTREP"
         Me.btnACTREP.Size = New System.Drawing.Size(280, 42)
         Me.btnACTREP.TabIndex = 3
@@ -249,9 +249,9 @@ Partial Class frmREPORTSHEAD
         '
         Me.rptUSER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptUSER.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource1.Name = "DataSet_USERACCOUNT"
-        ReportDataSource1.Value = Me.tbl_userBindingSource
-        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource3.Name = "DataSet_USERACCOUNT"
+        ReportDataSource3.Value = Me.tbl_userBindingSource
+        Me.rptUSER.LocalReport.DataSources.Add(ReportDataSource3)
         Me.rptUSER.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptUSERACCOUNT.rdlc"
         Me.rptUSER.Location = New System.Drawing.Point(21, 72)
         Me.rptUSER.Name = "rptUSER"

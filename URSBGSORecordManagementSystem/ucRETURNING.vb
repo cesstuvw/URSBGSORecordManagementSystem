@@ -10,7 +10,7 @@
 
             .AddWithValue("un", username.Replace("@", ""))
             .AddWithValue("act", activity)
-            .AddWithValue("dt", DateTime.Now())
+            .AddWithValue("dt", Date.Now())
         End With
         cmd.ExecuteNonQuery()
         con.Close()
@@ -285,5 +285,9 @@
         lblQUAN.Hide()
         btnSAVE.Enabled = True
         btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+    End Sub
+
+    Private Sub pnlITEM_Click(sender As Object, e As EventArgs) Handles pnlITEM.Click
+        pnlITEM.Visible = False
     End Sub
 End Class

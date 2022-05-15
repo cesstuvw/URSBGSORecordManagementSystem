@@ -14,6 +14,13 @@
         Me.tbl_profileTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_profile)
         Me.rptPROFILE.RefreshReport()
 
+        btnBPROREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnBPROREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnTRANSREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnTRANSREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnRETREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnRETREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+
         'HIDE USERCONTROL PANEL TO SHOW BP PANEL
         pnlBP.Show()
         pnlREPS.Hide()
@@ -53,7 +60,6 @@
         Me.rptPROFILE.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.tbl_profileTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_profile)
         Me.rptPROFILE.RefreshReport()
-
     End Sub
 
     Private Sub btnTRANSREP_Click(sender As Object, e As EventArgs) Handles btnTRANSREP.Click

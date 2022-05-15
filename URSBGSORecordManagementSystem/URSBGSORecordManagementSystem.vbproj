@@ -720,6 +720,10 @@
     <None Include="Resources\cubeloading.gif" />
     <None Include="Resources\showinfouni1.png" />
     <None Include="Resources\logged-dashboard1.png" />
+    <None Include="Resources\logged.png" />
+    <None Include="Resources\logged1.png" />
+    <None Include="Resources\map-pin-3-fill 1.png" />
+    <None Include="Resources\pin.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

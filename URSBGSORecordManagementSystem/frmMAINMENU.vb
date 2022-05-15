@@ -748,7 +748,7 @@
     End Sub
 
     'WINDOW CONTROLS
-    Private Sub BTNMINIMIZE_Click(sender As Object, e As EventArgs) Handles BTNMINIMIZE.Click, PictureBox2.Click
+    Private Sub BTNMINIMIZE_Click(sender As Object, e As EventArgs) Handles BTNMINIMIZE.Click, PictureBox2.Click, PictureBox3.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 

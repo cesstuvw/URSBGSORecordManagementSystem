@@ -23,7 +23,7 @@ Partial Class UCrptRETURN
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource4 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_returnBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
@@ -34,12 +34,12 @@ Partial Class UCrptRETURN
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cboTYPE = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnUNFILTERD = New System.Windows.Forms.Button()
-        Me.btnFILTERD = New System.Windows.Forms.Button()
+        Me.btnUNDATE = New System.Windows.Forms.Button()
+        Me.btnDATE = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.dtDATETIME1 = New System.Windows.Forms.DateTimePicker()
-        Me.dtDATETIME = New System.Windows.Forms.DateTimePicker()
+        Me.dtEND = New System.Windows.Forms.DateTimePicker()
+        Me.dtSTART = New System.Windows.Forms.DateTimePicker()
         Me.rptRETURN = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbl_returnTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_returnTableAdapter()
@@ -79,8 +79,8 @@ Partial Class UCrptRETURN
         Me.Panel3.Controls.Add(Me.btnFILTER)
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.btnUNFILTERD)
-        Me.Panel3.Controls.Add(Me.btnFILTERD)
+        Me.Panel3.Controls.Add(Me.btnUNDATE)
+        Me.Panel3.Controls.Add(Me.btnDATE)
         Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Location = New System.Drawing.Point(188, 12)
         Me.Panel3.Name = "Panel3"
@@ -162,41 +162,41 @@ Partial Class UCrptRETURN
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Filter by Date"
         '
-        'btnUNFILTERD
+        'btnUNDATE
         '
-        Me.btnUNFILTERD.BackColor = System.Drawing.Color.White
-        Me.btnUNFILTERD.FlatAppearance.BorderSize = 0
-        Me.btnUNFILTERD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUNFILTERD.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUNFILTERD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUNFILTERD.Location = New System.Drawing.Point(440, 7)
-        Me.btnUNFILTERD.Name = "btnUNFILTERD"
-        Me.btnUNFILTERD.Size = New System.Drawing.Size(109, 35)
-        Me.btnUNFILTERD.TabIndex = 12
-        Me.btnUNFILTERD.Text = "Unfilter"
-        Me.btnUNFILTERD.UseVisualStyleBackColor = False
-        Me.btnUNFILTERD.Visible = False
+        Me.btnUNDATE.BackColor = System.Drawing.Color.White
+        Me.btnUNDATE.FlatAppearance.BorderSize = 0
+        Me.btnUNDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNDATE.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNDATE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNDATE.Location = New System.Drawing.Point(440, 7)
+        Me.btnUNDATE.Name = "btnUNDATE"
+        Me.btnUNDATE.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNDATE.TabIndex = 12
+        Me.btnUNDATE.Text = "Unfilter"
+        Me.btnUNDATE.UseVisualStyleBackColor = False
+        Me.btnUNDATE.Visible = False
         '
-        'btnFILTERD
+        'btnDATE
         '
-        Me.btnFILTERD.BackColor = System.Drawing.Color.White
-        Me.btnFILTERD.FlatAppearance.BorderSize = 0
-        Me.btnFILTERD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFILTERD.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFILTERD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnFILTERD.Location = New System.Drawing.Point(440, 7)
-        Me.btnFILTERD.Name = "btnFILTERD"
-        Me.btnFILTERD.Size = New System.Drawing.Size(109, 35)
-        Me.btnFILTERD.TabIndex = 11
-        Me.btnFILTERD.Text = "Filter"
-        Me.btnFILTERD.UseVisualStyleBackColor = False
+        Me.btnDATE.BackColor = System.Drawing.Color.White
+        Me.btnDATE.FlatAppearance.BorderSize = 0
+        Me.btnDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDATE.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDATE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDATE.Location = New System.Drawing.Point(440, 7)
+        Me.btnDATE.Name = "btnDATE"
+        Me.btnDATE.Size = New System.Drawing.Size(109, 35)
+        Me.btnDATE.TabIndex = 11
+        Me.btnDATE.Text = "Filter"
+        Me.btnDATE.UseVisualStyleBackColor = False
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.dtDATETIME1)
-        Me.Panel2.Controls.Add(Me.dtDATETIME)
+        Me.Panel2.Controls.Add(Me.dtEND)
+        Me.Panel2.Controls.Add(Me.dtSTART)
         Me.Panel2.Location = New System.Drawing.Point(136, 7)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(292, 35)
@@ -213,36 +213,36 @@ Partial Class UCrptRETURN
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "to"
         '
-        'dtDATETIME1
+        'dtEND
         '
-        Me.dtDATETIME1.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME1.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME1.Location = New System.Drawing.Point(165, 8)
-        Me.dtDATETIME1.Name = "dtDATETIME1"
-        Me.dtDATETIME1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dtDATETIME1.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME1.TabIndex = 6
-        Me.dtDATETIME1.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
+        Me.dtEND.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtEND.CustomFormat = "yyyy-MM-dd"
+        Me.dtEND.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtEND.Location = New System.Drawing.Point(165, 8)
+        Me.dtEND.Name = "dtEND"
+        Me.dtEND.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dtEND.Size = New System.Drawing.Size(110, 20)
+        Me.dtEND.TabIndex = 6
+        Me.dtEND.Value = New Date(2022, 5, 10, 0, 0, 0, 0)
         '
-        'dtDATETIME
+        'dtSTART
         '
-        Me.dtDATETIME.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.dtDATETIME.CustomFormat = "yyyy-MM-dd"
-        Me.dtDATETIME.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtDATETIME.Location = New System.Drawing.Point(16, 8)
-        Me.dtDATETIME.Name = "dtDATETIME"
-        Me.dtDATETIME.Size = New System.Drawing.Size(110, 20)
-        Me.dtDATETIME.TabIndex = 6
-        Me.dtDATETIME.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
+        Me.dtSTART.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.dtSTART.CustomFormat = "yyyy-MM-dd"
+        Me.dtSTART.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtSTART.Location = New System.Drawing.Point(16, 8)
+        Me.dtSTART.Name = "dtSTART"
+        Me.dtSTART.Size = New System.Drawing.Size(110, 20)
+        Me.dtSTART.TabIndex = 6
+        Me.dtSTART.Value = New Date(2022, 5, 5, 0, 0, 0, 0)
         '
         'rptRETURN
         '
         Me.rptRETURN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptRETURN.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource4.Name = "DataSet_Return"
-        ReportDataSource4.Value = Me.tbl_returnBindingSource
-        Me.rptRETURN.LocalReport.DataSources.Add(ReportDataSource4)
+        ReportDataSource2.Name = "DataSet_Return"
+        ReportDataSource2.Value = Me.tbl_returnBindingSource
+        Me.rptRETURN.LocalReport.DataSources.Add(ReportDataSource2)
         Me.rptRETURN.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptRETURN.rdlc"
         Me.rptRETURN.Location = New System.Drawing.Point(21, 112)
         Me.rptRETURN.Name = "rptRETURN"
@@ -299,10 +299,10 @@ Partial Class UCrptRETURN
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cboTYPE As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnUNFILTERD As Button
-    Friend WithEvents btnFILTERD As Button
+    Friend WithEvents btnUNDATE As Button
+    Friend WithEvents btnDATE As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents dtDATETIME1 As DateTimePicker
-    Friend WithEvents dtDATETIME As DateTimePicker
+    Friend WithEvents dtEND As DateTimePicker
+    Friend WithEvents dtSTART As DateTimePicker
 End Class

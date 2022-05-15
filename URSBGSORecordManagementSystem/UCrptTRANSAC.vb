@@ -39,7 +39,7 @@
         btnUNFILTERD.Visible = True
     End Sub
 
-    Private Sub btnUNFILTERD_Click(sender As Object, e As EventArgs) Handles btnUNFILTER.Click
+    Private Sub btnUNFILTERD_Click(sender As Object, e As EventArgs) Handles btnUNFILTERD.Click
         Me.rptTRANSAC.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.tbl_transactionTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_transaction)
         Me.rptTRANSAC.RefreshReport()

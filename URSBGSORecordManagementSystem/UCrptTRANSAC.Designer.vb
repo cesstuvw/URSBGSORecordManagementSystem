@@ -23,7 +23,7 @@ Partial Class UCrptTRANSAC
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_transactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.rptTRANSAC = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -65,9 +65,9 @@ Partial Class UCrptTRANSAC
         '
         Me.rptTRANSAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptTRANSAC.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource2.Name = "DataSet_TRANSACTION"
-        ReportDataSource2.Value = Me.tbl_transactionBindingSource
-        Me.rptTRANSAC.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "DataSet_TRANSACTION"
+        ReportDataSource1.Value = Me.tbl_transactionBindingSource
+        Me.rptTRANSAC.LocalReport.DataSources.Add(ReportDataSource1)
         Me.rptTRANSAC.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptTRANSAC.rdlc"
         Me.rptTRANSAC.Location = New System.Drawing.Point(21, 112)
         Me.rptTRANSAC.Name = "rptTRANSAC"

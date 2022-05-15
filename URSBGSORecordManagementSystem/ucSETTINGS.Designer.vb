@@ -51,6 +51,7 @@ Partial Class ucSETTINGS
         Me.btnCANCEL = New System.Windows.Forms.Button()
         Me.Tbl_categoryTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_categoryTableAdapter()
         Me.txtCOCN = New System.Windows.Forms.TextBox()
+        Me.txtCOCC = New System.Windows.Forms.TextBox()
         Me.pnlCODE.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCATEGORY, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -381,12 +382,25 @@ Partial Class ucSETTINGS
         Me.txtCOCN.TabIndex = 104
         Me.txtCOCN.Visible = False
         '
+        'txtCOCC
+        '
+        Me.txtCOCC.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.txtCOCC.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCOCC.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCOCC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.txtCOCC.Location = New System.Drawing.Point(1168, 67)
+        Me.txtCOCC.Name = "txtCOCC"
+        Me.txtCOCC.Size = New System.Drawing.Size(108, 16)
+        Me.txtCOCC.TabIndex = 104
+        Me.txtCOCC.Visible = False
+        '
         'ucSETTINGS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Controls.Add(Me.txtCOCC)
         Me.Controls.Add(Me.txtCOCN)
         Me.Controls.Add(Me.pnlCODE)
         Me.Controls.Add(Me.btnCANCELDGV)
@@ -442,4 +456,5 @@ Partial Class ucSETTINGS
     Friend WithEvents lblCODE As Label
     Friend WithEvents lblCATNAME As Label
     Friend WithEvents txtCOCN As TextBox
+    Friend WithEvents txtCOCC As TextBox
 End Class

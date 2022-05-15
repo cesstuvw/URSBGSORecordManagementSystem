@@ -41,6 +41,8 @@ Partial Class frmMAINMENU
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblGREETINGS = New System.Windows.Forms.Label()
         Me.tmrTIME = New System.Windows.Forms.Timer(Me.components)
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnRET = New System.Windows.Forms.Button()
         Me.btnREPORTS = New System.Windows.Forms.Button()
         Me.btnSETT = New System.Windows.Forms.Button()
@@ -57,6 +59,7 @@ Partial Class frmMAINMENU
         Me.BTNCLOSE = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.lblRETURN = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.lblITEM = New System.Windows.Forms.Label()
@@ -77,6 +80,7 @@ Partial Class frmMAINMENU
         CType(Me.BTNMINIMIZE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -169,6 +173,7 @@ Partial Class frmMAINMENU
         '
         Me.pnlDASHBOARD.Controls.Add(Me.pnlUSERCONTROL)
         Me.pnlDASHBOARD.Controls.Add(Me.Panel7)
+        Me.pnlDASHBOARD.Controls.Add(Me.PictureBox3)
         Me.pnlDASHBOARD.Controls.Add(Me.PictureBox2)
         Me.pnlDASHBOARD.Controls.Add(Me.Panel5)
         Me.pnlDASHBOARD.Controls.Add(Me.Panel4)
@@ -180,6 +185,8 @@ Partial Class frmMAINMENU
         Me.pnlDASHBOARD.Controls.Add(Me.lblLOGGED)
         Me.pnlDASHBOARD.Controls.Add(Me.Label3)
         Me.pnlDASHBOARD.Controls.Add(Me.Label2)
+        Me.pnlDASHBOARD.Controls.Add(Me.Label5)
+        Me.pnlDASHBOARD.Controls.Add(Me.Label4)
         Me.pnlDASHBOARD.Controls.Add(Me.lblGREETINGS)
         Me.pnlDASHBOARD.Location = New System.Drawing.Point(0, 0)
         Me.pnlDASHBOARD.Name = "pnlDASHBOARD"
@@ -188,7 +195,7 @@ Partial Class frmMAINMENU
         '
         'pnlUSERCONTROL
         '
-        Me.pnlUSERCONTROL.Location = New System.Drawing.Point(0, 685)
+        Me.pnlUSERCONTROL.Location = New System.Drawing.Point(0, 0)
         Me.pnlUSERCONTROL.Name = "pnlUSERCONTROL"
         Me.pnlUSERCONTROL.Size = New System.Drawing.Size(1324, 705)
         Me.pnlUSERCONTROL.TabIndex = 54
@@ -197,7 +204,7 @@ Partial Class frmMAINMENU
         '
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.Controls.Add(Me.Panel6)
-        Me.Panel7.Location = New System.Drawing.Point(946, 200)
+        Me.Panel7.Location = New System.Drawing.Point(946, 225)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(321, 395)
         Me.Panel7.TabIndex = 55
@@ -208,7 +215,7 @@ Partial Class frmMAINMENU
         Me.lblTIMEPERIOD.BackColor = System.Drawing.Color.Transparent
         Me.lblTIMEPERIOD.Font = New System.Drawing.Font("Arial", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTIMEPERIOD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.lblTIMEPERIOD.Location = New System.Drawing.Point(1227, 131)
+        Me.lblTIMEPERIOD.Location = New System.Drawing.Point(1227, 105)
         Me.lblTIMEPERIOD.Name = "lblTIMEPERIOD"
         Me.lblTIMEPERIOD.Size = New System.Drawing.Size(40, 23)
         Me.lblTIMEPERIOD.TabIndex = 48
@@ -220,7 +227,7 @@ Partial Class frmMAINMENU
         Me.lblTIME.BackColor = System.Drawing.Color.Transparent
         Me.lblTIME.Font = New System.Drawing.Font("Arial", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTIME.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblTIME.Location = New System.Drawing.Point(1122, 121)
+        Me.lblTIME.Location = New System.Drawing.Point(1132, 95)
         Me.lblTIME.Name = "lblTIME"
         Me.lblTIME.Size = New System.Drawing.Size(104, 40)
         Me.lblTIME.TabIndex = 49
@@ -243,7 +250,7 @@ Partial Class frmMAINMENU
         Me.lblLOGGED.AutoSize = True
         Me.lblLOGGED.BackColor = System.Drawing.Color.Transparent
         Me.lblLOGGED.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLOGGED.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.lblLOGGED.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblLOGGED.Location = New System.Drawing.Point(844, 140)
         Me.lblLOGGED.Name = "lblLOGGED"
         Me.lblLOGGED.Size = New System.Drawing.Size(67, 17)
@@ -256,7 +263,7 @@ Partial Class frmMAINMENU
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(328, 146)
+        Me.Label3.Location = New System.Drawing.Point(328, 141)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(111, 17)
         Me.Label3.TabIndex = 47
@@ -278,11 +285,11 @@ Partial Class frmMAINMENU
         '
         Me.lblGREETINGS.AutoSize = True
         Me.lblGREETINGS.BackColor = System.Drawing.Color.Transparent
-        Me.lblGREETINGS.Font = New System.Drawing.Font("Arial", 22.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGREETINGS.Font = New System.Drawing.Font("Arial", 19.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGREETINGS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblGREETINGS.Location = New System.Drawing.Point(324, 107)
         Me.lblGREETINGS.Name = "lblGREETINGS"
-        Me.lblGREETINGS.Size = New System.Drawing.Size(247, 35)
+        Me.lblGREETINGS.Size = New System.Drawing.Size(215, 30)
         Me.lblGREETINGS.TabIndex = 45
         Me.lblGREETINGS.Text = "Hello, User Type"
         '
@@ -290,6 +297,30 @@ Partial Class frmMAINMENU
         '
         Me.tmrTIME.Enabled = True
         Me.tmrTIME.Interval = 1000
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(973, 144)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(258, 16)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "University of Rizal System - Binangonan"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(176, Byte), Integer), CType(CType(218, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(1073, 163)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(158, 16)
+        Me.Label5.TabIndex = 45
+        Me.Label5.Text = "General Services Office"
         '
         'btnRET
         '
@@ -493,12 +524,25 @@ Partial Class frmMAINMENU
         Me.lblRETURN.Text = "00"
         Me.lblRETURN.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox3.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.pin
+        Me.PictureBox3.Location = New System.Drawing.Point(1236, 143)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(26, 35)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 19
+        Me.PictureBox3.TabStop = False
+        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.history_fill_2
+        Me.PictureBox2.Image = Global.URSBGSORecordManagementSystem.My.Resources.Resources.logged1
         Me.PictureBox2.Location = New System.Drawing.Point(761, 137)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(22, 22)
@@ -512,7 +556,7 @@ Partial Class frmMAINMENU
         Me.Panel5.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.item_dahboard
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel5.Controls.Add(Me.lblITEM)
-        Me.Panel5.Location = New System.Drawing.Point(633, 413)
+        Me.Panel5.Location = New System.Drawing.Point(633, 438)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(279, 181)
         Me.Panel5.TabIndex = 50
@@ -536,7 +580,7 @@ Partial Class frmMAINMENU
         Me.Panel4.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.borrowers_dashboard
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel4.Controls.Add(Me.lblPROFILE)
-        Me.Panel4.Location = New System.Drawing.Point(331, 413)
+        Me.Panel4.Location = New System.Drawing.Point(331, 438)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(270, 181)
         Me.Panel4.TabIndex = 51
@@ -560,7 +604,7 @@ Partial Class frmMAINMENU
         Me.Panel3.BackgroundImage = Global.URSBGSORecordManagementSystem.My.Resources.Resources.transaction_dashboard
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel3.Controls.Add(Me.lblTRANSAC)
-        Me.Panel3.Location = New System.Drawing.Point(536, 201)
+        Me.Panel3.Location = New System.Drawing.Point(536, 226)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(375, 181)
         Me.Panel3.TabIndex = 52
@@ -586,7 +630,7 @@ Partial Class frmMAINMENU
         Me.Panel2.Controls.Add(Me.lblMONTH)
         Me.Panel2.Controls.Add(Me.lblTODAY)
         Me.Panel2.Controls.Add(Me.lblDAY)
-        Me.Panel2.Location = New System.Drawing.Point(330, 201)
+        Me.Panel2.Location = New System.Drawing.Point(330, 226)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(177, 181)
         Me.Panel2.TabIndex = 53
@@ -653,6 +697,7 @@ Partial Class frmMAINMENU
         CType(Me.BTNCLOSE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -709,4 +754,7 @@ Partial Class frmMAINMENU
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents lblRETURN As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

@@ -6,7 +6,6 @@
         Me.rptITEMST.RefreshReport()
     End Sub
 
-
     Private Sub btnFILTER_Click(sender As Object, e As EventArgs) Handles btnFILTER.Click
         Me.rptITEMST.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.tbl_itemstockTableAdapter.FillByAdded(Me.ursbgso_dbDataSet.tbl_itemstock, dtSTART.Value.ToShortDateString, dtEND.Value.ToShortDateString)

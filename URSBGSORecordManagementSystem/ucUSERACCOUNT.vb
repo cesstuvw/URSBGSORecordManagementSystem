@@ -383,6 +383,11 @@
     Private Sub btnUPDATE_Click(sender As Object, e As EventArgs) Handles btnUPDATE.Click
         'Error Trapping
 
+        If txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
+            MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
+            Exit Sub
+        End If
+
         If txtPASS.Text <> txtCOPW.Text And txtLNAME.Text <> txtCOLN.Text And cboUTYPE.Text <> cboCOUT.Text And cboSTATUS.Text <> cboCOST.Text Then
             OpenCon()
             cmd.CommandText = "Select * from tbl_user where password = '" & txtPASS.Text & "' and loginname = '" & txtLNAME.Text & "' and usertype = '" & cboUTYPE.Text & "' and status = '" & cboSTATUS.Text & "'"
@@ -393,10 +398,6 @@
                 Exit Sub
             End If
             con.Close()
-        End If
-        If txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
-            MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
-            Exit Sub
         End If
 
         If cboUTYPE.Text <> "GSO Head" And cboUTYPE.Text <> "Staff" Then

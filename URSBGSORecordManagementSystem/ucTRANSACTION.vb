@@ -155,6 +155,15 @@
         btnADD.BackColor = ColorTranslator.FromHtml("#AEBAEC")
 
         Me.Tbl_itemcartTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_itemcart)
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -425,6 +434,15 @@
             btnREMOVE.BackColor = ColorTranslator.FromHtml("#f0f0f0")
             dgvITEMCART_Refresh()
         End If
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -455,21 +473,21 @@
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_Enter(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHITEM_Enter(sender As Object, e As EventArgs) Handles txtSEARCHITEM.Enter
         If txtSEARCHITEM.Text = "Search item" Then
             txtSEARCHITEM.Text = ""
             txtSEARCHITEM.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_Leave(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHITEM_Leave(sender As Object, e As EventArgs) Handles txtSEARCHITEM.Leave
         If txtSEARCHITEM.Text = "" Then
             txtSEARCHITEM.Text = "Search item"
             txtSEARCHITEM.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
-    Private Sub txtSEARCHITEM_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHITEM_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCHITEM.TextChanged
         TblitemBindingSource.Filter = "ItemName Like '%" & txtSEARCHITEM.Text & "%' "
 
         If txtSEARCHITEM.Text = "Search item" Then
@@ -480,21 +498,21 @@
         End If
     End Sub
 
-    Private Sub txtSEARCHPROF_Enter(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHPROF_Enter(sender As Object, e As EventArgs) Handles txtSEARCHPROF.Enter
         If txtSEARCHPROF.Text = "Search profile" Then
             txtSEARCHPROF.Text = ""
             txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
     End Sub
 
-    Private Sub txtSEARCHPROF_Leave(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHPROF_Leave(sender As Object, e As EventArgs) Handles txtSEARCHPROF.Leave
         If txtSEARCHPROF.Text = "" Then
             txtSEARCHPROF.Text = "Search profile"
             txtSEARCHPROF.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
-    Private Sub txtSEARCHprof_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtSEARCHPROF_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCHPROF.TextChanged
         TblprofileBindingSource.Filter = "Lname like '%" & txtSEARCHPROF.Text & "%' "
 
         If txtSEARCHPROF.Text = "Search profile" Then
@@ -522,5 +540,9 @@
         If e.KeyChar <> ControlChars.Back Then
             e.Handled = Not (Char.IsDigit(e.KeyChar))
         End If
+    End Sub
+
+    Private Sub pnlBG_Click(sender As Object, e As EventArgs) Handles pnlBG.Click
+        pnlBG.Visible = False
     End Sub
 End Class

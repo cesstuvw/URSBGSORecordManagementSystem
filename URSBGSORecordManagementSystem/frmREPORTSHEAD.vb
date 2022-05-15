@@ -35,6 +35,23 @@
         Me.tbl_userTableAdapter.Fill(Me.ursbgso_dbDataSet.tbl_user)
         Me.rptUSER.RefreshReport()
 
+        btnUAREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnUAREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnACTREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnACTREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITEMREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITEMREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITSTREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITSTREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITSTREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnITSTREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnBPROREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnBPROREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnTRANSREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnTRANSREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnRETREP.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#C2CDFF")
+        btnRETREP.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#C2CDFF")
+
         'HIDE USERCONTROL PANEL TO SHOW UA PANEL
         pnlUA.Show()
         pnlREP.Hide()

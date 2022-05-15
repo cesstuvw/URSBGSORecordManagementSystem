@@ -115,6 +115,7 @@
         End If
 
         dgvCATEGORY.Enabled = True
+
     End Sub
 
 
@@ -156,6 +157,7 @@
         btnCANCEL.Enabled = False
         btnEDIT.Enabled = False
         dgvCATEGORY.Enabled = True
+        btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         Function_Disabled()
         Function_DisabledPanel()
@@ -265,9 +267,9 @@
             Exit Sub
         End If
 
-        If txtCATCODE.Text <> txtCOCN.Text Then
+        If txtCATCODE.Text <> txtCOCN.Text And txtCATCODE.Text <> txtCOCC.Text Then
             OpenCon()
-            cmd.CommandText = "Select * from tbl_category where categoryname = '" & txtCATNAME.Text & "'"
+            cmd.CommandText = "Select * from tbl_category where categoryname = '" & txtCATNAME.Text & "' and categorycode = '" & txtCATCODE.Text & "'"
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 MsgBox("No changes have been made.", vbOKOnly + vbInformation, "Update")
@@ -276,6 +278,20 @@
             End If
             con.Close()
         End If
+
+        If txtCATNAME.Text <> txtCOCN.Text Then
+            OpenCon()
+            cmd.CommandText = "Select * from tbl_category where categoryname  = '" & txtCATNAME.Text & "' "
+            dr = cmd.ExecuteReader()
+            If dr.HasRows Then
+                MsgBox("Sorry, that category already exists.", vbOKOnly + vbCritical, "Error Saving")
+                con.Close()
+                txtCATNAME.Focus()
+                Exit Sub
+            End If
+            con.Close()
+        End If
+
 
         OpenCon()
         cmd.CommandText = "Update tbl_category Set CategoryCode = @catcode, CategoryName = @catname where CategoryCode = @catcode"
