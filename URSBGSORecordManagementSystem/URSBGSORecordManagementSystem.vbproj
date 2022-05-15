@@ -269,6 +269,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptACTLOG.rdlc" />
     <EmbeddedResource Include="UCrptPROFILE.resx">
       <DependentUpon>UCrptPROFILE.vb</DependentUpon>
     </EmbeddedResource>

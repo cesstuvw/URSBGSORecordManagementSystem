@@ -6520,16 +6520,16 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param1"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
             param.IsNullable = true
             param.SourceColumn = "DateBorrowed"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param2"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
             param.IsNullable = true
             param.SourceColumn = "DateBorrowed"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
@@ -6578,18 +6578,10 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByDateB(ByVal dataTable As ursbgso_dbDataSet.tbl_transactionDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
+        Public Overloads Overridable Function FillByDateBorrowed(ByVal dataTable As ursbgso_dbDataSet.tbl_transactionDataTable, ByVal param1 As Date, ByVal param2 As Date) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
-            End If
-            If (param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param2")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -6601,18 +6593,10 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDateB(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_transactionDataTable
+        Public Overloads Overridable Function GetDataByDateBorrowed(ByVal param1 As Date, ByVal param2 As Date) As ursbgso_dbDataSet.tbl_transactionDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
-            End If
-            If (param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param2")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
             Dim dataTable As ursbgso_dbDataSet.tbl_transactionDataTable = New ursbgso_dbDataSet.tbl_transactionDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -9238,16 +9222,16 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param1"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
             param.IsNullable = true
             param.SourceColumn = "DateReturned"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param2"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
             param.IsNullable = true
             param.SourceColumn = "DateReturned"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
@@ -9296,17 +9280,17 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByDateR(ByVal dataTable As ursbgso_dbDataSet.tbl_returnDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
+        Public Overloads Overridable Function FillByDateR(ByVal dataTable As ursbgso_dbDataSet.tbl_returnDataTable, ByVal param1 As Global.System.Nullable(Of Date), ByVal param2 As Global.System.Nullable(Of Date)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
+            If (param1.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1.Value,Date)
+            Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
-            If (param2 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            If (param2.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2.Value,Date)
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -9319,17 +9303,17 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDateR(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_returnDataTable
+        Public Overloads Overridable Function GetDataByDateR(ByVal param1 As Global.System.Nullable(Of Date), ByVal param2 As Global.System.Nullable(Of Date)) As ursbgso_dbDataSet.tbl_returnDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
+            If (param1.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1.Value,Date)
+            Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
             End If
-            If (param2 Is Nothing) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            If (param2.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2.Value,Date)
             Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
+                Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As ursbgso_dbDataSet.tbl_returnDataTable = New ursbgso_dbDataSet.tbl_returnDataTable()
             Me.Adapter.Fill(dataTable)
@@ -9851,16 +9835,16 @@ Namespace ursbgso_dbDataSetTableAdapters
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param1"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "DateTime"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._commandCollection(1).Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@param2"
-            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
-            param.Size = 45
+            param.DbType = Global.System.Data.DbType.DateTime
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.DateTime
             param.IsNullable = true
             param.SourceColumn = "DateTime"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
@@ -9895,18 +9879,10 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByDateAndTime(ByVal dataTable As ursbgso_dbDataSet.tbl_activityDataTable, ByVal param1 As String, ByVal param2 As String) As Integer
+        Public Overloads Overridable Function FillByDateTime(ByVal dataTable As ursbgso_dbDataSet.tbl_activityDataTable, ByVal param1 As Date, ByVal param2 As Date) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
-            End If
-            If (param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param2")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -9918,18 +9894,10 @@ Namespace ursbgso_dbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByDateAndTime(ByVal param1 As String, ByVal param2 As String) As ursbgso_dbDataSet.tbl_activityDataTable
+        Public Overloads Overridable Function GetDataByDateTime(ByVal param1 As Date, ByVal param2 As Date) As ursbgso_dbDataSet.tbl_activityDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (param1 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param1")
-            Else
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,String)
-            End If
-            If (param2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("param2")
-            Else
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,String)
-            End If
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(param2,Date)
             Dim dataTable As ursbgso_dbDataSet.tbl_activityDataTable = New ursbgso_dbDataSet.tbl_activityDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

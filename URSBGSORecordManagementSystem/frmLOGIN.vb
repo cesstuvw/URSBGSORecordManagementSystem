@@ -2,6 +2,7 @@
 
     Dim status As String = "Active"
     Dim username As String = ""
+
     Private Sub FRMLOGIN_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Me.TransparencyKey = BackColor 'REMOVE BACKCOLOR OF THE FORM
         btnSHOW.Hide() 'BTNSHOW IS A CUSTOMIZED BUTTON USING PICTUREBOX 

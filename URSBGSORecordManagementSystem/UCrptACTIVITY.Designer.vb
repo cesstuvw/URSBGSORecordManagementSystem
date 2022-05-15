@@ -23,13 +23,12 @@ Partial Class UCrptACTIVITY
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_activityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ursbgso_dbDataSet = New URSBGSORecordManagementSystem.ursbgso_dbDataSet()
         Me.pnlREPORT = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnUNFILTER = New System.Windows.Forms.Button()
         Me.btnFILTER = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,6 +36,7 @@ Partial Class UCrptACTIVITY
         Me.dtSTART = New System.Windows.Forms.DateTimePicker()
         Me.rptACT = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.tbl_activityTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_activityTableAdapter()
+        Me.btnUNFILTER = New System.Windows.Forms.Button()
         CType(Me.tbl_activityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlREPORT.SuspendLayout()
@@ -56,9 +56,9 @@ Partial Class UCrptACTIVITY
         'pnlREPORT
         '
         Me.pnlREPORT.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.pnlREPORT.Controls.Add(Me.btnUNFILTER)
         Me.pnlREPORT.Controls.Add(Me.Label3)
         Me.pnlREPORT.Controls.Add(Me.Label1)
-        Me.pnlREPORT.Controls.Add(Me.btnUNFILTER)
         Me.pnlREPORT.Controls.Add(Me.btnFILTER)
         Me.pnlREPORT.Controls.Add(Me.Panel2)
         Me.pnlREPORT.Controls.Add(Me.rptACT)
@@ -88,21 +88,6 @@ Partial Class UCrptACTIVITY
         Me.Label1.Size = New System.Drawing.Size(119, 19)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "ACTIVITY LOG"
-        '
-        'btnUNFILTER
-        '
-        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
-        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
-        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
-        Me.btnUNFILTER.Name = "btnUNFILTER"
-        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
-        Me.btnUNFILTER.TabIndex = 4
-        Me.btnUNFILTER.Text = "Unfilter"
-        Me.btnUNFILTER.UseVisualStyleBackColor = False
-        Me.btnUNFILTER.Visible = False
         '
         'btnFILTER
         '
@@ -167,10 +152,10 @@ Partial Class UCrptACTIVITY
         '
         Me.rptACT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.rptACT.BorderStyle = System.Windows.Forms.BorderStyle.None
-        ReportDataSource2.Name = "DataSet_ACTIVITY"
-        ReportDataSource2.Value = Me.tbl_activityBindingSource
-        Me.rptACT.LocalReport.DataSources.Add(ReportDataSource2)
-        Me.rptACT.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptACTIVITY.rdlc"
+        ReportDataSource1.Name = "DataSet_ActLog"
+        ReportDataSource1.Value = Me.tbl_activityBindingSource
+        Me.rptACT.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.rptACT.LocalReport.ReportEmbeddedResource = "URSBGSORecordManagementSystem.rptACTLOG.rdlc"
         Me.rptACT.Location = New System.Drawing.Point(21, 72)
         Me.rptACT.Name = "rptACT"
         Me.rptACT.ServerReport.BearerToken = Nothing
@@ -180,6 +165,21 @@ Partial Class UCrptACTIVITY
         'tbl_activityTableAdapter
         '
         Me.tbl_activityTableAdapter.ClearBeforeFill = True
+        '
+        'btnUNFILTER
+        '
+        Me.btnUNFILTER.BackColor = System.Drawing.Color.White
+        Me.btnUNFILTER.FlatAppearance.BorderSize = 0
+        Me.btnUNFILTER.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNFILTER.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNFILTER.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNFILTER.Location = New System.Drawing.Point(629, 20)
+        Me.btnUNFILTER.Name = "btnUNFILTER"
+        Me.btnUNFILTER.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNFILTER.TabIndex = 6
+        Me.btnUNFILTER.Text = "Unfilter"
+        Me.btnUNFILTER.UseVisualStyleBackColor = False
+        Me.btnUNFILTER.Visible = False
         '
         'UCrptACTIVITY
         '
@@ -202,7 +202,6 @@ Partial Class UCrptACTIVITY
     Friend WithEvents pnlREPORT As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnUNFILTER As Button
     Friend WithEvents btnFILTER As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents dtSTART As DateTimePicker
@@ -212,4 +211,5 @@ Partial Class UCrptACTIVITY
     Friend WithEvents tbl_activityBindingSource As BindingSource
     Friend WithEvents ursbgso_dbDataSet As ursbgso_dbDataSet
     Friend WithEvents tbl_activityTableAdapter As ursbgso_dbDataSetTableAdapters.tbl_activityTableAdapter
+    Friend WithEvents btnUNFILTER As Button
 End Class

@@ -33,7 +33,7 @@
 
     Private Sub btnFILTERD_Click(sender As Object, e As EventArgs) Handles btnFILTERD.Click
         Me.rptTRANSAC.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
-        Me.tbl_transactionTableAdapter.FillByDateB(Me.ursbgso_dbDataSet.tbl_transaction, dtDATETIME.Value.ToShortDateString, dtDATETIME1.Value.ToShortDateString)
+        Me.tbl_transactionTableAdapter.FillByDateBorrowed(Me.ursbgso_dbDataSet.tbl_transaction, dtDATETIME.Value.ToShortDateString, dtDATETIME1.Value.ToShortDateString)
         Me.rptTRANSAC.RefreshReport()
         btnFILTERD.Visible = False
         btnUNFILTERD.Visible = True

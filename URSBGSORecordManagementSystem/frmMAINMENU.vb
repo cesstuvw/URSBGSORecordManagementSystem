@@ -19,6 +19,22 @@
         End Get
     End Property
 
+
+    Private Sub actlog()
+        con.Close()
+        OpenCon()
+        cmd.CommandText = "insert into tbl_activity values (@un, @act, @dt)"
+        With cmd.Parameters
+            .Clear()
+
+            .AddWithValue("un", lblUSERNAME.Text.Replace("@", ""))
+            .AddWithValue("act", activity)
+            .AddWithValue("dt", Date.Now())
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+
     Private Sub frmMAINMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'dashboard counts
@@ -582,6 +598,8 @@
         response = MsgBox("Do you really want to logout?", vbYesNo + vbQuestion, "Logout")
 
         If response = MsgBoxResult.Yes Then
+            activity = "Logged out"
+            actlog()
             frmLOGIN.Show()
             Me.Close()
 

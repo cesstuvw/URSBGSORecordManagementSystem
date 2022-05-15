@@ -450,7 +450,7 @@
     '---------------------------------- SEARCH FUNCTION AND ITS EVENTS ----------------------------------'
 
     Private Sub txtSEARCH_Enter(sender As Object, e As EventArgs) Handles txtSEARCH.Enter
-        If txtSEARCH.Text = "Search profile" Then
+        If txtSEARCH.Text = "Search item" Then
             txtSEARCH.Text = ""
             txtSEARCH.ForeColor = ColorTranslator.FromHtml("#204AFF")
         End If
@@ -458,18 +458,18 @@
 
     Private Sub txtSEARCH_Leave(sender As Object, e As EventArgs) Handles txtSEARCH.Leave
         If txtSEARCH.Text = "" Then
-            txtSEARCH.Text = "Search profile"
+            txtSEARCH.Text = "Search item"
             txtSEARCH.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         End If
     End Sub
 
     Private Sub txtSEARCH_TextChanged(sender As Object, e As EventArgs) Handles txtSEARCH.TextChanged
-        TblprofileBindingSource.Filter = "Lname like '%" & txtSEARCH.Text & "%' "
+        TblitemcartBindingSource.Filter = "ItemName like '%" & txtSEARCH.Text & "%' "
 
-        If txtSEARCH.Text = "Search profile" Then
-            TblprofileBindingSource.RemoveFilter()
+        If txtSEARCH.Text = "Search item" Then
+            TblitemcartBindingSource.RemoveFilter()
         ElseIf txtSEARCH.Text = "" Then
-            TblprofileBindingSource.Filter = "lname like '%" & txtSEARCH.Text & "%' "
+            TblitemcartBindingSource.Filter = "ItemName like '%" & txtSEARCH.Text & "%' "
         End If
     End Sub
 

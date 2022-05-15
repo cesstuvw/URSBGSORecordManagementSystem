@@ -33,7 +33,6 @@ Partial Class UCrptTRANSAC
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnUNFILTER = New System.Windows.Forms.Button()
         Me.btnFILTER = New System.Windows.Forms.Button()
-        Me.btnUNFILTERD = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cboTYPE = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class UCrptTRANSAC
         Me.dtDATETIME1 = New System.Windows.Forms.DateTimePicker()
         Me.dtDATETIME = New System.Windows.Forms.DateTimePicker()
         Me.tbl_transactionTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_transactionTableAdapter()
+        Me.btnUNFILTERD = New System.Windows.Forms.Button()
         CType(Me.tbl_transactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlREPORT.SuspendLayout()
@@ -99,10 +99,10 @@ Partial Class UCrptTRANSAC
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.btnUNFILTERD)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.btnUNFILTER)
         Me.Panel3.Controls.Add(Me.btnFILTER)
-        Me.Panel3.Controls.Add(Me.btnUNFILTERD)
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btnFILTERD)
@@ -151,21 +151,6 @@ Partial Class UCrptTRANSAC
         Me.btnFILTER.TabIndex = 15
         Me.btnFILTER.Text = "Filter"
         Me.btnFILTER.UseVisualStyleBackColor = False
-        '
-        'btnUNFILTERD
-        '
-        Me.btnUNFILTERD.BackColor = System.Drawing.Color.White
-        Me.btnUNFILTERD.FlatAppearance.BorderSize = 0
-        Me.btnUNFILTERD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUNFILTERD.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUNFILTERD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUNFILTERD.Location = New System.Drawing.Point(440, 7)
-        Me.btnUNFILTERD.Name = "btnUNFILTERD"
-        Me.btnUNFILTERD.Size = New System.Drawing.Size(109, 35)
-        Me.btnUNFILTERD.TabIndex = 12
-        Me.btnUNFILTERD.Text = "Unfilter"
-        Me.btnUNFILTERD.UseVisualStyleBackColor = False
-        Me.btnUNFILTERD.Visible = False
         '
         'Panel1
         '
@@ -265,6 +250,21 @@ Partial Class UCrptTRANSAC
         '
         Me.tbl_transactionTableAdapter.ClearBeforeFill = True
         '
+        'btnUNFILTERD
+        '
+        Me.btnUNFILTERD.BackColor = System.Drawing.Color.White
+        Me.btnUNFILTERD.FlatAppearance.BorderSize = 0
+        Me.btnUNFILTERD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUNFILTERD.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUNFILTERD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(74, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUNFILTERD.Location = New System.Drawing.Point(440, 7)
+        Me.btnUNFILTERD.Name = "btnUNFILTERD"
+        Me.btnUNFILTERD.Size = New System.Drawing.Size(109, 35)
+        Me.btnUNFILTERD.TabIndex = 18
+        Me.btnUNFILTERD.Text = "Unfilter"
+        Me.btnUNFILTERD.UseVisualStyleBackColor = False
+        Me.btnUNFILTERD.Visible = False
+        '
         'UCrptTRANSAC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -299,10 +299,10 @@ Partial Class UCrptTRANSAC
     Friend WithEvents Panel1 As Panel
     Friend WithEvents cboTYPE As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnUNFILTERD As Button
     Friend WithEvents btnFILTERD As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents dtDATETIME1 As DateTimePicker
     Friend WithEvents dtDATETIME As DateTimePicker
+    Friend WithEvents btnUNFILTERD As Button
 End Class

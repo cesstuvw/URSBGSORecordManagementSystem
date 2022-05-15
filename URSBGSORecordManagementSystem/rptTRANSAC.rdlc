@@ -714,7 +714,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DateBorrowed.Value</Value>
+                              <Value>=String.Format("{0:yyyy/MM/dd}",Fields!DateBorrowed.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -750,7 +750,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DateReturned.Value</Value>
+                              <Value>=String.Format("{0:yyyy/MM/dd}",Fields!DateReturned.Value)</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -808,7 +808,7 @@
         <Top>0.77666in</Top>
         <Left>1.97165in</Left>
         <Height>0.88371in</Height>
-        <Width>10.00405in</Width>
+        <Width>10.00404in</Width>
         <Style>
           <Border>
             <Style>None</Style>
