@@ -174,7 +174,7 @@
         'ERROR TRAPPING
         btnUPDATE.Visible = False
         btnSAVE.Visible = True
-        If txtUSER.Text = "Username" Or txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
+        If txtUSER.Text = "Username" Or txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Password" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Saving")
             Exit Sub
         End If
@@ -383,12 +383,12 @@
     Private Sub btnUPDATE_Click(sender As Object, e As EventArgs) Handles btnUPDATE.Click
         'Error Trapping
 
-        If txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Pass" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
+        If txtPASS.Text = "Password" Or txtCPASS.Text = "Confirm Password" Or txtLNAME.Text = "Login Name" Or cboUTYPE.Text = "User Type" Or cboSTATUS.Text = "Status" Then
             MsgBox("All fields are required!", vbOKOnly + vbCritical, "Error Updating")
             Exit Sub
         End If
 
-        If txtPASS.Text <> txtCOPW.Text And txtLNAME.Text <> txtCOLN.Text And cboUTYPE.Text <> cboCOUT.Text And cboSTATUS.Text <> cboCOST.Text Then
+        If txtPASS.Text <> txtCOPW.Text And txtCPASS.Text <> txtCOCPASS.Text And txtLNAME.Text <> txtCOLN.Text And cboUTYPE.Text <> cboCOUT.Text And cboSTATUS.Text <> cboCOST.Text Then
             OpenCon()
             cmd.CommandText = "Select * from tbl_user where password = '" & txtPASS.Text & "' and loginname = '" & txtLNAME.Text & "' and usertype = '" & cboUTYPE.Text & "' and status = '" & cboSTATUS.Text & "'"
             dr = cmd.ExecuteReader()
@@ -412,7 +412,7 @@
             Exit Sub
         End If
 
-        If txtPASS.Text <> txtCPASS.Text Then
+        If txtPASS.Text <> txtCPASS.Text Or txtCPASS.Text <> txtPASS.Text Then
             MsgBox("Passwords do not match.", vbOKOnly + vbCritical, "Error Updating")
             txtPASS.Focus()
             Exit Sub

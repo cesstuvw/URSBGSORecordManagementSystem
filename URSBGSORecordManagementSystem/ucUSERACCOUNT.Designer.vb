@@ -79,6 +79,7 @@ Partial Class ucUSERACCOUNT
         Me.Tbl_userTableAdapter = New URSBGSORecordManagementSystem.ursbgso_dbDataSetTableAdapters.tbl_userTableAdapter()
         Me.btnCANCELDGV = New System.Windows.Forms.Button()
         Me.btnCANCEL = New System.Windows.Forms.Button()
+        Me.txtCOCPASS = New System.Windows.Forms.TextBox()
         CType(Me.dgvUSER, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ursbgso_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -700,6 +701,16 @@ Partial Class ucUSERACCOUNT
         Me.btnCANCEL.TabIndex = 53
         Me.btnCANCEL.UseVisualStyleBackColor = False
         '
+        'txtCOCPASS
+        '
+        Me.txtCOCPASS.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.txtCOCPASS.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCOCPASS.Location = New System.Drawing.Point(905, 29)
+        Me.txtCOCPASS.Name = "txtCOCPASS"
+        Me.txtCOCPASS.Size = New System.Drawing.Size(93, 13)
+        Me.txtCOCPASS.TabIndex = 60
+        Me.txtCOCPASS.Visible = False
+        '
         'ucUSERACCOUNT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -708,6 +719,7 @@ Partial Class ucUSERACCOUNT
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Controls.Add(Me.cboCOUT)
         Me.Controls.Add(Me.cboCOST)
+        Me.Controls.Add(Me.txtCOCPASS)
         Me.Controls.Add(Me.txtCOCPW)
         Me.Controls.Add(Me.txtCOLN)
         Me.Controls.Add(Me.txtCOPW)
@@ -805,4 +817,5 @@ Partial Class ucUSERACCOUNT
     Friend WithEvents UsertypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents lblUSER As Label
+    Friend WithEvents txtCOCPASS As TextBox
 End Class

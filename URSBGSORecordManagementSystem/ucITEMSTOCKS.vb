@@ -132,15 +132,16 @@
     '---------------------------------- SAVE BUTTON ---------------------------------'
     'ERROR TRAPPING
     Private Sub btnSAVE_Click(sender As Object, e As EventArgs) Handles btnSAVE.Click
-        If txtADDEDSTOCK.Text = "No of Stock to be Added" Then
+        If txtADDEDSTOCK.Text = "No of Stock to be Added" Or txtADDEDSTOCK.Text = "" Then
             MsgBox("Please put the number of stock to be added.", vbOKOnly + vbCritical, "Adding Stock Failed")
             txtADDEDSTOCK.Focus()
             Exit Sub
         End If
 
-        If txtADDEDSTOCK.Text < 1 Then
+        If Val(txtADDEDSTOCK.Text) < 1 Then
             MsgBox("Invalid number of added stock!", vbOKOnly + vbCritical, "Adding Stock Failed")
             txtADDEDSTOCK.Focus()
+            Exit Sub
         End If
 
         Dim qtyupdate As Integer
