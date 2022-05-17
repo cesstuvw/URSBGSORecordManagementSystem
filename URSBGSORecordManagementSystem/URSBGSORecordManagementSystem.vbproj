@@ -112,12 +112,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLOADING.Designer.vb">
-      <DependentUpon>frmLOADING.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmLOADING.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmLOGIN.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -248,9 +242,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmLOADING.resx">
-      <DependentUpon>frmLOADING.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLOGIN.resx">
       <DependentUpon>frmLOGIN.vb</DependentUpon>
     </EmbeddedResource>

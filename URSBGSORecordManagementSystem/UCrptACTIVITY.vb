@@ -22,4 +22,12 @@
         btnFILTER.Visible = True
         btnUNFILTER.Visible = False
     End Sub
+
+    Private Sub btnDGV_Click(sender As Object, e As EventArgs) Handles btnDGV.Click
+        pnlDGV.Visible = True
+    End Sub
+
+    Private Sub btnHIDEDGV_Click(sender As Object, e As EventArgs) Handles btnHIDEDGV.Click
+        pnlDGV.Visible = False
+    End Sub
 End Class

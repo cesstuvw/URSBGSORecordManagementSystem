@@ -117,7 +117,6 @@
         btnCANCEL.BackColor = ColorTranslator.FromHtml("#f0f0f0")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
 
-
         Me.Tbl_returnTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_return)
     End Sub
 
@@ -187,7 +186,7 @@
         cmd.Parameters.AddWithValue("itemn", txtITNAME.Text)
         cmd.Parameters.AddWithValue("qty", txtQUAN.Text)
         cmd.Parameters.AddWithValue("bdate", txtDATE.Text)
-        cmd.Parameters.AddWithValue("rdate", Format(Date.Now, "yyyy-MM-dd"))
+        cmd.Parameters.AddWithValue("rdate", Format(Date.Now, "yyyy/MM/dd"))
         cmd.ExecuteNonQuery()
         con.Close()
 
@@ -201,7 +200,7 @@
         dgvTRANSAC_Refresh()
 
         MsgBox("Returned successfully", vbOKOnly + vbInformation, "Transaction Recorded")
-        activity = "Returned an item. Item: " + txtITNAME.Text + "|" + "Quantity:" + txtQUAN.Text
+        activity = "Returned an item. Item: " + txtITNAME.Text + " | " + "Quantity:" + txtQUAN.Text
         actlog()
         Function_TextFormat()
         btnSEL.Enabled = True

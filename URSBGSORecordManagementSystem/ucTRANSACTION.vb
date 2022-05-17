@@ -16,20 +16,6 @@
         con.Close()
     End Sub
 
-    Private Sub Function_Enabled()
-        btnSAVE.Enabled = True
-        btnCANCEL.Enabled = True
-        txtNO.Enabled = True
-        txtID.Enabled = True
-        txtFULLNAME.Enabled = True
-        txtTYPE.Enabled = True
-        txtITCODE.Enabled = True
-        txtITNAME.Enabled = True
-        txtCAT.Enabled = True
-        txtQUAN.Enabled = True
-
-    End Sub
-
     Private Sub Function_Disabled()
         btnSAVE.Enabled = False
         btnCANCEL.Enabled = False
@@ -43,13 +29,13 @@
         txtQUAN.Enabled = False
     End Sub
 
-    Private Sub Function_DisplayUser()
+    Private Sub Function_DisplayBorrower()
         lblID.Hide()
         lblFULL.Hide()
         lblTYPE.Hide()
     End Sub
 
-    Private Sub Function_DontDisplayUser()
+    Private Sub Function_DontDisplayBorrower()
         lblID.Show()
         lblFULL.Show()
         lblTYPE.Show()
@@ -108,18 +94,6 @@
         pnlSTOCK.BackColor = ColorTranslator.FromHtml("#f0f0f0")
     End Sub
 
-    'Private Sub Function_EnabledPanel()
-    '    pnlNO.BackColor = Color.White
-    '    pnlID.BackColor = Color.White
-    '    pnlFULL.BackColor = Color.White
-    '    pnlTYPE.BackColor = Color.White
-    '    pnlCODE.BackColor = Color.White
-    '    pnlNAME.BackColor = Color.White
-    '    lblQUAN.BackColor = Color.White
-    '    pnlSTOCK.BackColor = Color.White
-
-    'End Sub
-
     Private Sub dgvITEMCART_Refresh()
         Me.Tbl_itemcartTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_itemcart)
     End Sub
@@ -127,7 +101,6 @@
     Private Sub dgvITEM_Refresh()
         Me.Tbl_itemTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_item)
     End Sub
-
 
     Private Sub Getmax()
         OpenCon()
@@ -167,8 +140,8 @@
     End Sub
 
 
-    '---------------------------------- ADD USER BUTTON ---------------------------------'
-    Private Sub btnUSER_Click(sender As Object, e As EventArgs) Handles btnUSER.Click
+    '---------------------------------- ADD BORROWER BUTTON ---------------------------------'
+    Private Sub btnBORROWER_Click(sender As Object, e As EventArgs) Handles btnBORROWER.Click
         btnCANCEL.BackColor = Color.White
         btnITEM.BackColor = Color.White
         lblNO.Hide()
@@ -182,6 +155,15 @@
         Me.Tbl_profileTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_profile)
         btnITEM.Enabled = True
         btnCANCEL.Enabled = True
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -206,6 +188,15 @@
         btnCANCEL.Enabled = True
         txtQUAN.Focus()
         btnADD.Enabled = True
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -261,7 +252,6 @@
             Exit Sub
         End If
 
-
         OpenCon()
         cmd.CommandText = "insert into tbl_itemcart (TransNo, BorrowersID, BorrowersName, BorrowersType, Itemcode, Itemname, Quantity, DateBorrowed) values (@transno, @bid, @fulln, @btype, @itemc, @itemn, @qty, @dateb)"
         cmd.Parameters.Clear()
@@ -272,7 +262,7 @@
         cmd.Parameters.AddWithValue("itemc", txtITCODE.Text)
         cmd.Parameters.AddWithValue("itemn", txtITNAME.Text)
         cmd.Parameters.AddWithValue("qty", txtQUAN.Text)
-        cmd.Parameters.AddWithValue("dateb", Format(Date.Now, "yyyy-MM-dd"))
+        cmd.Parameters.AddWithValue("dateb", Format(Date.Now, "yyyy/MM/dd"))
         cmd.ExecuteNonQuery()
         con.Close()
 
@@ -294,10 +284,19 @@
         btnITEM.Enabled = False
         btnADD.Enabled = False
         Function_DontDisplayItem()
-        Function_DontDisplayUser()
+        Function_DontDisplayBorrower()
         Function_TextFormat()
         dgvITEMCART_Refresh()
         Function_TextFormat()
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -374,10 +373,19 @@
         btnADD.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         txtID.ForeColor = ColorTranslator.FromHtml("#A9B0DA")
         Function_TextFormat()
-        Function_DontDisplayUser()
+        Function_DontDisplayBorrower()
         Function_DontDisplayItem()
         btnITEM.Enabled = False
         btnITEM.BackColor = ColorTranslator.FromHtml("#f0f0f0")
+
+        If dgvTRANSAC.Rows.Count <> 0 Then
+
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
+            btnSAVE.Enabled = True
+        ElseIf dgvTRANSAC.Rows.Count = 0 Then
+            btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
+            btnSAVE.Enabled = False
+        End If
     End Sub
 
 
@@ -391,7 +399,7 @@
             txtTYPE.Text = row.Cells(4).Value
         End If
         pnlBG.Visible = False
-        Function_DisplayUser()
+        Function_DisplayBorrower()
     End Sub
 
     Private Sub DGVITEM_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvITEM.CellClick
@@ -416,7 +424,6 @@
             row = dgvTRANSAC.Rows(e.RowIndex)
             txtREMOVE.Text = row.Cells(5).Value
         End If
-
     End Sub
 
     'REMOVE BUTTON
