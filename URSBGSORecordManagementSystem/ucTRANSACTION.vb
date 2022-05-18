@@ -130,7 +130,6 @@
         Me.Tbl_itemcartTableAdapter.Fill(Me.Ursbgso_dbDataSet.tbl_itemcart)
 
         If dgvTRANSAC.Rows.Count <> 0 Then
-
             btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
             btnSAVE.Enabled = True
         ElseIf dgvTRANSAC.Rows.Count = 0 Then
@@ -169,7 +168,6 @@
 
     '---------------------------------- ADD ITEM BUTTON ---------------------------------'
     Private Sub btnITEM_Click(sender As Object, e As EventArgs) Handles btnITEM.Click
-        'btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
         btnSAVE.BackColor = ColorTranslator.FromHtml("#AEBAEC")
         txtQUAN.BackColor = Color.White
         btnADD.BackColor = ColorTranslator.FromHtml("#204aff")
@@ -190,7 +188,6 @@
         btnADD.Enabled = True
 
         If dgvTRANSAC.Rows.Count <> 0 Then
-
             btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
             btnSAVE.Enabled = True
         ElseIf dgvTRANSAC.Rows.Count = 0 Then
@@ -290,7 +287,6 @@
         Function_TextFormat()
 
         If dgvTRANSAC.Rows.Count <> 0 Then
-
             btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
             btnSAVE.Enabled = True
         ElseIf dgvTRANSAC.Rows.Count = 0 Then
@@ -379,7 +375,6 @@
         btnITEM.BackColor = ColorTranslator.FromHtml("#f0f0f0")
 
         If dgvTRANSAC.Rows.Count <> 0 Then
-
             btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
             btnSAVE.Enabled = True
         ElseIf dgvTRANSAC.Rows.Count = 0 Then
@@ -443,7 +438,6 @@
         End If
 
         If dgvTRANSAC.Rows.Count <> 0 Then
-
             btnSAVE.BackColor = ColorTranslator.FromHtml("#204aff")
             btnSAVE.Enabled = True
         ElseIf dgvTRANSAC.Rows.Count = 0 Then
